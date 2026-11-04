@@ -7,15 +7,25 @@
     fetch(up + "search.json").then(function (r) { return r.json(); }).then(function (rows) { index = rows; then(); });
   }
   function find(query) {
-    var q = query.toLowerCase().trim(), starts = [], within = [];
+    var q = query.toLowerCase().trim(), found = [];
     if (!q) return [];
-    for (var i = 0; i < index.length; i++) {
-      var name = index[i][0].toLowerCase();
-      if (name.indexOf(q) === 0) starts.push(index[i]); else if (name.indexOf(q) > 0) within.push(index[i]);
+    function tier(name) {
+      name = name.toLowerCase();
+      if (name === q) return 3;
+      if (name.indexOf(q) === 0 || name.indexOf(" " + q) >= 0) return 2;
+      if (name.indexOf(q) > 0) return 1;
+      return 0;
     }
-    function byWeight(a, b) { return b[3] - a[3]; }
-    starts.sort(byWeight); within.sort(byWeight);
-    return starts.concat(within).slice(0, 12);
+    for (var i = 0; i < index.length; i++) {
+      var best = tier(index[i][0]), names = index[i][4] || [];
+      for (var k = 0; k < names.length; k++) best = Math.max(best, tier(names[k]));
+      if (best) found.push([best, index[i]]);
+    }
+    function byTier(a, b) { return (b[0] - a[0]) || (b[1][3] - a[1][3]); }
+    found.sort(byTier);
+    var out = [];
+    for (var j = 0; j < found.length && j < 12; j++) out.push(found[j][1]);
+    return out;
   }
   function esc(s) { return String(s).split("&").join("&amp;").split("<").join("&lt;").split('"').join("&quot;"); }
   document.querySelectorAll(".search").forEach(function (box) {
