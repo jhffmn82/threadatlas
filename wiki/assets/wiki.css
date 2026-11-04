@@ -99,6 +99,7 @@ ol.steps li { margin: 0.6rem 0; padding: 0.6rem 0.9rem; border-left: 3px solid v
 .snapshot table { border-collapse: collapse; width: 100%; font-family: system-ui, sans-serif; font-size: 0.9rem; }
 .snapshot th, .snapshot td { text-align: left; padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--rule); }
 .snapshot th { background: var(--band); font-weight: 600; } .soon { color: var(--muted); font-style: italic; }
+.snapshot .points { font-size: 0.92rem; margin: 0.7rem 0 0; padding-left: 1.2rem; } .snapshot .points li { margin: 0.3rem 0; }
 ol.stages li { margin: 0.5rem 0; } ul.links-out li { margin: 0.4rem 0; }
 footer { border-top: 1px solid var(--tint); margin-top: 3rem; padding: 1.2rem 0 2rem; color: var(--muted); font-size: 0.85rem; font-family: system-ui, sans-serif; }
 @media (max-width: 860px) {
