@@ -1,5 +1,7 @@
 # ThreadAtlas
 
+**[Open the wiki: https://jhffmn82.github.io/threadatlas/wiki/](https://jhffmn82.github.io/threadatlas/wiki/)**
+
 ThreadAtlas turns a mixed pile of documents (books, papers, chat histories) into one knowledge graph in which every
 fact carries the verbatim quote and the document it came from. On top of it sit a self-building wiki and a retrieval
 path that answers questions from the graph.
@@ -8,7 +10,7 @@ IT 494 project, M.S. in Computer Science, Illinois State University. Advisor: Dr
 
 ## The wiki
 
-**https://jhffmn82.github.io/threadatlas/**
+**[https://jhffmn82.github.io/threadatlas/wiki/](https://jhffmn82.github.io/threadatlas/wiki/)**
 
 Rendered from the graph by one deterministic pass: every entity, work and claim links to the verbatim quote it came
 from, and every quote opens the source text where it was taken. The built site is in [`wiki/`](wiki/); nothing in it is
@@ -25,4 +27,3 @@ edited by hand. The texts are public-domain literature and CC BY papers, and eac
 | folder | what it holds |
 |---|---|
 | `wiki/` | the published wiki, built by the wiki notebook |
-| `.github/workflows/` | the job that publishes `wiki/` to GitHub Pages |
