@@ -10,13 +10,7 @@ nav.top .inner { display: flex; gap: 1.2rem; align-items: center; height: 3rem; 
 nav.top a { color: #e6edf4; } nav.top .brand { font-weight: 700; letter-spacing: 0.04em; margin-right: 0.6rem; }
 .search { position: relative; margin-left: auto; }
 .search input { font: inherit; padding: 0.35rem 0.7rem; border-radius: 4px; border: 1px solid #5d6f82; width: 18rem; max-width: 50vw; }
-.search .hits { position: absolute; right: 0; top: 2.3rem; background: #fff; color: var(--ink); width: 26rem; max-width: 90vw; z-index: 20;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.18); border-radius: 6px; overflow: hidden; }
-.search .hits a { display: block; padding: 0.45rem 0.8rem; color: var(--ink); border-bottom: 1px solid var(--rule); }
-.search .hits a:hover, .search .hits a.on { background: var(--band); text-decoration: none; }
-.search .hits small { color: var(--muted); margin-left: 0.4rem; }
 .search.big { margin: 1.2rem 0 0; } .search.big input { width: 34rem; max-width: 100%; font-size: 1.05rem; padding: 0.6rem 0.9rem; }
-.search.big .hits { left: 0; right: auto; top: 3rem; }
 header { background: var(--band); color: var(--band-ink); padding: 1.6rem 0 1.4rem; border-bottom: 2px solid var(--tint); }
 header h1 { font-size: 2.2rem; margin: 0.2rem 0 0; font-weight: normal; letter-spacing: 0.01em; }
 header h1.title { font-size: 3rem; } header .tagline { font-size: 1.3rem; color: var(--band-muted); font-style: italic; }
@@ -102,6 +96,13 @@ ol.steps li { margin: 0.6rem 0; padding: 0.6rem 0.9rem; border-left: 3px solid v
 .snapshot .points { font-size: 0.92rem; margin: 0.7rem 0 0; padding-left: 1.2rem; } .snapshot .points li { margin: 0.3rem 0; }
 .snapshot h4 { margin: 1.6rem 0 0.3rem; font-family: system-ui, sans-serif; font-size: 1rem; }
 .snapshot .scroll { overflow-x: auto; } .snapshot .after { font-size: 0.92rem; margin: 0.7rem 0 0; }
+form.asksearch { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; margin-top: 1rem; font-family: system-ui, sans-serif; font-size: 0.9rem; }
+form.asksearch input[type=search] { font: inherit; font-size: 1.05rem; padding: 0.55rem 0.9rem; width: 34rem; max-width: 100%; border: 1px solid var(--tint); border-radius: 4px; }
+form.asksearch select { font: inherit; padding: 0.3rem; } form.asksearch .choice label { margin-left: 0.6rem; } form.asksearch label { white-space: nowrap; } form.asksearch .button { border: none; cursor: pointer; font-size: 0.95rem; }
+ol.results { padding-left: 1.6rem; } li.result { margin: 0 0 1.2rem; } li.result p { margin: 0.25rem 0; }
+li.result blockquote { margin: 0.2rem 0 0.3rem 0.8rem; font-style: italic; color: var(--ink); border-left: 3px solid var(--tint); padding-left: 0.7rem; }
+li.result .where { font-family: system-ui, sans-serif; font-size: 0.9rem; } li.result .tag { margin: 0 0.3rem 0 0; }
+li.result .found { font-family: system-ui, sans-serif; font-size: 0.8rem; color: var(--muted); }
 .snapshot tr.ours td { background: var(--mark); font-weight: 600; } .snapshot tr.ours td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 ol.stages li { margin: 0.5rem 0; } ul.links-out li { margin: 0.4rem 0; }
 footer { border-top: 1px solid var(--tint); margin-top: 3rem; padding: 1.2rem 0 2rem; color: var(--muted); font-size: 0.85rem; font-family: system-ui, sans-serif; }
