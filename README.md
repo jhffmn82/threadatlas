@@ -29,3 +29,9 @@ edited by hand. The texts are public-domain literature and CC BY papers, and eac
 | `wiki/` | the published wiki, built by the wiki notebook |
 | `threadatlas_memory/` | ThreadAtlas as a memory for one user at a time: `add`, `search` and `delete` |
 | `omnimemeval/` | ThreadAtlas's OmniMemEval runs on LoCoMo and LongMemEval: results, every record, the notebook |
+
+## License
+
+The code, the wiki's pages and every derived record are MIT ([LICENSE](LICENSE)). Quoted text keeps its source's
+license: public domain for the books, MIT for LongMemEval and GraphRAG-Bench, CC BY for the papers (each paper's wiki
+page carries its licence line), and CC BY-NC 4.0 for the LoCoMo text in `omnimemeval/`.
