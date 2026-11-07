@@ -1,0 +1,283 @@
+{
+    "lme_exper_user_smoke_2": {
+        "user_id": "lme_exper_user_smoke_2",
+        "category": "single-session-user",
+        "question": "Where did I redeem a $5 coupon on coffee creamer?",
+        "answer": "You redeemed the $5 coupon on coffee creamer at Target.",
+        "question_date": "2023/05/30 (Tue) 20:42",
+        "golden_answer": "Target",
+        "response_duration_ms": 736.9828224182129,
+        "search_duration_ms": 5889.566421508789,
+        "answer_evidences": [
+            "user : I actually redeemed a $5 coupon on coffee creamer last Sunday, which was a nice surprise since I didn't know I had it in my email inbox."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_18": {
+        "user_id": "lme_exper_user_smoke_18",
+        "category": "single-session-user",
+        "question": "How many shirts did I pack for my 5-day trip to Costa Rica?",
+        "answer": "You packed 7 shirts for your 5-day trip to Costa Rica.",
+        "question_date": "2023/05/30 (Tue) 14:18",
+        "golden_answer": "7",
+        "response_duration_ms": 920.6094741821289,
+        "search_duration_ms": 409.404993057251,
+        "answer_evidences": [
+            "user : That's really helpful! I've been trying to get better at packing, but I still tend to overpack. Like, on my last trip to Costa Rica, I brought 7 shirts and 5 pairs of shorts, but I only ended up wearing 3 of the shirts and 2 of the shorts. I guess I need to work on packing more essentials and fewer \"just in case\" items."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_13": {
+        "user_id": "lme_exper_user_smoke_13",
+        "category": "single-session-user",
+        "question": "Where did I attend for my study abroad program?",
+        "answer": "You attended your study abroad program at the University of Melbourne.",
+        "question_date": "2023/05/30 (Tue) 16:24",
+        "golden_answer": "University of Melbourne in Australia",
+        "response_duration_ms": 933.8016510009766,
+        "search_duration_ms": 607.9318523406982,
+        "answer_evidences": [
+            "user : That sounds amazing! I've been to the Great Ocean Road before, and it's definitely a must-see in Australia. I actually went there with some friends during my study abroad program at the University of Melbourne. We had a blast exploring the coast, hiking, and taking in the stunning views. If you have time, I'd recommend stopping by the Kennett River Koala Walk to spot some koalas in their natural habitat."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_16": {
+        "user_id": "lme_exper_user_smoke_16",
+        "category": "single-session-user",
+        "question": "What did I buy for my sister's birthday gift?",
+        "answer": "You bought your sister a yellow dress and a pair of earrings to match for her birthday.",
+        "question_date": "2023/05/30 (Tue) 17:09",
+        "golden_answer": "a yellow dress",
+        "response_duration_ms": 959.8054885864258,
+        "search_duration_ms": 431.0910701751709,
+        "answer_evidences": [
+            "user : For my sister's birthday, I got her a yellow dress and a pair of earrings to match."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_8": {
+        "user_id": "lme_exper_user_smoke_8",
+        "category": "single-session-user",
+        "question": "When did I volunteer at the local animal shelter's fundraising dinner?",
+        "answer": "You volunteered at the local animal shelter's fundraising dinner around Valentine's Day, which is February 14th.",
+        "question_date": "2023/04/02 (Sun) 23:49",
+        "golden_answer": "February 14th",
+        "response_duration_ms": 982.5263023376465,
+        "search_duration_ms": 480.61156272888184,
+        "answer_evidences": [
+            "user : I'm really looking forward to the silent auction and raffles at \"Strut Your Mutt\". I've had a great experience with similar events in the past, like the \"Love is in the Air\" fundraising dinner I volunteered at back on Valentine's Day. The energy and excitement of bidding on amazing prizes while supporting a good cause is just fantastic!"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_9": {
+        "user_id": "lme_exper_user_smoke_9",
+        "category": "single-session-user",
+        "question": "Where did I buy my new tennis racket from?",
+        "answer": "You bought your new tennis racket from a sports store downtown.",
+        "question_date": "2023/05/30 (Tue) 23:39",
+        "golden_answer": "the sports store downtown",
+        "response_duration_ms": 1011.6887092590332,
+        "search_duration_ms": 480.14259338378906,
+        "answer_evidences": [
+            "user : I'll definitely do those exercises before playing tennis. By the way, I'm really happy with my new tennis racket, which I got from a sports store downtown. It's been performing really well, and I feel like it's improved my game. Do you have any tips on how to maintain and clean my racket?"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_17": {
+        "user_id": "lme_exper_user_smoke_17",
+        "category": "single-session-user",
+        "question": "What speed is my new internet plan?",
+        "answer": "Your new internet plan speed is 500 Mbps, as you mentioned upgrading to 500 Mbps about three weeks ago.",
+        "question_date": "2023/05/30 (Tue) 21:56",
+        "golden_answer": "500 Mbps",
+        "response_duration_ms": 1024.4760513305664,
+        "search_duration_ms": 430.8202266693115,
+        "answer_evidences": [
+            "user : I did notice that my internet speed has been really good lately, especially when I'm streaming movies on Netflix. I upgraded to 500 Mbps about three weeks ago, and it's made a huge difference. Anyway, back to my battery issue... do you think it's possible that my laptop's battery is just old and needs to be replaced?"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_10": {
+        "user_id": "lme_exper_user_smoke_10",
+        "category": "single-session-user",
+        "question": "What was my previous occupation?",
+        "answer": "Your previous occupation was a marketing specialist at a small startup. This is confirmed by your statement on 2023-05-24T23:58 where you mentioned having used Trello in your previous role as a marketing specialist at a small startup.",
+        "question_date": "2023/05/30 (Tue) 20:08",
+        "golden_answer": "Marketing specialist at a small startup",
+        "response_duration_ms": 1089.144229888916,
+        "search_duration_ms": 503.51619720458984,
+        "answer_evidences": [
+            "user : I've used Trello in my previous role as a marketing specialist at a small startup and I'm familiar with its features. But I'm interested in exploring other options as well. Could you tell me more about ClickUp? How does it differ from Trello, and what are its strengths and weaknesses?"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_3": {
+        "user_id": "lme_exper_user_smoke_3",
+        "category": "single-session-user",
+        "question": "What play did I attend at the local community theater?",
+        "answer": "You attended a production of *The Glass Menagerie* at the local community theater.",
+        "question_date": "2023/05/30 (Tue) 22:53",
+        "golden_answer": "The Glass Menagerie",
+        "response_duration_ms": 1101.8035411834717,
+        "search_duration_ms": 5713.382005691528,
+        "answer_evidences": [
+            "user : I was thinking of getting Emily to audition for a role, I'll definitely encourage her to give it a shot. The play I attended was actually a production of The Glass Menagerie, have you heard of it?"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_19": {
+        "user_id": "lme_exper_user_smoke_19",
+        "category": "single-session-user",
+        "question": "What was my previous stance on spirituality?",
+        "answer": "Your previous stance on spirituality was that you were a staunch atheist. This is indicated in the memory from 2023-05-24T19:21 where you mentioned that you used to be a staunch atheist but have since been exploring other possibilities and reading a lot about Buddhism.",
+        "question_date": "2023/05/30 (Tue) 19:10",
+        "golden_answer": "A staunch atheist",
+        "response_duration_ms": 1059.929609298706,
+        "search_duration_ms": 398.4529972076416,
+        "answer_evidences": [
+            "user : I'm trying to find some books on synchronicity and its connection to spirituality. Can you recommend some titles or authors? By the way, I've been reading a lot about Buddhism lately, which is a big shift from my previous stance on spirituality - I used to be a staunch atheist, but I've been exploring other possibilities."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_12": {
+        "user_id": "lme_exper_user_smoke_12",
+        "category": "single-session-user",
+        "question": "How many playlists do I have on Spotify?",
+        "answer": "You have 20 playlists on Spotify.",
+        "question_date": "2023/05/30 (Tue) 18:45",
+        "golden_answer": "20",
+        "response_duration_ms": 639.784574508667,
+        "search_duration_ms": 601.8271446228027,
+        "answer_evidences": [
+            "user : I've been listening to a mix of Lo-Fi hip hop beats and Tameca Jones' album on repeat lately, and I realized I want to create a new playlist for relaxing music. Can you suggest some mellow artists or songs that might fit the vibe? Also, by the way, I have 20 playlists on Spotify already, and I'm looking to organize them better - do you have any tips on how to categorize them?"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_11": {
+        "user_id": "lme_exper_user_smoke_11",
+        "category": "single-session-user",
+        "question": "How much did I spend on a designer handbag?",
+        "answer": "You spent $800 on a designer handbag.",
+        "question_date": "2023/05/30 (Tue) 23:20",
+        "golden_answer": "$800",
+        "response_duration_ms": 665.7476425170898,
+        "search_duration_ms": 520.2779769897461,
+        "answer_evidences": [
+            "user : I think I'd like to start tracking my expenses. Can you recommend any good budgeting apps? I've been using my credit card a lot lately, and I'm pretty sure I spent a lot on luxury items last month. I remember buying a designer handbag for a pretty penny - $800, to be exact."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_14": {
+        "user_id": "lme_exper_user_smoke_14",
+        "category": "single-session-user",
+        "question": "What was the discount I got on my first purchase from the new clothing brand?",
+        "answer": "The discount you got on your first purchase from the new clothing brand was 10%.",
+        "question_date": "2023/05/30 (Tue) 23:15",
+        "golden_answer": "10%",
+        "response_duration_ms": 665.9872531890869,
+        "search_duration_ms": 602.182149887085,
+        "answer_evidences": [
+            "user : I'm also thinking of exploring other platforms like Instagram and Twitter to promote my writing services. Do you have any tips on how to get started with those platforms, especially since I don't have much experience with them? By the way, speaking of first purchases, I remember getting a 10% discount on my first purchase from that new clothing brand last month, which was nice."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_1": {
+        "user_id": "lme_exper_user_smoke_1",
+        "category": "single-session-user",
+        "question": "How long is my daily commute to work?",
+        "answer": "Your daily commute to work takes 45 minutes each way.",
+        "question_date": "2023/05/30 (Tue) 20:36",
+        "golden_answer": "45 minutes each way",
+        "response_duration_ms": 729.6614646911621,
+        "search_duration_ms": 5990.375757217407,
+        "answer_evidences": [
+            "user : I've been listening to audiobooks during my daily commute, which takes 45 minutes each way."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_5": {
+        "user_id": "lme_exper_user_smoke_5",
+        "category": "single-session-user",
+        "question": "What was my last name before I changed it?",
+        "answer": "Your last name before you changed it was Johnson.",
+        "question_date": "2023/05/30 (Tue) 22:36",
+        "golden_answer": "Johnson",
+        "response_duration_ms": 650.8135795593262,
+        "search_duration_ms": 459.5205783843994,
+        "answer_evidences": [
+            "user : I need to update my address with my health insurance provider. Can you walk me through the process or give me a phone number to call? By the way, I just recently changed my last name, and I'm still getting used to it - it's funny, my old name was Johnson, but now it's Winters."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_15": {
+        "user_id": "lme_exper_user_smoke_15",
+        "category": "single-session-user",
+        "question": "How long did it take me to assemble the IKEA bookshelf?",
+        "answer": "You mentioned that assembling the IKEA bookshelf took you 4 hours.",
+        "question_date": "2023/05/30 (Tue) 23:11",
+        "golden_answer": "4 hours",
+        "response_duration_ms": 721.4705944061279,
+        "search_duration_ms": 530.1942825317383,
+        "answer_evidences": [
+            "user : I've been leaning towards a wooden top, but now I'm considering the glass top option too. Do you think a glass top would be more prone to scratches or fingerprints compared to wood? Also, by the way, I just assembled an IKEA bookshelf recently and it took me 4 hours, which wasn't too bad."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_0": {
+        "user_id": "lme_exper_user_smoke_0",
+        "category": "single-session-user",
+        "question": "What degree did I graduate with?",
+        "answer": "You graduated with a degree in Business Administration.",
+        "question_date": "2023/05/30 (Tue) 23:40",
+        "golden_answer": "Business Administration",
+        "response_duration_ms": 749.4678497314453,
+        "search_duration_ms": 5594.20108795166,
+        "answer_evidences": [
+            "user : I graduated with a degree in Business Administration, which has definitely helped me in my new role. Do you have any advice on how to stay organized when it comes to paperwork and documentation, especially when it comes to tracking expenses and reimbursements?",
+            "assistant : Congratulations on your degree in Business Administration! That's a great foundation for your new role.\n\nStaying organized with paperwork and documentation is crucial, especially when it comes to tracking expenses and reimbursements. Here are some tips to help you stay on top of it:\n\n1. **Create a filing system**: Develop a consistent filing system, both physical and digital, to store and categorize your documents. This could include folders, binders, or digital files labeled by category (e.g., expenses, invoices, receipts, etc.).\n2. **Digitize your documents**: Scan or digitize paper documents to reduce clutter and make them easily searchable. Consider using cloud storage services like Google Drive, Dropbox, or OneDrive to access your files from anywhere.\n3. **Expense tracking tools**: Utilize expense tracking tools like Expensify, Concur, or Zoho Expense to streamline your expense reporting and reimbursement process. These tools often have mobile apps, making it easy to track expenses on-the-go.\n4. **Receipt organization**: Designate a specific place to store receipts, such as a receipt binder or a digital folder. Consider using a receipt scanning app like Shoeboxed or Neat to digitize your receipts.\n5. **Categorize and tag documents**: Use clear categories and tags to label your documents, making it easy to search and find specific files. For example, you could use tags like \"Q1 Expenses,\" \"Travel Reimbursements,\" or \"Project XYZ Invoices.\"\n6. **Set reminders**: Schedule regular reminders to review and submit expense reports, ensuring you don't miss deadlines or forget to file important documents.\n7. **Centralize your documentation**: Designate a central location, like a shared drive or intranet, to store company-wide documents, policies, and procedures. This ensures everyone has access to the same information.\n8. **Use templates**: Create templates for frequently used documents, such as expense reports or invoices, to save time and ensure consistency.\n9. **Verify and review**: Regularly verify the accuracy of your documents and review them for completeness. This helps prevent errors and ensures you're staying organized.\n10. **Stay up-to-date with company policies**: Familiarize yourself with your company's policies and procedures regarding documentation, expenses, and reimbursements. This will help you stay compliant and avoid any potential issues.\n\nBy implementing these strategies, you'll be well on your way to staying organized and efficient when it comes to paperwork and documentation, especially with tracking expenses and reimbursements.\n\nRemember to always follow your company's specific guidelines and policies, and don't hesitate to ask for help if you need it. Good luck!"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_7": {
+        "user_id": "lme_exper_user_smoke_7",
+        "category": "single-session-user",
+        "question": "What color did I repaint my bedroom walls?",
+        "answer": "You repainted your bedroom walls a lighter shade of gray.",
+        "question_date": "2023/05/30 (Tue) 22:42",
+        "golden_answer": "a lighter shade of gray",
+        "response_duration_ms": 730.6232452392578,
+        "search_duration_ms": 458.68825912475586,
+        "answer_evidences": [
+            "user : I've heard great things about Snake Plants, but I'm also curious about the ZZ Plant. Can you tell me more about its watering schedule and how often it needs to be fertilized? By the way, I've been doing some redecorating and recently repainted my bedroom walls a lighter shade of gray - it's made the room feel so much brighter!"
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_6": {
+        "user_id": "lme_exper_user_smoke_6",
+        "category": "single-session-user",
+        "question": "Where do I take yoga classes?",
+        "answer": "Based on the conversation memories dated 2023-05-30, you take yoga classes primarily at Serenity Yoga studio and also practice at home using the Down Dog app. You use Down Dog especially on days when you can't make it to Serenity Yoga.",
+        "question_date": "2023/05/30 (Tue) 21:04",
+        "golden_answer": "Serenity Yoga",
+        "response_duration_ms": 1002.1405220031738,
+        "search_duration_ms": 401.22032165527344,
+        "answer_evidences": [
+            "user : I've actually been using Down Dog for my home practice and I really like it. It's been super helpful for me, especially on days when I can't make it to Serenity Yoga."
+        ],
+        "status": "success"
+    },
+    "lme_exper_user_smoke_4": {
+        "user_id": "lme_exper_user_smoke_4",
+        "category": "single-session-user",
+        "question": "What is the name of the playlist I created on Spotify?",
+        "answer": "The name of the playlist you created on Spotify is \"Summer Vibes.\"",
+        "question_date": "2023/05/30 (Tue) 19:19",
+        "golden_answer": "Summer Vibes",
+        "response_duration_ms": 1332.3705196380615,
+        "search_duration_ms": 484.91907119750977,
+        "answer_evidences": [
+            "user : What's a good music streaming service that can help me discover new music and artists, especially in the ambient and lo-fi genres? Also, by the way, I've been listening to this one playlist on Spotify that I created, called Summer Vibes, and it's got all these chill tracks that are perfect for relaxing or working out."
+        ],
+        "status": "success"
+    }
+}

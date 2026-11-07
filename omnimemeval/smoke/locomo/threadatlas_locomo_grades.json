@@ -1,0 +1,350 @@
+{
+    "metrics": {
+        "llm_judge_score": 0.9276315789473685,
+        "llm_judge_std": 0.0,
+        "lexical": {
+            "f1": 0.29269179138427437,
+            "rouge1_f": 0.2986777631091493,
+            "rouge2_f": 0.1409365844524269,
+            "rougeL_f": 0.2706855701688565,
+            "bleu1": 0.1813288481136719,
+            "bleu2": 0.12104730496873613,
+            "bleu3": 0.08807595757890227,
+            "bleu4": 0.06373239838273662,
+            "meteor": 0.4119832560176646
+        },
+        "semantic": {
+            "bert_f1": null,
+            "similarity": null
+        },
+        "context_tokens": 6194.368421052632,
+        "duration": {
+            "search_duration_ms": 601.5959350686325,
+            "search_duration_ms_p50": 502.98750400543213,
+            "search_duration_ms_p95": 1834.6274018287656,
+            "add_duration_ms": 58054.0205263158,
+            "add_duration_ms_p50": 55564.61,
+            "add_duration_ms_p95": 95678.30249999999
+        }
+    },
+    "category_scores": {
+        "2": {
+            "category_name": "temporal reasoning",
+            "llm_judge_score": 0.9459459459459459,
+            "llm_judge_std": 0.0,
+            "total": 37,
+            "lexical": {
+                "f1": 0.29950391823665706,
+                "rouge1_f": 0.3324274042191461,
+                "rouge2_f": 0.11168829806333808,
+                "rougeL_f": 0.3056971546587482,
+                "bleu1": 0.18460139160205538,
+                "bleu2": 0.09758298646217371,
+                "bleu3": 0.06670461397172493,
+                "bleu4": 0.04150374794042991,
+                "meteor": 0.3850338925002383
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "duration": {
+                "search_duration_ms": 727.5143958426811,
+                "search_duration_ms_p50": 502.6378631591797,
+                "search_duration_ms_p95": 1940.8915042877197
+            },
+            "context_tokens": 6158.5675675675675
+        },
+        "3": {
+            "category_name": "open domain",
+            "llm_judge_score": 0.7692307692307693,
+            "llm_judge_std": 0.0,
+            "total": 13,
+            "lexical": {
+                "f1": 0.13399805968915038,
+                "rouge1_f": 0.11207085757550005,
+                "rouge2_f": 0.020917678812415654,
+                "rougeL_f": 0.09330293611947053,
+                "bleu1": 0.07685031613801607,
+                "bleu2": 0.03261221444314426,
+                "bleu3": 0.01720968735819855,
+                "bleu4": 0.010200612368475344,
+                "meteor": 0.16874379952939553
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "duration": {
+                "search_duration_ms": 606.2189982487605,
+                "search_duration_ms_p50": 502.5622844696045,
+                "search_duration_ms_p95": 1062.2934341430646
+            },
+            "context_tokens": 6054.2307692307695
+        },
+        "1": {
+            "category_name": "multi hop",
+            "llm_judge_score": 0.9375,
+            "llm_judge_std": 0.0,
+            "total": 32,
+            "lexical": {
+                "f1": 0.2126581687678436,
+                "rouge1_f": 0.19835053658716834,
+                "rouge2_f": 0.060083263114683254,
+                "rougeL_f": 0.165974438411251,
+                "bleu1": 0.12402724448949831,
+                "bleu2": 0.08115064034402886,
+                "bleu3": 0.04891333596541418,
+                "bleu4": 0.0312318091037431,
+                "meteor": 0.30462906756769303
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "duration": {
+                "search_duration_ms": 632.440023124218,
+                "search_duration_ms_p50": 501.36637687683105,
+                "search_duration_ms_p95": 1880.1970720291138
+            },
+            "context_tokens": 6364.25
+        },
+        "4": {
+            "category_name": "single hop",
+            "llm_judge_score": 0.9428571428571428,
+            "llm_judge_std": 0.0,
+            "total": 70,
+            "lexical": {
+                "f1": 0.3551495877017634,
+                "rouge1_f": 0.36135811024587705,
+                "rouge2_f": 0.21564713663134444,
+                "rougeL_f": 0.3329898820654195,
+                "bleu1": 0.22519724986491313,
+                "bleu2": 0.16811200824825231,
+                "bleu3": 0.13043603069270698,
+                "bleu4": 0.10028085754671572,
+                "meteor": 0.5204771619446841
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "duration": {
+                "search_duration_ms": 520.0803109577724,
+                "search_duration_ms_p50": 519.8602676391602,
+                "search_duration_ms_p95": 603.0395269393921
+            },
+            "context_tokens": 6161.657142857143
+        }
+    },
+    "user_scores": {
+        "locomo_exp_user_0": {
+            "total": 152,
+            "llm_judge_score": 0.9276315789473685,
+            "llm_judge_std": 0.0,
+            "judgment_run_scores": {
+                "judgment_1": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1
+                ]
+            },
+            "lexical": {
+                "f1": 0.29269179138427437,
+                "rouge1_f": 0.2986777631091493,
+                "rouge2_f": 0.1409365844524269,
+                "rougeL_f": 0.2706855701688565,
+                "bleu1": 0.1813288481136719,
+                "bleu2": 0.12104730496873613,
+                "bleu3": 0.08807595757890227,
+                "bleu4": 0.06373239838273662,
+                "meteor": 0.4119832560176646
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 6194.368421052632,
+            "duration": {
+                "search_duration_ms": 601.5959350686325,
+                "search_duration_ms_p50": 502.98750400543213,
+                "search_duration_ms_p95": 1834.6274018287656
+            }
+        }
+    },
+    "pipeline_status": {
+        "search": {
+            "status_counts": {
+                "success": 152
+            },
+            "failed_units": 0,
+            "failed_groups": 0,
+            "skipped_records": 0
+        },
+        "answer": {
+            "status_counts": {
+                "success": 152
+            },
+            "failed_units": 0,
+            "failed_groups": 0,
+            "skipped_records": 0
+        },
+        "eval": {
+            "status_counts": {
+                "success": 152
+            },
+            "failed_units": 0,
+            "failed_groups": 0,
+            "skipped_records": 0
+        }
+    }
+}

@@ -44,6 +44,7 @@ LLM-as-judge accuracy with the harness's own answer and judge models, one run ea
 | Retrieval | `top_k` 20: the packet's header and up to 19 records; 40 hits from each of vector and keyword search, fused by rank; two hops through the graph; a cap of 100,000 tokens |
 | Workers | LoCoMo 10, LongMemEval 4; `LLM_WORKERS` 10; one run each (`NUM_RUNS` 1) |
 | Machine | Kaggle CPU notebook [`jhffmn/threadatlas-omnimemeval`](https://www.kaggle.com/code/jhffmn/threadatlas-omnimemeval) |
+| Environment | Python and every installed package with its version, as the notebook installs them: [`run/environment.txt`](run/environment.txt), recorded by the smoke run below. The scored runs installed the same requirements, unpinned, the day before; their own versions were not recorded |
 
 **How a session gets into memory.** Each `add()` is one session. ThreadAtlas reads it into dated facts, each tied to
 the words of the turn it came from, and writes it into that user's own store with its 256-token chunks of text, its
@@ -80,12 +81,19 @@ Each full run of the harness on ThreadAtlas, in order. The scores above are the 
 | 2026-11-07 | LongMemEval | 8 | each thread opens its own connection | 87.40 |
 | 2026-11-07 | LoCoMo | 10 | sessions read with `gpt-4.1-mini-2025-04-14` | 88.44 |
 
+## Smoke run
+
+On 2026-11-07 (notebook version 14, kit version 5, `gpt-5.6-luna`) the notebook ran the smoke commands of the
+adapter's guide as written, [`smoke/smoke.sh`](smoke/smoke.sh): the first 20 LongMemEval users and the first LoCoMo
+conversation through every step. Every record finished: LongMemEval 20 of 20 judged right, LoCoMo 141 of 152
+(92.76). Its records are in [`smoke/`](smoke/).
+
 ## Reproducing a run
 
 On Kaggle, the notebook in [`run/`](run/) does every step; attach the datasets it names and an `OPENAI_API_KEY` secret.
 Its first cell picks the run: `BENCHMARKS`, `LABEL` and `READ_MODEL`. Version 6 ran `["lme", "locomo"]` and version 8
-`["lme"]`, both with the label `ta021` and the default reading model; version 10, the copy here, ran `["locomo"]` with
-the label `ta021-41mini` and `gpt-4.1-mini-2025-04-14`.
+`["lme"]`, both with the label `ta021` and the default reading model; version 10 ran `["locomo"]` with the label
+`ta021-41mini` and `gpt-4.1-mini-2025-04-14`; version 14, the copy here, is the smoke run.
 On any machine:
 
 ```bash
@@ -124,6 +132,8 @@ is licensed MIT.
 | `results/locomo/threadatlas-ta021-full/` | the LoCoMo run with `gpt-5.6-luna` reading: search results, responses, judged answers, grades, status files, token usage, report |
 | `results/locomo/threadatlas-ta021-41mini-full/` | the LoCoMo run with `gpt-4.1-mini-2025-04-14` reading, the same files |
 | `results/lme/threadatlas-ta021-full/` | the LongMemEval run, the same files |
+| `smoke/` | the smoke run: its commands, and the LongMemEval and LoCoMo records |
 | `run/threadatlas-omnimemeval.ipynb` | the Kaggle notebook |
+| `run/environment.txt` | Python and the installed packages with their versions |
 | `run/snapshot.env` | the harness settings of versions 6 and 8, without keys; version 10's adds `THREADATLAS_READ_MODEL` |
-| `SHA256SUMS` | a checksum for every file in `results/` and `run/` |
+| `SHA256SUMS` | a checksum for every file in `results/`, `smoke/` and `run/` |

@@ -1,0 +1,582 @@
+{
+    "lme_exper_user_smoke_14": {
+        "user_id": "lme_exper_user_smoke_14",
+        "category": "single-session-user",
+        "question": "What was the discount I got on my first purchase from the new clothing brand?",
+        "question_date": "2023/05/30 (Tue) 23:15",
+        "golden_answer": "10%",
+        "answer": "The discount you got on your first purchase from the new clothing brand was 10%.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3950,
+            "lexical": {
+                "f1": 0.2222222222222222,
+                "rouge1_f": 0.125,
+                "rouge2_f": 0.0,
+                "rougeL_f": 0.125,
+                "bleu1": 0.11764705882352941,
+                "bleu2": 0.08574929257125444,
+                "bleu3": 0.03782875469444492,
+                "bleu4": 0.02432542569851428,
+                "meteor": 0.5357142857142857
+            }
+        },
+        "response_duration_ms": 665.9872531890869,
+        "search_duration_ms": 602.182149887085,
+        "total_duration_ms": 1268.1694030761719,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_9": {
+        "user_id": "lme_exper_user_smoke_9",
+        "category": "single-session-user",
+        "question": "Where did I buy my new tennis racket from?",
+        "question_date": "2023/05/30 (Tue) 23:39",
+        "golden_answer": "the sports store downtown",
+        "answer": "You bought your new tennis racket from a sports store downtown.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4098,
+            "lexical": {
+                "f1": 0.375,
+                "rouge1_f": 0.39999999999999997,
+                "rouge2_f": 0.30769230769230765,
+                "rougeL_f": 0.39999999999999997,
+                "bleu1": 0.25,
+                "bleu2": 0.21320071635561041,
+                "bleu3": 0.16865550266337087,
+                "bleu4": 0.08430118946484098,
+                "meteor": 0.6134259259259259
+            }
+        },
+        "response_duration_ms": 1011.6887092590332,
+        "search_duration_ms": 480.14259338378906,
+        "total_duration_ms": 1491.8313026428223,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_15": {
+        "user_id": "lme_exper_user_smoke_15",
+        "category": "single-session-user",
+        "question": "How long did it take me to assemble the IKEA bookshelf?",
+        "question_date": "2023/05/30 (Tue) 23:11",
+        "golden_answer": "4 hours",
+        "answer": "You mentioned that assembling the IKEA bookshelf took you 4 hours.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 5024,
+            "lexical": {
+                "f1": 0.3076923076923077,
+                "rouge1_f": 0.3076923076923077,
+                "rouge2_f": 0.18181818181818182,
+                "rougeL_f": 0.3076923076923077,
+                "bleu1": 0.16666666666666669,
+                "bleu2": 0.12309149097933275,
+                "bleu3": 0.054897238831218345,
+                "bleu4": 0.03602080288207364,
+                "meteor": 0.6250000000000001
+            }
+        },
+        "response_duration_ms": 721.4705944061279,
+        "search_duration_ms": 530.1942825317383,
+        "total_duration_ms": 1251.6648769378662,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_1": {
+        "user_id": "lme_exper_user_smoke_1",
+        "category": "single-session-user",
+        "question": "How long is my daily commute to work?",
+        "question_date": "2023/05/30 (Tue) 20:36",
+        "golden_answer": "45 minutes each way",
+        "answer": "Your daily commute to work takes 45 minutes each way.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 5121,
+            "lexical": {
+                "f1": 0.5333333333333333,
+                "rouge1_f": 0.5714285714285715,
+                "rouge2_f": 0.5,
+                "rougeL_f": 0.5714285714285715,
+                "bleu1": 0.36363636363636365,
+                "bleu2": 0.33028912953790823,
+                "bleu3": 0.293028657606374,
+                "bleu4": 0.23462350320528,
+                "meteor": 0.8444148936170214
+            }
+        },
+        "response_duration_ms": 729.6614646911621,
+        "search_duration_ms": 5990.375757217407,
+        "total_duration_ms": 6720.037221908569,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_16": {
+        "user_id": "lme_exper_user_smoke_16",
+        "category": "single-session-user",
+        "question": "What did I buy for my sister's birthday gift?",
+        "question_date": "2023/05/30 (Tue) 17:09",
+        "golden_answer": "a yellow dress",
+        "answer": "You bought your sister a yellow dress and a pair of earrings to match for her birthday.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3235,
+            "lexical": {
+                "f1": 0.3,
+                "rouge1_f": 0.3,
+                "rouge2_f": 0.2222222222222222,
+                "rougeL_f": 0.3,
+                "bleu1": 0.16666666666666669,
+                "bleu2": 0.140028008402801,
+                "bleu3": 0.10943147363956583,
+                "bleu4": 0.053463162573637084,
+                "meteor": 0.5679012345679013
+            }
+        },
+        "response_duration_ms": 959.8054885864258,
+        "search_duration_ms": 431.0910701751709,
+        "total_duration_ms": 1390.8965587615967,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_18": {
+        "user_id": "lme_exper_user_smoke_18",
+        "category": "single-session-user",
+        "question": "How many shirts did I pack for my 5-day trip to Costa Rica?",
+        "question_date": "2023/05/30 (Tue) 14:18",
+        "golden_answer": "7",
+        "answer": "You packed 7 shirts for your 5-day trip to Costa Rica.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3912,
+            "lexical": {
+                "f1": 0.15384615384615385,
+                "rouge1_f": 0.15384615384615385,
+                "rouge2_f": 0.0,
+                "rougeL_f": 0.15384615384615385,
+                "bleu1": 0.08333333333333333,
+                "bleu2": 0.027524094128159027,
+                "bleu3": 0.020427282860665447,
+                "bleu4": 0.017033186037639283,
+                "meteor": 0.2380952380952381
+            }
+        },
+        "response_duration_ms": 920.6094741821289,
+        "search_duration_ms": 409.404993057251,
+        "total_duration_ms": 1330.0144672393799,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_11": {
+        "user_id": "lme_exper_user_smoke_11",
+        "category": "single-session-user",
+        "question": "How much did I spend on a designer handbag?",
+        "question_date": "2023/05/30 (Tue) 23:20",
+        "golden_answer": "$800",
+        "answer": "You spent $800 on a designer handbag.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4768,
+            "lexical": {
+                "f1": 0.3636363636363636,
+                "rouge1_f": 0.25,
+                "rouge2_f": 0.0,
+                "rougeL_f": 0.25,
+                "bleu1": 0.2222222222222222,
+                "bleu2": 0.16666666666666669,
+                "bleu3": 0.07542890820012248,
+                "bleu4": 0.050712153369465586,
+                "meteor": 0.6944444444444445
+            }
+        },
+        "response_duration_ms": 665.7476425170898,
+        "search_duration_ms": 520.2779769897461,
+        "total_duration_ms": 1186.025619506836,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_13": {
+        "user_id": "lme_exper_user_smoke_13",
+        "category": "single-session-user",
+        "question": "Where did I attend for my study abroad program?",
+        "question_date": "2023/05/30 (Tue) 16:24",
+        "golden_answer": "University of Melbourne in Australia",
+        "answer": "You attended your study abroad program at the University of Melbourne.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3927,
+            "lexical": {
+                "f1": 0.35294117647058826,
+                "rouge1_f": 0.37499999999999994,
+                "rouge2_f": 0.28571428571428575,
+                "rougeL_f": 0.37499999999999994,
+                "bleu1": 0.25,
+                "bleu2": 0.21320071635561041,
+                "bleu3": 0.16865550266337087,
+                "bleu4": 0.08430118946484098,
+                "meteor": 0.5165692007797271
+            }
+        },
+        "response_duration_ms": 933.8016510009766,
+        "search_duration_ms": 607.9318523406982,
+        "total_duration_ms": 1541.7335033416748,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_8": {
+        "user_id": "lme_exper_user_smoke_8",
+        "category": "single-session-user",
+        "question": "When did I volunteer at the local animal shelter's fundraising dinner?",
+        "question_date": "2023/04/02 (Sun) 23:49",
+        "golden_answer": "February 14th",
+        "answer": "You volunteered at the local animal shelter's fundraising dinner around Valentine's Day, which is February 14th.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4651,
+            "lexical": {
+                "f1": 0.1904761904761905,
+                "rouge1_f": 0.19999999999999998,
+                "rouge2_f": 0.1111111111111111,
+                "rougeL_f": 0.19999999999999998,
+                "bleu1": 0.10000000000000002,
+                "bleu2": 0.07254762501100116,
+                "bleu3": 0.0318985825417419,
+                "bleu4": 0.020364851292391,
+                "meteor": 0.4934210526315789
+            }
+        },
+        "response_duration_ms": 982.5263023376465,
+        "search_duration_ms": 480.61156272888184,
+        "total_duration_ms": 1463.1378650665283,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_5": {
+        "user_id": "lme_exper_user_smoke_5",
+        "category": "single-session-user",
+        "question": "What was my last name before I changed it?",
+        "question_date": "2023/05/30 (Tue) 22:36",
+        "golden_answer": "Johnson",
+        "answer": "Your last name before you changed it was Johnson.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4108,
+            "lexical": {
+                "f1": 0.18181818181818182,
+                "rouge1_f": 0.19999999999999998,
+                "rouge2_f": 0.0,
+                "rougeL_f": 0.19999999999999998,
+                "bleu1": 0.10000000000000002,
+                "bleu2": 0.03333333333333335,
+                "bleu3": 0.024950558772614845,
+                "bleu4": 0.021105340631872645,
+                "meteor": 0.2631578947368421
+            }
+        },
+        "response_duration_ms": 650.8135795593262,
+        "search_duration_ms": 459.5205783843994,
+        "total_duration_ms": 1110.3341579437256,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_17": {
+        "user_id": "lme_exper_user_smoke_17",
+        "category": "single-session-user",
+        "question": "What speed is my new internet plan?",
+        "question_date": "2023/05/30 (Tue) 21:56",
+        "golden_answer": "500 Mbps",
+        "answer": "Your new internet plan speed is 500 Mbps, as you mentioned upgrading to 500 Mbps about three weeks ago.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 5808,
+            "lexical": {
+                "f1": 0.1904761904761905,
+                "rouge1_f": 0.1904761904761905,
+                "rouge2_f": 0.10526315789473684,
+                "rougeL_f": 0.1904761904761905,
+                "bleu1": 0.09523809523809525,
+                "bleu2": 0.06900655593423542,
+                "bleu3": 0.030316491853278917,
+                "bleu4": 0.019316954186233335,
+                "meteor": 0.48076923076923084
+            }
+        },
+        "response_duration_ms": 1024.4760513305664,
+        "search_duration_ms": 430.8202266693115,
+        "total_duration_ms": 1455.296277999878,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_2": {
+        "user_id": "lme_exper_user_smoke_2",
+        "category": "single-session-user",
+        "question": "Where did I redeem a $5 coupon on coffee creamer?",
+        "question_date": "2023/05/30 (Tue) 20:42",
+        "golden_answer": "Target",
+        "answer": "You redeemed the $5 coupon on coffee creamer at Target.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4719,
+            "lexical": {
+                "f1": 0.15384615384615385,
+                "rouge1_f": 0.18181818181818182,
+                "rouge2_f": 0.0,
+                "rougeL_f": 0.18181818181818182,
+                "bleu1": 0.08333333333333333,
+                "bleu2": 0.027524094128159027,
+                "bleu3": 0.020427282860665447,
+                "bleu4": 0.017033186037639283,
+                "meteor": 0.2380952380952381
+            }
+        },
+        "response_duration_ms": 736.9828224182129,
+        "search_duration_ms": 5889.566421508789,
+        "total_duration_ms": 6626.549243927002,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_7": {
+        "user_id": "lme_exper_user_smoke_7",
+        "category": "single-session-user",
+        "question": "What color did I repaint my bedroom walls?",
+        "question_date": "2023/05/30 (Tue) 22:42",
+        "golden_answer": "a lighter shade of gray",
+        "answer": "You repainted your bedroom walls a lighter shade of gray.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 5038,
+            "lexical": {
+                "f1": 0.625,
+                "rouge1_f": 0.6666666666666666,
+                "rouge2_f": 0.6153846153846153,
+                "rougeL_f": 0.6666666666666666,
+                "bleu1": 0.45454545454545453,
+                "bleu2": 0.4264014327112209,
+                "bleu3": 0.3964882289652318,
+                "bleu4": 0.3508439695638686,
+                "meteor": 0.8892857142857143
+            }
+        },
+        "response_duration_ms": 730.6232452392578,
+        "search_duration_ms": 458.68825912475586,
+        "total_duration_ms": 1189.3115043640137,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_12": {
+        "user_id": "lme_exper_user_smoke_12",
+        "category": "single-session-user",
+        "question": "How many playlists do I have on Spotify?",
+        "question_date": "2023/05/30 (Tue) 18:45",
+        "golden_answer": "20",
+        "answer": "You have 20 playlists on Spotify.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4620,
+            "lexical": {
+                "f1": 0.25,
+                "rouge1_f": 0.2857142857142857,
+                "rouge2_f": 0.0,
+                "rougeL_f": 0.2857142857142857,
+                "bleu1": 0.14285714285714285,
+                "bleu2": 0.048795003647426664,
+                "bleu3": 0.037468614372419724,
+                "bleu4": 0.033031643180138064,
+                "meteor": 0.31250000000000006
+            }
+        },
+        "response_duration_ms": 639.784574508667,
+        "search_duration_ms": 601.8271446228027,
+        "total_duration_ms": 1241.6117191314697,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_0": {
+        "user_id": "lme_exper_user_smoke_0",
+        "category": "single-session-user",
+        "question": "What degree did I graduate with?",
+        "question_date": "2023/05/30 (Tue) 23:40",
+        "golden_answer": "Business Administration",
+        "answer": "You graduated with a degree in Business Administration.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 5042,
+            "lexical": {
+                "f1": 0.3636363636363636,
+                "rouge1_f": 0.4,
+                "rouge2_f": 0.25,
+                "rougeL_f": 0.4,
+                "bleu1": 0.2222222222222222,
+                "bleu2": 0.16666666666666669,
+                "bleu3": 0.07542890820012248,
+                "bleu4": 0.050712153369465586,
+                "meteor": 0.6944444444444445
+            }
+        },
+        "response_duration_ms": 749.4678497314453,
+        "search_duration_ms": 5594.20108795166,
+        "total_duration_ms": 6343.6689376831055,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_3": {
+        "user_id": "lme_exper_user_smoke_3",
+        "category": "single-session-user",
+        "question": "What play did I attend at the local community theater?",
+        "question_date": "2023/05/30 (Tue) 22:53",
+        "golden_answer": "The Glass Menagerie",
+        "answer": "You attended a production of *The Glass Menagerie* at the local community theater.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 2904,
+            "lexical": {
+                "f1": 0.35294117647058826,
+                "rouge1_f": 0.375,
+                "rouge2_f": 0.2857142857142857,
+                "rougeL_f": 0.375,
+                "bleu1": 0.1875,
+                "bleu2": 0.15811388300841897,
+                "bleu3": 0.12390760171084929,
+                "bleu4": 0.06087895024805787,
+                "meteor": 0.5943152454780362
+            }
+        },
+        "response_duration_ms": 1101.8035411834717,
+        "search_duration_ms": 5713.382005691528,
+        "total_duration_ms": 6815.185546875,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_4": {
+        "user_id": "lme_exper_user_smoke_4",
+        "category": "single-session-user",
+        "question": "What is the name of the playlist I created on Spotify?",
+        "question_date": "2023/05/30 (Tue) 19:19",
+        "golden_answer": "Summer Vibes",
+        "answer": "The name of the playlist you created on Spotify is \"Summer Vibes.\"",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3813,
+            "lexical": {
+                "f1": 0.25,
+                "rouge1_f": 0.2857142857142857,
+                "rouge2_f": 0.16666666666666669,
+                "rougeL_f": 0.2857142857142857,
+                "bleu1": 0.13333333333333333,
+                "bleu2": 0.09759000729485329,
+                "bleu3": 0.043192289467872375,
+                "bleu4": 0.027952555963587523,
+                "meteor": 0.5681818181818182
+            }
+        },
+        "response_duration_ms": 1332.3705196380615,
+        "search_duration_ms": 484.91907119750977,
+        "total_duration_ms": 1817.2895908355713,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_10": {
+        "user_id": "lme_exper_user_smoke_10",
+        "category": "single-session-user",
+        "question": "What was my previous occupation?",
+        "question_date": "2023/05/30 (Tue) 20:08",
+        "golden_answer": "Marketing specialist at a small startup",
+        "answer": "Your previous occupation was a marketing specialist at a small startup. This is confirmed by your statement on 2023-05-24T23:58 where you mentioned having used Trello in your previous role as a marketing specialist at a small startup.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3948,
+            "lexical": {
+                "f1": 0.3636363636363636,
+                "rouge1_f": 0.2608695652173913,
+                "rouge2_f": 0.22727272727272727,
+                "rougeL_f": 0.2608695652173913,
+                "bleu1": 0.15384615384615385,
+                "bleu2": 0.14227759830611802,
+                "bleu3": 0.13250837712267735,
+                "bleu4": 0.11620839902894889,
+                "meteor": 0.643667861409797
+            }
+        },
+        "response_duration_ms": 1089.144229888916,
+        "search_duration_ms": 503.51619720458984,
+        "total_duration_ms": 1592.6604270935059,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_19": {
+        "user_id": "lme_exper_user_smoke_19",
+        "category": "single-session-user",
+        "question": "What was my previous stance on spirituality?",
+        "question_date": "2023/05/30 (Tue) 19:10",
+        "golden_answer": "A staunch atheist",
+        "answer": "Your previous stance on spirituality was that you were a staunch atheist. This is indicated in the memory from 2023-05-24T19:21 where you mentioned that you used to be a staunch atheist but have since been exploring other possibilities and reading a lot about Buddhism.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 4885,
+            "lexical": {
+                "f1": 0.14634146341463414,
+                "rouge1_f": 0.12,
+                "rouge2_f": 0.08333333333333333,
+                "rougeL_f": 0.12,
+                "bleu1": 0.06521739130434781,
+                "bleu2": 0.05383819020581654,
+                "bleu3": 0.041704250003841474,
+                "bleu4": 0.019784038259398888,
+                "meteor": 0.3500761035007611
+            }
+        },
+        "response_duration_ms": 1059.929609298706,
+        "search_duration_ms": 398.4529972076416,
+        "total_duration_ms": 1458.3826065063477,
+        "status": "success"
+    },
+    "lme_exper_user_smoke_6": {
+        "user_id": "lme_exper_user_smoke_6",
+        "category": "single-session-user",
+        "question": "Where do I take yoga classes?",
+        "question_date": "2023/05/30 (Tue) 21:04",
+        "golden_answer": "Serenity Yoga",
+        "answer": "Based on the conversation memories dated 2023-05-30, you take yoga classes primarily at Serenity Yoga studio and also practice at home using the Down Dog app. You use Down Dog especially on days when you can't make it to Serenity Yoga.",
+        "llm_judgments": {
+            "judgment_1": true
+        },
+        "nlp_metrics": {
+            "context_tokens": 3272,
+            "lexical": {
+                "f1": 0.1111111111111111,
+                "rouge1_f": 0.08695652173913045,
+                "rouge2_f": 0.04545454545454545,
+                "rougeL_f": 0.08695652173913045,
+                "bleu1": 0.04444444444444445,
+                "bleu2": 0.03178208630818641,
+                "bleu3": 0.013880202285875195,
+                "bleu4": 0.008647922020227043,
+                "meteor": 0.29761904761904767
+            }
+        },
+        "response_duration_ms": 1002.1405220031738,
+        "search_duration_ms": 401.22032165527344,
+        "total_duration_ms": 1403.3608436584473,
+        "status": "success"
+    }
+}
