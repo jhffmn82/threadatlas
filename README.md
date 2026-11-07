@@ -18,14 +18,22 @@ edited by hand. The texts are public-domain literature and CC BY papers, and eac
 
 ## Data and notebooks
 
-- [Step 0 dataset](https://www.kaggle.com/datasets/jhffmn/it494-threadatlas-step0): the documents' text and units
-- [Step 1 dataset](https://www.kaggle.com/datasets/jhffmn/it494-threadatlas-step1): entities, facts, cells and abstracts per document
-- [Global layer notebook](https://www.kaggle.com/code/jhffmn/threadatlas-global-layer): the parents, collections and vectors
+Each stage is a Kaggle notebook; the copies in [`development_code/`](development_code/) are the versions that made the published
+outputs.
+
+| stage | notebook | output |
+|---|---|---|
+| Step 0, extraction: documents to text and units | [`threadatlas-extractor`](development_code/threadatlas-extractor.ipynb) ([Kaggle](https://www.kaggle.com/code/jhffmn/threadatlas-extractor)) | [Step 0 dataset](https://www.kaggle.com/datasets/jhffmn/it494-threadatlas-step0) |
+| Step 1, reading: entities, facts with their quotes, cells, abstracts | [`threadatlas-document-ingestor`](development_code/threadatlas-document-ingestor.ipynb) ([Kaggle](https://www.kaggle.com/code/jhffmn/threadatlas-document-ingestor)) | [Step 1 dataset](https://www.kaggle.com/datasets/jhffmn/it494-threadatlas-step1) |
+| Global layer: one graph over every document, its parents, chunks and vectors | [`threadatlas-global-layer`](development_code/threadatlas-global-layer.ipynb) ([Kaggle](https://www.kaggle.com/code/jhffmn/threadatlas-global-layer)) | [store](https://www.kaggle.com/datasets/jhffmn/threadatlas-global-chunks) |
+| GraphRAG-Bench Medical: the same pipeline over the Medical corpus | [`threadatlas-medical`](development_code/threadatlas-medical.ipynb) ([Kaggle](https://www.kaggle.com/code/jhffmn/threadatlas-medical)) | [store](https://www.kaggle.com/datasets/jhffmn/threadatlas-medical-chunks) |
+| Retrieval, and the GraphRAG-Bench submission run | [`threadatlas-graphrag-submission`](development_code/threadatlas-graphrag-submission.ipynb) ([Kaggle](https://www.kaggle.com/code/jhffmn/threadatlas-graphrag-submission)) | [answers, evaluator output, board rows](https://www.kaggle.com/code/jhffmn/threadatlas-graphrag-submission/output) |
 
 ## Layout
 
 | folder | what it holds |
 |---|---|
+| `development_code/` | the pipeline's Kaggle notebooks, from extraction to the GraphRAG-Bench submission |
 | `wiki/` | the published wiki, built by the wiki notebook |
 | `threadatlas_memory/` | ThreadAtlas as a memory for one user at a time: `add`, `search` and `delete` |
 | `omnimemeval/` | ThreadAtlas's OmniMemEval runs on LoCoMo and LongMemEval: results, every record, the notebook |
