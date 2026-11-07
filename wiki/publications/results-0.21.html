@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Retrieval 0.21: every result, with commentary &middot; ThreadAtlas</title>
+<link rel="stylesheet" href="../assets/wiki.css"></head>
+<body data-up="../">
+<nav class="top"><div class="inner"><a class="brand" href="../index.html">ThreadAtlas</a>
+<a href="../index.html#about">About</a><a href="../index.html#collections">Collections</a><a href="../index.html#results">Results</a><a href="../index.html#how">How it works</a><a href="../search.html">Search the store</a>
+<form class="search" action="../search.html"><input type="search" name="q" placeholder="Search the store" aria-label="Search the store"></form></div></nav>
+<header><div class="inner"><div class="crumb"><a href="../index.html#results">Results</a></div><h1>Retrieval 0.21: every result, with commentary</h1></div></header>
+<div class="wrap"><main class="full"><div class="snapshot publication">
+<p>All results of <code>threadatlas-retrieval 0.21</code> (the Kaggle notebooks below)
+on the 0.7 store, which holds chunks as records, and the OmniMemEval entry of <code>threadatlas_memory</code> at the
+same version. The paper's results part cites this file for every number it does not print. Collected
+2026-11-07.</p>
+<h2>Where each number comes from</h2>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Kaggle notebook</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LongMemEval <code>_s</code>, filtered and whole store</td>
+<td><code>jhffmn/threadatlas-retrieval-memory</code>, version 10</td>
+<td><code>results.json</code>, <code>memory</code></td>
+</tr>
+<tr>
+<td>GraphRAG-Bench Novel, own set</td>
+<td><code>jhffmn/threadatlas-novels-filtered</code></td>
+<td><code>results.json</code>, <code>graphrag_bench.novels</code></td>
+</tr>
+<tr>
+<td>GraphRAG-Bench Novel, whole store</td>
+<td><code>jhffmn/threadatlas-novels-unfiltered</code></td>
+<td><code>results.json</code>, <code>graphrag_bench.novels</code></td>
+</tr>
+<tr>
+<td>GraphRAG-Bench Medical, own set</td>
+<td><code>jhffmn/threadatlas-medical-chunks-run</code></td>
+<td><code>results.json</code>, <code>graphrag_bench.medical</code></td>
+</tr>
+<tr>
+<td>OmniMemEval LoCoMo and LongMemEval</td>
+<td>ThreadAtlas's rows for the board's <code>docs/user_memory/results.md</code></td>
+<td>every record the harness wrote: github.com/jhffmn82/threadatlas, <code>omnimemeval/</code></td>
+</tr>
+</tbody>
+</table>
+<p>Every run used reader <code>gpt-4o-mini-2024-07-18</code> at temperature 0, except OmniMemEval, which fixes reader
+<code>gpt-4.1-mini-2025-04-14</code> and judge <code>gpt-4o-mini-2024-07-18</code>. LongMemEval's judge is <code>gpt-4o-2024-08-06</code>.
+GraphRAG-Bench is scored by its own evaluator at commit <code>fdbab59</code>, unchanged, with <code>gpt-4o-mini</code> and
+<code>bge-large-en-v1.5</code>.</p>
+<h2>The arms</h2>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th>What the reader gets</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG (<code>flat-</code> on LongMemEval, <code>plain-rag-</code> on GraphRAG-Bench)</td>
+<td>raw text by vector search, packed to the budget: turns on LongMemEval, 256-token chunks of the source on GraphRAG-Bench</td>
+</tr>
+<tr>
+<td>plain RAG, top 5 (<code>plain-rag</code>)</td>
+<td>the benchmark's own five chunks</td>
+</tr>
+<tr>
+<td>chunks through hybrid search (<code>chunks-hybrid-</code>)</td>
+<td>the store's chunks only, found by ThreadAtlas's fused keyword and vector search; no fact, cell, abstract or parent; no walk</td>
+</tr>
+<tr>
+<td>graph and chunks, hop 0, 1, 2 (<code>hop&lt;n&gt;-</code>)</td>
+<td>ThreadAtlas 0.21: facts, cells, abstracts, parents and chunks, found by the same fused search, then a walk of 0, 1 or 2 hops, packed as whole bundles</td>
+</tr>
+<tr>
+<td>full context</td>
+<td>LongMemEval only: the question's whole history</td>
+</tr>
+<tr>
+<td>no context</td>
+<td>GraphRAG-Bench only: the question alone</td>
+</tr>
+</tbody>
+</table>
+<p>Budgets are 2,000 and 12,000 tokens. "Filtered" searches each question's own history (LongMemEval) or its
+own set's documents (GraphRAG-Bench). "Whole store" searches all 24,071 documents: chats, books and
+papers together. Medical has no whole-store run.</p>
+<p>Plain RAG to chunks through hybrid search isolates the search. Chunks through hybrid search to graph and
+chunks isolates the graph.</p>
+<h2>LongMemEval</h2>
+<p>500 questions; accuracy with its standard error; won, lost and p are paired per question against plain
+RAG at the same budget and filter (McNemar).</p>
+<h3>Filtered: each question's own history</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">Accuracy</th>
+<th style="text-align: right;">se</th>
+<th style="text-align: right;">Tokens</th>
+<th style="text-align: right;">Won</th>
+<th style="text-align: right;">Lost</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG, 2,000</td>
+<td style="text-align: right;">70.4</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">1,992</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>chunks, hybrid, 2,000</td>
+<td style="text-align: right;">61.6</td>
+<td style="text-align: right;">2.18</td>
+<td style="text-align: right;">1,958</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">&lt; 0.001</td>
+</tr>
+<tr>
+<td>graph hop 0, 2,000</td>
+<td style="text-align: right;">74.2</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">1,973</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">0.070</td>
+</tr>
+<tr>
+<td>graph hop 1, 2,000</td>
+<td style="text-align: right;">73.2</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">1,980</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">0.198</td>
+</tr>
+<tr>
+<td>graph hop 2, 2,000</td>
+<td style="text-align: right;">73.6</td>
+<td style="text-align: right;">1.97</td>
+<td style="text-align: right;">1,986</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">0.117</td>
+</tr>
+<tr>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">72.4</td>
+<td style="text-align: right;">2.00</td>
+<td style="text-align: right;">11,992</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>chunks, hybrid, 12,000</td>
+<td style="text-align: right;">68.6</td>
+<td style="text-align: right;">2.08</td>
+<td style="text-align: right;">11,924</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">0.042</td>
+</tr>
+<tr>
+<td>graph hop 0, 12,000</td>
+<td style="text-align: right;">74.0</td>
+<td style="text-align: right;">1.96</td>
+<td style="text-align: right;">9,390</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">0.451</td>
+</tr>
+<tr>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">76.2</td>
+<td style="text-align: right;">1.90</td>
+<td style="text-align: right;">10,591</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">0.045</td>
+</tr>
+<tr>
+<td>graph hop 2, 12,000</td>
+<td style="text-align: right;">75.2</td>
+<td style="text-align: right;">1.93</td>
+<td style="text-align: right;">11,795</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0.141</td>
+</tr>
+<tr>
+<td>full context</td>
+<td style="text-align: right;">60.6</td>
+<td style="text-align: right;">2.19</td>
+<td style="text-align: right;">115,123</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3>Whole store: all 24,071 documents</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">Accuracy</th>
+<th style="text-align: right;">se</th>
+<th style="text-align: right;">Tokens</th>
+<th style="text-align: right;">Won</th>
+<th style="text-align: right;">Lost</th>
+<th style="text-align: right;">p</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG, 2,000</td>
+<td style="text-align: right;">33.6</td>
+<td style="text-align: right;">2.11</td>
+<td style="text-align: right;">1,991</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>chunks, hybrid, 2,000</td>
+<td style="text-align: right;">31.8</td>
+<td style="text-align: right;">2.08</td>
+<td style="text-align: right;">1,946</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">56</td>
+<td style="text-align: right;">0.431</td>
+</tr>
+<tr>
+<td>graph hop 0, 2,000</td>
+<td style="text-align: right;">45.2</td>
+<td style="text-align: right;">2.23</td>
+<td style="text-align: right;">1,969</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">&lt; 0.001</td>
+</tr>
+<tr>
+<td>graph hop 2, 2,000</td>
+<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">2.23</td>
+<td style="text-align: right;">1,983</td>
+<td style="text-align: right;">98</td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">&lt; 0.001</td>
+</tr>
+<tr>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">41.2</td>
+<td style="text-align: right;">2.20</td>
+<td style="text-align: right;">11,991</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>chunks, hybrid, 12,000</td>
+<td style="text-align: right;">44.0</td>
+<td style="text-align: right;">2.22</td>
+<td style="text-align: right;">11,930</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">0.239</td>
+</tr>
+<tr>
+<td>graph hop 0, 12,000</td>
+<td style="text-align: right;">47.0</td>
+<td style="text-align: right;">2.23</td>
+<td style="text-align: right;">11,157</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">0.010</td>
+</tr>
+<tr>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">49.0</td>
+<td style="text-align: right;">2.24</td>
+<td style="text-align: right;">11,923</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">&lt; 0.001</td>
+</tr>
+<tr>
+<td>graph hop 2, 12,000</td>
+<td style="text-align: right;">50.0</td>
+<td style="text-align: right;">2.24</td>
+<td style="text-align: right;">11,936</td>
+<td style="text-align: right;">88</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">&lt; 0.001</td>
+</tr>
+</tbody>
+</table>
+<p>Hop 1 at 2,000 tokens over the whole store was not run.</p>
+<h3>Commentary</h3>
+<ul>
+<li><strong>Over the whole store the graph wins at every setting, by 5.8 to 11.8 points</strong> (best per budget:
+  +11.8 at 2,000, +8.8 at 12,000; every graph arm p 0.01 or below). Hybrid search over
+  chunks alone does not: it is within error of plain RAG at both budgets. On LongMemEval the gain over
+  the whole store is the graph's, not the search's.</li>
+<li><strong>The graph loses less when the haystack becomes the library.</strong> From each question's own history to
+  the whole store, plain RAG falls 36.8 points at 2,000 tokens and 31.2 at 12,000; the best graph arm
+  falls 28.8 and 26.2.</li>
+<li><strong>Filtered, the graph is ahead at every setting by 1.6 to 3.8 points.</strong> One setting, hop 1 at
+  12,000, is below p 0.05 before any correction for the number of comparisons. Chunks through hybrid
+  search score below plain RAG filtered: a turn of a chat is a better unit than a 256-token chunk that
+  cuts across turns.</li>
+<li><strong>The graph uses fewer tokens at 12,000 filtered</strong> (9,390 at hop 0), because it packs whole bundles
+  and stops when the next does not fit.</li>
+<li><strong>Full context, 60.6, is below every filtered arm</strong>, all of which use 12,000 tokens or fewer
+  against its 115,123.</li>
+<li><strong>0.20 against 0.21, filtered:</strong> 0.20's best was 73.8 at hop 2, 12,000, tying plain RAG at 73.8.</li>
+</ul>
+<h2>GraphRAG-Bench Novel</h2>
+<p>Figure: the mean of the four question types' answer correctness on the questions every arm scored.
+"vs plain" is the paired difference per question against plain RAG at the same budget and filter, with
+its standard error. Types: fact retrieval (FR), complex reasoning (CR), contextual summarize (CS),
+creative generation (CG).</p>
+<h3>Own set: 1,968 questions</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">Figure</th>
+<th style="text-align: right;">vs plain</th>
+<th style="text-align: right;">se</th>
+<th style="text-align: right;">Tokens</th>
+<th style="text-align: right;">FR</th>
+<th style="text-align: right;">CR</th>
+<th style="text-align: right;">CS</th>
+<th style="text-align: right;">CG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG, top 5</td>
+<td style="text-align: right;">58.52</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,435</td>
+<td style="text-align: right;">57.11</td>
+<td style="text-align: right;">55.25</td>
+<td style="text-align: right;">62.74</td>
+<td style="text-align: right;">58.98</td>
+</tr>
+<tr>
+<td>plain RAG, 2,000</td>
+<td style="text-align: right;">60.70</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,946</td>
+<td style="text-align: right;">59.96</td>
+<td style="text-align: right;">56.50</td>
+<td style="text-align: right;">65.95</td>
+<td style="text-align: right;">60.39</td>
+</tr>
+<tr>
+<td>chunks, hybrid, 2,000</td>
+<td style="text-align: right;">63.04</td>
+<td style="text-align: right;">+2.44</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">1,922</td>
+<td style="text-align: right;">63.20</td>
+<td style="text-align: right;">57.76</td>
+<td style="text-align: right;">68.26</td>
+<td style="text-align: right;">62.93</td>
+</tr>
+<tr>
+<td>graph hop 0, 2,000</td>
+<td style="text-align: right;">62.47</td>
+<td style="text-align: right;">+2.60</td>
+<td style="text-align: right;">0.65</td>
+<td style="text-align: right;">1,986</td>
+<td style="text-align: right;">64.27</td>
+<td style="text-align: right;">57.91</td>
+<td style="text-align: right;">66.31</td>
+<td style="text-align: right;">61.40</td>
+</tr>
+<tr>
+<td>graph hop 1, 2,000</td>
+<td style="text-align: right;">63.14</td>
+<td style="text-align: right;">+2.17</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">1,988</td>
+<td style="text-align: right;">63.29</td>
+<td style="text-align: right;">57.30</td>
+<td style="text-align: right;">66.95</td>
+<td style="text-align: right;">65.02</td>
+</tr>
+<tr>
+<td>graph hop 2, 2,000</td>
+<td style="text-align: right;">62.65</td>
+<td style="text-align: right;">+1.78</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">1,988</td>
+<td style="text-align: right;">62.74</td>
+<td style="text-align: right;">57.45</td>
+<td style="text-align: right;">66.09</td>
+<td style="text-align: right;">64.31</td>
+</tr>
+<tr>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">64.29</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11,901</td>
+<td style="text-align: right;">65.84</td>
+<td style="text-align: right;">58.92</td>
+<td style="text-align: right;">70.58</td>
+<td style="text-align: right;">61.83</td>
+</tr>
+<tr>
+<td>chunks, hybrid, 12,000</td>
+<td style="text-align: right;">64.39</td>
+<td style="text-align: right;">+0.36</td>
+<td style="text-align: right;">0.54</td>
+<td style="text-align: right;">11,899</td>
+<td style="text-align: right;">66.40</td>
+<td style="text-align: right;">59.28</td>
+<td style="text-align: right;">70.59</td>
+<td style="text-align: right;">61.29</td>
+</tr>
+<tr>
+<td>graph hop 0, 12,000</td>
+<td style="text-align: right;">63.47</td>
+<td style="text-align: right;">-0.39</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">8,175</td>
+<td style="text-align: right;">65.71</td>
+<td style="text-align: right;">59.07</td>
+<td style="text-align: right;">68.82</td>
+<td style="text-align: right;">60.30</td>
+</tr>
+<tr>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">63.71</td>
+<td style="text-align: right;">-0.45</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">10,072</td>
+<td style="text-align: right;">65.31</td>
+<td style="text-align: right;">59.57</td>
+<td style="text-align: right;">68.50</td>
+<td style="text-align: right;">61.46</td>
+</tr>
+<tr>
+<td>graph hop 2, 12,000</td>
+<td style="text-align: right;">64.09</td>
+<td style="text-align: right;">-0.42</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">10,946</td>
+<td style="text-align: right;">65.60</td>
+<td style="text-align: right;">58.71</td>
+<td style="text-align: right;">69.06</td>
+<td style="text-align: right;">63.01</td>
+</tr>
+<tr>
+<td>no context</td>
+<td style="text-align: right;">36.56</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">25.68</td>
+<td style="text-align: right;">32.96</td>
+<td style="text-align: right;">41.52</td>
+<td style="text-align: right;">46.10</td>
+</tr>
+</tbody>
+</table>
+<p>No context scored 1,912 questions.</p>
+<h3>Whole store: 1,954 questions</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">Figure</th>
+<th style="text-align: right;">vs plain</th>
+<th style="text-align: right;">se</th>
+<th style="text-align: right;">Tokens</th>
+<th style="text-align: right;">FR</th>
+<th style="text-align: right;">CR</th>
+<th style="text-align: right;">CS</th>
+<th style="text-align: right;">CG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG, 2,000</td>
+<td style="text-align: right;">58.77</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,964</td>
+<td style="text-align: right;">56.98</td>
+<td style="text-align: right;">55.62</td>
+<td style="text-align: right;">64.82</td>
+<td style="text-align: right;">57.68</td>
+</tr>
+<tr>
+<td>chunks, hybrid, 2,000</td>
+<td style="text-align: right;">58.32</td>
+<td style="text-align: right;">-0.37</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">1,946</td>
+<td style="text-align: right;">57.57</td>
+<td style="text-align: right;">54.98</td>
+<td style="text-align: right;">62.18</td>
+<td style="text-align: right;">58.56</td>
+</tr>
+<tr>
+<td>graph hop 0, 2,000</td>
+<td style="text-align: right;">60.51</td>
+<td style="text-align: right;">+1.60</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">1,983</td>
+<td style="text-align: right;">59.11</td>
+<td style="text-align: right;">57.28</td>
+<td style="text-align: right;">64.57</td>
+<td style="text-align: right;">61.07</td>
+</tr>
+<tr>
+<td>graph hop 2, 2,000</td>
+<td style="text-align: right;">60.61</td>
+<td style="text-align: right;">+1.61</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">1,987</td>
+<td style="text-align: right;">59.29</td>
+<td style="text-align: right;">56.29</td>
+<td style="text-align: right;">65.86</td>
+<td style="text-align: right;">60.99</td>
+</tr>
+<tr>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">63.91</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11,940</td>
+<td style="text-align: right;">62.96</td>
+<td style="text-align: right;">59.58</td>
+<td style="text-align: right;">69.83</td>
+<td style="text-align: right;">63.25</td>
+</tr>
+<tr>
+<td>chunks, hybrid, 12,000</td>
+<td style="text-align: right;">63.54</td>
+<td style="text-align: right;">-1.53</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">11,928</td>
+<td style="text-align: right;">61.51</td>
+<td style="text-align: right;">56.94</td>
+<td style="text-align: right;">69.16</td>
+<td style="text-align: right;">66.55</td>
+</tr>
+<tr>
+<td>graph hop 0, 12,000</td>
+<td style="text-align: right;">63.37</td>
+<td style="text-align: right;">-0.42</td>
+<td style="text-align: right;">0.64</td>
+<td style="text-align: right;">10,325</td>
+<td style="text-align: right;">63.17</td>
+<td style="text-align: right;">58.52</td>
+<td style="text-align: right;">68.80</td>
+<td style="text-align: right;">62.99</td>
+</tr>
+<tr>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">63.58</td>
+<td style="text-align: right;">-0.40</td>
+<td style="text-align: right;">0.64</td>
+<td style="text-align: right;">11,394</td>
+<td style="text-align: right;">63.16</td>
+<td style="text-align: right;">58.03</td>
+<td style="text-align: right;">69.69</td>
+<td style="text-align: right;">63.44</td>
+</tr>
+<tr>
+<td>graph hop 2, 12,000</td>
+<td style="text-align: right;">62.55</td>
+<td style="text-align: right;">-1.32</td>
+<td style="text-align: right;">0.63</td>
+<td style="text-align: right;">11,708</td>
+<td style="text-align: right;">62.36</td>
+<td style="text-align: right;">57.54</td>
+<td style="text-align: right;">67.71</td>
+<td style="text-align: right;">62.58</td>
+</tr>
+</tbody>
+</table>
+<p>Every arm scored the same 1,954 questions. Hop 1 at 2,000 tokens over the whole store was not run.</p>
+<h3>Commentary</h3>
+<ul>
+<li><strong>At 12,000 tokens the graph ties plain RAG.</strong> On its own set every hop is within one standard
+  error, with 8,175 to 10,946 tokens against plain RAG's 11,901. Over the whole store hops 0 and 1 tie
+  (-0.42, -0.40); hop 2 trails by 1.32 (se 0.63), and hybrid search alone by 1.53 (se 0.60).</li>
+<li><strong>At 2,000 tokens on its own set the graph beats plain RAG by about 2 points, and so does hybrid
+  search over chunks alone</strong> (+2.44). There the gain is the search's.</li>
+<li><strong>At 2,000 tokens over the whole store the graph beats plain RAG by 1.6 (about 2.3 se) and hybrid
+  search alone does not</strong> (-0.37). There the gain is the graph's, as on LongMemEval.</li>
+<li><strong>From own set to whole store, hybrid search over chunks falls 4.7 points at 2,000 tokens; the graph
+  falls about 2.</strong> The question sets differ slightly (1,968 and 1,954).</li>
+<li><strong>0.20, the graph without chunks</strong> (the retrieval 0.20 Novel run, 1,931 questions): hop 0 at 12,000
+  scored 61.14 against plain RAG's 64.12, -5.07 per question (se 0.68). With chunks as records, 0.21
+  closes that gap.</li>
+</ul>
+<h2>GraphRAG-Bench Medical</h2>
+<p>Own set only: the Medical store holds the medical corpus alone. 1,971 questions scored by every arm, of
+2,062.</p>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">Figure</th>
+<th style="text-align: right;">vs plain</th>
+<th style="text-align: right;">se</th>
+<th style="text-align: right;">Tokens</th>
+<th style="text-align: right;">FR</th>
+<th style="text-align: right;">CR</th>
+<th style="text-align: right;">CS</th>
+<th style="text-align: right;">CG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG, top 5</td>
+<td style="text-align: right;">70.03</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,423</td>
+<td style="text-align: right;">68.70</td>
+<td style="text-align: right;">72.09</td>
+<td style="text-align: right;">74.10</td>
+<td style="text-align: right;">65.22</td>
+</tr>
+<tr>
+<td>plain RAG, 2,000</td>
+<td style="text-align: right;">70.96</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">1,957</td>
+<td style="text-align: right;">70.79</td>
+<td style="text-align: right;">72.84</td>
+<td style="text-align: right;">73.95</td>
+<td style="text-align: right;">66.26</td>
+</tr>
+<tr>
+<td>chunks, hybrid, 2,000</td>
+<td style="text-align: right;">70.71</td>
+<td style="text-align: right;">-0.14</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">1,914</td>
+<td style="text-align: right;">70.61</td>
+<td style="text-align: right;">73.13</td>
+<td style="text-align: right;">73.31</td>
+<td style="text-align: right;">65.78</td>
+</tr>
+<tr>
+<td>graph hop 0, 2,000</td>
+<td style="text-align: right;">71.62</td>
+<td style="text-align: right;">+0.50</td>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">1,987</td>
+<td style="text-align: right;">70.98</td>
+<td style="text-align: right;">74.13</td>
+<td style="text-align: right;">73.77</td>
+<td style="text-align: right;">67.62</td>
+</tr>
+<tr>
+<td>graph hop 1, 2,000</td>
+<td style="text-align: right;">70.75</td>
+<td style="text-align: right;">-0.05</td>
+<td style="text-align: right;">0.56</td>
+<td style="text-align: right;">1,990</td>
+<td style="text-align: right;">70.62</td>
+<td style="text-align: right;">73.76</td>
+<td style="text-align: right;">72.73</td>
+<td style="text-align: right;">65.89</td>
+</tr>
+<tr>
+<td>graph hop 2, 2,000</td>
+<td style="text-align: right;">71.08</td>
+<td style="text-align: right;">-0.24</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">1,989</td>
+<td style="text-align: right;">69.98</td>
+<td style="text-align: right;">73.17</td>
+<td style="text-align: right;">74.60</td>
+<td style="text-align: right;">66.57</td>
+</tr>
+<tr>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">75.08</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">11,907</td>
+<td style="text-align: right;">73.97</td>
+<td style="text-align: right;">78.45</td>
+<td style="text-align: right;">78.17</td>
+<td style="text-align: right;">69.72</td>
+</tr>
+<tr>
+<td>chunks, hybrid, 12,000</td>
+<td style="text-align: right;">74.49</td>
+<td style="text-align: right;">-0.56</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">11,900</td>
+<td style="text-align: right;">73.85</td>
+<td style="text-align: right;">76.75</td>
+<td style="text-align: right;">77.66</td>
+<td style="text-align: right;">69.70</td>
+</tr>
+<tr>
+<td>graph hop 0, 12,000</td>
+<td style="text-align: right;">74.42</td>
+<td style="text-align: right;">-0.33</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">7,664</td>
+<td style="text-align: right;">74.59</td>
+<td style="text-align: right;">76.63</td>
+<td style="text-align: right;">76.44</td>
+<td style="text-align: right;">70.01</td>
+</tr>
+<tr>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">74.88</td>
+<td style="text-align: right;">-0.11</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">9,888</td>
+<td style="text-align: right;">74.41</td>
+<td style="text-align: right;">77.40</td>
+<td style="text-align: right;">77.09</td>
+<td style="text-align: right;">70.60</td>
+</tr>
+<tr>
+<td>graph hop 2, 12,000</td>
+<td style="text-align: right;">74.55</td>
+<td style="text-align: right;">-0.18</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">11,120</td>
+<td style="text-align: right;">74.31</td>
+<td style="text-align: right;">77.96</td>
+<td style="text-align: right;">76.51</td>
+<td style="text-align: right;">69.40</td>
+</tr>
+<tr>
+<td>no context</td>
+<td style="text-align: right;">36.08</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">89</td>
+<td style="text-align: right;">25.67</td>
+<td style="text-align: right;">43.96</td>
+<td style="text-align: right;">25.71</td>
+<td style="text-align: right;">48.97</td>
+</tr>
+</tbody>
+</table>
+<p>No context scored 1,875 questions.</p>
+<h3>Commentary</h3>
+<ul>
+<li><strong>The graph ties plain RAG at every setting</strong>, each difference within about one standard error.</li>
+<li><strong>At 12,000 tokens, hop 0 ties it with 7,664 tokens against 11,907</strong>, about 36% fewer.</li>
+<li><strong>Hybrid search over chunks alone also ties.</strong> On one corpus of one kind, neither the search nor the
+  graph moves the score.</li>
+<li><strong>0.20 against 0.21:</strong> 0.20's best graph arm scored 72.72 against plain RAG's 74.84. Chunks as records
+  close that gap.</li>
+<li><strong>The board figure.</strong> The board averages each type over the questions that type scored, not over the
+  questions common to every arm. By that figure hop 1 at 12,000 scores 74.58 and plain RAG at 12,000
+  74.62.</li>
+</ul>
+<h2>OmniMemEval</h2>
+<p>The board's fixed settings: reader <code>gpt-4.1-mini-2025-04-14</code>, judge <code>gpt-4o-mini-2024-07-18</code>, top-k 20,
+one run each, every question scored. ThreadAtlas reads sessions with <code>gpt-5.6-luna</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Benchmark</th>
+<th style="text-align: right;">Accuracy</th>
+<th style="text-align: right;">Questions</th>
+<th style="text-align: right;">Context tokens</th>
+<th>Place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LoCoMo, categories 1 to 4</td>
+<td style="text-align: right;">89.22</td>
+<td style="text-align: right;">1,540</td>
+<td style="text-align: right;">6,190</td>
+<td>1st of 16; MemOS 88.83 at 5,400</td>
+</tr>
+<tr>
+<td>LongMemEval, cleaned</td>
+<td style="text-align: right;">87.40</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">4,332</td>
+<td>2nd of 14; MemOS 89.20 at 4,151, LCM-X 87.00 at 5,164</td>
+</tr>
+</tbody>
+</table>
+<p>LoCoMo by type: single-hop 94.17 (841 questions), multi-hop 83.69 (282), temporal 86.29 (321),
+open-domain 71.88 (96). ThreadAtlas has the highest score of the 16 on single-hop, temporal and
+open-domain; MemOS leads multi-hop at 88.65.</p>
+<p>LongMemEval by type: 100.00, 96.43, 86.67, 83.46, 79.70 and 89.74 in the board's column order
+(the board's <code>docs/user_memory/results.md</code>).</p>
+<p>A LoCoMo run with sessions read by <code>gpt-4.1-mini-2025-04-14</code> scored 88.44; an earlier version, before
+chunks as records, 89.35. Both are in the artifacts.</p>
+<h3>Commentary</h3>
+<ul>
+<li>These are places among other memory systems under one reader and judge. There is no plain RAG run
+  under the board's settings, so they measure ThreadAtlas against the field, not the graph against raw
+  text.</li>
+<li>The board shows these rows once our submission is merged:
+  https://github.com/MemTensor/OmniMemEval/pull/21 (opened 2026-11-07).</li>
+</ul>
+<h2>The pattern across the four sets</h2>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Whole store</th>
+<th>Own set, 2,000</th>
+<th>Own set, 12,000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LongMemEval</td>
+<td>graph +5.8 to +11.8; hybrid search alone no gain</td>
+<td>graph +2.8 to +3.8; hybrid alone below plain</td>
+<td>graph +1.6 to +3.8, one at p 0.045</td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph +1.6 at 2,000, tie at 12,000 for hops 0 and 1; hybrid alone no gain</td>
+<td>graph and hybrid alone both about +2</td>
+<td>all tie; graph uses fewer tokens</td>
+</tr>
+<tr>
+<td>Medical</td>
+<td>not run</td>
+<td>all tie</td>
+<td>all tie; graph uses fewer tokens</td>
+</tr>
+</tbody>
+</table>
+<p>The graph's best setting never scores below plain RAG beyond its standard error. It gains most where the store is
+large and mixed, and where the material is a person's conversations; on one book set or one medical
+corpus it ties, usually with fewer tokens. Where hybrid search over chunks matches the graph (Novel own
+set, 2,000 tokens), the gain is the search's; where it does not (LongMemEval and Novel over the whole
+store), the gain is the graph's.</p></div></main></div>
+<footer><div class="inner">ThreadAtlas, IT 494, Illinois State University. Advisor: Dr. Xing Fang. Built 2026-11-07 from the store, deterministically; nothing on a page is written by hand.</div></footer>
+<script src="../assets/wiki.js"></script>
+</body></html>

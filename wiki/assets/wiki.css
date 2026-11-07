@@ -95,7 +95,8 @@ ol.steps li { margin: 0.6rem 0; padding: 0.6rem 0.9rem; border-left: 3px solid v
 .snapshot th { background: var(--band); font-weight: 600; } .soon { color: var(--muted); font-style: italic; }
 .snapshot .points { font-size: 0.92rem; margin: 0.7rem 0 0; padding-left: 1.2rem; } .snapshot .points li { margin: 0.3rem 0; }
 .snapshot h4 { margin: 1.6rem 0 0.3rem; font-family: system-ui, sans-serif; font-size: 1rem; }
-.snapshot .scroll { overflow-x: auto; } .snapshot .after { font-size: 0.92rem; margin: 0.7rem 0 0; }
+.snapshot .scroll { overflow-x: auto; } .publication { max-width: 60rem; } .publication table { margin: 0.6rem 0 1rem; }
+.publication h2 { margin-top: 2rem; } .publication li { margin: 0.35rem 0; } .snapshot .after { font-size: 0.92rem; margin: 0.7rem 0 0; }
 form.asksearch { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; margin-top: 1rem; font-family: system-ui, sans-serif; font-size: 0.9rem; }
 form.asksearch input[type=search] { font: inherit; font-size: 1.05rem; padding: 0.55rem 0.9rem; width: 34rem; max-width: 100%; border: 1px solid var(--tint); border-radius: 4px; }
 form.asksearch select { font: inherit; padding: 0.3rem; } form.asksearch .choice label { margin-left: 0.6rem; } form.asksearch label { white-space: nowrap; } form.asksearch .button { border: none; cursor: pointer; font-size: 0.95rem; }

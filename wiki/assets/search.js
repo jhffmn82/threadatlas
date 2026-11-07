@@ -57,9 +57,26 @@ function entriesOf(scope, records) {
   return only;
 }
 
+// both models start loading as the page opens; a search waits only for what is not loaded yet
+let embedderLoading = null, rerankerLoading = null;
+function loadEmbedder() {
+  if (!embedderLoading) embedderLoading = (async function () {
+    if (!library) library = await import(LIBRARY);
+    embedder = await library.pipeline("feature-extraction", S.MODEL, { dtype: "fp16", device: "wasm" });
+  })();
+  return embedderLoading;
+}
+function loadReranker() {
+  if (!rerankerLoading) rerankerLoading = (async function () {
+    if (!library) library = await import(LIBRARY);
+    tokenizer = await library.AutoTokenizer.from_pretrained(S.RERANKER);
+    reranker = await library.AutoModelForSequenceClassification.from_pretrained(S.RERANKER, { dtype: "fp32", device: DEVICE });
+  })();
+  return rerankerLoading;
+}
+
 async function embed(question) {
-  if (!library) library = await import(LIBRARY);
-  if (!embedder) { status("Loading the embedding model..."); embedder = await library.pipeline("feature-extraction", S.MODEL, { dtype: "fp16", device: "wasm" }); }
+  if (!embedder) { status("Loading the embedding model..."); await loadEmbedder(); }
   const out = await embedder([question], { pooling: "cls", normalize: true });
   return out.data;
 }
@@ -191,12 +208,7 @@ function rerankText(r) { return r.q ? r.s + " " + r.q : r.s; }
 
 // the cross-encoder's score of the question with every record of the pool, as retrieval reranks
 async function rerank(question, scope, pool) {
-  if (!library) library = await import(LIBRARY);
-  if (!reranker) {
-    status("Loading the reranker...");
-    tokenizer = await library.AutoTokenizer.from_pretrained(S.RERANKER);
-    reranker = await library.AutoModelForSequenceClassification.from_pretrained(S.RERANKER, { dtype: "fp32", device: DEVICE });
-  }
+  if (!reranker) { status("Loading the reranker..."); await loadReranker(); }
   // scored shortest first, so each batch pads to texts of about its own length
   const top = Array.from(pool.keys());
   top.sort(function (a, b) { return rerankText(scope.get(a)).length - rerankText(scope.get(b)).length; });
@@ -286,6 +298,8 @@ async function run(question) {
 }
 
 document.getElementById("ask").addEventListener("submit", search);
+loadEmbedder();
+loadReranker();
 
 // a question from a search box on another page: searched at once over every work, the other settings as the page opens
 const asked = new URLSearchParams(location.search).get("q");

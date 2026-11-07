@@ -1,6 +1,20 @@
 
 (function () {
   function esc(s) { return String(s).split("&").join("&amp;").split("<").join("&lt;").split('"').join("&quot;"); }
+  // the search's two models: their files fetched into the cache transformers.js reads, a moment after the page loads,
+  // so a search finds them there; the search page loads its models itself
+  var MODEL_FILES = ["https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/config.json", "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/tokenizer_config.json", "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/tokenizer.json", "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/onnx/model_fp16.onnx", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/config.json", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/tokenizer_config.json", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/tokenizer.json", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/onnx/model.onnx"];
+  function warm() {
+    caches.open("transformers-cache").then(function (cache) {
+      return cache.keys().then(function (keys) {
+        var have = {}, missing = [];
+        for (var i = 0; i < keys.length; i++) have[keys[i].url] = true;
+        for (var j = 0; j < MODEL_FILES.length; j++) if (!have[MODEL_FILES[j]]) missing.push(MODEL_FILES[j]);
+        return cache.addAll(missing);
+      });
+    }).catch(function () {});
+  }
+  if (window.caches && !document.getElementById("settings")) window.addEventListener("load", function () { setTimeout(warm, 1000); });
   var data = document.getElementById("facts");
   if (!data) return;
   var facts = JSON.parse(data.textContent), pop = document.getElementById("pop"), cited = document.getElementById("cited");
