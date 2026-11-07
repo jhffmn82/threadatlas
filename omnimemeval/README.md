@@ -33,7 +33,7 @@ LLM-as-judge accuracy with the harness's own answer and judge models, one run ea
 
 | | |
 |---|---|
-| Harness | MemTensor/OmniMemEval at commit [`7c79d46`](https://github.com/MemTensor/OmniMemEval/tree/7c79d46e31dd85f3da2509b430bba9406656dd28), with the adapter's files from [`jhffmn82/OmniMemEval@67941d5`](https://github.com/jhffmn82/OmniMemEval/commit/67941d5) copied over it (the reports' "dirty" flag counts those files) |
+| Harness | MemTensor/OmniMemEval at commit [`7c79d46`](https://github.com/MemTensor/OmniMemEval/tree/7c79d46e31dd85f3da2509b430bba9406656dd28), with the adapter's files from [`jhffmn82/OmniMemEval@e0828ba`](https://github.com/jhffmn82/OmniMemEval/commit/e0828ba83825c44ef6c2f66e29f16a046e673c9c) copied over it (the runs fetched it as `67941d5`; only its commit message has changed since, and its files are the same) (the reports' "dirty" flag counts those files) |
 | Adapter | `threadatlas`, in-process; `THREADATLAS_REPO` is the root of this repository |
 | Package | each run used the copy of [`threadatlas_memory/`](../threadatlas_memory/) in the Kaggle dataset [`jhffmn/threadatlas-omni-kit`](https://www.kaggle.com/datasets/jhffmn/threadatlas-omni-kit): version 2 for LoCoMo with `gpt-5.6-luna` (notebook version 6), version 3 for LongMemEval (notebook version 8), version 4 for LoCoMo with `gpt-4.1-mini-2025-04-14` (notebook version 10). Version 3 added a database connection per thread and version 4 the `THREADATLAS_READ_MODEL` setting; the copy here is version 4 with comments updated |
 | LoCoMo | `locomo10.json` from snap-research/locomo, SHA-256 `79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4`; categories 1 to 4, 1,540 questions |
@@ -44,7 +44,7 @@ LLM-as-judge accuracy with the harness's own answer and judge models, one run ea
 | Retrieval | `top_k` 20: the packet's header and up to 19 records; 40 hits from each of vector and keyword search, fused by rank; two hops through the graph; a cap of 100,000 tokens |
 | Workers | LoCoMo 10, LongMemEval 4; `LLM_WORKERS` 10; one run each (`NUM_RUNS` 1) |
 | Machine | Kaggle CPU notebook [`jhffmn/threadatlas-omnimemeval`](https://www.kaggle.com/code/jhffmn/threadatlas-omnimemeval) |
-| Environment | Python and every installed package with its version, as the notebook installs them: [`run/environment.txt`](run/environment.txt), recorded by the smoke run below. The scored runs installed the same requirements, unpinned, the day before; their own versions were not recorded |
+| Environment | Python and every installed package with its version, as the notebook installs them: [`run/environment.txt`](run/environment.txt), recorded by the smoke run below. The scored runs installed the same requirements, unpinned, earlier the same day (their reports are timed 00:03 to 03:17 UTC, the smoke run's 09:52); their own versions were not recorded |
 
 **How a session gets into memory.** Each `add()` is one session. ThreadAtlas reads it into dated facts, each tied to
 the words of the turn it came from, and writes it into that user's own store with its 256-token chunks of text, its
