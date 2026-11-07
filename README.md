@@ -27,3 +27,5 @@ edited by hand. The texts are public-domain literature and CC BY papers, and eac
 | folder | what it holds |
 |---|---|
 | `wiki/` | the published wiki, built by the wiki notebook |
+| `threadatlas_memory/` | ThreadAtlas as a memory for one user at a time: `add`, `search` and `delete` |
+| `omnimemeval/` | ThreadAtlas's OmniMemEval runs on LoCoMo and LongMemEval: results, every record, the notebook |
