@@ -35,6 +35,7 @@ LLM-as-judge accuracy with the harness's own answer and judge models, one run ea
 |---|---|
 | Harness | MemTensor/OmniMemEval at commit [`7c79d46`](https://github.com/MemTensor/OmniMemEval/tree/7c79d46e31dd85f3da2509b430bba9406656dd28), with the adapter's files from [`jhffmn82/OmniMemEval@67941d5`](https://github.com/jhffmn82/OmniMemEval/commit/67941d5) copied over it (the reports' "dirty" flag counts those files) |
 | Adapter | `threadatlas`, in-process; `THREADATLAS_REPO` is the root of this repository |
+| Package | each run used the copy of [`threadatlas_memory/`](../threadatlas_memory/) in the Kaggle dataset [`jhffmn/threadatlas-omni-kit`](https://www.kaggle.com/datasets/jhffmn/threadatlas-omni-kit): version 2 for LoCoMo with `gpt-5.6-luna` (notebook version 6), version 3 for LongMemEval (notebook version 8), version 4 for LoCoMo with `gpt-4.1-mini-2025-04-14` (notebook version 10). Version 3 added a database connection per thread and version 4 the `THREADATLAS_READ_MODEL` setting; the copy here is version 4 with comments updated |
 | LoCoMo | `locomo10.json` from snap-research/locomo, SHA-256 `79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4`; categories 1 to 4, 1,540 questions |
 | LongMemEval | `longmemeval_s_cleaned.json`, SHA-256 `d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442`; 500 questions |
 | Answer model | `gpt-4.1-mini-2025-04-14`, OpenAI API |
