@@ -3,9 +3,9 @@ const S = JSON.parse(document.getElementById("settings").textContent);
 const LIBRARY = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.1";
 const loaded = {};
 let words = null, library = null, embedder = null, tokenizer = null, reranker = null;
-// the reranker runs on the graphics card when the browser offers one; the embedder runs on the processor, where its
-// vectors match the store's exactly
-const DEVICE = navigator.gpu ? "webgpu" : "wasm";
+// the reranker runs on the graphics card when the browser offers one that works, else on the processor; the embedder
+// runs on the processor, where its vectors match the store's exactly
+let device = navigator.gpu ? "webgpu" : "wasm";
 
 function status(text) { document.getElementById("status").textContent = text; }
 function esc(s) { return String(s).split("&").join("&amp;").split("<").join("&lt;").split('"').join("&quot;"); }
@@ -59,24 +59,50 @@ function entriesOf(scope, records) {
 
 // both models start loading as the page opens; a search waits only for what is not loaded yet
 let embedderLoading = null, rerankerLoading = null;
+// how far each model's download has gone, shown while a search waits for it
+const loading = { embedder: "", reranker: "" };
+function progress(which) {
+  return function (event) {
+    if (event.status === "progress" && event.file && event.file.indexOf(".onnx") >= 0) loading[which] = " " + Math.round(event.progress) + "%";
+  };
+}
 function loadEmbedder() {
   if (!embedderLoading) embedderLoading = (async function () {
     if (!library) library = await import(LIBRARY);
-    embedder = await library.pipeline("feature-extraction", S.MODEL, { dtype: "fp16", device: "wasm" });
+    embedder = await library.pipeline("feature-extraction", S.MODEL, { dtype: "fp16", device: "wasm", progress_callback: progress("embedder") });
   })();
+  // a load that fails is tried again by the next search
+  embedderLoading.catch(function () { embedderLoading = null; });
   return embedderLoading;
 }
 function loadReranker() {
   if (!rerankerLoading) rerankerLoading = (async function () {
     if (!library) library = await import(LIBRARY);
     tokenizer = await library.AutoTokenizer.from_pretrained(S.RERANKER);
-    reranker = await library.AutoModelForSequenceClassification.from_pretrained(S.RERANKER, { dtype: "fp32", device: DEVICE });
+    if (device === "webgpu") {
+      // a browser can offer a graphics card the model cannot use: then the processor runs it
+      const adapter = await navigator.gpu.requestAdapter().catch(function () { return null; });
+      if (!adapter) device = "wasm";
+    }
+    try {
+      reranker = await library.AutoModelForSequenceClassification.from_pretrained(S.RERANKER, { dtype: "fp32", device: device, progress_callback: progress("reranker") });
+    } catch (error) {
+      if (device !== "webgpu") throw error;
+      device = "wasm";
+      reranker = await library.AutoModelForSequenceClassification.from_pretrained(S.RERANKER, { dtype: "fp32", device: device, progress_callback: progress("reranker") });
+    }
   })();
+  rerankerLoading.catch(function () { rerankerLoading = null; });
   return rerankerLoading;
+}
+// the status line while a search waits for a model
+async function waitFor(which, load, label) {
+  const timer = setInterval(function () { status("Loading " + label + "..." + loading[which]); }, 500);
+  try { await load(); } finally { clearInterval(timer); }
 }
 
 async function embed(question) {
-  if (!embedder) { status("Loading the embedding model..."); await loadEmbedder(); }
+  if (!embedder) { status("Loading the embedding model..."); await waitFor("embedder", loadEmbedder, "the embedding model"); }
   const out = await embedder([question], { pooling: "cls", normalize: true });
   return out.data;
 }
@@ -208,7 +234,7 @@ function rerankText(r) { return r.q ? r.s + " " + r.q : r.s; }
 
 // the cross-encoder's score of the question with every record of the pool, as retrieval reranks
 async function rerank(question, scope, pool) {
-  if (!reranker) { status("Loading the reranker..."); await loadReranker(); }
+  if (!reranker) { status("Loading the reranker..."); await waitFor("reranker", loadReranker, "the reranker"); }
   // scored shortest first, so each batch pads to texts of about its own length
   const top = Array.from(pool.keys());
   top.sort(function (a, b) { return rerankText(scope.get(a)).length - rerankText(scope.get(b)).length; });
@@ -268,7 +294,9 @@ async function search(e) {
   const button = document.querySelector("#ask button");
   if (!question || button.disabled) return;
   button.disabled = true;
-  try { await run(question); } finally { button.disabled = false; }
+  try { await run(question); }
+  catch (error) { status("The search stopped: " + (error && error.message ? error.message : error) + ". Search again to retry."); }
+  finally { button.disabled = false; }
 }
 
 async function run(question) {
@@ -298,8 +326,8 @@ async function run(question) {
 }
 
 document.getElementById("ask").addEventListener("submit", search);
-loadEmbedder();
-loadReranker();
+loadEmbedder().catch(function () {});
+loadReranker().catch(function () {});
 
 // a question from a search box on another page: searched at once over every work, the other settings as the page opens
 const asked = new URLSearchParams(location.search).get("q");
