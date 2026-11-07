@@ -778,9 +778,8 @@ creative generation (CG).</p>
   graph moves the score.</li>
 <li><strong>0.20 against 0.21:</strong> 0.20's best graph arm scored 72.72 against plain RAG's 74.84. Chunks as records
   close that gap.</li>
-<li><strong>The board figure.</strong> The board averages each type over the questions that type scored, not over the
-  questions common to every arm. By that figure hop 1 at 12,000 scores 74.58 and plain RAG at 12,000
-  74.62.</li>
+<li><strong>The board figure.</strong> By the board's own figure hop 1 at 12,000 scores 74.58 and plain RAG at 12,000
+  74.62: see "GraphRAG-Bench: the board's figure and our place" below.</li>
 </ul>
 <h2>OmniMemEval</h2>
 <p>The board's fixed settings: reader <code>gpt-4.1-mini-2025-04-14</code>, judge <code>gpt-4o-mini-2024-07-18</code>, top-k 20,
@@ -826,6 +825,136 @@ chunks as records, 89.35. Both are in the artifacts.</p>
   text.</li>
 <li>The board shows these rows once our submission is merged:
   https://github.com/MemTensor/OmniMemEval/pull/21 (opened 2026-11-07).</li>
+</ul>
+<h2>GraphRAG-Bench: the board's figure and our place</h2>
+<p>The board averages each type's answer correctness over the questions that type scored, then takes the
+plain mean of the four types. That is the figure below, read from the evaluator's own output for each
+arm (<code>&lt;set&gt;-&lt;arm&gt;-generation.json</code>); the tables above use the questions common to every arm instead.
+Places are against the boards as read on 2026-11-02 (21 rows each); the arm placed on each board is
+hop 1 at 12,000 tokens, own set, as on the wiki.</p>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Arm</th>
+<th style="text-align: right;">Board figure</th>
+<th style="text-align: right;">FR</th>
+<th style="text-align: right;">CR</th>
+<th style="text-align: right;">CS</th>
+<th style="text-align: right;">CG</th>
+<th>Place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Novel</td>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">63.77</td>
+<td style="text-align: right;">65.06</td>
+<td style="text-align: right;">59.65</td>
+<td style="text-align: right;">68.65</td>
+<td style="text-align: right;">61.72</td>
+<td>6th of 22, between KT-MOSAIC 64.28 and AutoPrunedRetriever-llm 63.72</td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 0, 12,000</td>
+<td style="text-align: right;">63.65</td>
+<td style="text-align: right;">65.30</td>
+<td style="text-align: right;">58.93</td>
+<td style="text-align: right;">68.92</td>
+<td style="text-align: right;">61.46</td>
+<td></td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 2, 12,000</td>
+<td style="text-align: right;">63.94</td>
+<td style="text-align: right;">65.24</td>
+<td style="text-align: right;">58.57</td>
+<td style="text-align: right;">69.09</td>
+<td style="text-align: right;">62.86</td>
+<td></td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">64.48</td>
+<td style="text-align: right;">65.41</td>
+<td style="text-align: right;">58.91</td>
+<td style="text-align: right;">70.61</td>
+<td style="text-align: right;">62.98</td>
+<td></td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 0, 2,000</td>
+<td style="text-align: right;">62.42</td>
+<td style="text-align: right;">63.73</td>
+<td style="text-align: right;">57.89</td>
+<td style="text-align: right;">66.10</td>
+<td style="text-align: right;">61.96</td>
+<td></td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 1, 2,000</td>
+<td style="text-align: right;">63.16</td>
+<td style="text-align: right;">62.82</td>
+<td style="text-align: right;">57.16</td>
+<td style="text-align: right;">67.01</td>
+<td style="text-align: right;">65.63</td>
+<td></td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 2, 2,000</td>
+<td style="text-align: right;">62.50</td>
+<td style="text-align: right;">62.36</td>
+<td style="text-align: right;">57.40</td>
+<td style="text-align: right;">65.94</td>
+<td style="text-align: right;">64.31</td>
+<td></td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>plain RAG, 2,000</td>
+<td style="text-align: right;">60.24</td>
+<td style="text-align: right;">59.24</td>
+<td style="text-align: right;">56.37</td>
+<td style="text-align: right;">65.79</td>
+<td style="text-align: right;">59.56</td>
+<td></td>
+</tr>
+<tr>
+<td>Medical</td>
+<td>graph hop 1, 12,000</td>
+<td style="text-align: right;">74.58</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td>7th of 22, between AtlasGraphRAG 75.62 and G-reasoner 73.30</td>
+</tr>
+<tr>
+<td>Medical</td>
+<td>plain RAG, 12,000</td>
+<td style="text-align: right;">74.62</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Novel questions scored by type for hop 1 at 12,000: 970 of 971 FR, 609 of 610 CR, 362 of 362 CS, 67 of
+67 CG.</p>
+<ul>
+<li>On both boards ThreadAtlas sits among the graph systems above the board's own RAG rows (Novel 48.35
+  and 47.93, Medical 62.43 and 61.00). Our plain RAG, run with our reader prompt at 12,000 tokens,
+  scores close to the graph (Novel 64.48, Medical 74.62); the board's RAG rows were scored by an earlier
+  evaluator on an earlier question file, so the two are not like for like.</li>
 </ul>
 <h2>The pattern across the four sets</h2>
 <table>
