@@ -58,6 +58,10 @@ alone.
 **Coverage.** Every stage finished every record: no failed, skipped, timed-out or excluded items in search, answer or
 judging. Each accuracy is over every question.
 
+**Scoring.** The harness's own judge marks each answer right or wrong, and each accuracy is the share of
+questions marked right, so the LongMemEval overall weights each type by its question count. One run per benchmark
+and setting; no run is combined with another.
+
 **Context tokens** are the harness's own count of prompt tokens sent to the answer model, averaged per question. The
 totals and call counts are in each run's `token_usage_answer.json`.
 
@@ -104,6 +108,13 @@ bash scripts/run_lme_eval.sh --lib threadatlas --env .env.threadatlas --version 
 [`jhffmn/it494-narrative-corpora-raw`](https://www.kaggle.com/datasets/jhffmn/it494-narrative-corpora-raw). For the
 `gpt-4.1-mini-2025-04-14` run, add `THREADATLAS_READ_MODEL="gpt-4.1-mini-2025-04-14"`. The answer and judge settings
 are those of [`run/snapshot.env`](run/snapshot.env). API keys come from the environment.
+
+## Data licenses
+
+The records quote the benchmarks' own text. LoCoMo ([snap-research/locomo](https://github.com/snap-research/locomo),
+Maharana et al., 2024) is licensed CC BY-NC 4.0, so its records are for non-commercial use with attribution to the
+LoCoMo authors. LongMemEval ([xiaowu0162/LongMemEval](https://github.com/xiaowu0162/LongMemEval), Wu et al., 2024)
+is licensed MIT.
 
 ## Files
 
