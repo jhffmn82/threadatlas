@@ -89,7 +89,7 @@ Hop 1 at 2,000 tokens over the whole store was not run.
   search score below plain RAG filtered: a turn of a chat is a better unit than a 256-token chunk that
   cuts across turns.
 - **The graph uses fewer tokens at 12,000 filtered** (9,390 at hop 0), because it packs whole bundles
-  and stops when the next does not fit.
+  and skips any bundle that does not fit in what is left.
 - **Full context, 60.6, is below every filtered arm**, all of which use 12,000 tokens or fewer
   against its 115,123.
 - **0.20 against 0.21, filtered:** 0.20's best was 73.8 at hop 2, 12,000, tying plain RAG at 73.8.
@@ -181,8 +181,9 @@ No context scored 1,875 questions.
   graph moves the score.
 - **0.20 against 0.21:** 0.20's best graph arm scored 72.72 against plain RAG's 74.84. Chunks as records
   close that gap.
-- **The board figure.** By the board's own figure hop 1 at 12,000 scores 74.58 and plain RAG at 12,000
-  74.62: see "GraphRAG-Bench: the board's figure and our place" below.
+- **The board figure.** By the board's own figure the paper run's hop 1 at 12,000 scores 74.58 and plain
+  RAG at 12,000 74.62; the submission run scores 74.15, seventh of 22: see "GraphRAG-Bench: the board's
+  figure and our place" below.
 
 ## OmniMemEval
 
@@ -214,27 +215,42 @@ chunks as records, 89.35. Both are in the artifacts.
 
 ## GraphRAG-Bench: the board's figure and our place
 
-The board averages each type's answer correctness over the questions that type scored, then takes the
-plain mean of the four types. That is the figure below, read from the evaluator's own output for each
-arm (`<set>-<arm>-generation.json`); the tables above use the questions common to every arm instead.
-Places are against the boards as read on 2026-11-02 (21 rows each); the arm placed on each board is
-hop 1 at 12,000 tokens, own set, as on the wiki.
+### The submission run
 
-| Set | Arm | Board figure | FR | CR | CS | CG | Place |
-|---|---|---:|---:|---:|---:|---:|---|
-| Novel | graph hop 1, 12,000 | 63.77 | 65.06 | 59.65 | 68.65 | 61.72 | 6th of 22, between KT-MOSAIC 64.28 and AutoPrunedRetriever-llm 63.72 |
-| Novel | graph hop 0, 12,000 | 63.65 | 65.30 | 58.93 | 68.92 | 61.46 | |
-| Novel | graph hop 2, 12,000 | 63.94 | 65.24 | 58.57 | 69.09 | 62.86 | |
-| Novel | plain RAG, 12,000 | 64.48 | 65.41 | 58.91 | 70.61 | 62.98 | |
-| Novel | graph hop 0, 2,000 | 62.42 | 63.73 | 57.89 | 66.10 | 61.96 | |
-| Novel | graph hop 1, 2,000 | 63.16 | 62.82 | 57.16 | 67.01 | 65.63 | |
-| Novel | graph hop 2, 2,000 | 62.50 | 62.36 | 57.40 | 65.94 | 64.31 | |
-| Novel | plain RAG, 2,000 | 60.24 | 59.24 | 56.37 | 65.79 | 59.56 | |
-| Medical | graph hop 1, 12,000 | 74.58 | | | | | 7th of 22, between AtlasGraphRAG 75.62 and G-reasoner 73.30 |
-| Medical | plain RAG, 12,000 | 74.62 | | | | | |
+The figures entered on the boards come from a separate final run with one setting: graph and chunks,
+hop 1, 12,000 tokens, each question filtered to its own source; reader `gpt-4o-mini-2024-07-18` at
+temperature 0; the evaluator unchanged at `fdbab59` (Kaggle `jhffmn/threadatlas-graphrag-submission`,
+version 2, finished 2026-11-07). The board's figure: each type's answer correctness over the rows it
+scored, then the plain mean of the four. Places against the boards as read on 2026-11-07.
 
-Novel questions scored by type for hop 1 at 12,000: 970 of 971 FR, 609 of 610 CR, 362 of 362 CS, 67 of
-67 CG.
+| Set | Average | Fact retrieval (ACC / ROUGE-L) | Complex reasoning (ACC / ROUGE-L) | Contextual summarize (ACC / Cov) | Creative generation (ACC / FS / Cov) | Rows scored | Place |
+|---|---:|---|---|---|---|---|---|
+| Novel | 64.03 | 65.02 / 35.08 (970) | 58.12 / 30.49 (609) | 68.63 / 44.27 (362) | 64.34 / 61.51 / 38.53 (67) | 2,008 of 2,010 | 6th of 22, between KT-MOSAIC 64.28 and AutoPrunedRetriever-llm 63.72 |
+| Medical | 74.15 | 73.40 / 43.77 (1,095) | 76.75 / 36.34 (509) | 75.72 / 50.11 (287) | 70.72 / 51.28 / 41.85 (166) | 2,057 of 2,062 | 7th of 22, between AtlasGraphRAG 75.62 and G-reasoner 73.30 |
+
+Rows the evaluator dropped, each "Sample failed: 2 validation errors for ClassificationWithReason":
+Novel `Novel-8866282b` (fact retrieval) and one of the two rows of the duplicate id `Novel-55f0c0e2`
+(complex reasoning); Medical `Medical-0535a6b1`, `Medical-411895da`, `Medical-682c2e93` (fact retrieval),
+`Medical-3cc76c04`, `Medical-7544e6ca` (contextual summarize).
+
+### Every arm of the paper run, by the board's figure
+
+The paper run's arms, by the same figure, read from the evaluator's own output for each arm
+(`<set>-<arm>-generation.json`). The tables above use the questions common to every arm instead. These
+are not the board entries; the submission run above is.
+
+| Set | Arm | Board figure | FR | CR | CS | CG |
+|---|---|---:|---:|---:|---:|---:|
+| Novel | graph hop 1, 12,000 | 63.77 | 65.06 | 59.65 | 68.65 | 61.72 |
+| Novel | graph hop 0, 12,000 | 63.65 | 65.30 | 58.93 | 68.92 | 61.46 |
+| Novel | graph hop 2, 12,000 | 63.94 | 65.24 | 58.57 | 69.09 | 62.86 |
+| Novel | plain RAG, 12,000 | 64.48 | 65.41 | 58.91 | 70.61 | 62.98 |
+| Novel | graph hop 0, 2,000 | 62.42 | 63.73 | 57.89 | 66.10 | 61.96 |
+| Novel | graph hop 1, 2,000 | 63.16 | 62.82 | 57.16 | 67.01 | 65.63 |
+| Novel | graph hop 2, 2,000 | 62.50 | 62.36 | 57.40 | 65.94 | 64.31 |
+| Novel | plain RAG, 2,000 | 60.24 | 59.24 | 56.37 | 65.79 | 59.56 |
+| Medical | graph hop 1, 12,000 | 74.58 | | | | |
+| Medical | plain RAG, 12,000 | 74.62 | | | | |
 
 - On both boards ThreadAtlas sits among the graph systems above the board's own RAG rows (Novel 48.35
   and 47.93, Medical 62.43 and 61.00). Our plain RAG, run with our reader prompt at 12,000 tokens,
