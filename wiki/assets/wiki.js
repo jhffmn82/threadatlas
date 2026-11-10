@@ -5,6 +5,8 @@
   // so a search finds them there; the search page loads its models itself
   var MODEL_FILES = ["https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/config.json", "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/tokenizer_config.json", "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/tokenizer.json", "https://huggingface.co/Xenova/bge-small-en-v1.5/resolve/main/onnx/model_fp16.onnx", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/config.json", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/tokenizer_config.json", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/tokenizer.json", "https://huggingface.co/Xenova/ms-marco-MiniLM-L-6-v2/resolve/main/onnx/model.onnx"];
   function warm() {
+    var line = navigator.connection;
+    if (line && (line.saveData || line.effectiveType === "slow-2g" || line.effectiveType === "2g" || line.effectiveType === "3g")) return;
     caches.open("transformers-cache").then(function (cache) {
       return cache.keys().then(function (keys) {
         var have = {}, missing = [];
@@ -23,9 +25,30 @@
     for (var i = 0; i < all.length; i++) if ((" " + all[i].getAttribute("data-f") + " ").indexOf(" " + n + " ") >= 0) out.push(all[i]);
     return out;
   }
+  // a link from a search result: #p-a-b marks the stretch from character a to character b of the text shown
+  function passage() {
+    var ends = location.hash.slice(3).split("-"), a = Number(ends[0]), b = Number(ends[1]);
+    var walker = document.createTreeWalker(document.querySelector(".text"), NodeFilter.SHOW_TEXT);
+    var range = document.createRange(), at = 0, node, last = null, started = false, ended = false;
+    while ((node = walker.nextNode())) {
+      var end = at + node.length;
+      if (!started && a < end) { range.setStart(node, a - at); started = true; }
+      if (started && b <= end) { range.setEnd(node, b - at); ended = true; break; }
+      at = end;
+      last = node;
+    }
+    if (!started) return;
+    if (!ended) range.setEnd(last, last.length);
+    if (window.CSS && CSS.highlights && window.Highlight) CSS.highlights.set("passage", new Highlight(range));
+    cited.innerHTML = "<b>The passage this search result was read from, highlighted below.</b>";
+    cited.hidden = false;
+    window.scrollTo(0, window.scrollY + range.getBoundingClientRect().top - window.innerHeight / 3);
+  }
   function highlight() {
     var id = decodeURIComponent(location.hash.slice(3));
     document.querySelectorAll(".q.hit").forEach(function (s) { s.classList.remove("hit"); });
+    if (window.CSS && CSS.highlights) CSS.highlights.delete("passage");
+    if (location.hash.indexOf("#p-") === 0) { passage(); return; }
     if (location.hash.indexOf("#f-") !== 0) { cited.hidden = true; return; }
     for (var n = 0; n < facts.length; n++) {
       if (facts[n][0] === id) {

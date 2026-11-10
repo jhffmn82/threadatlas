@@ -3,6 +3,9 @@
 // models. The page sends a question and its settings; the worker sends back its progress and the results.
 const LIBRARY = "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.5.1";
 const KINDS = { f: "fact", c: "cell", a: "abstract", h: "chunk", p: "parent" };
+// whose words a result is: a model's, or the source's
+const WHOSE = { f: '<span class="by">claim worded by a model, its quotation the source&rsquo;s</span>', c: '<span class="by">written by a model</span>',
+                a: '<span class="by">written by a model</span>', h: '<span class="by source">the source&rsquo;s own words</span>' };
 let S = null, base = "";
 const shards = {};
 let words = null, library = null, embedder = null, tokenizer = null, reranker = null;
@@ -328,7 +331,7 @@ async function show(scope, pool, ranks, started) {
     let text = "<p>" + esc(r.s) + "</p>";
     if (r.q) text += "<blockquote>" + esc(r.q) + "</blockquote>";
     const cross = item.cross === undefined ? "" : " &middot; reranker " + item.cross.toFixed(2);
-    html += '<li class="result"><div class="where"><span class="tag">' + KINDS[r.k] + '</span> <a href="' + esc(r.u) + '">' + esc(r.l) + "</a></div>"
+    html += '<li class="result"><div class="where"><span class="tag">' + KINDS[r.k] + '</span> <a href="' + esc(r.u) + '">' + esc(r.l) + "</a> " + (WHOSE[r.k] || "") + "</div>"
          + text + '<div class="found">' + how(scope, item, ranks) + cross + "</div></li>";
   }
   const seconds = (performance.now() - started) / 1000;

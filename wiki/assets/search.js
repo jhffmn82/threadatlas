@@ -36,10 +36,24 @@ function search(e) {
 
 document.getElementById("ask").addEventListener("submit", search);
 
-// a question from a search box on another page: searched at once over every work, the other settings as the page opens
-const asked = new URLSearchParams(location.search).get("q");
+// a question from a search box on another page: searched at once, over that page's collection when it has one, else
+// over every work; the other settings as the page opens
+const sent = new URLSearchParams(location.search);
+const asked = sent.get("q"), within = sent.get("in");
+const widen = document.getElementById("widen");
+function everyWork() {
+  document.getElementById("scope").value = "all";
+  widen.hidden = true;
+  document.getElementById("ask").requestSubmit();
+}
+widen.querySelector("a").addEventListener("click", function (e) { e.preventDefault(); everyWork(); });
+document.getElementById("scope").addEventListener("change", function () { widen.hidden = true; });
 if (asked && asked.trim()) {
   document.getElementById("question").value = asked.trim();
-  document.getElementById("scope").value = "all";
+  document.getElementById("scope").value = within && S.shards.indexOf(within) >= 0 ? within : "all";
+  if (document.getElementById("scope").value !== "all") {
+    widen.querySelector("span").textContent = S.names[within];
+    widen.hidden = false;
+  }
   document.getElementById("ask").requestSubmit();
 }
