@@ -12,6 +12,8 @@
 on the 0.7 store, which holds chunks as records, and the OmniMemEval entry of <code>threadatlas_memory</code> at the
 same version. The paper's results part cites this file for every number it does not print. Collected
 2026-11-07.</p>
+<p>Each table gives the scores of every arm. The full figures of the same arms open under it: standard
+error, context tokens, the comparison per question against plain RAG, and the four question types.</p>
 <h2>Where each number comes from</h2>
 <table>
 <thead>
@@ -94,9 +96,48 @@ papers together. Medical has no whole-store run.</p>
 <p>Plain RAG to chunks through hybrid search isolates the search. Chunks through hybrid search to graph and
 chunks isolates the graph.</p>
 <h2>LongMemEval</h2>
-<p>500 questions; accuracy with its standard error; won, lost and p are paired per question against plain
-RAG at the same budget and filter (McNemar).</p>
+<p>500 questions; accuracy (%). The full figures give each arm's standard error and its won, lost and p,
+paired per question against plain RAG at the same budget and filter (McNemar).</p>
 <h3>Filtered: each question's own history</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">2,000 tokens</th>
+<th style="text-align: right;">12,000 tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG</td>
+<td style="text-align: right;">70.4</td>
+<td style="text-align: right;">72.4</td>
+</tr>
+<tr>
+<td>chunks, hybrid search</td>
+<td style="text-align: right;">61.6</td>
+<td style="text-align: right;">68.6</td>
+</tr>
+<tr>
+<td>graph hop 0</td>
+<td style="text-align: right;">74.2</td>
+<td style="text-align: right;">74.0</td>
+</tr>
+<tr>
+<td>graph hop 1</td>
+<td style="text-align: right;">73.2</td>
+<td style="text-align: right;">76.2</td>
+</tr>
+<tr>
+<td>graph hop 2</td>
+<td style="text-align: right;">73.6</td>
+<td style="text-align: right;">75.2</td>
+</tr>
+</tbody>
+</table>
+<p>Full context, the question's whole history: 60.6.</p>
+<details>
+<summary>Full figures: standard error, tokens, won, lost and p</summary>
 <table>
 <thead>
 <tr>
@@ -211,7 +252,46 @@ RAG at the same budget and filter (McNemar).</p>
 </tr>
 </tbody>
 </table>
+</details>
 <h3>Whole store: all 24,071 documents</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">2,000 tokens</th>
+<th style="text-align: right;">12,000 tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG</td>
+<td style="text-align: right;">33.6</td>
+<td style="text-align: right;">41.2</td>
+</tr>
+<tr>
+<td>chunks, hybrid search</td>
+<td style="text-align: right;">31.8</td>
+<td style="text-align: right;">44.0</td>
+</tr>
+<tr>
+<td>graph hop 0</td>
+<td style="text-align: right;">45.2</td>
+<td style="text-align: right;">47.0</td>
+</tr>
+<tr>
+<td>graph hop 1</td>
+<td style="text-align: right;">not run</td>
+<td style="text-align: right;">49.0</td>
+</tr>
+<tr>
+<td>graph hop 2</td>
+<td style="text-align: right;">45.4</td>
+<td style="text-align: right;">50.0</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Full figures: standard error, tokens, won, lost and p</summary>
 <table>
 <thead>
 <tr>
@@ -309,6 +389,7 @@ RAG at the same budget and filter (McNemar).</p>
 </tbody>
 </table>
 <p>Hop 1 at 2,000 tokens over the whole store was not run.</p>
+</details>
 <h3>Commentary</h3>
 <ul>
 <li><strong>Over the whole store the graph wins at every setting, by 5.8 to 11.8 points</strong> (best per budget:
@@ -329,11 +410,50 @@ RAG at the same budget and filter (McNemar).</p>
 <li><strong>0.20 against 0.21, filtered:</strong> 0.20's best was 73.8 at hop 2, 12,000, tying plain RAG at 73.8.</li>
 </ul>
 <h2>GraphRAG-Bench Novel</h2>
-<p>Figure: the mean of the four question types' answer correctness on the questions every arm scored.
-"vs plain" is the paired difference per question against plain RAG at the same budget and filter, with
-its standard error. Types: fact retrieval (FR), complex reasoning (CR), contextual summarize (CS),
-creative generation (CG).</p>
+<p>Figure: the mean of the four question types' answer correctness on the questions every arm scored. The
+full figures give each arm's paired difference per question against plain RAG at the same budget and
+filter ("vs plain") with its standard error, and the four types: fact retrieval (FR), complex reasoning
+(CR), contextual summarize (CS), creative generation (CG).</p>
 <h3>Own set: 1,968 questions</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">2,000 tokens</th>
+<th style="text-align: right;">12,000 tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG</td>
+<td style="text-align: right;">60.70</td>
+<td style="text-align: right;">64.29</td>
+</tr>
+<tr>
+<td>chunks, hybrid search</td>
+<td style="text-align: right;">63.04</td>
+<td style="text-align: right;">64.39</td>
+</tr>
+<tr>
+<td>graph hop 0</td>
+<td style="text-align: right;">62.47</td>
+<td style="text-align: right;">63.47</td>
+</tr>
+<tr>
+<td>graph hop 1</td>
+<td style="text-align: right;">63.14</td>
+<td style="text-align: right;">63.71</td>
+</tr>
+<tr>
+<td>graph hop 2</td>
+<td style="text-align: right;">62.65</td>
+<td style="text-align: right;">64.09</td>
+</tr>
+</tbody>
+</table>
+<p>Plain RAG with the benchmark's own five chunks: 58.52. No context: 36.56.</p>
+<details>
+<summary>Full figures: difference against plain RAG, standard error, tokens and the four question types</summary>
 <table>
 <thead>
 <tr>
@@ -484,7 +604,46 @@ creative generation (CG).</p>
 </tbody>
 </table>
 <p>No context scored 1,912 questions.</p>
+</details>
 <h3>Whole store: 1,954 questions</h3>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">2,000 tokens</th>
+<th style="text-align: right;">12,000 tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG</td>
+<td style="text-align: right;">58.77</td>
+<td style="text-align: right;">63.91</td>
+</tr>
+<tr>
+<td>chunks, hybrid search</td>
+<td style="text-align: right;">58.32</td>
+<td style="text-align: right;">63.54</td>
+</tr>
+<tr>
+<td>graph hop 0</td>
+<td style="text-align: right;">60.51</td>
+<td style="text-align: right;">63.37</td>
+</tr>
+<tr>
+<td>graph hop 1</td>
+<td style="text-align: right;">not run</td>
+<td style="text-align: right;">63.58</td>
+</tr>
+<tr>
+<td>graph hop 2</td>
+<td style="text-align: right;">60.61</td>
+<td style="text-align: right;">62.55</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Full figures: difference against plain RAG, standard error, tokens and the four question types</summary>
 <table>
 <thead>
 <tr>
@@ -602,6 +761,7 @@ creative generation (CG).</p>
 </tbody>
 </table>
 <p>Every arm scored the same 1,954 questions. Hop 1 at 2,000 tokens over the whole store was not run.</p>
+</details>
 <h3>Commentary</h3>
 <ul>
 <li><strong>At 12,000 tokens the graph ties plain RAG.</strong> On its own set every hop is within one standard
@@ -620,6 +780,45 @@ creative generation (CG).</p>
 <h2>GraphRAG-Bench Medical</h2>
 <p>Own set only: the Medical store holds the medical corpus alone. 1,971 questions scored by every arm, of
 2,062.</p>
+<table>
+<thead>
+<tr>
+<th>Arm</th>
+<th style="text-align: right;">2,000 tokens</th>
+<th style="text-align: right;">12,000 tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>plain RAG</td>
+<td style="text-align: right;">70.96</td>
+<td style="text-align: right;">75.08</td>
+</tr>
+<tr>
+<td>chunks, hybrid search</td>
+<td style="text-align: right;">70.71</td>
+<td style="text-align: right;">74.49</td>
+</tr>
+<tr>
+<td>graph hop 0</td>
+<td style="text-align: right;">71.62</td>
+<td style="text-align: right;">74.42</td>
+</tr>
+<tr>
+<td>graph hop 1</td>
+<td style="text-align: right;">70.75</td>
+<td style="text-align: right;">74.88</td>
+</tr>
+<tr>
+<td>graph hop 2</td>
+<td style="text-align: right;">71.08</td>
+<td style="text-align: right;">74.55</td>
+</tr>
+</tbody>
+</table>
+<p>Plain RAG with the benchmark's own five chunks: 70.03. No context: 36.08.</p>
+<details>
+<summary>Full figures: difference against plain RAG, standard error, tokens and the four question types</summary>
 <table>
 <thead>
 <tr>
@@ -770,6 +969,7 @@ creative generation (CG).</p>
 </tbody>
 </table>
 <p>No context scored 1,875 questions.</p>
+</details>
 <h3>Commentary</h3>
 <ul>
 <li><strong>The graph ties plain RAG at every setting</strong>, each difference within about one standard error.</li>
@@ -839,6 +1039,32 @@ scored, then the plain mean of the four. Places against the boards as read on 20
 <tr>
 <th>Set</th>
 <th style="text-align: right;">Average</th>
+<th>Rows scored</th>
+<th>Place</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Novel</td>
+<td style="text-align: right;">64.03</td>
+<td>2,008 of 2,010</td>
+<td>6th of 22, between KT-MOSAIC 64.28 and AutoPrunedRetriever-llm 63.72</td>
+</tr>
+<tr>
+<td>Medical</td>
+<td style="text-align: right;">74.15</td>
+<td>2,057 of 2,062</td>
+<td>7th of 22, between AtlasGraphRAG 75.62 and G-reasoner 73.30</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Full figures: each question type's scores and rows</summary>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th style="text-align: right;">Average</th>
 <th>Fact retrieval (ACC / ROUGE-L)</th>
 <th>Complex reasoning (ACC / ROUGE-L)</th>
 <th>Contextual summarize (ACC / Cov)</th>
@@ -874,10 +1100,61 @@ scored, then the plain mean of the four. Places against the boards as read on 20
 Novel <code>Novel-8866282b</code> (fact retrieval) and one of the two rows of the duplicate id <code>Novel-55f0c0e2</code>
 (complex reasoning); Medical <code>Medical-0535a6b1</code>, <code>Medical-411895da</code>, <code>Medical-682c2e93</code> (fact retrieval),
 <code>Medical-3cc76c04</code>, <code>Medical-7544e6ca</code> (contextual summarize).</p>
+</details>
 <h3>Every arm of the paper run, by the board's figure</h3>
 <p>The paper run's arms, by the same figure, read from the evaluator's own output for each arm
 (<code>&lt;set&gt;-&lt;arm&gt;-generation.json</code>). The tables above use the questions common to every arm instead. These
 are not the board entries; the submission run above is.</p>
+<table>
+<thead>
+<tr>
+<th>Set</th>
+<th>Arm</th>
+<th style="text-align: right;">2,000 tokens</th>
+<th style="text-align: right;">12,000 tokens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Novel</td>
+<td>plain RAG</td>
+<td style="text-align: right;">60.24</td>
+<td style="text-align: right;">64.48</td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 0</td>
+<td style="text-align: right;">62.42</td>
+<td style="text-align: right;">63.65</td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 1</td>
+<td style="text-align: right;">63.16</td>
+<td style="text-align: right;">63.77</td>
+</tr>
+<tr>
+<td>Novel</td>
+<td>graph hop 2</td>
+<td style="text-align: right;">62.50</td>
+<td style="text-align: right;">63.94</td>
+</tr>
+<tr>
+<td>Medical</td>
+<td>plain RAG</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">74.62</td>
+</tr>
+<tr>
+<td>Medical</td>
+<td>graph hop 1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">74.58</td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>Full figures: the four question types</summary>
 <table>
 <thead>
 <tr>
@@ -983,6 +1260,7 @@ are not the board entries; the submission run above is.</p>
 </tr>
 </tbody>
 </table>
+</details>
 <ul>
 <li>On both boards ThreadAtlas sits among the graph systems above the board's own RAG rows (Novel 48.35
   and 47.93, Medical 62.43 and 61.00). Our plain RAG, run with our reader prompt at 12,000 tokens,
@@ -1026,6 +1304,6 @@ corpus it ties, usually with fewer tokens. Where hybrid search over chunks match
 set, 2,000 tokens), the gain is the search's; where it does not (LongMemEval and Novel over the whole
 store), the gain is the graph's.</p></div></main></div>
 <footer><div class="inner"><p><span class="by">written by a model</span> marks a model&rsquo;s summary or wording. Quotations and the text in the viewer are the source&rsquo;s own words; every quotation opens the source at its passage.</p>
-<p>ThreadAtlas, IT 494, Illinois State University. Advisor: Dr. Xing Fang. Built 2026-11-10 from the store, deterministically; nothing on a page is written by hand.</p></div></footer>
+<p>ThreadAtlas, IT 494, Illinois State University. Advisor: Dr. Xing Fang. Built 2026-11-11 from the store, deterministically; nothing on a page is written by hand.</p></div></footer>
 <script src="../assets/wiki.js"></script>
 </body></html>

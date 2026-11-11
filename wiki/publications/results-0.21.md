@@ -5,6 +5,9 @@ on the 0.7 store, which holds chunks as records, and the OmniMemEval entry of `t
 same version. The paper's results part cites this file for every number it does not print. Collected
 2026-11-07.
 
+Each table gives the scores of every arm. The full figures of the same arms open under it: standard
+error, context tokens, the comparison per question against plain RAG, and the four question types.
+
 ## Where each number comes from
 
 | Set | Kaggle notebook | File |
@@ -40,10 +43,23 @@ chunks isolates the graph.
 
 ## LongMemEval
 
-500 questions; accuracy with its standard error; won, lost and p are paired per question against plain
-RAG at the same budget and filter (McNemar).
+500 questions; accuracy (%). The full figures give each arm's standard error and its won, lost and p,
+paired per question against plain RAG at the same budget and filter (McNemar).
 
 ### Filtered: each question's own history
+
+| Arm | 2,000 tokens | 12,000 tokens |
+|---|---:|---:|
+| plain RAG | 70.4 | 72.4 |
+| chunks, hybrid search | 61.6 | 68.6 |
+| graph hop 0 | 74.2 | 74.0 |
+| graph hop 1 | 73.2 | 76.2 |
+| graph hop 2 | 73.6 | 75.2 |
+
+Full context, the question's whole history: 60.6.
+
+<details markdown="1">
+<summary>Full figures: standard error, tokens, won, lost and p</summary>
 
 | Arm | Accuracy | se | Tokens | Won | Lost | p |
 |---|---:|---:|---:|---:|---:|---:|
@@ -59,7 +75,20 @@ RAG at the same budget and filter (McNemar).
 | graph hop 2, 12,000 | 75.2 | 1.93 | 11,795 | 46 | 32 | 0.141 |
 | full context | 60.6 | 2.19 | 115,123 | | | |
 
+</details>
+
 ### Whole store: all 24,071 documents
+
+| Arm | 2,000 tokens | 12,000 tokens |
+|---|---:|---:|
+| plain RAG | 33.6 | 41.2 |
+| chunks, hybrid search | 31.8 | 44.0 |
+| graph hop 0 | 45.2 | 47.0 |
+| graph hop 1 | not run | 49.0 |
+| graph hop 2 | 45.4 | 50.0 |
+
+<details markdown="1">
+<summary>Full figures: standard error, tokens, won, lost and p</summary>
 
 | Arm | Accuracy | se | Tokens | Won | Lost | p |
 |---|---:|---:|---:|---:|---:|---:|
@@ -74,6 +103,8 @@ RAG at the same budget and filter (McNemar).
 | graph hop 2, 12,000 | 50.0 | 2.24 | 11,936 | 88 | 44 | < 0.001 |
 
 Hop 1 at 2,000 tokens over the whole store was not run.
+
+</details>
 
 ### Commentary
 
@@ -96,12 +127,25 @@ Hop 1 at 2,000 tokens over the whole store was not run.
 
 ## GraphRAG-Bench Novel
 
-Figure: the mean of the four question types' answer correctness on the questions every arm scored.
-"vs plain" is the paired difference per question against plain RAG at the same budget and filter, with
-its standard error. Types: fact retrieval (FR), complex reasoning (CR), contextual summarize (CS),
-creative generation (CG).
+Figure: the mean of the four question types' answer correctness on the questions every arm scored. The
+full figures give each arm's paired difference per question against plain RAG at the same budget and
+filter ("vs plain") with its standard error, and the four types: fact retrieval (FR), complex reasoning
+(CR), contextual summarize (CS), creative generation (CG).
 
 ### Own set: 1,968 questions
+
+| Arm | 2,000 tokens | 12,000 tokens |
+|---|---:|---:|
+| plain RAG | 60.70 | 64.29 |
+| chunks, hybrid search | 63.04 | 64.39 |
+| graph hop 0 | 62.47 | 63.47 |
+| graph hop 1 | 63.14 | 63.71 |
+| graph hop 2 | 62.65 | 64.09 |
+
+Plain RAG with the benchmark's own five chunks: 58.52. No context: 36.56.
+
+<details markdown="1">
+<summary>Full figures: difference against plain RAG, standard error, tokens and the four question types</summary>
 
 | Arm | Figure | vs plain | se | Tokens | FR | CR | CS | CG |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -120,7 +164,20 @@ creative generation (CG).
 
 No context scored 1,912 questions.
 
+</details>
+
 ### Whole store: 1,954 questions
+
+| Arm | 2,000 tokens | 12,000 tokens |
+|---|---:|---:|
+| plain RAG | 58.77 | 63.91 |
+| chunks, hybrid search | 58.32 | 63.54 |
+| graph hop 0 | 60.51 | 63.37 |
+| graph hop 1 | not run | 63.58 |
+| graph hop 2 | 60.61 | 62.55 |
+
+<details markdown="1">
+<summary>Full figures: difference against plain RAG, standard error, tokens and the four question types</summary>
 
 | Arm | Figure | vs plain | se | Tokens | FR | CR | CS | CG |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -135,6 +192,8 @@ No context scored 1,912 questions.
 | graph hop 2, 12,000 | 62.55 | -1.32 | 0.63 | 11,708 | 62.36 | 57.54 | 67.71 | 62.58 |
 
 Every arm scored the same 1,954 questions. Hop 1 at 2,000 tokens over the whole store was not run.
+
+</details>
 
 ### Commentary
 
@@ -156,6 +215,19 @@ Every arm scored the same 1,954 questions. Hop 1 at 2,000 tokens over the whole 
 Own set only: the Medical store holds the medical corpus alone. 1,971 questions scored by every arm, of
 2,062.
 
+| Arm | 2,000 tokens | 12,000 tokens |
+|---|---:|---:|
+| plain RAG | 70.96 | 75.08 |
+| chunks, hybrid search | 70.71 | 74.49 |
+| graph hop 0 | 71.62 | 74.42 |
+| graph hop 1 | 70.75 | 74.88 |
+| graph hop 2 | 71.08 | 74.55 |
+
+Plain RAG with the benchmark's own five chunks: 70.03. No context: 36.08.
+
+<details markdown="1">
+<summary>Full figures: difference against plain RAG, standard error, tokens and the four question types</summary>
+
 | Arm | Figure | vs plain | se | Tokens | FR | CR | CS | CG |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | plain RAG, top 5 | 70.03 | | | 1,423 | 68.70 | 72.09 | 74.10 | 65.22 |
@@ -172,6 +244,8 @@ Own set only: the Medical store holds the medical corpus alone. 1,971 questions 
 | no context | 36.08 | | | 89 | 25.67 | 43.96 | 25.71 | 48.97 |
 
 No context scored 1,875 questions.
+
+</details>
 
 ### Commentary
 
@@ -223,6 +297,14 @@ temperature 0; the evaluator unchanged at `fdbab59` (Kaggle `jhffmn/threadatlas-
 version 2, finished 2026-11-07). The board's figure: each type's answer correctness over the rows it
 scored, then the plain mean of the four. Places against the boards as read on 2026-11-07.
 
+| Set | Average | Rows scored | Place |
+|---|---:|---|---|
+| Novel | 64.03 | 2,008 of 2,010 | 6th of 22, between KT-MOSAIC 64.28 and AutoPrunedRetriever-llm 63.72 |
+| Medical | 74.15 | 2,057 of 2,062 | 7th of 22, between AtlasGraphRAG 75.62 and G-reasoner 73.30 |
+
+<details markdown="1">
+<summary>Full figures: each question type's scores and rows</summary>
+
 | Set | Average | Fact retrieval (ACC / ROUGE-L) | Complex reasoning (ACC / ROUGE-L) | Contextual summarize (ACC / Cov) | Creative generation (ACC / FS / Cov) | Rows scored | Place |
 |---|---:|---|---|---|---|---|---|
 | Novel | 64.03 | 65.02 / 35.08 (970) | 58.12 / 30.49 (609) | 68.63 / 44.27 (362) | 64.34 / 61.51 / 38.53 (67) | 2,008 of 2,010 | 6th of 22, between KT-MOSAIC 64.28 and AutoPrunedRetriever-llm 63.72 |
@@ -233,11 +315,25 @@ Novel `Novel-8866282b` (fact retrieval) and one of the two rows of the duplicate
 (complex reasoning); Medical `Medical-0535a6b1`, `Medical-411895da`, `Medical-682c2e93` (fact retrieval),
 `Medical-3cc76c04`, `Medical-7544e6ca` (contextual summarize).
 
+</details>
+
 ### Every arm of the paper run, by the board's figure
 
 The paper run's arms, by the same figure, read from the evaluator's own output for each arm
 (`<set>-<arm>-generation.json`). The tables above use the questions common to every arm instead. These
 are not the board entries; the submission run above is.
+
+| Set | Arm | 2,000 tokens | 12,000 tokens |
+|---|---|---:|---:|
+| Novel | plain RAG | 60.24 | 64.48 |
+| Novel | graph hop 0 | 62.42 | 63.65 |
+| Novel | graph hop 1 | 63.16 | 63.77 |
+| Novel | graph hop 2 | 62.50 | 63.94 |
+| Medical | plain RAG | | 74.62 |
+| Medical | graph hop 1 | | 74.58 |
+
+<details markdown="1">
+<summary>Full figures: the four question types</summary>
 
 | Set | Arm | Board figure | FR | CR | CS | CG |
 |---|---|---:|---:|---:|---:|---:|
@@ -251,6 +347,8 @@ are not the board entries; the submission run above is.
 | Novel | plain RAG, 2,000 | 60.24 | 59.24 | 56.37 | 65.79 | 59.56 |
 | Medical | graph hop 1, 12,000 | 74.58 | | | | |
 | Medical | plain RAG, 12,000 | 74.62 | | | | |
+
+</details>
 
 - On both boards ThreadAtlas sits among the graph systems above the board's own RAG rows (Novel 48.35
   and 47.93, Medical 62.43 and 61.00). Our plain RAG, run with our reader prompt at 12,000 tokens,
