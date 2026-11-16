@@ -98,8 +98,16 @@ def add(messages, user_id, minute):
             store.append(folder / "store", session=read_fresh(messages, folder, minute, key))
         added["sessions"].append(key)
         write_added(folder, added)
+    close_store(folder)
+
+
+def close_store(folder):
+    """Forget the user's opened store and close its file, so the next search opens what is there now.
+    Windows does not remove or replace a file that is still open."""
     with SEARCH_LOCK:
-        OPEN.pop(str(folder), None)
+        opened = OPEN.pop(str(folder), None)
+        if opened is not None:
+            opened["db"].close()
 
 
 def read_fresh(messages, folder, minute, key):
@@ -130,7 +138,6 @@ def search_memory(query, user_id, top_k):
 def delete(user_id):
     folder = user_folder(user_id)
     with user_lock(folder):
-        with SEARCH_LOCK:
-            OPEN.pop(str(folder), None)
+        close_store(folder)
         if folder.exists():
             shutil.rmtree(folder)

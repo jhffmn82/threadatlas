@@ -51,9 +51,18 @@ INDEX_LOCK = threading.Lock()
 
 
 def read_index():
-    """key -> [[history, file name], ...]: built once from the source file, then kept beside the users."""
+    """key -> [[history, file name], ...]: built once from the source file, then kept beside the users.
+
+    Without the pipeline's store there is nothing to find a session in, so the index is empty and
+    add() reads every session fresh. The store counts as absent when any of its three inputs is:
+    the source file, the store itself, or Step 0's export."""
     with INDEX_LOCK:
         if "keys" in INDEX:
+            return INDEX["keys"]
+        inputs = (config.SOURCE_FILE, config.STORE_DIR / "threadatlas.sqlite", config.STORE_DIR / "threadatlas.npy",
+                  config.STEP0_DIR / "documents.jsonl", config.STEP0_DIR / "units.jsonl")
+        if not all(path.exists() for path in inputs):
+            INDEX["keys"] = {}             # not written beside the users: a store supplied later is still found
             return INDEX["keys"]
         cached = config.STATE_DIR / "session-index.json"
         if cached.exists():

@@ -16,7 +16,8 @@ memory.delete(user_id)
 Step 1 reads its facts, each tied to the words of the turn it came from, checks every fact against
 that passage, and corrects or drops the ones the passage does not state. A session the pipeline has
 already read, word for word and at the same minute, is not read again: its rows and vectors are
-taken from the pipeline's store. Either way the session goes straight into the user's own store,
+taken from the pipeline's store. When the pipeline's store is not supplied (the store, Step 0's
+export or the source file is missing), every session is read. Either way the session goes straight into the user's own store,
 after the sessions already there, with its facts, its 256-token chunks of text, its keyword rows and
 its vectors.
 
