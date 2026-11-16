@@ -1,0 +1,37 @@
+{
+ "run": "full",
+ "benchmarks": [
+  "lme"
+ ],
+ "label": "base",
+ "read_model": "gpt-4.1-mini-2025-04-14",
+ "device": "gpu",
+ "store_built_beforehand": false,
+ "attached_inputs": [],
+ "data": {
+  "data/longmemeval/longmemeval_s_cleaned.json": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+ },
+ "users": {
+  "lme": {
+   "in the prepared file": 500,
+   "in this run": 500
+  }
+ },
+ "workers": {
+  "lme": 60
+ },
+ "embedding": {
+  "device": "cuda",
+  "providers": "CUDAExecutionProvider,CPUExecutionProvider",
+  "seconds for 512 texts": 0.05
+ },
+ "rate limits": {
+  "x-ratelimit-limit-requests": "30000",
+  "x-ratelimit-limit-tokens": "150000000",
+  "x-ratelimit-remaining-requests": "29999",
+  "x-ratelimit-remaining-tokens": "149999997"
+ },
+ "harness": "5e8cdc115b2eff391e72192dbfe3786ebadc9005",
+ "package": "015143cdb995497022b88878c8ebc8c5223d1eee",
+ "package_files_changed": ""
+}

@@ -1,0 +1,37 @@
+{
+ "run": "full",
+ "benchmarks": [
+  "halumem"
+ ],
+ "label": "base",
+ "read_model": "gpt-4.1-mini-2025-04-14",
+ "device": "cpu",
+ "store_built_beforehand": false,
+ "attached_inputs": [],
+ "data": {
+  "data/halumem/HaluMem-Medium.jsonl": "486fbc130a5c8781a2af27ffa508a1d7855245137aa449c193ac4d29c45634e7"
+ },
+ "users": {
+  "halumem": {
+   "in the prepared file": 20,
+   "in this run": 20
+  }
+ },
+ "workers": {
+  "halumem": 20
+ },
+ "embedding": {
+  "device": "cpu",
+  "providers": "CPUExecutionProvider",
+  "seconds for 512 texts": 3.22
+ },
+ "rate limits": {
+  "x-ratelimit-limit-requests": "30000",
+  "x-ratelimit-limit-tokens": "150000000",
+  "x-ratelimit-remaining-requests": "29999",
+  "x-ratelimit-remaining-tokens": "149999997"
+ },
+ "harness": "5e8cdc115b2eff391e72192dbfe3786ebadc9005",
+ "package": "015143cdb995497022b88878c8ebc8c5223d1eee",
+ "package_files_changed": ""
+}

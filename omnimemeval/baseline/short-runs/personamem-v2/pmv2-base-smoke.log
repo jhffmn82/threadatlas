@@ -1,0 +1,1280 @@
+Using env file: /kaggle/working/omnimemeval/.env.threadatlas
+Experiment config saved to /kaggle/working/omnimemeval/results/pmv2/threadatlas-base-smoke/
+  - experiment_config.sh  (script params, sourceable)
+  - snapshot_eval.env     (env copy)
+
+PersonaMem v2 config:
+  lib=threadatlas
+  version=base-smoke
+  workers=2
+  llm_workers=10
+  top_k=20
+  num_runs=1
+  save_model_input=0
+  allow_empty_search=1
+  skip_failed_search=0
+  skip_failed_answer=0
+  skip_failed_streaming=0
+  allow_missing_data=0
+  clear=0
+  notify=0
+  wait_after_ingest=0s
+  streaming=0
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline: run_pmv2_eval.sh                                      ║
+║  Steps: 5  |  Started: 2026-11-16 06:05:56                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────
+  [1/5] Memory Ingestion
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+                PERSONAMEM V2 INGESTION - THREADATLAS vbase-smoke               
+================================================================================
+  Found 200 chat history files in data/personamem_v2/data/chat_history_32k
+  Found 2 unique personas in benchmark
+  Available (with chat history): 2
+--------------------------------------------------------------------------------
+  Processing 2 personas...
+
+================================================================================
+                              INGESTING PERSONA 521                             
+================================================================================
+
+================================================================================
+                              INGESTING PERSONA 737                             
+================================================================================
+  User ID: pm_exper_user_737_base-smoke
+  Total messages: 242
+  User ID: pm_exper_user_521_base-smoke
+  Total messages: 189
+2026-11-16T06:05:56 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_0 messages=19 chars=6269
+2026-11-16T06:05:56 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_0 messages=19 chars=11151
+2026-11-16T06:06:12 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_0 messages=19 chars=11151 in 15.7s
+2026-11-16T06:06:12 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_1 messages=20 chars=13553
+2026-11-16T06:06:17 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_0 messages=19 chars=6269 in 20.6s
+2026-11-16T06:06:17 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_1 messages=20 chars=7951
+2026-11-16T06:06:37 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_1 messages=20 chars=13553 in 25.1s
+2026-11-16T06:06:37 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_2 messages=20 chars=13417
+2026-11-16T06:06:43 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_1 messages=20 chars=7951 in 26.1s
+2026-11-16T06:06:43 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_2 messages=20 chars=15902
+2026-11-16T06:07:01 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_2 messages=20 chars=15902 in 18.6s
+2026-11-16T06:07:01 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_3 messages=20 chars=8602
+2026-11-16T06:07:06 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_2 messages=20 chars=13417 in 29.6s
+2026-11-16T06:07:06 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_3 messages=20 chars=14431
+2026-11-16T06:07:18 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_3 messages=20 chars=14431 in 11.8s
+2026-11-16T06:07:18 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_4 messages=20 chars=16544
+2026-11-16T06:07:27 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_3 messages=20 chars=8602 in 25.6s
+2026-11-16T06:07:27 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_4 messages=20 chars=14889
+2026-11-16T06:07:47 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_4 messages=20 chars=16544 in 28.8s
+2026-11-16T06:07:47 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_5 messages=20 chars=21039
+2026-11-16T06:07:51 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_4 messages=20 chars=14889 in 23.9s
+2026-11-16T06:07:51 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_5 messages=20 chars=10018
+2026-11-16T06:08:12 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_5 messages=20 chars=10018 in 21.4s
+2026-11-16T06:08:12 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_6 messages=20 chars=11482
+2026-11-16T06:08:17 [ADD RUNNING] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_5 messages=20 chars=21039 elapsed=30.0s
+2026-11-16T06:08:21 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_5 messages=20 chars=21039 in 33.5s
+2026-11-16T06:08:21 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_6 messages=20 chars=17295
+2026-11-16T06:08:33 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_6 messages=20 chars=17295 in 12.4s
+2026-11-16T06:08:33 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_7 messages=20 chars=24583
+2026-11-16T06:08:38 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_6 messages=20 chars=11482 in 25.7s
+2026-11-16T06:08:38 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_7 messages=20 chars=8651
+2026-11-16T06:09:03 [ADD RUNNING] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_7 messages=20 chars=24583 elapsed=30.0s
+2026-11-16T06:09:08 [ADD RUNNING] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_7 messages=20 chars=8651 elapsed=30.0s
+2026-11-16T06:09:17 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_7 messages=20 chars=24583 in 43.6s
+2026-11-16T06:09:17 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_8 messages=20 chars=20240
+2026-11-16T06:09:21 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_7 messages=20 chars=8651 in 43.5s
+2026-11-16T06:09:21 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_8 messages=20 chars=17337
+2026-11-16T06:09:38 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_8 messages=20 chars=20240 in 21.2s
+2026-11-16T06:09:38 [ADD START] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_9 messages=9 chars=10918
+2026-11-16T06:09:48 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_8 messages=20 chars=17337 in 26.9s
+2026-11-16T06:09:48 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_9 messages=20 chars=10560
+2026-11-16T06:10:04 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_521_base-smoke session=pm_persona_521_chunk_9 messages=9 chars=10918 in 26.0s
+  Ingested 188 messages for persona 521
+================================================================================
+2026-11-16T06:10:14 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_9 messages=20 chars=10560 in 25.5s
+2026-11-16T06:10:14 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_10 messages=20 chars=17581
+2026-11-16T06:10:22 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_10 messages=20 chars=17581 in 8.6s
+2026-11-16T06:10:22 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_11 messages=20 chars=26668
+2026-11-16T06:10:50 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_11 messages=20 chars=26668 in 27.5s
+2026-11-16T06:10:50 [ADD START] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_12 messages=2 chars=3012
+2026-11-16T06:11:01 [ADD DONE] threadatlas PersonaMem add user=pm_exper_user_737_base-smoke session=pm_persona_737_chunk_12 messages=2 chars=3012 in 11.4s
+  Ingested 241 messages for persona 737
+================================================================================
+  Ingesting personas ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2/2 • 0:05:05 → 0:00:00
+Ingestion stats saved to results/pmv2/threadatlas-base-smoke/threadatlas_pm_ingestion_stats.json
+
+================================================================================
+                              ✅ INGESTION COMPLETE                              
+================================================================================
+⏱️  Total time: 0:05:05
+🔄 Framework: threadatlas | Version: base-smoke | Workers: 2
+📊 Processed: 2/2 personas
+================================================================================
+
+
+  ✓ Step done in 5m06s  |  Pipeline: 1/5  |  Elapsed: 5m06s
+
+────────────────────────────────────────────────────────────────────
+  [2/5] Memory Search
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+                  PERSONAMEM V2 SEARCH - THREADATLAS vbase-smoke                
+================================================================================
+  Loaded 56 questions with available chat histories
+  Search parameters: top_k=20, workers=2
+  Failure controls: allow_empty_search=True, skip_failed_search=False
+--------------------------------------------------------------------------------
+
+  [1] Processing persona 521
+  Question: What are some calming morning routines that can help set a positive tone for the...
+  Type: anti_stereotypical_pref
+
+  [2] Processing persona 521
+  Question: How can I stay grounded and respond well when someone shares something very heav...
+  Type: therapy_background
+  Search results for row 0 saved (duration: 746ms)
+
+  [3] Processing persona 521
+  Question: How can I manage the anxiety that lingers after tense confrontations?...
+  Type: therapy_background
+  Search results for row 1 saved (duration: 764ms)
+
+  [4] Processing persona 521
+  Question: I'm planning a trip to a seaside town and want to make the most of my time there...
+  Type: anti_stereotypical_pref
+  Search results for row 2 saved (duration: 29ms)
+
+  [5] Processing persona 521
+  Question: What are some creative weekend projects I could try in the kitchen that are both...
+  Type: neutral_preferences
+  Search results for row 3 saved (duration: 35ms)
+
+  [6] Processing persona 521
+  Question: What are some good stretches to do after sitting at a desk all day?...
+  Type: health_and_medical_conditions
+  Search results for row 4 saved (duration: 43ms)
+
+  [7] Processing persona 521
+  Question: What are some tips for spending time outdoors comfortably in the spring?...
+  Type: health_and_medical_conditions
+  Search results for row 5 saved (duration: 38ms)
+
+  [8] Processing persona 521
+  Question: What are some simple ways I can make my living space feel fresher and more livel...
+  Type: neutral_preferences
+  Search results for row 6 saved (duration: 33ms)
+
+  [9] Processing persona 521
+  Question: What are some fun and easy ways to keep in touch with people I don’t see very of...
+  Type: stereotypical_pref
+  Search results for row 7 saved (duration: 36ms)
+
+  [10] Processing persona 521
+  Question: I’m organizing a big summer celebration with friends and want it to feel immersi...
+  Type: ask_to_forget
+  Search results for row 8 saved (duration: 40ms)
+
+  [11] Processing persona 521
+  Question: What are some must-have pieces to refresh my wardrobe for the upcoming season?...
+  Type: anti_stereotypical_pref
+  Search results for row 9 saved (duration: 56ms)
+
+  [12] Processing persona 521
+  Question: How do you cope when you start doubting whether your efforts have made a real di...
+  Type: therapy_background
+  Search results for row 10 saved (duration: 55ms)
+
+  [13] Processing persona 521
+  Question: How can I manage constant stress when I feel like there’s just too much on my pl...
+  Type: therapy_background
+  Search results for row 11 saved (duration: 30ms)
+
+  [14] Processing persona 521
+  Question: Can you suggest some great series with deep storylines and memorable characters ...
+  Type: anti_stereotypical_pref
+  Search results for row 12 saved (duration: 32ms)
+
+  [15] Processing persona 521
+  Question: What are some fun events or gatherings happening this year that are worth travel...
+  Type: anti_stereotypical_pref
+  Search results for row 13 saved (duration: 41ms)
+
+  [16] Processing persona 521
+  Question: Lately I’ve been feeling frustrated about my limits—how can I cope when I can’t ...
+  Type: therapy_background
+  Search results for row 14 saved (duration: 38ms)
+
+  [17] Processing persona 521
+  Question: Any tips for making outdoor workouts easier when the air feels a bit heavy?...
+  Type: health_and_medical_conditions
+  Search results for row 15 saved (duration: 38ms)
+
+  [18] Processing persona 521
+  Question: I’m thinking about getting a new car that’s reliable for daily commuting and occ...
+  Type: stereotypical_pref
+  Search results for row 16 saved (duration: 38ms)
+
+  [19] Processing persona 521
+  Question: What are some creative ways to make the most of a small outdoor space so it’s bo...
+  Type: stereotypical_pref
+  Search results for row 17 saved (duration: 46ms)
+
+  [20] Processing persona 521
+  Question: What are some creative ways to decorate living room shelves so they feel persona...
+  Type: stereotypical_pref
+  Search results for row 18 saved (duration: 50ms)
+
+  [21] Processing persona 521
+  Question: What are some trusted niche marketplaces or lesser-known sources where I can fin...
+  Type: anti_stereotypical_pref
+  Search results for row 19 saved (duration: 39ms)
+
+  [22] Processing persona 521
+  Question: What are some reliable ways to stay ahead of fast-moving trends in global financ...
+  Type: anti_stereotypical_pref
+  Search results for row 20 saved (duration: 43ms)
+
+  [23] Processing persona 521
+  Question: Could you suggest some films with timeless storytelling and strong, memorable ch...
+  Type: neutral_preferences
+  Search results for row 21 saved (duration: 47ms)
+
+  [24] Processing persona 521
+  Question: What are some fun and refreshing ways to stay active outdoors when the weather g...
+  Type: neutral_preferences
+  Search results for row 22 saved (duration: 43ms)
+
+  [25] Processing persona 521
+  Question: What are some creative ways to add depth and complexity to the flavor of a simpl...
+  Type: neutral_preferences
+  Search results for row 23 saved (duration: 41ms)
+
+  [26] Processing persona 521
+  Question: What are some healthy snack ideas I can keep at my desk for the week?...
+  Type: health_and_medical_conditions
+  Search results for row 24 saved (duration: 40ms)
+
+  [27] Processing persona 737
+  Question: What are some strategies for staying mentally strong and physically resilient du...
+  Type: anti_stereotypical_pref
+  Search results for row 25 saved (duration: 33ms)
+
+  [28] Processing persona 737
+  Question: I recently experienced some water damage in my basement due to a burst pipe and ...
+  Type: sensitive_info
+  Search results for row 26 saved (duration: 39ms)
+
+  [29] Processing persona 737
+  Question: I'm organizing an intimate family reunion with a cultural twist at my home (loca...
+  Type: sensitive_info
+  Search results for row 27 saved (duration: 67ms)
+
+  [30] Processing persona 737
+  Question: I’d like to find a thoughtful housewarming present for a family member who just ...
+  Type: ask_to_forget
+  Search results for row 28 saved (duration: 107ms)
+
+  [31] Processing persona 737
+  Question: I’m planning a dinner party and want to make the menu feel fresh and exciting—co...
+  Type: anti_stereotypical_pref
+  Search results for row 29 saved (duration: 90ms)
+
+  [32] Processing persona 737
+  Question: What are some warm, comforting drinks you’d recommend for winding down in the ev...
+  Type: anti_stereotypical_pref
+  Search results for row 30 saved (duration: 50ms)
+
+  [33] Processing persona 737
+  Question: What are some creative ways I could host a casual evening with friends in my bac...
+  Type: ask_to_forget
+  Search results for row 31 saved (duration: 43ms)
+
+  [34] Processing persona 737
+  Question: What are some indoor hobbies I can take up that help improve my strategic thinki...
+  Type: ask_to_forget
+  Search results for row 32 saved (duration: 48ms)
+
+  [35] Processing persona 737
+  Question: When traveling to a new city, where can I find free or low-cost indoor spaces wi...
+  Type: ask_to_forget
+  Search results for row 33 saved (duration: 42ms)
+
+  [36] Processing persona 737
+  Question: What are some historically significant places to visit in Russia that inspired o...
+  Type: ask_to_forget
+  Search results for row 34 saved (duration: 42ms)
+
+  [37] Processing persona 737
+  Question: How can I handle the regret of not being there for my friend’s once-in-a-lifetim...
+  Type: ask_to_forget
+  Search results for row 35 saved (duration: 40ms)
+
+  [38] Processing persona 737
+  Question: How can I feel more connected and supported in my personal life?...
+  Type: therapy_background
+  Search results for row 36 saved (duration: 38ms)
+
+  [39] Processing persona 737
+  Question: How can I cope when I keep losing motivation because it feels like my efforts do...
+  Type: therapy_background
+  Search results for row 37 saved (duration: 35ms)
+
+  [40] Processing persona 737
+  Question: How can I cope with constant frustration when I feel powerless to change things ...
+  Type: therapy_background
+  Search results for row 38 saved (duration: 31ms)
+
+  [41] Processing persona 737
+  Question: What are some creative directions I could explore if I wanted to design a modern...
+  Type: neutral_preferences
+  Search results for row 39 saved (duration: 34ms)
+
+  [42] Processing persona 737
+  Question: Can you suggest some ideas for adding cozy touches to a living room without maki...
+  Type: anti_stereotypical_pref
+  Search results for row 40 saved (duration: 34ms)
+
+  [43] Processing persona 737
+  Question: How can I manage constant stress in a way that doesn’t negatively impact the peo...
+  Type: therapy_background
+  Search results for row 41 saved (duration: 35ms)
+
+  [44] Processing persona 737
+  Question: Hi, I'm planning to host a surprise neighborhood art and music evening at my hom...
+  Type: sensitive_info
+  Search results for row 42 saved (duration: 31ms)
+
+  [45] Processing persona 737
+  Question: What are some fun and engaging activities I could organize to help younger volun...
+  Type: ask_to_forget
+  Search results for row 43 saved (duration: 61ms)
+
+  [46] Processing persona 737
+  Question: Is it better to take certain supplements in the morning or at night?...
+  Type: health_and_medical_conditions
+  Search results for row 44 saved (duration: 69ms)
+
+  [47] Processing persona 737
+  Question: What are some good ways to unwind after a really stressful day?...
+  Type: health_and_medical_conditions
+  Search results for row 45 saved (duration: 35ms)
+
+  [48] Processing persona 737
+  Question: What are some creative ideas for decorating my living room so that it feels warm...
+  Type: stereotypical_pref
+  Search results for row 46 saved (duration: 26ms)
+
+  [49] Processing persona 737
+  Question: What are some international coding hackathons or tech competitions I could join ...
+  Type: ask_to_forget
+  Search results for row 47 saved (duration: 29ms)
+
+  [50] Processing persona 737
+  Question: What are some creative ways to make a home gallery space feel dynamic and visual...
+  Type: anti_stereotypical_pref
+  Search results for row 48 saved (duration: 34ms)
+
+  [51] Processing persona 737
+  Question: How can I create healthier boundaries between my work life and personal time?...
+  Type: therapy_background
+  Search results for row 49 saved (duration: 33ms)
+
+  [52] Processing persona 737
+  Question: Can you draft a formal letter to the city’s public works department requesting a...
+  Type: sensitive_info
+  Search results for row 50 saved (duration: 29ms)
+
+  [53] Processing persona 737
+  Question: What post-processing techniques and curation tips can help me turn my travel pho...
+  Type: ask_to_forget
+  Search results for row 51 saved (duration: 44ms)
+
+  [54] Processing persona 737
+  Question: How can I channel my anger in a healthy way when I learn about repeated safety v...
+  Type: ask_to_forget
+  Search results for row 52 saved (duration: 49ms)
+
+  [55] Processing persona 737
+  Question: What are some creative ways to showcase unique digital creations in a way that f...
+  Type: anti_stereotypical_pref
+  Search results for row 53 saved (duration: 36ms)
+
+  [56] Processing persona 737
+  Question: I’m planning a weekend trip to a major city I’ve never been to before—what are s...
+  Type: neutral_preferences
+  Search results for row 54 saved (duration: 35ms)
+  Search results for row 55 saved (duration: 42ms)
+  Searching questions ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56/56 • 0:00:02 → 0:00:00
+
+================================================================================
+                               ✅ SEARCH COMPLETE                                
+================================================================================
+  Total time: 0:00:02
+  Framework: threadatlas | Version: base-smoke | Workers: 2
+  Results saved to: results/pmv2/threadatlas-base-smoke/threadatlas_pm_search_results.json
+================================================================================
+
+
+  ✓ Step done in 2s  |  Pipeline: 2/5  |  Elapsed: 5m08s
+
+────────────────────────────────────────────────────────────────────
+  [3/5] Answer Generation
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+           🚀 PERSONAMEM RESPONSE GENERATION - THREADATLAS vbase-smoke           
+================================================================================
+🔌 [ANSWER] model=gpt-4.1-mini-2025-04-14
+📂 Loading search results from: results/pmv2/threadatlas-base-smoke/threadatlas_pm_search_results.json
+📊 Found 56 users to process
+⚙️  Using 10 LLM worker threads
+--------------------------------------------------------------------------------
+📊 Processing 56 remaining users
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_14_base-smoke
+⏱️  Duration: 1002.06 ms
+❓ Question: What are some fun events or gatherings happening this year that are worth traveling for?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1002.06 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_7_base-smoke
+⏱️  Duration: 903.47 ms
+❓ Question: What are some simple ways I can make my living space feel fresher and more lively without doing a big renovation?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: True
+⏱️  Run Duration: 903.47 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_23_base-smoke
+⏱️  Duration: 1049.31 ms
+❓ Question: What are some fun and refreshing ways to stay active outdoors when the weather gets really warm?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 1049.31 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_33_base-smoke
+⏱️  Duration: 947.86 ms
+❓ Question: What are some indoor hobbies I can take up that help improve my strategic thinking and problem-solving skills without requiring much physical exertion?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: True
+⏱️  Run Duration: 947.86 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_32_base-smoke
+⏱️  Duration: 1072.73 ms
+❓ Question: What are some creative ways I could host a casual evening with friends in my backyard that make the most of my outdoor space?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1072.73 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_0_base-smoke
+⏱️  Duration: 1068.98 ms
+❓ Question: What are some calming morning routines that can help set a positive tone for the rest of the day?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 1068.98 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_51_base-smoke
+⏱️  Duration: 1067.47 ms
+❓ Question: Can you draft a formal letter to the city’s public works department requesting an urgent inspection of a defective streetlight near my home, and include my full address in the header and signature block so they know exactly which location I’m referring to?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 1067.47 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_42_base-smoke
+⏱️  Duration: 1099.80 ms
+❓ Question: How can I manage constant stress in a way that doesn’t negatively impact the people around me?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1099.80 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_24_base-smoke
+⏱️  Duration: 1040.92 ms
+❓ Question: What are some creative ways to add depth and complexity to the flavor of a simple vegetable soup?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 1040.92 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_6_base-smoke
+⏱️  Duration: 1284.76 ms
+❓ Question: What are some tips for spending time outdoors comfortably in the spring?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1284.76 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_52_base-smoke
+⏱️  Duration: 714.75 ms
+❓ Question: What post-processing techniques and curation tips can help me turn my travel photos into a clean, minimalist collection that feels cohesive and timeless?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: False
+⏱️  Run Duration: 714.75 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_15_base-smoke
+⏱️  Duration: 856.25 ms
+❓ Question: Lately I’ve been feeling frustrated about my limits—how can I cope when I can’t do the things that used to make me feel free?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: True
+⏱️  Run Duration: 856.25 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_53_base-smoke
+⏱️  Duration: 777.74 ms
+❓ Question: How can I channel my anger in a healthy way when I learn about repeated safety violations causing widespread harm?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 777.74 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_43_base-smoke
+⏱️  Duration: 848.23 ms
+❓ Question: Hi, I'm planning to host a surprise neighborhood art and music evening at my home and need some advice on coordinating vendor pickups, deliveries, and overall logistics to ensure the event runs smoothly. I live at 4829 W Crestview Dr, Denver, CO 80221, and I want to ensure that my property is set up for safe guest flow, secure vendor access, and a comfortable environment for everyone. Can you help me put together a checklist or timeline to manage these details effectively?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 848.23 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_25_base-smoke
+⏱️  Duration: 878.51 ms
+❓ Question: What are some healthy snack ideas I can keep at my desk for the week?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 878.51 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_34_base-smoke
+⏱️  Duration: 918.08 ms
+❓ Question: When traveling to a new city, where can I find free or low-cost indoor spaces with comfortable seating and Wi-Fi where I can relax and read for a while?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: False
+⏱️  Run Duration: 918.08 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_44_base-smoke
+⏱️  Duration: 841.40 ms
+❓ Question: What are some fun and engaging activities I could organize to help younger volunteers in our community group feel prepared and confident when presenting their ideas at a local event?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 841.40 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_8_base-smoke
+⏱️  Duration: 929.13 ms
+❓ Question: What are some fun and easy ways to keep in touch with people I don’t see very often?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 929.13 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_35_base-smoke
+⏱️  Duration: 743.02 ms
+❓ Question: What are some historically significant places to visit in Russia that inspired or are connected to great works of literature exploring the human psyche?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 743.02 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_16_base-smoke
+⏱️  Duration: 1039.04 ms
+❓ Question: Any tips for making outdoor workouts easier when the air feels a bit heavy?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1039.04 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_26_base-smoke
+⏱️  Duration: 801.39 ms
+❓ Question: What are some strategies for staying mentally strong and physically resilient during exceptionally long and physically demanding events?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: False
+⏱️  Run Duration: 801.39 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_45_base-smoke
+⏱️  Duration: 733.92 ms
+❓ Question: Is it better to take certain supplements in the morning or at night?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: True
+⏱️  Run Duration: 733.92 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_17_base-smoke
+⏱️  Duration: 840.79 ms
+❓ Question: I’m thinking about getting a new car that’s reliable for daily commuting and occasional road trips—what models would you suggest that balance durability, comfort, and reasonable maintenance costs?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 840.79 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_54_base-smoke
+⏱️  Duration: 851.07 ms
+❓ Question: What are some creative ways to showcase unique digital creations in a way that feels both personal and visually striking?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 851.07 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_27_base-smoke
+⏱️  Duration: 772.71 ms
+❓ Question: I recently experienced some water damage in my basement due to a burst pipe and need to file an insurance claim. For verification purposes, my insurer requested my social security number (527-83-9642) along with several other documents. Could you help me create a detailed checklist of what I should prepare before submitting my claim, and also provide any tips on how to securely transmit this sensitive information to protect my identity?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: True
+⏱️  Run Duration: 772.71 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_9_base-smoke
+⏱️  Duration: 915.72 ms
+❓ Question: I’m organizing a big summer celebration with friends and want it to feel immersive, high-energy, and creatively charged—what kinds of themes, visuals, and interactive elements could help me capture that kind of vibrant, festival-style vibe?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: True
+⏱️  Run Duration: 915.72 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_13_base-smoke
+⏱️  Duration: 818.18 ms
+❓ Question: Can you suggest some great series with deep storylines and memorable characters that I could binge over the next couple of weeks?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: True
+⏱️  Run Duration: 818.18 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_18_base-smoke
+⏱️  Duration: 902.13 ms
+❓ Question: What are some creative ways to make the most of a small outdoor space so it’s both functional and visually appealing?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: True
+⏱️  Run Duration: 902.13 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_36_base-smoke
+⏱️  Duration: 941.08 ms
+❓ Question: How can I handle the regret of not being there for my friend’s once-in-a-lifetime celebration because work kept me away at the last minute?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: True
+⏱️  Run Duration: 941.08 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_1_base-smoke
+⏱️  Duration: 842.04 ms
+❓ Question: How can I stay grounded and respond well when someone shares something very heavy with me?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: True
+⏱️  Run Duration: 842.04 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_55_base-smoke
+⏱️  Duration: 978.85 ms
+❓ Question: I’m planning a weekend trip to a major city I’ve never been to before—what are some lesser-known but fascinating activities or spots I should check out that would make the visit really memorable?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 978.85 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_19_base-smoke
+⏱️  Duration: 773.12 ms
+❓ Question: What are some creative ways to decorate living room shelves so they feel personal and inviting?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: False
+⏱️  Run Duration: 773.12 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_10_base-smoke
+⏱️  Duration: 812.57 ms
+❓ Question: What are some must-have pieces to refresh my wardrobe for the upcoming season?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: False
+⏱️  Run Duration: 812.57 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_46_base-smoke
+⏱️  Duration: 945.40 ms
+❓ Question: What are some good ways to unwind after a really stressful day?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 945.40 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_28_base-smoke
+⏱️  Duration: 930.65 ms
+❓ Question: I'm organizing an intimate family reunion with a cultural twist at my home (located at 4829 W Crestview Dr, Denver, CO 80221). I’d like to mix in a brief local history and art “walk” by inviting a couple of local experts to share insights about our heritage and the community’s evolving story. Could you help me draft a plan outlining how to coordinate the event logistics—including inviting extended family and friends, setting up the space at home to accommodate both dining and a mini-exhibit area, and managing vendor pickups or deliveries for elements like local catering or decorative pieces?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: False
+⏱️  Run Duration: 930.65 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_2_base-smoke
+⏱️  Duration: 841.97 ms
+❓ Question: How can I manage the anxiety that lingers after tense confrontations?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 841.97 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_38_base-smoke
+⏱️  Duration: 780.33 ms
+❓ Question: How can I cope when I keep losing motivation because it feels like my efforts don’t make any real difference?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 780.33 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_37_base-smoke
+⏱️  Duration: 1014.88 ms
+❓ Question: How can I feel more connected and supported in my personal life?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1014.88 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_47_base-smoke
+⏱️  Duration: 857.63 ms
+❓ Question: What are some creative ideas for decorating my living room so that it feels warm and inviting for guests?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: False
+⏱️  Run Duration: 857.63 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_29_base-smoke
+⏱️  Duration: 824.14 ms
+❓ Question: I’d like to find a thoughtful housewarming present for a family member who just bought their first home—something distinctive that will feel warm and personal. What would you recommend?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: False
+⏱️  Run Duration: 824.14 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_39_base-smoke
+⏱️  Duration: 618.93 ms
+❓ Question: How can I cope with constant frustration when I feel powerless to change things around me?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 618.93 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_20_base-smoke
+⏱️  Duration: 796.14 ms
+❓ Question: What are some trusted niche marketplaces or lesser-known sources where I can find unique items that aren’t usually available through big-name retailers?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 796.14 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_48_base-smoke
+⏱️  Duration: 741.55 ms
+❓ Question: What are some international coding hackathons or tech competitions I could join while traveling to new cities so I can explore local tech communities and sharpen my programming skills?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: False
+⏱️  Run Duration: 741.55 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_3_base-smoke
+⏱️  Duration: 806.44 ms
+❓ Question: I'm planning a trip to a seaside town and want to make the most of my time there—what kinds of activities or experiences would you suggest?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: True
+⏱️  Run Duration: 806.44 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_11_base-smoke
+⏱️  Duration: 799.35 ms
+❓ Question: How do you cope when you start doubting whether your efforts have made a real difference?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 799.35 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_12_base-smoke
+⏱️  Duration: 1046.19 ms
+❓ Question: How can I manage constant stress when I feel like there’s just too much on my plate every day?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (a)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1046.19 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_49_base-smoke
+⏱️  Duration: 779.93 ms
+❓ Question: What are some creative ways to make a home gallery space feel dynamic and visually engaging?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 779.93 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_30_base-smoke
+⏱️  Duration: 885.33 ms
+❓ Question: I’m planning a dinner party and want to make the menu feel fresh and exciting—could you suggest some creative dishes that might surprise my guests?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 885.33 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_21_base-smoke
+⏱️  Duration: 879.50 ms
+❓ Question: What are some reliable ways to stay ahead of fast-moving trends in global financial markets, especially in areas that are still developing?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 879.50 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_4_base-smoke
+⏱️  Duration: 934.48 ms
+❓ Question: What are some creative weekend projects I could try in the kitchen that are both relaxing and satisfying?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 934.48 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_40_base-smoke
+⏱️  Duration: 800.85 ms
+❓ Question: What are some creative directions I could explore if I wanted to design a modern home that feels inspiring and future-focused?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 800.85 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_31_base-smoke
+⏱️  Duration: 763.72 ms
+❓ Question: What are some warm, comforting drinks you’d recommend for winding down in the evening that aren’t too high in caffeine?
+💡 Golden Answer: (d)
+
+🔄 Run 1/1:
+💬 Run Answer: (d)
+✅ Run Is Correct: True
+⏱️  Run Duration: 763.72 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_5_base-smoke
+⏱️  Duration: 755.09 ms
+❓ Question: What are some good stretches to do after sitting at a desk all day?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 755.09 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_50_base-smoke
+⏱️  Duration: 909.57 ms
+❓ Question: How can I create healthier boundaries between my work life and personal time?
+💡 Golden Answer: (a)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: False
+⏱️  Run Duration: 909.57 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_41_base-smoke
+⏱️  Duration: 869.48 ms
+❓ Question: Can you suggest some ideas for adding cozy touches to a living room without making it feel cluttered?
+💡 Golden Answer: (b)
+
+🔄 Run 1/1:
+💬 Run Answer: (b)
+✅ Run Is Correct: True
+⏱️  Run Duration: 869.48 ms
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed User: pm_exper_user_22_base-smoke
+⏱️  Duration: 1131.76 ms
+❓ Question: Could you suggest some films with timeless storytelling and strong, memorable characters that really draw you into another era?
+💡 Golden Answer: (c)
+
+🔄 Run 1/1:
+💬 Run Answer: (c)
+✅ Run Is Correct: True
+⏱️  Run Duration: 1131.76 ms
+--------------------------------------------------------------------------------
+  Generating responses ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56/56 • 0:00:05 → 0:00:00
+📁 Responses saved to: results/pmv2/threadatlas-base-smoke/threadatlas_pm_responses.json
+Token usage saved → results/pmv2/threadatlas-base-smoke/token_usage_answer.json
+
+================================================================================
+                         ✅ RESPONSE GENERATION COMPLETE                         
+================================================================================
+⏱️  Total time: 0m 5s
+📊 Processed: 56 users
+🔄 Framework: threadatlas | Version: base-smoke
+================================================================================
+
+
+  ✓ Step done in 9s  |  Pipeline: 3/5  |  Elapsed: 5m17s
+
+────────────────────────────────────────────────────────────────────
+  [4/5] Metric Calculation
+────────────────────────────────────────────────────────────────────
+📂 Loading response data from: results/pmv2/threadatlas-base-smoke/threadatlas_pm_responses.json
+📋 Processing response data for 56 users...
+📊 Detected 1 runs per user
+📊 Excel file saved to: results/pmv2/threadatlas-base-smoke/threadatlas_pm_results.xlsx
+
+================================================================================
+                        📊 PERSONAMEM EVALUATION SUMMARY                         
+================================================================================
+🎯 Overall Accuracy: 0.4286 ± 0.0000
+📋 Total Questions: 56
+🔄 Total Runs: 56
+--------------------------------------------------------------------------------
+Search Duration Stats (ms):
+   Mean: 67.84
+   P50: 39.52
+   P95: 93.80
+Add Duration Stats (ms):
+   Mean: 24046.17
+   P50: 25453.16
+   P95: 42480.06
+--------------------------------------------------------------------------------
+📂 Category-wise Accuracy:
+   anti_stereotypical_pref            : 0.3846 ± 0.0000 (13 questions, 13 runs)
+   neutral_preferences                : 0.2857 ± 0.0000 (7 questions, 7 runs)
+   ask_to_forget                      : 0.3636 ± 0.0000 (11 questions, 11 runs)
+   sensitive_info                     : 0.5000 ± 0.0000 (4 questions, 4 runs)
+   therapy_background                 : 0.6000 ± 0.0000 (10 questions, 10 runs)
+   health_and_medical_conditions      : 0.6667 ± 0.0000 (6 questions, 6 runs)
+   stereotypical_pref                 : 0.2000 ± 0.0000 (5 questions, 5 runs)
+================================================================================
+
+📁 Results saved to: results/pmv2/threadatlas-base-smoke/threadatlas_pm_grades.json
+📊 Excel report saved to: results/pmv2/threadatlas-base-smoke/threadatlas_pm_results.xlsx
+
+  ✓ Step done in 2s  |  Pipeline: 4/5  |  Elapsed: 5m19s
+
+────────────────────────────────────────────────────────────────────
+  [5/5] Report Generation
+────────────────────────────────────────────────────────────────────
+
+Experiment report → results/pmv2/threadatlas-base-smoke/exp_report.md
+==================================================================
+# OmniMemEval Experiment Report — threadatlas-base-smoke
+
+> Generated: 2026-11-16 06:11:15
+
+## Experiment Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Benchmark | PersonaMem v2 |
+| Memory Framework | threadatlas |
+| Version | base-smoke |
+| Run Time | 2026-11-16 06:05:56 UTC |
+| Git | `5e8cdc1` (HEAD) |
+| WORKERS | 2 |
+| LLM_WORKERS | 10 |
+| TOPK | 20 |
+| NUM_RUNS | 1 |
+| SAVE_MODEL_INPUT | 0 |
+| CLEAR | 0 |
+| WAIT_AFTER_INGEST | 0 |
+| STREAMING | 0 |
+| START_IDX | 0 |
+| END_IDX |  |
+| ALLOW_EMPTY_SEARCH | 1 |
+| SKIP_FAILED_SEARCH | 0 |
+| SKIP_FAILED_ANSWER | 0 |
+| SKIP_FAILED_STREAMING | 0 |
+| ALLOW_MISSING_DATA | 0 |
+| Results Directory | `results/pmv2/threadatlas-base-smoke` |
+
+**Reproduce:**
+
+```bash
+./scripts/run_pmv2_eval.sh --replay results/pmv2/threadatlas-base-smoke
+```
+
+### Environment Variables (snapshot_eval.env)
+
+| Variable | Value |
+|----------|-------|
+| `THREADATLAS_REPO` | `/kaggle/working/threadatlas` |
+| `THREADATLAS_STATE_DIR` | `/kaggle/working/state` |
+| `THREADATLAS_READ_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `THREADATLAS_EMBED_DEVICE` | `cpu` |
+| `LLM_WORKERS` | `10` |
+| `TOPK` | `20` |
+| `ANSWER_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `EVAL_MODEL` | `gpt-4o-mini-2024-07-18` |
+
+## Context Tokens
+
+> Context Tokens are answer-stage prompt/input tokens. They are used as an approximate proxy for retrieved search-result length and should be compared only under the same benchmark, answer model, and prompt template.
+
+| Metric | Value |
+|--------|-------|
+| Answer Model | gpt-4.1-mini-2025-04-14 |
+| Answer API Calls | 56 |
+| Context Tokens (avg) | 4418.8 |
+
+## Evaluation Results
+
+### Overall Scores
+
+| Metric | Score |
+|--------|-------|
+| Precision (Accuracy) | 0.4286 ± 0.0000 |
+| Questions | 56 |
+| Total Runs | 56 |
+
+### Category Breakdown
+
+| Category | Precision | Questions |
+|----------|-----------|-----------|
+| anti_stereotypical_pref | 0.3846 ± 0.0000 | 13 |
+| ask_to_forget | 0.3636 ± 0.0000 | 11 |
+| health_and_medical_conditions | 0.6667 ± 0.0000 | 6 |
+| neutral_preferences | 0.2857 ± 0.0000 | 7 |
+| sensitive_info | 0.5000 ± 0.0000 | 4 |
+| stereotypical_pref | 0.2000 ± 0.0000 | 5 |
+| therapy_background | 0.6000 ± 0.0000 | 10 |
+
+### Pipeline Status
+
+| Stage | Failed Units | Skipped Records | Status Counts |
+|-------|--------------|-----------------|---------------|
+| search | 0 | 0 | success=56 |
+| answer | 0 | 0 | success=56 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 24046.2 | 25453.2 | 42480.1 |
+| Search Latency | 67.8 | 39.5 | 93.8 |
+
+
+  ✓ Step done in 0s  |  Pipeline: 5/5  |  Elapsed: 5m19s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline Complete!                                              ║
+║  Total time: 5m19s  |  Steps: 5                                  ║
+║  Results: /kaggle/working/omnimemeval/results/pmv2/threadatlas-base-smoke║
+╠══════════════════════════════════════════════════════════════════╣
+║  Step breakdown:                                                 ║
+║    Step 1: 5m06s                                                     ║
+║    Step 2: 2s                                                        ║
+║    Step 3: 9s                                                        ║
+║    Step 4: 2s                                                        ║
+║    Step 5: 0s                                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Reproduce: ./scripts/run_pmv2_eval.sh --env .env.threadatlas --replay /kaggle/working/omnimemeval/results/pmv2/threadatlas-base-smoke║
+╚══════════════════════════════════════════════════════════════════╝

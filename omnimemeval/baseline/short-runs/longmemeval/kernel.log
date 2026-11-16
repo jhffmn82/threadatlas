@@ -1,0 +1,249 @@
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+attached inputs: none
+OPENAI_API_KEY available: True
+$ git clone -q https://github.com/MemTensor/OmniMemEval.git /kaggle/working/omnimemeval
+$ git -C /kaggle/working/omnimemeval checkout -q 5e8cdc115b2eff391e72192dbfe3786ebadc9005
+$ git clone -q --filter=blob:none --no-checkout https://github.com/jhffmn82/threadatlas.git /kaggle/working/threadatlas
+$ git -C /kaggle/working/threadatlas sparse-checkout set threadatlas_memory
+$ git -C /kaggle/working/threadatlas checkout -q 015143cdb995497022b88878c8ebc8c5223d1eee
+$ /usr/bin/python3 -m pip install -q -r /kaggle/working/omnimemeval/requirements_user_memory.txt tiktoken
+WARNING: Skipping fastembed as it is not installed.
+WARNING: Skipping onnxruntime as it is not installed.
+$ /usr/bin/python3 -m pip install -q fastembed-gpu
+WARNING: Skipping fastembed as it is not installed.
+WARNING: Skipping onnxruntime as it is not installed.
+
+WARNING: Skipping fastembed as it is not installed.
+WARNING: Skipping onnxruntime as it is not installed.
+Tesla T4, 15360 MiB, 580.178.04
+Tesla T4, 15360 MiB, 580.178.04
+$ /usr/bin/python3 -m pip install -q onnxruntime-gpu[cuda,cudnn]
+onnxruntime-gpu[cuda,cudnn] -> CUDAExecutionProvider,CPUExecutionProvider |  / [0;93m2026-11-16 06:06:21.214723319 [W:onnxruntime:, session_state.cc:1618 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an negative impact on performance. e.g. ORT explicitly assigns shape related ops to CPU to improve perf.[m / [0;93m2026-11-16 06:06:21.214752428 [W:onnxruntime:, session_state.cc:1620 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+['fastembed-gpu==0.9.1', 'nvidia-cublas==13.1.0.3', 'nvidia-cublas-cu12==12.9.2.10', 'nvidia-cudnn-cu12==9.27.0.42', 'nvidia-cudnn-cu13==9.19.0.56', 'onnxruntime-gpu==1.32.0']
+$ /usr/bin/python3 -m unittest scripts/tests/unit/test_threadatlas_client.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK
+$ /usr/bin/python3 data/longmemeval/prepare_longmemeval.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK
+
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK
+Output directory: /kaggle/working/omnimemeval/data/longmemeval
+Variants to download: s
+
+  [s] Downloading longmemeval_s_cleaned.json ...
+  [s] Saved longmemeval_s_cleaned.json (500 records, 264.5 MB)
+
+Done.
+Output directory: /kaggle/working/omnimemeval/data/longmemeval
+Variants to download: s
+
+  [s] Downloading longmemeval_s_cleaned.json ...
+  [s] Saved longmemeval_s_cleaned.json (500 records, 264.5 MB)
+
+Done.
+lme {'in the prepared file': 500, 'in this run': 20} | read at once: 20
+the package as loaded: 0 gpt-4.1-mini-2025-04-14 cuda CUDAExecutionProvider,CPUExecutionProvider 512 0.05 [0;93m2026-11-16 06:06:50.256087106 [W:onnxruntime:, session_state.cc:1618 VerifyEachNodeIsAssignedToAnEp] Some nodes were not assigned to the preferred execution providers which may or may not have an negative impact on performance. e.g. ORT explicitly assigns shape related ops to CPU to improve perf.[m
+[0;93m2026-11-16 06:06:50.256118251 [W:onnxruntime:, session_state.cc:1620 VerifyEachNodeIsAssignedToAnEp] Rerunning with verbose output on a non-minimal build will show node assignments.[m
+
+rate limits for gpt-4.1-mini-2025-04-14: {'x-ratelimit-limit-requests': '30000', 'x-ratelimit-limit-tokens': '150000000', 'x-ratelimit-remaining-requests': '29999', 'x-ratelimit-remaining-tokens': '149999997'}
+{
+ "run": "smoke",
+ "benchmarks": [
+  "lme"
+ ],
+ "label": "base",
+ "read_model": "gpt-4.1-mini-2025-04-14",
+ "device": "gpu",
+ "store_built_beforehand": false,
+ "attached_inputs": [],
+ "data": {
+  "data/longmemeval/longmemeval_s_cleaned.json": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+ },
+ "users": {
+  "lme": {
+   "in the prepared file": 500,
+   "in this run": 20
+  }
+ },
+ "workers": {
+  "lme": 20
+ },
+ "embedding": {
+  "device": "cuda",
+  "providers": "CUDAExecutionProvider,CPUExecutionProvider",
+  "seconds for 512 texts": 0.05
+ },
+ "rate limits": {
+  "x-ratelimit-limit-requests": "30000",
+  "x-ratelimit-limit-tokens": "150000000",
+  "x-ratelimit-remaining-requests": "29999",
+  "x-ratelimit-remaining-tokens": "149999997"
+ },
+ "harness": "5e8cdc115b2eff391e72192dbfe3786ebadc9005",
+ "package": "015143cdb995497022b88878c8ebc8c5223d1eee",
+ "package_files_changed": ""
+}
+bash scripts/run_lme_eval.sh --lib threadatlas --env /kaggle/working/omnimemeval/.env.threadatlas --version base-smoke --workers 20
+lme exit 0 after 27.8 minutes
+|-------|--------------|-----------------|---------------|
+| search | 0 | 0 | success=20 |
+| answer | 0 | 0 | success=20 |
+| eval | 0 | 0 | success=20 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 28101.4 | 23154.1 | 62629.3 |
+| Search Latency | 2189.1 | 2196.4 | 2727.1 |
+
+
+  ✓ Step done in 0s  |  Pipeline: 6/6  |  Elapsed: 27m47s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline Complete!                                              ║
+║  Total time: 27m47s  |  Steps: 6                                 ║
+║  Results: /kaggle/working/omnimemeval/results/lme/threadatlas-base-smoke║
+╠══════════════════════════════════════════════════════════════════╣
+║  Step breakdown:                                                 ║
+║    Step 1: 26m44s                                                    ║
+║    Step 2: 5s                                                        ║
+║    Step 3: 7s                                                        ║
+║    Step 4: 50s                                                       ║
+║    Step 5: 1s                                                        ║
+║    Step 6: 0s                                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Reproduce: ./scripts/run_lme_eval.sh --env .env.threadatlas --replay /kaggle/working/omnimemeval/results/lme/threadatlas-base-smoke║
+╚══════════════════════════════════════════════════════════════════╝
+reading: correct gpt-4.1-mini-2025-04-14 349 calls, 155857 tokens in, 24595 out, $0.10
+reading: salience gpt-4.1-mini-2025-04-14 939 calls, 1364389 tokens in, 451583 out, $1.27
+reading: session gpt-4.1-mini-2025-04-14 980 calls, 2824292 tokens in, 2897809 out, $5.77
+reading: support gpt-4.1-mini-2025-04-14 1032 calls, 1596609 tokens in, 6454 out, $0.65
+reading: verify gpt-4.1-mini-2025-04-14 184 calls, 54332 tokens in, 1034 out, $0.02
+reading in all: 3484 calls, 5995479 tokens in, 3381475 out, $7.81 at list price, 7.58 hours inside calls
+/kaggle/working/results/lme/threadatlas-base-smoke/threadatlas_lme_grades.json
+ metrics: {"llm_judge_score": 1.0, "llm_judge_std": 0.0, "lexical": {"f1": 0.2893397205110284, "rouge1_f": 0.29044632024761985, "rouge2_f": 0.17669945485368188, "rougeL_f": 0.29044632024761985, "bleu1": 0.1738599585511182, "bleu2": 0.13627201474761563, "bleu3": 0.10102828937852804, "bleu4": 0.07276488704234649, "meteor": 0.5083206664782344}, "semantic": {"bert_f1": null, "similarity": null}, "context_tokens": 4002.6, "duration": {"search_duration_ms": 2189.055120944977, "search_duration_ms_p50": 2196.4465379714966, "search_duration_ms_p95": 2727.0923018455505, "add_duration_ms": 28101.409673469392, "add_duration_ms_p50": 23154.095, "add_duration_ms_p95": 62629.3115}}
+ status: {"search": {"status_counts": {"success": 20}, "failed_units": 0, "failed_users": 0, "skipped_records": 0}, "answer": {"status_counts": {"success": 20}, "failed_units": 0, "failed_users": 0, "skipped_records": 0}, "eval": {"status_counts": {"success": 20}, "failed_units": 0, "failed_users": 0, "skipped_records": 0}}
+/kaggle/working/results/lme/threadatlas-base-smoke/exp_report.md
+# OmniMemEval Experiment Report — threadatlas-base-smoke
+
+> Generated: 2026-11-16 06:34:39
+
+## Experiment Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Benchmark | LongMemEval |
+| Memory Framework | threadatlas |
+| Version | base-smoke |
+| Run Time | 2026-11-16 06:06:52 UTC |
+| Git | `5e8cdc1` (HEAD) |
+| WORKERS | 20 |
+| LLM_WORKERS | 10 |
+| TOPK | 20 |
+| NUM_RUNS | 1 |
+| SAVE_MODEL_INPUT | 0 |
+| STREAMING | 0 |
+| START_IDX | 0 |
+| END_IDX |  |
+| ALLOW_EMPTY_SEARCH | 1 |
+| SKIP_FAILED_SEARCH | 0 |
+| SKIP_FAILED_ANSWER | 0 |
+| SKIP_FAILED_JUDGE | 0 |
+| SKIP_FAILED_STREAMING | 0 |
+| Results Directory | `results/lme/threadatlas-base-smoke` |
+
+**Reproduce:**
+
+```bash
+./scripts/run_lme_eval.sh --replay results/lme/threadatlas-base-smoke
+```
+
+### Environment Variables (snapshot_eval.env)
+
+| Variable | Value |
+|----------|-------|
+| `THREADATLAS_REPO` | `/kaggle/working/threadatlas` |
+| `THREADATLAS_STATE_DIR` | `/kaggle/working/state` |
+| `THREADATLAS_READ_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `THREADATLAS_EMBED_DEVICE` | `cuda` |
+| `LLM_WORKERS` | `10` |
+| `TOPK` | `20` |
+| `ANSWER_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `EVAL_MODEL` | `gpt-4o-mini-2024-07-18` |
+
+## Context Tokens
+
+> Context Tokens are answer-stage prompt/input tokens. They are used as an approximate proxy for retrieved search-result length and should be compared only under the same benchmark, answer model, and prompt template.
+
+| Metric | Value |
+|--------|-------|
+| Answer Model | gpt-4.1-mini-2025-04-14 |
+| Answer API Calls | 20 |
+| Context Tokens (avg) | 4237.6 |
+
+## Evaluation Results
+
+### Overall Scores
+
+| Metric | Score |
+|--------|-------|
+| LLM-as-Judge | 1.0000 ± 0.0000 |
+| F1 | 0.2893 |
+| ROUGE-1 | 0.2904 |
+| ROUGE-2 | 0.1767 |
+| ROUGE-L | 0.2904 |
+| BLEU-1 | 0.1739 |
+| BLEU-4 | 0.0728 |
+| METEOR | 0.5083 |
+| BERTScore F1 | - |
+| Semantic Similarity | - |
+
+### Category Breakdown
+
+| Category | LLM-Judge | Questions |
+|----------|-----------|-----------|
+| single-session-user | 1.0000 | 20 |
+
+### Pipeline Status
+
+| Stage | Failed Users | Skipped Records | Status Counts |
+|-------|--------------|-----------------|---------------|
+| search | 0 | 0 | success=20 |
+| answer | 0 | 0 | success=20 |
+| eval | 0 | 0 | success=20 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 28101.4 | 23154.1 | 62629.3 |
+| Search Latency | 2189.1 | 2196.4 | 2727.1 |
+
+['__notebook__.ipynb', 'environment.txt', 'lme-base-smoke.log', 'provenance.json', 'reading-calls.jsonl', 'results']
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+[NbConvertApp] Writing 36105 bytes to __notebook__.ipynb
+[NbConvertApp] Converting notebook __notebook__.ipynb to html
+[NbConvertApp] Writing 360086 bytes to __results__.html

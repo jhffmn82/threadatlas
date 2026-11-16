@@ -1,0 +1,37 @@
+{
+ "run": "smoke",
+ "benchmarks": [
+  "beam"
+ ],
+ "label": "base",
+ "read_model": "gpt-4.1-mini-2025-04-14",
+ "device": "cpu",
+ "store_built_beforehand": false,
+ "attached_inputs": [],
+ "data": {
+  "data/beam/beam_100k.json": "613b85b9e5eca98b88de25bedb7490f1dbf61ae4c361d544452feea19bfa18a3"
+ },
+ "users": {
+  "beam": {
+   "in the prepared file": 20,
+   "in this run": 1
+  }
+ },
+ "workers": {
+  "beam": 1
+ },
+ "embedding": {
+  "device": "cpu",
+  "providers": "CPUExecutionProvider",
+  "seconds for 512 texts": 5.25
+ },
+ "rate limits": {
+  "x-ratelimit-limit-requests": "30000",
+  "x-ratelimit-limit-tokens": "150000000",
+  "x-ratelimit-remaining-requests": "29999",
+  "x-ratelimit-remaining-tokens": "149999995"
+ },
+ "harness": "5e8cdc115b2eff391e72192dbfe3786ebadc9005",
+ "package": "015143cdb995497022b88878c8ebc8c5223d1eee",
+ "package_files_changed": ""
+}

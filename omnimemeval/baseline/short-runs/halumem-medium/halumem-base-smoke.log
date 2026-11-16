@@ -1,0 +1,1841 @@
+Using env file: /kaggle/working/omnimemeval/.env.threadatlas
+Experiment config saved to /kaggle/working/omnimemeval/results/halumem/threadatlas-base-smoke/
+  - experiment_config.sh  (script params, sourceable)
+  - snapshot_eval.env     (env copy)
+
+HaluMem config:
+  lib=threadatlas
+  version=base-smoke
+  variant=medium
+  workers=1
+  llm_workers=10
+  top_k=20
+  num_runs=1
+  save_model_input=0
+  allow_empty_search=1
+  skip_failed_search=0
+  skip_failed_answer=0
+  skip_failed_judge=0
+  skip_failed_streaming=0
+  clear=0
+  notify=0
+  wait_after_ingest=0s
+  streaming=0
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline: run_halumem_eval.sh                                   ║
+║  Steps: 6  |  Started: 2026-11-16 06:03:43                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────
+  [1/6] Memory Ingestion
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+            🚀 HALUMEM INGESTION - THREADATLAS V-base-smoke (medium)             
+================================================================================
+📚 Loaded HaluMem-Medium dataset (1 users)
+--------------------------------------------------------------------------------
+
+================================================================================
+            🔄 [INGESTING USER 2f1f897e-d67f-dbc5-6a7b-b7634a9e294f]             
+================================================================================
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_0: Ingested 12 messages at 2025-09-04T21:12:18+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_1: Ingested 8 messages at 2025-09-06T01:02:20+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_2: Ingested 32 messages at 2025-09-07T01:13:36+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_3: Ingested 60 messages at 2025-12-15T08:41:23+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_4: Ingested 52 messages at 2026-01-06T20:12:29+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_5: Ingested 30 messages at 2026-01-10T08:11:20+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_6: Ingested 30 messages at 2026-02-05T18:12:15+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_7: Ingested 60 messages at 2026-03-01T09:34:00+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_8: Ingested 38 messages at 2026-04-10T11:51:02+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_9: Ingested 60 messages at 2026-07-14T20:41:03+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_10: Ingested 38 messages at 2026-10-16T13:25:45+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_11: Ingested 30 messages at 2027-01-19T08:19:55+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_12: Ingested 44 messages at 2027-04-23T22:36:00+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_13: Ingested 44 messages at 2027-07-27T15:53:02+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_14: Ingested 44 messages at 2027-10-29T17:29:56+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_15: Ingested 44 messages at 2027-12-01T13:55:33+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_16: Ingested 60 messages at 2028-01-15T14:06:26+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_17: Ingested 38 messages at 2028-02-01T10:55:30+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_18: Ingested 60 messages at 2028-03-10T18:31:33+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_19: Ingested 52 messages at 2028-04-20T19:28:38+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_20: Ingested 30 messages at 2028-05-05T12:38:07+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_21: Ingested 52 messages at 2028-06-02T01:22:27+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_22: Ingested 44 messages at 2028-08-08T15:25:04+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_23: Ingested 38 messages at 2028-11-10T16:35:07+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_24: Ingested 30 messages at 2029-01-15T16:15:20+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_25: Ingested 30 messages at 2029-02-13T11:43:39+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_26: Ingested 52 messages at 2029-03-10T08:35:02+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_27: Ingested 30 messages at 2029-05-01T14:21:58+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_28: Ingested 52 messages at 2029-05-18T08:35:34+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_29: Ingested 60 messages at 2029-06-15T19:42:50+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_30: Ingested 30 messages at 2029-08-21T21:38:14+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_31: Ingested 38 messages at 2029-11-23T11:48:17+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_32: Ingested 52 messages at 2030-02-26T15:53:36+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_33: Ingested 44 messages at 2030-05-31T12:21:42+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_34: Ingested 52 messages at 2030-09-04T00:17:40+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_35: Ingested 44 messages at 2030-12-06T15:37:45+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_36: Ingested 44 messages at 2031-03-11T16:43:06+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_37: Ingested 52 messages at 2031-06-13T23:10:12+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_38: Ingested 60 messages at 2031-08-16T00:00:55+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_39: Ingested 52 messages at 2031-09-16T19:23:50+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_40: Ingested 30 messages at 2031-10-05T11:21:28+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_41: Ingested 60 messages at 2031-12-01T10:25:55+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_42: Ingested 60 messages at 2031-12-20T00:36:40+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_43: Ingested 60 messages at 2032-02-20T16:59:32+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_44: Ingested 44 messages at 2032-03-23T09:54:13+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_45: Ingested 30 messages at 2032-06-25T16:52:31+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_46: Ingested 52 messages at 2032-09-28T09:46:41+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_47: Ingested 52 messages at 2032-12-31T14:25:03+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_48: Ingested 52 messages at 2033-04-05T20:21:52+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_49: Ingested 44 messages at 2033-04-25T18:23:50+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_50: Ingested 30 messages at 2033-05-10T23:36:43+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_51: Ingested 60 messages at 2033-05-25T10:39:10+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_52: Ingested 38 messages at 2033-06-15T15:51:25+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_53: Ingested 60 messages at 2033-07-08T09:21:01+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_54: Ingested 30 messages at 2033-10-11T09:05:02+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_55: Ingested 60 messages at 2034-01-13T11:16:10+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_56: Ingested 30 messages at 2034-04-18T15:02:33+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_57: Ingested 30 messages at 2034-07-21T12:57:02+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_58: Ingested 38 messages at 2034-10-24T23:30:23+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_59: Ingested 30 messages at 2035-01-26T08:53:08+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_60: Ingested 30 messages at 2035-02-15T07:46:36+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_61: Ingested 44 messages at 2035-05-01T15:47:12+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_62: Ingested 38 messages at 2035-05-01T13:17:04+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_63: Ingested 52 messages at 2035-08-03T22:03:03+00:00
+[threadatlas] Session hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f_hm_session_64: Ingested 30 messages at 2035-09-15T14:47:07+00:00
+================================================================================
+  Ingesting users ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1/1 • 0:43:43 → 0:00:00
+Ingestion stats saved to results/halumem/threadatlas-base-smoke/threadatlas_hm_ingestion_stats.json
+
+================================================================================
+                              ✅ INGESTION COMPLETE                              
+================================================================================
+⏱️  Total time taken to ingest 1 users: 0:43:43
+🔄 Framework: threadatlas | Version: base-smoke | Workers: 1
+================================================================================
+
+
+  ✓ Step done in 43m44s  |  Pipeline: 1/6  |  Elapsed: 43m44s
+
+────────────────────────────────────────────────────────────────────
+  [2/6] Memory Search
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+              🔍 HALUMEM SEARCH - THREADATLAS vbase-smoke (medium)               
+================================================================================
+📚 Loaded HaluMem-Medium dataset (1 users, 164 questions)
+⚙️  Search parameters: top_k=20, workers=1
+⚙️  Failure controls: allow_empty_search=True, skip_failed_search=False
+--------------------------------------------------------------------------------
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q1: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q2: What is Martin Mark's birth date?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q3: Did Martin Mark establish a global health initiative with his partner in 2025?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q4: Did Martin Mark work as a nurse at Huaxin Consulting on Sep 06, 2025?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q5: Is Martin Mark unemployed and struggling financially as of Sep 06, 2025?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q6: What is Martin Mark's job title as of Sep 06, 2025?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q7: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q8: Did Martin Mark mention a preference for reptiles as pets on Sep 07, 2025?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q9: What type of pets does Martin Mark like?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q10: Did Martin express a preference for Labradors over Golden Retrievers on Jan 06, 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q11: What is Martin's friend's name whose Golden Retriever he interacted with on Jan 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q12: How might Martin's preference for Golden Retrievers influence his choice of pet 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q13: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q14: What was Martin Mark's salary as a director at Huaxin Consulting?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q15: What is Martin Mark's blood type?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q16: Did Martin Mark have any siblings mentioned in the dialogues?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q17: What role did Martin transition to on March 01, 2026, that improved his mental h
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q18: How did Martin's change in pet preference reflect his openness to new experience
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q19: What was the main reason Martin wanted to change his career according to dialogu
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q20: How did Martin's colleagues influence his career transition as discussed on Febr
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q21: What type of new physical activity might Martin be interested in trying after Ap
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q22: How might Martin's approach to overcoming creative blocks influence his choice o
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q23: What activity did Martin participate in during a team-building event on April 10
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q24: Based on Martin's interests, what type of non-violent action games could he expl
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q25: What type of games is Martin interested in exploring as of July 14, 2026?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q26: Did Martin express interest in violent video games on July 14, 2026?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q27: What alternatives is Martin exploring to wellness retreats as of October 16, 202
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q28: What is Martin's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q29: What was the exact date of Martin's first wellness retreat experience?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q30: What is Martin's middle name as of Jan 19, 2027?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q31: Did Martin's movie preference shift from fictional narratives to documentaries a
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q32: What type of movie genres might Martin explore to relax after a stressful week i
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q33: What type of beverage did Martin express enthusiasm about incorporating into his
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q34: What is Martin's middle name as of April 23, 2027?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q35: Based on Martin's evolving beverage preferences on April 23, 2027, what type of 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q36: Given Martin's interest in heavy metal music as of Jul 27, 2027, what type of mu
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q37: What is Martin's middle name as of Jul 27, 2027?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q38: What sustainable travel choices might Martin consider after October 29, 2027?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q39: What type of clothing does Martin prefer as of October 29, 2027?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q40: Did Martin decide to keep using traditional athletic wear after attending the se
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q41: What type of reptile did Martin find interesting on Feb 01, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q42: Did Martin express a newfound interest in snakes after his visit to the reptile 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q43: What is Martin's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q44: What aspect of boxing did Martin appreciate on May 5, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q45: Did Martin's perception of boxing remain purely negative after May 05, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q46: Was Martin closed to new experiences and uninterested in sports that challenge h
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q47: Did Martin retire early from Huaxin Consulting on March 10, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q48: Did Martin's social network encourage him to retire early on April 20, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q49: Did Martin officially begin his retirement on June 1, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q50: Why did Martin decide to take a sabbatical instead of retiring early?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q51: What activities does Martin plan to engage in during his sabbatical starting Jun
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q52: How did Martin's role at Huaxin Consulting affect his decision to take a sabbati
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q53: What factors contributed to Martin's optimism about his sabbatical starting Apri
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q54: What is the user's name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q55: On what date did Martin officially begin his sabbatical?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q56: Which activity does Martin plan to engage in during his sabbatical to reduce str
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q57: Who in Martin's social network provided support that influenced his decision to 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q58: What is Martin's commitment despite career challenges?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q59: What is Martin's emotional state as he begins his sabbatical?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q60: What is Martin's middle name as of Aug 08, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q61: Did Martin express a preference for solo gaming over multiplayer puzzle games on
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q62: On Aug 08, 2028, did Martin show disinterest in cooperative gaming opportunities
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q63: What is Martin Mark's travel preference after his trip on Nov 10, 2028?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q64: What type of destinations should Martin Mark consider visiting after Nov 10, 202
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q65: Did Martin Mark express a preference for avoiding crowded tourist spots on Nov 1
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q66: What type of horror films should Martin explore next to maintain his positive mi
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q67: Did Martin express a dislike for horror films on February 13, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q68: What genre of films has Martin Mark recently started to appreciate?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q69: What type of smoothies did Martin express enthusiasm for on May 18, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q70: How might Martin adapt his smoothie recipes for a high-energy event on 2029-05-2
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q71: What is Martin's middle name as of May 18, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q72: What is Martin Mark's middle name as of June 15, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q73: What is the name of Martin Mark's new colleague mentioned on May 01, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q74: What was Martin Mark's exact weight on March 10, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q75: Did Martin's promotion to Senior Director at Huaxin Consulting occur after June 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q76: Did Martin's mental health improve after his promotion in March 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q77: Did Martin Mark express optimism about his future role as Senior Director before
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q78: What is Martin Mark's current mental health status as of Mar 10, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q79: What stress management activities has Martin Mark incorporated into his routine 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q80: What music genre captivated Martin Mark on Aug 21, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q81: What type of music might Martin explore to enhance his creativity in September 2
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q82: What is Martin Mark's middle name as of Aug 21, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q83: What is Martin Mark's favorite color as of November 23, 2029?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q84: What type of attire might Martin choose for a business conference in December 20
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q85: Did Martin Mark decide to switch to casual attire on Nov 23, 2029, to enhance pr
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q86: Did Martin Mark decide to exclude Sphynx cats from his pet preferences after vis
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q87: What pet preference did Martin Mark modify on Feb 26, 2030?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q88: Based on Martin Mark's preferences as of Feb 26, 2030, what other pet breeds mig
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q89: What event did Martin Mark attend on May 31, 2030?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q90: Did Martin Mark's perception of wrestling remain negative after attending a live
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q91: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q92: What is Martin's friend's name who recovered from gambling addiction as of Sep 0
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q93: What specific games does Martin play that align with responsible gaming practice
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q94: Did Martin express skepticism about responsible gaming practices during his frie
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q95: Did Martin Mark abandon conservation-focused hikes after December 06, 2030?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q96: What type of leisure activities might Martin Mark consider for his next trip in 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q97: What type of hikes has Martin Mark's travel preferences evolved to include?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q98: What is Martin's middle name as of Mar 11, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q99: What was the title of the slasher film Martin discussed on Mar 11, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q100: On Mar 11, 2031, what genre of films did Martin reconsider his stance on?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q101: What article did Martin Mark read on Jun 13, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q102: What is Martin Mark's beverage preference as of Jun 13, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q103: What is Martin Mark's middle name as of Jun 13, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q104: What genre of music did Martin Mark use for stress relief during work challenges
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q105: What activity does Martin Mark incorporate into his late-night routine to unwind
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q106: Did Martin Mark find rock music therapeutic during stressful periods at work on 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q107: Did Martin Mark decide to expand his collection of formal wear on Dec 20, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q108: What clothing preference did Martin Mark express on Dec 20, 2031?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q109: What clothing style might Martin Mark prefer for a hiking trip after Dec 20, 203
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q110: How might Martin use his financial stability to support his humanitarian goals i
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q111: What strategies might Martin use to maintain a balanced lifestyle and profession
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q112: Did Martin experience a decrease in financial freedom after his salary increase 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q113: Did Martin's lifestyle changes after his salary increase lead to decreased job s
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q114: What kind of pet ownership practices might Martin adopt after March 23, 2032?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q115: What is Martin's pet preference as of Mar 23, 2032?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q116: What is Martin's middle name as of March 23, 2032?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q117: What sport did Martin Mark express excitement about on June 25, 2032?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q118: What is Martin Mark's middle name as of June 25, 2032?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q119: What new sports might Martin Mark explore after June 25, 2032, given his interes
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q120: What type of leisure activity might Martin Mark explore next based on his intere
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q121: What type of games has Martin Mark recently started appreciating as of Sep 28, 2
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q122: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q123: Did Martin decide to exclude cultural tours from his travel preferences as of 20
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q124: What type of tours should Martin consider for his travel plans in 2033 to align 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q125: What travel preference did Martin express on Dec 31, 2032?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q126: What is Martin's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q127: How did Martin's promotion on April 25, 2033, impact his health practices by Jun
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q128: What is Martin Mark's current job title as of June 15, 2033?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q129: What is Martin Mark's latest physical health status as of May 10, 2033?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q130: How has Martin Mark's monthly income changed by April 25, 2033?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q131: How might Martin's commitment to yoga and meditation benefit his team in future 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q132: What impact might Martin's improved health have on his career development after 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q133: Did Martin Mark express a preference for regular green tea after the tea expo on
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q134: What type of beverage might Martin prefer at a health-focused event after Jul 08
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q135: What type of tea did Martin Mark prefer after attending the tea expo on Jul 08, 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q136: Did Martin Mark express disinterest in socially conscious rap music on October 1
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q137: What type of rap music did Martin Mark's preferences evolve to include as of Oct
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q138: What type of music might Martin explore to align with his values after October 1
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q139: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q140: What was the exact date when Martin Mark first started researching organic mater
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q141: Did Martin Mark express skepticism about the impact of sustainable clothing on h
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q142: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q143: What was the exact number of therapy sessions Martin Mark attended on Apr 18, 20
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q144: What type of dog did Martin Mark recently develop a preference for on Apr 18, 20
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q145: What is Martin Mark's current movie preference as of July 21, 2034?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q146: Who recommended the psychological thriller to Martin Mark that influenced his mo
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q147: What is Martin Mark's friend's name who recommended the psychological thriller o
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q148: Did Martin Mark express a preference for traditional herbal teas over potent hea
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q149: What is Martin Mark's middle name as of October 24, 2034?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q150: Based on Martin Mark's recent shift in beverage preference, what new dietary hab
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q151: What music genres did Martin Mark's preferences shift to on Jan 26, 2035?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q152: What new music genre might Martin explore next based on his current preferences 
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q153: Did Martin Mark express a preference for ambient music over jazz on Jan 26, 2035
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q154: What is Martin Mark's middle name?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q155: Did Martin Mark decide to avoid stylish athletic wear after May 01, 2035?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q156: What type of clothing might Martin prefer for a new fitness class starting on 20
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q157: Did Martin Mark express disinterest in integrating insights from a study on feli
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q158: What is Martin Mark's middle name as of Aug 03, 2035?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q159: What was Martin Mark's exact salary on Aug 03, 2035?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q160: What is Martin Mark's current employment status as of September 15, 2035?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q161: Did Martin launch his Global Health Initiative in May 2035?
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q162: Based on Martin's experiences, what strategy might he use to expand his Global H
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q163: How might Martin's family background influence his future decisions in healthcar
+  🔎 [2f1f897e-d67f-dbc5-6a7b-b7634a9e294f] Q164: What was Martin Mark's employment status on Feb 15, 2035?
+💾 Search results for user 2f1f897e-d67f-dbc5-6a7b-b7634a9e294f saved (164 questions)
+  Searching users ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1/1 • 0:00:21 → 0:00:00
+
+================================================================================
+                               ✅ SEARCH COMPLETE                                
+================================================================================
+⏱️  Total time: 0:00:21
+🔄 Framework: threadatlas | Version: base-smoke | Workers: 1
+📁 Results saved to: results/halumem/threadatlas-base-smoke/threadatlas_hm_search_results.json
+================================================================================
+
+
+  ✓ Step done in 23s  |  Pipeline: 2/6  |  Elapsed: 44m07s
+
+────────────────────────────────────────────────────────────────────
+  [3/6] Answer Generation
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+            🚀 HALUMEM RESPONSE GENERATION - THREADATLAS vbase-smoke             
+================================================================================
+🔌 [ANSWER] model=gpt-4.1-mini-2025-04-14
+📂 Loading search results from: results/halumem/threadatlas-base-smoke/threadatlas_hm_search_results.json
+📊 Found 1 users, 164 questions to process
+⚙️  Using 10 LLM worker threads
+⚙️  Failure controls: skip_failed_answer=False
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 971.99 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1069.13 ms
+❓ Question: What aspect of boxing did Martin appreciate on May 5, 2028?
+💬 Answer: On May 5, 2028, Martin appreciated the strategic and disciplined aspects of boxing, particularly valuing its mental challenges and the balance it offe...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1104.16 ms
+❓ Question: What sport did Martin Mark express excitement about on June 25, 2032?
+💬 Answer: On June 25, 2032, Martin Mark expressed excitement about embracing eco-friendly racing, seeing it as a way to align his humanitarian goals with promot...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1111.81 ms
+❓ Question: What music genre captivated Martin Mark on Aug 21, 2029?
+💬 Answer: On August 21, 2029, Martin Mark was captivated by contemporary classical music.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1149.08 ms
+❓ Question: Did Martin Mark mention a preference for reptiles as pets on Sep 07, 2025?
+💬 Answer: No, on September 7, 2025, Martin Mark explicitly stated that he dislikes reptiles, such as snakes, because he finds them unsettling due to their unpre...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1349.35 ms
+❓ Question: What music genres did Martin Mark's preferences shift to on Jan 26, 2035?
+💬 Answer: On January 26, 2035, Martin Mark's music preferences shifted from ambient music to more dynamic and engaging genres, specifically including jazz and c...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1445.38 ms
+❓ Question: What stress management activities has Martin Mark incorporated into his routine by Jun 15, 2029?
+💬 Answer: By June 15, 2029, Martin Mark has incorporated yoga and meditation into his routine as primary stress management activities. Additionally, he uses pai...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1451.25 ms
+❓ Question: What is Martin's middle name as of March 23, 2032?
+💬 Answer: Based on the provided memories, Martin's full name is given only as "Martin Mark." There is no mention of a middle name in any records, including thos...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1529.02 ms
+❓ Question: Did Martin's perception of boxing remain purely negative after May 05, 2028?
+💬 Answer: No, Martin's perception of boxing did not remain purely negative after May 5, 2028. On that date, Martin expressed a newfound appreciation for boxing'...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1722.90 ms
+❓ Question: What new music genre might Martin explore next based on his current preferences as of Jan 26, 2035?
+💬 Answer: As of January 26, 2035, Martin has shifted from ambient music to more dynamic and engaging genres such as jazz and contemporary classical music. Based...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 826.49 ms
+❓ Question: What is Martin Mark's middle name as of June 25, 2032?
+💬 Answer: The memories provided do not contain any information about Martin Mark's middle name as of June 25, 2032 or any other date. Therefore, I cannot provid...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 943.46 ms
+❓ Question: What type of music might Martin explore to enhance his creativity in September 2029?
+💬 Answer: In September 2029, Martin might explore contemporary classical music, contemporary jazz, contemporary rock, and potentially contemporary electronic mu...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 585.04 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 736.71 ms
+❓ Question: What is Martin Mark's middle name as of Aug 21, 2029?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name as of August 21, 2029, or any other date. Therefore, I cannot pro...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1086.51 ms
+❓ Question: Did Martin Mark express a preference for ambient music over jazz on Jan 26, 2035?
+💬 Answer: No, on January 26, 2035, Martin did not express a preference for ambient music over jazz. Instead, he indicated a shift away from ambient music toward...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 943.20 ms
+❓ Question: Did Martin express a preference for Labradors over Golden Retrievers on Jan 06, 2026?
+💬 Answer: No, on January 6, 2026, Martin did not express a preference for Labradors over Golden Retrievers. Instead, he had developed a new preference for Golde...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1340.87 ms
+❓ Question: What type of pets does Martin Mark like?
+💬 Answer: Based on the memories, Martin Mark likes pets that offer relaxation, comfort, and emotional support. Specifically, he has shown a preference for Golde...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1444.44 ms
+❓ Question: Was Martin closed to new experiences and uninterested in sports that challenge him mentally after May 05, 2028?
+💬 Answer: Based on the memories, Martin was not closed to new experiences or uninterested in sports that challenge him mentally after May 5, 2028. In fact, on t...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 714.21 ms
+❓ Question: What is Martin's friend's name whose Golden Retriever he interacted with on Jan 06, 2026?
+💬 Answer: The provided memories do not contain any information about the name of Martin's friend whose Golden Retriever he interacted with on January 6, 2026.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 936.51 ms
+❓ Question: What is Martin Mark's favorite color as of November 23, 2029?
+💬 Answer: The provided memories do not contain any information about Martin Mark's favorite color as of November 23, 2029, or any other date.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1374.55 ms
+❓ Question: What new sports might Martin Mark explore after June 25, 2032, given his interest in eco-friendly racing?
+💬 Answer: Based on the memories from June 25, 2032, Martin Mark has developed a strong interest in eco-friendly automobile racing due to its alignment with his ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 951.29 ms
+❓ Question: Did Martin's social network encourage him to retire early on April 20, 2028?
+💬 Answer: Yes, on April 20, 2028, Martin acknowledged that the support from his social network had been instrumental in his decision regarding early retirement.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1651.35 ms
+❓ Question: Did Martin retire early from Huaxin Consulting on March 10, 2028?
+💬 Answer: No, Martin did not retire early from Huaxin Consulting on March 10, 2028. Instead, on that date, he was feeling overwhelmed by stress in his role as d...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1427.73 ms
+❓ Question: Did Martin Mark decide to avoid stylish athletic wear after May 01, 2035?
+💬 Answer: Based on the most recent and relevant memories up to and including May 01, 2035, Martin Mark did not decide to avoid stylish athletic wear. In fact, o...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 784.07 ms
+❓ Question: Did Martin officially begin his retirement on June 1, 2028?
+💬 Answer: No, Martin did not officially begin his retirement on June 1, 2028. Instead, he officially started a sabbatical on that date to focus on personal well...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1321.78 ms
+❓ Question: How might Martin's preference for Golden Retrievers influence his choice of pet during stressful work periods in 2026?
+💬 Answer: Martin's preference for Golden Retrievers in 2026 is likely to positively influence his choice of pet during stressful work periods because he values ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 548.93 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 730.54 ms
+❓ Question: What type of games has Martin Mark recently started appreciating as of Sep 28, 2032?
+💬 Answer: As of September 28, 2032, Martin Mark has recently started appreciating narrative-driven games. He enjoys their immersive storytelling, finds the rich...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1512.37 ms
+❓ Question: What type of leisure activity might Martin Mark explore next based on his interest in narrative-driven games as of 2032-
+💬 Answer: Based on Martin's interest in narrative-driven games as of 2032-09-28, he might next explore more narrative-driven games that offer rich storytelling,...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1684.35 ms
+❓ Question: What type of attire might Martin choose for a business conference in December 2029?
+💬 Answer: Based on the most recent and relevant information from November 2029, Martin has updated his work wardrobe from casual business attire to smart-casual...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 543.45 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1071.81 ms
+❓ Question: Did Martin Mark decide to switch to casual attire on Nov 23, 2029, to enhance professionalism?
+💬 Answer: On November 23, 2029, Martin Mark decided to update his work wardrobe from casual business attire to smart-casual business attire—not casual attire—to...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1673.08 ms
+❓ Question: What type of clothing might Martin prefer for a new fitness class starting on 2035-05-15?
+💬 Answer: Based on the most recent and relevant memories from 2035-05-01, Martin prefers stylish and functional athletic wear that balances comfort with luxury....
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1068.24 ms
+❓ Question: Did Martin Mark express disinterest in integrating insights from a study on feline communication into his pet preference
+💬 Answer: No, Martin Mark did not express disinterest in integrating insights from the study on feline communication into his pet preferences on August 3, 2035....
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 687.24 ms
+❓ Question: What was Martin Mark's salary as a director at Huaxin Consulting?
+💬 Answer: Martin Mark's salary as a director at Huaxin Consulting was $15,700 per month, as stated in the record from 2025-09-06.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 762.96 ms
+❓ Question: What is Martin Mark's middle name as of Aug 03, 2035?
+💬 Answer: The memories provided do not contain any information about Martin Mark's middle name as of August 3, 2035, or any other date. Therefore, I cannot prov...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 914.62 ms
+❓ Question: What activities does Martin plan to engage in during his sabbatical starting June 1, 2028?
+💬 Answer: Martin plans to engage in stress-reducing activities such as yoga retreats and nature hikes during his sabbatical starting June 1, 2028. Additionally,...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 622.05 ms
+❓ Question: What is Martin Mark's blood type?
+💬 Answer: The provided memories do not contain any information about Martin Mark's blood type.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1064.28 ms
+❓ Question: Did Martin Mark decide to exclude Sphynx cats from his pet preferences after visiting his colleague's home on 2030-02-26
+💬 Answer: No, Martin Mark did not decide to exclude Sphynx cats from his pet preferences after visiting his colleague's home on 2030-02-26. In fact, he expresse...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 723.87 ms
+❓ Question: What pet preference did Martin Mark modify on Feb 26, 2030?
+💬 Answer: The memories do not contain any information about Martin Mark modifying his pet preference on February 26, 2030. Therefore, there is no record of a pe...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 946.43 ms
+❓ Question: Did Martin decide to exclude cultural tours from his travel preferences as of 2032-12-31?
+💬 Answer: No, Martin did not decide to exclude cultural tours from his travel preferences as of 2032-12-31. In fact, the most recent records show that he contin...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1649.15 ms
+❓ Question: Why did Martin decide to take a sabbatical instead of retiring early?
+💬 Answer: Martin decided to take a sabbatical instead of retiring early because, although he was feeling increasingly stressed and had considered early retireme...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 759.08 ms
+❓ Question: Did Martin Mark have any siblings mentioned in the dialogues?
+💬 Answer: Based on the provided memories, there is no mention of Martin Mark having any siblings. The information about his family only includes his parents, bo...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1109.49 ms
+❓ Question: What was Martin Mark's exact salary on Aug 03, 2035?
+💬 Answer: The memories do not contain Martin Mark's exact salary on August 3, 2035. The latest specific salary information available is from earlier dates: in 2...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 867.77 ms
+❓ Question: What is Martin Mark's current employment status as of September 15, 2035?
+💬 Answer: As of September 15, 2035, Martin Mark is self-employed. He transitioned from his role as Executive Director at Huaxin Consulting to launch his own Glo...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 885.20 ms
+❓ Question: What travel preference did Martin express on Dec 31, 2032?
+💬 Answer: On December 31, 2032, Martin expressed a travel preference focused on cultural and health tours. He emphasized that these tours offer a unique opportu...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 708.93 ms
+❓ Question: What event did Martin Mark attend on May 31, 2030?
+💬 Answer: On May 31, 2030, Martin Mark attended a wrestling event, which he described as truly transformative for him.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1280.32 ms
+❓ Question: Based on Martin Mark's preferences as of Feb 26, 2030, what other pet breeds might he explore for companionship?
+💬 Answer: Based on Martin Mark's preferences as of February 26, 2030, besides Sphynx cats, he might explore other cat breeds such as Persian cats, known for the...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 580.25 ms
+❓ Question: What is the user's name?
+💬 Answer: The user's name is Martin Mark.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1706.91 ms
+❓ Question: How did Martin's role at Huaxin Consulting affect his decision to take a sabbatical?
+💬 Answer: Martin’s role as director at Huaxin Consulting significantly contributed to his decision to take a sabbatical due to the high levels of stress and men...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 584.03 ms
+❓ Question: What is Martin's middle name?
+💬 Answer: The memories provided do not contain any information about Martin's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1848.44 ms
+❓ Question: What type of tours should Martin consider for his travel plans in 2033 to align with his interests?
+💬 Answer: Based on Martin's interests and priorities as of 2033, he should consider tours that emphasize health, wellness, cultural enrichment, and nature. Spec...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1145.19 ms
+❓ Question: Did Martin launch his Global Health Initiative in May 2035?
+💬 Answer: Based on the provided memories, Martin did not launch his Global Health Initiative in May 2035. The records show that he was still in the planning and...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1422.60 ms
+❓ Question: What role did Martin transition to on March 01, 2026, that improved his mental health?
+💬 Answer: On March 01, 2026, Martin transitioned to a new role that offered him a healthier balance between work and personal life, which significantly improved...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 563.34 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 928.13 ms
+❓ Question: On what date did Martin officially begin his sabbatical?
+💬 Answer: Martin officially began his sabbatical on June 1, 2028.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1116.15 ms
+❓ Question: Did Martin Mark's perception of wrestling remain negative after attending a live event on May 31, 2030?
+💬 Answer: No, Martin Mark's perception of wrestling did not remain negative after attending the live event on May 31, 2030. In fact, the event was described as ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1035.39 ms
+❓ Question: What was the main reason Martin wanted to change his career according to dialogues on December 15, 2025?
+💬 Answer: According to the dialogue on December 15, 2025, the main reason Martin wanted to change his career was that he believed a new role could inspire fresh...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 808.81 ms
+❓ Question: Which activity does Martin plan to engage in during his sabbatical to reduce stress?
+💬 Answer: Martin plans to engage in yoga retreats and nature hikes during his sabbatical to reduce stress.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2589.76 ms
+❓ Question: What factors contributed to Martin's optimism about his sabbatical starting April 20, 2028?
+💬 Answer: Martin's optimism about his sabbatical starting April 20, 2028, was influenced by several factors:
+
+1. **Focus on Personal Growth and Career Developme...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1423.54 ms
+❓ Question: How did Martin's promotion on April 25, 2033, impact his health practices by June 15, 2033?
+💬 Answer: Martin's promotion to Executive Director, which occurred before June 15, 2033, positively impacted his health practices. By June 15, 2033, he had succ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1622.26 ms
+❓ Question: How did Martin's change in pet preference reflect his openness to new experiences as of January 10, 2026?
+💬 Answer: As of January 10, 2026, Martin's change in pet preference—from Labradors to Golden Retrievers—reflected his openness to new experiences by showcasing ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 739.08 ms
+❓ Question: What is Martin's friend's name who recovered from gambling addiction as of Sep 04, 2030?
+💬 Answer: The memories provided do not contain any information about the name of Martin's friend who recovered from gambling addiction as of September 4, 2030.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 980.22 ms
+❓ Question: What is Martin Mark's current job title as of June 15, 2033?
+💬 Answer: As of June 15, 2033, Martin Mark's current job title is Executive Director. This is supported by the memory dated 2033-05-25T10:39:00 [P10], where Mar...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1446.95 ms
+❓ Question: How might Martin's family background influence his future decisions in healthcare initiatives?
+💬 Answer: Martin's family background, deeply rooted in the medical field—with a retired doctor father and a nurse mother—has strongly influenced his passion for...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 659.39 ms
+❓ Question: Who in Martin's social network provided support that influenced his decision to take a sabbatical?
+💬 Answer: Martin's social network members who provided support influencing his decision to take a sabbatical are Susan, Daniel, and Joshua.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1003.56 ms
+❓ Question: How did Martin's colleagues influence his career transition as discussed on February 05, 2026?
+💬 Answer: On February 05, 2026, Martin acknowledged that his colleagues—specifically Susan, Daniel, and Joshua—played an instrumental and positive role in his c...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 765.03 ms
+❓ Question: What was Martin Mark's employment status on Feb 15, 2035?
+💬 Answer: On February 15, 2035, Martin Mark had transitioned from being Executive Director at Huaxin Consulting to self-employment and had formed his own compan...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 633.43 ms
+❓ Question: What is Martin Mark's latest physical health status as of May 10, 2033?
+💬 Answer: As of May 10, 2033, Martin Mark's latest physical health status is described as "Excellent."
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 865.50 ms
+❓ Question: What specific games does Martin play that align with responsible gaming practices?
+💬 Answer: The memories do not specify any particular games that Martin currently plays which align with responsible gaming practices. He has expressed an intere...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 799.10 ms
+❓ Question: How has Martin Mark's monthly income changed by April 25, 2033?
+💬 Answer: By April 25, 2033, Martin Mark's monthly income had increased to $23,000.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 622.16 ms
+❓ Question: What activity did Martin participate in during a team-building event on April 10, 2026?
+💬 Answer: On April 10, 2026, Martin participated in simulated skydiving during a team-building event.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2820.38 ms
+❓ Question: Based on Martin's experiences, what strategy might he use to expand his Global Health Initiative in 2036?
+💬 Answer: Based on Martin's experiences and plans documented up to 2035, his strategy to expand his Global Health Initiative in 2036 would likely include the fo...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1079.07 ms
+❓ Question: What is Martin's emotional state as he begins his sabbatical?
+💬 Answer: Martin's emotional state as he begins his sabbatical is optimistic and grateful. He feels the need to unwind and refocus due to the pressures of his d...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1299.14 ms
+❓ Question: What is Martin's commitment despite career challenges?
+💬 Answer: Martin's commitment despite career challenges is to maintain and keep strong his dedication to humanitarian care goals. He wants to continue contribut...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1327.03 ms
+❓ Question: How might Martin's commitment to yoga and meditation benefit his team in future projects after June 15, 2033?
+💬 Answer: Based on the memories after June 15, 2033, Martin’s commitment to yoga and meditation benefits his team by fostering a positive and energetic work env...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1921.98 ms
+❓ Question: What type of new physical activity might Martin be interested in trying after April 10, 2026?
+💬 Answer: After April 10, 2026, Martin shows interest in exploring new physical activities that challenge him both physically and mentally. Specifically, he has...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1500.33 ms
+❓ Question: Did Martin express skepticism about responsible gaming practices during his friend's recovery on Sep 04, 2030?
+💬 Answer: Based on the conversation memories from September 4, 2030, Martin did not express skepticism about responsible gaming practices during his friend's re...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1107.16 ms
+❓ Question: Did Martin Mark abandon conservation-focused hikes after December 06, 2030?
+💬 Answer: Based on the memories provided, there is no indication that Martin Mark abandoned conservation-focused hikes after December 6, 2030. In fact, the most...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 974.28 ms
+❓ Question: What is Martin's middle name as of Aug 08, 2028?
+💬 Answer: The memories provided do not contain any information about Martin's middle name as of August 8, 2028, or any other date. Therefore, I cannot provide M...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2179.21 ms
+❓ Question: How might Martin's approach to overcoming creative blocks influence his choice of activities in the future?
+💬 Answer: Martin’s approach to overcoming creative blocks strongly influences his choice of activities by encouraging him to engage in diverse, stimulating expe...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 848.96 ms
+❓ Question: What is Martin's pet preference as of Mar 23, 2032?
+💬 Answer: As of March 23, 2032, Martin's pet preferences have evolved to favor parrots and turtles. This reflects his commitment to ethical practices and conser...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 960.03 ms
+❓ Question: Did Martin Mark express a preference for regular green tea after the tea expo on Jul 08, 2033?
+💬 Answer: Yes, after the tea expo on July 8, 2033, Martin expressed enthusiasm for antioxidant green tea, highlighting its health benefits and how it fits well ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1476.55 ms
+❓ Question: Based on Martin's interests, what type of non-violent action games could he explore after July 14, 2026?
+💬 Answer: Based on Martin's interests after July 14, 2026, he could explore non-violent action games that emphasize puzzle-solving, strategy, and exploration, w...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 818.30 ms
+❓ Question: What type of hikes has Martin Mark's travel preferences evolved to include?
+💬 Answer: Martin Mark's travel preferences have evolved to include conservation-focused hikes. These hikes not only support his personal growth but also align w...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1727.44 ms
+❓ Question: What impact might Martin's improved health have on his career development after May 25, 2033?
+💬 Answer: After May 25, 2033, Martin's improved health—achieved through consistent yoga, meditation, mindfulness, and physical workouts—has had a notably positi...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1135.01 ms
+❓ Question: What type of games is Martin interested in exploring as of July 14, 2026?
+💬 Answer: As of July 14, 2026, Martin is interested in exploring non-violent action games that provide cognitive benefits such as enhancing creativity and probl...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1583.99 ms
+❓ Question: Did Martin express a preference for solo gaming over multiplayer puzzle games on Aug 08, 2028?
+💬 Answer: No, on August 8, 2028, Martin did not express a preference for solo gaming over multiplayer puzzle games. In fact, he stated the opposite—he mentioned...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1142.62 ms
+❓ Question: On Aug 08, 2028, did Martin show disinterest in cooperative gaming opportunities?
+💬 Answer: No, on August 8, 2028, Martin did not show disinterest in cooperative gaming opportunities. In fact, he expressed a clear preference for cooperative g...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 821.41 ms
+❓ Question: What type of tea did Martin Mark prefer after attending the tea expo on Jul 08, 2033?
+💬 Answer: After attending the tea expo on July 8, 2033, Martin Mark preferred antioxidant green tea. He was excited about its potential health advantages and sa...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 900.93 ms
+❓ Question: What is Martin's middle name as of Mar 11, 2031?
+💬 Answer: The memories provided do not contain any information about Martin's middle name as of March 11, 2031, or any other date. Therefore, I cannot provide M...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 635.44 ms
+❓ Question: What was the title of the slasher film Martin discussed on Mar 11, 2031?
+💬 Answer: The memories do not contain any information about the title of the slasher film Martin discussed on March 11, 2031.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1162.12 ms
+❓ Question: Did Martin express interest in violent video games on July 14, 2026?
+💬 Answer: On July 14, 2026, Martin expressed curiosity about action games and their cognitive benefits but was also skeptical because he had always avoided viol...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1137.68 ms
+❓ Question: What is Martin Mark's travel preference after his trip on Nov 10, 2028?
+💬 Answer: After his trip on November 10, 2028, Martin Mark's travel preference is to balance his travels by carefully selecting destinations that offer both cul...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1098.29 ms
+❓ Question: What alternatives is Martin exploring to wellness retreats as of October 16, 2026?
+💬 Answer: As of October 16, 2026, Martin is exploring alternatives to wellness retreats that include nature hikes and cultural tours. He values these options be...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2495.11 ms
+❓ Question: What type of leisure activities might Martin Mark consider for his next trip in 2031?
+💬 Answer: Based on the memories, in 2031 Martin Mark is interested in leisure activities that align with his health and well-being values, as well as cultural e...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 619.36 ms
+❓ Question: What is Martin's middle name?
+💬 Answer: The provided memories do not contain any information about Martin's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1353.52 ms
+❓ Question: Did Martin Mark express disinterest in socially conscious rap music on October 11, 2033?
+💬 Answer: No, Martin Mark did not express disinterest in socially conscious rap music on October 11, 2033. In fact, he found the socially conscious themes in ra...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 691.41 ms
+❓ Question: What was the exact date of Martin's first wellness retreat experience?
+💬 Answer: The memories do not contain information specifying the exact date of Martin's first wellness retreat experience.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1034.03 ms
+❓ Question: Did Martin Mark express a preference for avoiding crowded tourist spots on Nov 10, 2028?
+💬 Answer: No, on November 10, 2028, Martin Mark did not express a preference for avoiding crowded tourist spots. In fact, he stated that he was excited about ex...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1083.71 ms
+❓ Question: On Mar 11, 2031, what genre of films did Martin reconsider his stance on?
+💬 Answer: On March 11, 2031, Martin reconsidered his stance on slasher films. Initially, he disliked them due to their violence and perceived lack of meaningful...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 878.77 ms
+❓ Question: What article did Martin Mark read on Jun 13, 2031?
+💬 Answer: On June 13, 2031, Martin Mark read an article in a health magazine about the negative impacts of sugary sodas, including weight gain and increased ris...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1722.50 ms
+❓ Question: What type of destinations should Martin Mark consider visiting after Nov 10, 2028?
+💬 Answer: After November 10, 2028, Martin Mark should consider visiting destinations that offer a balanced combination of cultural richness and manageable crowd...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1001.29 ms
+❓ Question: What type of rap music did Martin Mark's preferences evolve to include as of October 11, 2033?
+💬 Answer: As of October 11, 2033, Martin Mark's rap music preferences evolved to include socially conscious rap. He found the socially conscious themes in rap—p...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1200.45 ms
+❓ Question: What type of horror films should Martin explore next to maintain his positive mindset as of 2029-02-13?
+💬 Answer: As of 2029-02-13, Martin should explore horror films with compelling narratives that balance thrill with maintaining a positive mindset. Specifically,...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 546.56 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2755.79 ms
+❓ Question: What type of beverage might Martin prefer at a health-focused event after Jul 08, 2033?
+💬 Answer: Based on the most recent relevant memories after July 8, 2033, Martin shows a continued interest in health-focused beverages that support wellness goa...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1103.62 ms
+❓ Question: What type of music might Martin explore to align with his values after October 11, 2033?
+💬 Answer: After October 11, 2033, Martin is likely to explore rap music that highlights socially conscious themes such as equality and justice. He plans to use ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 833.25 ms
+❓ Question: What is Martin's middle name as of Jan 19, 2027?
+💬 Answer: The memories provided do not contain any information about Martin's middle name as of January 19, 2027, or any other date. Therefore, I cannot provide...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 752.12 ms
+❓ Question: What is Martin Mark's middle name as of Jun 13, 2031?
+💬 Answer: The memories provided do not contain any information about Martin Mark's middle name as of June 13, 2031, or any other date. Therefore, I cannot provi...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 968.41 ms
+❓ Question: Did Martin's movie preference shift from fictional narratives to documentaries after a relaxing week on Jan 19, 2027?
+💬 Answer: No, on January 19, 2027, Martin's movie preference shifted from documentaries to fictional narratives for mental escape and relaxation after stressful...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1262.16 ms
+❓ Question: Did Martin express a dislike for horror films on February 13, 2029?
+💬 Answer: No, on February 13, 2029, Martin did not express a dislike for horror films. Instead, he described watching a horror film at a film festival that he f...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 825.40 ms
+❓ Question: What genre of music did Martin Mark use for stress relief during work challenges on Sep 16, 2031?
+💬 Answer: On September 16, 2031, Martin Mark used jazz music for stress relief during work challenges. He found late-night jazz sessions particularly therapeuti...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1040.50 ms
+❓ Question: What was the exact date when Martin Mark first started researching organic materials?
+💬 Answer: The memories do not contain an exact date when Martin Mark first started researching organic materials. The earliest related information is from 2027-...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1760.97 ms
+❓ Question: What is Martin Mark's beverage preference as of Jun 13, 2031?
+💬 Answer: As of June 13, 2031, Martin Mark's beverage preference reflects a health-conscious approach focused on reducing sugar intake while maintaining taste a...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1510.40 ms
+❓ Question: What genre of films has Martin Mark recently started to appreciate?
+💬 Answer: Martin Mark has recently started to appreciate psychological thrillers. Initially, he disliked horror films because they disrupted his positive mindse...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 812.64 ms
+❓ Question: What type of beverage did Martin express enthusiasm about incorporating into his daily routine on April 23, 2027?
+💬 Answer: On April 23, 2027, Martin expressed enthusiasm about incorporating herbal teas with additional health blends into his evening routine to help manage s...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1091.99 ms
+❓ Question: Did Martin Mark express skepticism about the impact of sustainable clothing on his lifestyle and the environment on Janu
+💬 Answer: No, Martin Mark did not express skepticism about the impact of sustainable clothing on his lifestyle and the environment on January 13, 2034. Instead,...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1137.49 ms
+❓ Question: What type of smoothies did Martin express enthusiasm for on May 18, 2029?
+💬 Answer: On May 18, 2029, Martin expressed enthusiasm for superfood smoothies. He was excited about integrating superfood smoothies into his daily routine, aim...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 694.86 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1656.69 ms
+❓ Question: What type of movie genres might Martin explore to relax after a stressful week in 2027?
+💬 Answer: In 2027, after a stressful week, Martin shifted from documentaries to fictional narratives for relaxation. Specifically, he was interested in explorin...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 838.99 ms
+❓ Question: What is Martin's middle name as of April 23, 2027?
+💬 Answer: The memories provided do not contain any information about Martin's middle name as of April 23, 2027, or any other date. Therefore, I cannot provide M...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 823.30 ms
+❓ Question: What is Martin's middle name as of May 18, 2029?
+💬 Answer: The memories provided do not contain any information about Martin's middle name as of May 18, 2029, or any other date. Therefore, I cannot provide Mar...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 847.35 ms
+❓ Question: What was the exact number of therapy sessions Martin Mark attended on Apr 18, 2034?
+💬 Answer: The provided memories do not specify the exact number of therapy sessions Martin Mark attended on April 18, 2034. They mention his experiences and ref...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1007.35 ms
+❓ Question: Did Martin Mark decide to expand his collection of formal wear on Dec 20, 2031?
+💬 Answer: No, on December 20, 2031, Martin Mark did not decide to expand his collection of formal wear. Instead, he reflected that formal wear used to be a big ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1191.54 ms
+❓ Question: Based on Martin's evolving beverage preferences on April 23, 2027, what type of drinks might he explore to enhance his y
+💬 Answer: Based on Martin's evolving beverage preferences on April 23, 2027, he is likely to explore herbal teas with additional health blends that promote rela...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 726.11 ms
+❓ Question: What is Martin Mark's middle name as of June 15, 2029?
+💬 Answer: The memories provided do not contain any information about Martin Mark's middle name as of June 15, 2029, or any other date. Therefore, I cannot provi...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1461.31 ms
+❓ Question: Did Martin Mark find rock music therapeutic during stressful periods at work on Sep 16, 2031?
+💬 Answer: Based on the memories, Martin Mark did not specifically mention finding rock music therapeutic during stressful periods at work on September 16, 2031....
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 882.11 ms
+❓ Question: What type of dog did Martin Mark recently develop a preference for on Apr 18, 2034?
+💬 Answer: On April 18, 2034, Martin Mark recently developed a preference for Golden Retrievers. This is evidenced by his expressed interest in their gentle, ada...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2033.50 ms
+❓ Question: How might Martin adapt his smoothie recipes for a high-energy event on 2029-05-20?
+💬 Answer: Based on Martin's plans and insights from the 2029-05-18 conversations, to adapt his smoothie recipes for a high-energy event on 2029-05-20, he would ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 638.00 ms
+❓ Question: What is the name of Martin Mark's new colleague mentioned on May 01, 2029?
+💬 Answer: The name of Martin Mark's new colleague mentioned on May 01, 2029, is Joshua.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2346.43 ms
+❓ Question: What activity does Martin Mark incorporate into his late-night routine to unwind after demanding days as of Sep 16, 2031
+💬 Answer: As of September 16, 2031, Martin Mark incorporates listening to jazz music into his late-night routine to unwind after demanding days. He finds jazz s...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1553.41 ms
+❓ Question: Did Martin Mark establish a global health initiative with his partner in 2025?
+💬 Answer: Based on the provided memories, Martin Mark did not establish a global health initiative with a partner in 2025. In 2025, Martin's goal was to establi...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 817.07 ms
+❓ Question: What is Martin's middle name as of Jul 27, 2027?
+💬 Answer: The memories provided do not contain any information about Martin's middle name as of July 27, 2027, or any other date. Therefore, I cannot provide Ma...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 686.93 ms
+❓ Question: What is Martin Mark's birth date?
+💬 Answer: Martin Mark's birth date is August 2, 1996.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 736.11 ms
+❓ Question: What was Martin Mark's exact weight on March 10, 2029?
+💬 Answer: The provided memories do not contain any information about Martin Mark's exact weight on March 10, 2029.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1487.51 ms
+❓ Question: What clothing preference did Martin Mark express on Dec 20, 2031?
+💬 Answer: On December 20, 2031, Martin Mark expressed a preference for clothing that is comfortable, practical, and eco-friendly, aligned with a more casual wor...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 550.89 ms
+❓ Question: What is Martin Mark's middle name?
+💬 Answer: The provided memories do not contain any information about Martin Mark's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 975.45 ms
+❓ Question: Who recommended the psychological thriller to Martin Mark that influenced his movie preferences?
+💬 Answer: The memories do not specify the name or identity of the friend who recommended the psychological thriller to Martin Mark. They only mention that a fri...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1550.49 ms
+❓ Question: What is Martin Mark's current movie preference as of July 21, 2034?
+💬 Answer: As of July 21, 2034, Martin Mark's current movie preference has evolved from initially disliking horror films and slasher films due to their disturbin...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2183.60 ms
+❓ Question: Given Martin's interest in heavy metal music as of Jul 27, 2027, what type of music might he explore next for relaxation
+💬 Answer: As of July 27, 2027, Martin was interested in exploring heavy metal music for its surprising calming effects, alongside his existing relaxation routin...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1090.00 ms
+❓ Question: How might Martin use his financial stability to support his humanitarian goals in 2032?
+💬 Answer: In 2032, Martin plans to use his financial stability to invest in activities that enhance his well-being, such as fitness programs and mindfulness wor...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 852.57 ms
+❓ Question: Did Martin's promotion to Senior Director at Huaxin Consulting occur after June 2029?
+💬 Answer: Based on the memories, Martin's promotion to Senior Director at Huaxin Consulting was recorded on 2029-01-15, which is before June 2029. Therefore, Ma...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 793.58 ms
+❓ Question: What is Martin Mark's friend's name who recommended the psychological thriller on July 21, 2034?
+💬 Answer: The provided memories do not contain any information about the name of Martin Mark's friend who recommended the psychological thriller on July 21, 203...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1795.93 ms
+❓ Question: What clothing style might Martin Mark prefer for a hiking trip after Dec 20, 2031?
+💬 Answer: Based on the memories, after December 20, 2031, Martin Mark is focused on clothing that balances comfort, functionality, and style, aligned with his a...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 911.36 ms
+❓ Question: What type of clothing does Martin prefer as of October 29, 2027?
+💬 Answer: As of October 29, 2027, Martin prefers comfortable, eco-friendly athletic wear that aligns with his active lifestyle and environmental values. He emph...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 826.02 ms
+❓ Question: Did Martin Mark work as a nurse at Huaxin Consulting on Sep 06, 2025?
+💬 Answer: Based on the memories provided, on September 6, 2025, Martin Mark was employed at Huaxin Consulting as a director, not as a nurse. There is no informa...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1048.82 ms
+❓ Question: Did Martin's mental health improve after his promotion in March 2029?
+💬 Answer: Yes, Martin's mental health improved after his promotion in March 2029. By that time, he had become Senior Director and was effectively managing stres...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 855.90 ms
+❓ Question: What is Martin Mark's middle name as of October 24, 2034?
+💬 Answer: The memories provided do not contain any information about Martin Mark's middle name as of October 24, 2034, or any other date. Therefore, I cannot pr...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 642.46 ms
+❓ Question: What type of reptile did Martin find interesting on Feb 01, 2028?
+💬 Answer: On February 1, 2028, Martin found iguanas interesting due to their social behaviors and found them less intimidating compared to snakes, which he fear...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1175.54 ms
+❓ Question: Did Martin Mark express optimism about his future role as Senior Director before June 2029?
+💬 Answer: Yes, Martin Mark expressed optimism about his future role as Senior Director before June 2029. Specifically, on May 1, 2029, he mentioned feeling grat...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1496.33 ms
+❓ Question: Did Martin Mark express a preference for traditional herbal teas over potent health beverages on Oct 24, 2034?
+💬 Answer: On October 24, 2034, Martin Mark expressed an appreciation for traditional herbal teas and their comforting, calming effects but showed a clear shift ...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2821.18 ms
+❓ Question: What sustainable travel choices might Martin consider after October 29, 2027?
+💬 Answer: After October 29, 2027, Martin's sustainable travel choices reflect a thoughtful balance of environmental responsibility, cultural enrichment, and per...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1504.02 ms
+❓ Question: Did Martin experience a decrease in financial freedom after his salary increase on August 15, 2031?
+💬 Answer: Based on the memories, Martin did not experience a decrease in financial freedom after his salary increase on August 15, 2031. In fact, the records co...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1558.69 ms
+❓ Question: Is Martin Mark unemployed and struggling financially as of Sep 06, 2025?
+💬 Answer: Based on the memories from around that time, Martin Mark is not unemployed nor struggling financially as of September 6, 2025. At that time, he was 29...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 660.17 ms
+❓ Question: What is Martin Mark's job title as of Sep 06, 2025?
+💬 Answer: As of September 6, 2025, Martin Mark's job title is Director at Huaxin Consulting.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1800.28 ms
+❓ Question: Did Martin decide to keep using traditional athletic wear after attending the seminar on Oct 29, 2027?
+💬 Answer: Based on the memories, after attending the seminar on sustainable fashion on October 29, 2027, Martin did not decide to keep using traditional athleti...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 554.34 ms
+❓ Question: What is Martin's middle name?
+💬 Answer: The provided memories do not contain any information about Martin's middle name.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1215.69 ms
+❓ Question: What is Martin Mark's current mental health status as of Mar 10, 2029?
+💬 Answer: The memories do not contain specific information about Martin Mark's mental health status as of March 10, 2029. The closest relevant data points are f...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1661.38 ms
+❓ Question: Did Martin's lifestyle changes after his salary increase lead to decreased job satisfaction by December 1, 2031?
+💬 Answer: Based on the memories provided, Martin's lifestyle changes after his salary increase did **not** lead to decreased job satisfaction by December 1, 203...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 2890.64 ms
+❓ Question: What strategies might Martin use to maintain a balanced lifestyle and professional performance in 2032?
+💬 Answer: Based on the memories from 2032 and surrounding years, Martin might use the following strategies to maintain a balanced lifestyle and professional per...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1045.60 ms
+❓ Question: Did Martin express a newfound interest in snakes after his visit to the reptile sanctuary on Feb 01, 2028?
+💬 Answer: No, Martin did not express a newfound interest in snakes after his visit to the reptile sanctuary on February 1, 2028. Instead, he maintained a fear o...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1425.87 ms
+❓ Question: What kind of pet ownership practices might Martin adopt after March 23, 2032?
+💬 Answer: After March 23, 2032, Martin is likely to adopt pet ownership practices that are conservation-focused and ethically responsible, particularly regardin...
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+🤖 Processed: hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f
+⏱️  Duration: 1638.49 ms
+❓ Question: Based on Martin Mark's recent shift in beverage preference, what new dietary habits might he adopt after Oct 24, 2034?
+💬 Answer: Based on the most recent information from October 24, 2034, Martin Mark is optimistic about integrating potent health beverages like kombucha and matc...
+--------------------------------------------------------------------------------
+  Generating responses ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164/164 • 0:00:19 → 0:00:00
+📁 Responses saved to: results/halumem/threadatlas-base-smoke/threadatlas_hm_responses.json
+Token usage saved → results/halumem/threadatlas-base-smoke/token_usage_answer.json
+
+================================================================================
+                         ✅ RESPONSE GENERATION COMPLETE                         
+================================================================================
+⏱️ Total time: 0m 19s
+📊 Processed: 164 questions
+🔄 Framework: threadatlas | Version: base-smoke
+================================================================================
+
+
+  ✓ Step done in 25s  |  Pipeline: 3/6  |  Elapsed: 44m32s
+
+────────────────────────────────────────────────────────────────────
+  [4/6] LLM-as-Judge Evaluation
+────────────────────────────────────────────────────────────────────
+[nltk_data] Downloading package wordnet to /usr/share/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+============================================================
+Initializing evaluation resources...
+============================================================
+  [NLTK] wordnet: missing, downloading...
+  [NLTK] wordnet: download complete
+  [NLTK] punkt_tab: found in local cache
+============================================================
+Evaluation resources initialized
+============================================================
+
+Starting HaluMem evaluation for threadatlas version base-smoke...
+[EVAL] model=gpt-4o-mini-2024-07-18
+📂 Loaded search contexts from: results/halumem/threadatlas-base-smoke/threadatlas_hm_search_results.json
+Found 164 questions to evaluate
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s46__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s34__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s4__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s10__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s54__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s0__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s23__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s52__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s64__q3] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q7] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q10] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s36__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s31__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s46__q0] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s37__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s42__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s57__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s0__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s46__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s23__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s64__q4] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s54__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s52__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s13__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s13__q0] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s31__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s25__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s34__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s62__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s57__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s63__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s43__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s55__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s52__q3] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q3] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s8__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s54__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s53__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s57__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s2__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s64__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s63__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q4] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s11__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s42__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s14__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q12] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s20__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s32__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s45__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s37__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q11] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s11__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s1__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s30__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s52__q4] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q4] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s32__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s25__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s58__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s2__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s8__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s39__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s47__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s59__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s17__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q3] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s55__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s34__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q7] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q3] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q5] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s35__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s44__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s37__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s22__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s63__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s25__q2] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s8__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s58__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s20__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s64__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s44__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s14__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s59__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s12__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s43__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s47__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s45__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s55__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s33__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s53__q0] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s28__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s9__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s30__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s1__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s1__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s32__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s56__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s35__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s62__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s14__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q7] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s30__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s11__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s17__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q5] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s52__q5] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q6] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s59__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s12__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s9__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s48__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s28__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s43__q3] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s4__q0] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s47__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s22__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s2__q2] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s22__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s56__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s42__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s43__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s64__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s20__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s17__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s53__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q4] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s12__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s44__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s36__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s33__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s4__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s31__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s36__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q8] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s45__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s58__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s9__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s39__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s33__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s56__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q6] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s23__q0] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s29__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s28__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q9] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s10__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s62__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s35__q1] run1: ✗
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q6] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s39__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s21__q2] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s10__q1] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s7__q5] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s52__q0] run1: ✓
+  ⚖️  [hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f__s0__q2] run1: ✓
+  Evaluating questions ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 164/164 • 0:00:17 → 0:00:00
+
+================================================================================
+                              📊 EVALUATION SUMMARY                              
+================================================================================
+📋 Evaluated: 164 questions across 1 runs
+🎯 LLM-as-a-Judge Mean Accuracy: 0.8476
+🔍 Standard Deviation: 0.0000
+🔢 Individual run scores: [0.8476]
+--------------------------------------------------------------------------------
+📁 Results saved to: results/halumem/threadatlas-base-smoke/threadatlas_hm_judged.json
+✅ Evaluation completed successfully!
+================================================================================
+
+
+  ✓ Step done in 52s  |  Pipeline: 4/6  |  Elapsed: 45m24s
+
+────────────────────────────────────────────────────────────────────
+  [5/6] Metric Calculation
+────────────────────────────────────────────────────────────────────
+Excel file saved to: results/halumem/threadatlas-base-smoke/threadatlas_hm_results.xlsx
+
+=== Metric Calculation Complete ===
+LLM-as-a-Judge score: 0.8476 +/- 0.0000
+Total questions evaluated: 164
+
+=== Duration Metrics ===
+search_duration_ms (avg): 102.40 ms
+search_duration_ms (P50): 95.03 ms
+search_duration_ms (P95): 136.98 ms
+add_duration_ms (avg): 40354.87 ms
+add_duration_ms (P50): 36269.80 ms
+add_duration_ms (P95): 68219.74 ms
+
+Results written to results/halumem/threadatlas-base-smoke/threadatlas_hm_grades.json
+Excel report saved to results/halumem/threadatlas-base-smoke/threadatlas_hm_results.xlsx
+
+  ✓ Step done in 2s  |  Pipeline: 5/6  |  Elapsed: 45m26s
+
+────────────────────────────────────────────────────────────────────
+  [6/6] Report Generation
+────────────────────────────────────────────────────────────────────
+
+Experiment report → results/halumem/threadatlas-base-smoke/exp_report.md
+==================================================================
+# OmniMemEval Experiment Report — threadatlas-base-smoke
+
+> Generated: 2026-11-16 06:49:09
+
+## Experiment Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Benchmark | HaluMem |
+| Memory Framework | threadatlas |
+| Version | base-smoke |
+| Run Time | 2026-11-16 06:03:43 UTC |
+| Git | `5e8cdc1` (HEAD) |
+| WORKERS | 1 |
+| LLM_WORKERS | 10 |
+| TOPK | 20 |
+| VARIANT | medium |
+| NUM_RUNS | 1 |
+| SAVE_MODEL_INPUT | 0 |
+| CLEAR | 0 |
+| WAIT_AFTER_INGEST | 0 |
+| ALLOW_EMPTY_SEARCH | 1 |
+| SKIP_FAILED_SEARCH | 0 |
+| SKIP_FAILED_ANSWER | 0 |
+| SKIP_FAILED_JUDGE | 0 |
+| Results Directory | `results/halumem/threadatlas-base-smoke` |
+
+**Reproduce:**
+
+```bash
+./scripts/run_halumem_eval.sh --replay results/halumem/threadatlas-base-smoke
+```
+
+### Environment Variables (snapshot_eval.env)
+
+| Variable | Value |
+|----------|-------|
+| `THREADATLAS_REPO` | `/kaggle/working/threadatlas` |
+| `THREADATLAS_STATE_DIR` | `/kaggle/working/state` |
+| `THREADATLAS_READ_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `THREADATLAS_EMBED_DEVICE` | `cpu` |
+| `LLM_WORKERS` | `10` |
+| `TOPK` | `20` |
+| `ANSWER_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `EVAL_MODEL` | `gpt-4o-mini-2024-07-18` |
+
+## Context Tokens
+
+> Context Tokens are answer-stage prompt/input tokens. They are used as an approximate proxy for retrieved search-result length and should be compared only under the same benchmark, answer model, and prompt template.
+
+| Metric | Value |
+|--------|-------|
+| Answer Model | gpt-4.1-mini-2025-04-14 |
+| Answer API Calls | 164 |
+| Context Tokens (avg) | 3042.6 |
+
+## Evaluation Results
+
+### Overall Scores
+
+| Metric | Score |
+|--------|-------|
+| QA Accuracy (LLM-as-Judge) | 0.8476 ± 0.0000 |
+| F1 | 0.2103 |
+| ROUGE-1 | 0.1684 |
+| ROUGE-2 | 0.0669 |
+| ROUGE-L | 0.1411 |
+| BLEU-1 | 0.1087 |
+| BLEU-4 | 0.0274 |
+| METEOR | 0.2864 |
+| BERTScore F1 | - |
+| Semantic Similarity | - |
+
+### By Question Type (QA Accuracy)
+
+| Question Type | QA Accuracy | Questions |
+|---------------|-------------|-----------|
+| Basic Fact Recall | 0.8250 | 40 |
+| Memory Boundary | 0.9487 | 39 |
+| Memory Conflict | 0.8205 | 39 |
+| Generalization & Application | 0.8065 | 31 |
+| Multi-hop Inference | 0.8889 | 9 |
+| Dynamic Update | 0.6667 | 6 |
+
+### By Difficulty
+
+| Difficulty | QA Accuracy | Questions |
+|------------|-------------|-----------|
+| easy | 0.8842 | 95 |
+| hard | 0.5000 | 2 |
+| medium | 0.8060 | 67 |
+
+### Pipeline Status
+
+| Stage | Failed Users | Failed Questions | Skipped Records | Status Counts |
+|-------|--------------|------------------|-----------------|---------------|
+| search | 0 | 0 | 0 | success=164 |
+| answer | 0 | 0 | 0 | success=164 |
+| eval | 0 | 0 | 0 | success=164 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 40354.9 | 36269.8 | 68219.7 |
+| Search Latency | 102.4 | 95.0 | 137.0 |
+
+
+  ✓ Step done in 0s  |  Pipeline: 6/6  |  Elapsed: 45m26s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline Complete!                                              ║
+║  Total time: 45m26s  |  Steps: 6                                 ║
+║  Results: /kaggle/working/omnimemeval/results/halumem/threadatlas-base-smoke║
+╠══════════════════════════════════════════════════════════════════╣
+║  Step breakdown:                                                 ║
+║    Step 1: 43m44s                                                    ║
+║    Step 2: 23s                                                       ║
+║    Step 3: 25s                                                       ║
+║    Step 4: 52s                                                       ║
+║    Step 5: 2s                                                        ║
+║    Step 6: 0s                                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Reproduce: ./scripts/run_halumem_eval.sh --env .env.threadatlas --replay /kaggle/working/omnimemeval/results/halumem/threadatlas-base-smoke║
+╚══════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,174 @@
+{
+    "overall": {
+        "nugget_score_mean": 0.67375,
+        "nugget_score_std": 0.3699218667502639,
+        "total_questions": 20,
+        "duration": {
+            "search_duration_ms": 113.75802755355835,
+            "search_duration_ms_p50": 39.641499519348145,
+            "search_duration_ms_p95": 128.26147079467876,
+            "add_duration_ms": 184783.36666666667,
+            "add_duration_ms_p50": 186150.92,
+            "add_duration_ms_p95": 211021.475
+        }
+    },
+    "per_scale": {
+        "100k": {
+            "nugget_score_mean": 0.67375,
+            "nugget_score_std": 0.3699218667502639,
+            "count": 20,
+            "duration": {
+                "search_duration_ms": 113.75802755355835,
+                "search_duration_ms_p50": 39.641499519348145,
+                "search_duration_ms_p95": 128.26147079467876
+            }
+        }
+    },
+    "per_dimension": {
+        "abstention": {
+            "nugget_score_mean": 1.0,
+            "nugget_score_std": 0.0,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 759.5021724700928,
+                "search_duration_ms_p50": 759.5021724700928,
+                "search_duration_ms_p95": 1409.7174882888794
+            }
+        },
+        "contradiction_resolution": {
+            "nugget_score_mean": 0.4375,
+            "nugget_score_std": 0.0625,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 39.66689109802246,
+                "search_duration_ms_p50": 39.66689109802246,
+                "search_duration_ms_p95": 39.809584617614746
+            }
+        },
+        "event_ordering": {
+            "nugget_score_mean": 0.0,
+            "nugget_score_std": 0.0,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 53.93815040588379,
+                "search_duration_ms_p50": 53.93815040588379,
+                "search_duration_ms_p95": 54.084062576293945
+            }
+        },
+        "information_extraction": {
+            "nugget_score_mean": 1.0,
+            "nugget_score_std": 0.0,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 39.22164440155029,
+                "search_duration_ms_p50": 39.22164440155029,
+                "search_duration_ms_p95": 48.377525806427
+            }
+        },
+        "instruction_following": {
+            "nugget_score_mean": 0.75,
+            "nugget_score_std": 0.25,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 37.54532337188721,
+                "search_duration_ms_p50": 37.54532337188721,
+                "search_duration_ms_p95": 39.55172300338745
+            }
+        },
+        "knowledge_update": {
+            "nugget_score_mean": 0.5,
+            "nugget_score_std": 0.5,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 36.47720813751221,
+                "search_duration_ms_p50": 36.47720813751221,
+                "search_duration_ms_p95": 37.32553720474243
+            }
+        },
+        "multi_session_reasoning": {
+            "nugget_score_mean": 0.625,
+            "nugget_score_std": 0.125,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 38.51604461669922,
+                "search_duration_ms_p50": 38.51604461669922,
+                "search_duration_ms_p95": 38.65852355957031
+            }
+        },
+        "preference_following": {
+            "nugget_score_mean": 1.0,
+            "nugget_score_std": 0.0,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 50.00650882720947,
+                "search_duration_ms_p50": 50.00650882720947,
+                "search_duration_ms_p95": 56.31324052810669
+            }
+        },
+        "summarization": {
+            "nugget_score_mean": 0.8,
+            "nugget_score_std": 0.10000000000000003,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 52.77597904205322,
+                "search_duration_ms_p50": 52.77597904205322,
+                "search_duration_ms_p95": 55.8526873588562
+            }
+        },
+        "temporal_reasoning": {
+            "nugget_score_mean": 0.625,
+            "nugget_score_std": 0.375,
+            "count": 2,
+            "duration": {
+                "search_duration_ms": 29.93035316467285,
+                "search_duration_ms_p50": 29.93035316467285,
+                "search_duration_ms_p95": 31.882143020629883
+            }
+        }
+    },
+    "per_difficulty": {
+        "clear": {
+            "nugget_score_mean": 0.4375,
+            "nugget_score_std": 0.0625,
+            "count": 2
+        },
+        "easy": {
+            "nugget_score_mean": 0.6875,
+            "nugget_score_std": 0.369754986443726,
+            "count": 8
+        },
+        "hard": {
+            "nugget_score_mean": 1.0,
+            "nugget_score_std": 0.0,
+            "count": 1
+        },
+        "medium": {
+            "nugget_score_mean": 0.6777777777777778,
+            "nugget_score_std": 0.3965904066127722,
+            "count": 9
+        }
+    },
+    "pipeline_status": {
+        "search": {
+            "status_counts": {
+                "success": 20
+            },
+            "failed_units": 0,
+            "skipped_records": 0
+        },
+        "answer": {
+            "status_counts": {
+                "success": 20
+            },
+            "failed_units": 0,
+            "skipped_records": 0
+        },
+        "eval": {
+            "status_counts": {
+                "success": 20
+            },
+            "failed_units": 0,
+            "skipped_records": 0
+        }
+    }
+}

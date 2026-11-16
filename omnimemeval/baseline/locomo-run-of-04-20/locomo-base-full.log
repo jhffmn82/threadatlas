@@ -1,0 +1,2479 @@
+Using env file: /kaggle/working/omnimemeval/.env.threadatlas
+Experiment config saved to /kaggle/working/omnimemeval/results/locomo/threadatlas-base-full/
+  - experiment_config.sh  (script params, sourceable)
+  - snapshot_eval.env     (env copy)
+
+LoCoMo config:
+  lib=threadatlas
+  version=base-full
+  workers=10
+  llm_workers=10
+  top_k=20
+  num_runs=1
+  save_model_input=0
+  allow_empty_search=1
+  skip_failed_search=0
+  skip_failed_answer=0
+  skip_failed_judge=0
+  clear=0
+  notify=0
+  wait_after_ingest=0s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline: run_locomo_eval.sh                                    ║
+║  Steps: 6  |  Started: 2026-11-16 04:20:29                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────
+  [1/6] Memory Ingestion
+────────────────────────────────────────────────────────────────────
+Starting processing for 10 users in serial mode, each user using 10 workers for sessions...
+Processing 19 sessions for user 0
+Processing conv locomo_exp_user_0, session session_1
+Processing 28 sessions for user 5
+Processing conv locomo_exp_user_5, session session_1
+Processing 29 sessions for user 3
+Processing conv locomo_exp_user_3, session session_1
+Processing 29 sessions for user 4
+Processing conv locomo_exp_user_4, session session_1
+Processing 32 sessions for user 2
+Processing conv locomo_exp_user_2, session session_1
+Processing 25 sessions for user 8
+Processing conv locomo_exp_user_8, session session_1
+Processing 31 sessions for user 6
+Processing conv locomo_exp_user_6, session session_1
+Processing 30 sessions for user 7
+Processing conv locomo_exp_user_7, session session_1
+Processing 19 sessions for user 1
+Processing conv locomo_exp_user_1, session session_1
+Processing 30 sessions for user 9
+Processing conv locomo_exp_user_9, session session_1
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A[A
+
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A[A[A
+
+
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A[A[A[A
+
+
+
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A[A[A[A[AWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+
+
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:01,  3.30it/s][A[A[AFetching 5 files:  20%|██        | 1/5 [00:00<00:01,  3.08it/s]
+
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:01,  3.04it/s][A[A
+
+
+
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:01,  3.38it/s][A[A[A[A
+
+
+
+
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:01,  3.43it/s][A[A[A[A[A
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:01,  2.91it/s][A
+
+
+
+
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A[A[A[A[A[A
+
+
+
+
+
+
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s][A[A[A[A[A[A[A
+
+
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.94it/s][A[A[AFetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.95it/s]
+
+
+
+
+
+
+Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  5.18it/s][A[A[A[A[A[A
+
+
+
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.97it/s][A[A[A[AFetching 5 files: 100%|██████████| 5/5 [00:00<00:00,  5.17it/s]
+
+
+
+
+
+
+
+Fetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 16.13it/s][A[A[A[A[A[A[AFetching 5 files: 100%|██████████| 5/5 [00:00<00:00, 16.05it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.98it/s]
+
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.86it/s][AFetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.85it/s]
+
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.85it/s][A[AFetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.85it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.82it/s]
+
+
+
+
+
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.85it/s][A[A[A[A[AFetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.79it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:01<00:00,  2.84it/s]
+User 0, session_1 processed in 53.66 seconds
+Processing conv locomo_exp_user_0, session session_2
+User 3, session_1 processed in 59.71 seconds
+Processing conv locomo_exp_user_3, session session_2
+User 1, session_1 processed in 61.5 seconds
+Processing conv locomo_exp_user_1, session session_2
+User 8, session_1 processed in 67.03 seconds
+Processing conv locomo_exp_user_8, session session_2
+User 7, session_1 processed in 67.14 seconds
+Processing conv locomo_exp_user_7, session session_2
+User 5, session_1 processed in 73.43 seconds
+Processing conv locomo_exp_user_5, session session_2
+User 9, session_1 processed in 73.74 seconds
+Processing conv locomo_exp_user_9, session session_2
+User 4, session_1 processed in 76.31 seconds
+Processing conv locomo_exp_user_4, session session_2
+User 2, session_1 processed in 83.42 seconds
+Processing conv locomo_exp_user_2, session session_2
+User 6, session_1 processed in 92.7 seconds
+Processing conv locomo_exp_user_6, session session_2
+User 0, session_2 processed in 49.81 seconds
+Processing conv locomo_exp_user_0, session session_3
+User 3, session_2 processed in 64.49 seconds
+Processing conv locomo_exp_user_3, session session_3
+User 1, session_2 processed in 67.21 seconds
+Processing conv locomo_exp_user_1, session session_3
+User 7, session_2 processed in 66.67 seconds
+Processing conv locomo_exp_user_7, session session_3
+User 8, session_2 processed in 67.86 seconds
+Processing conv locomo_exp_user_8, session session_3
+User 4, session_2 processed in 60.91 seconds
+Processing conv locomo_exp_user_4, session session_3
+User 9, session_2 processed in 65.85 seconds
+Processing conv locomo_exp_user_9, session session_3
+User 5, session_2 processed in 67.0 seconds
+Processing conv locomo_exp_user_5, session session_3
+User 2, session_2 processed in 59.11 seconds
+Processing conv locomo_exp_user_2, session session_3
+User 6, session_2 processed in 72.74 seconds
+Processing conv locomo_exp_user_6, session session_3
+User 0, session_3 processed in 72.01 seconds
+Processing conv locomo_exp_user_0, session session_4
+User 1, session_3 processed in 52.06 seconds
+Processing conv locomo_exp_user_1, session session_4
+User 7, session_3 processed in 47.23 seconds
+Processing conv locomo_exp_user_7, session session_4
+User 3, session_3 processed in 59.86 seconds
+Processing conv locomo_exp_user_3, session session_4
+User 8, session_3 processed in 54.45 seconds
+Processing conv locomo_exp_user_8, session session_4
+User 9, session_3 processed in 54.35 seconds
+Processing conv locomo_exp_user_9, session session_4
+User 2, session_3 processed in 56.7 seconds
+Processing conv locomo_exp_user_2, session session_4
+User 5, session_3 processed in 79.32 seconds
+Processing conv locomo_exp_user_5, session session_4
+User 0, session_4 processed in 49.16 seconds
+Processing conv locomo_exp_user_0, session session_5
+User 6, session_3 processed in 65.63 seconds
+Processing conv locomo_exp_user_6, session session_4
+User 4, session_3 processed in 96.01 seconds
+Processing conv locomo_exp_user_4, session session_4
+User 1, session_4 processed in 63.32 seconds
+Processing conv locomo_exp_user_1, session session_5
+User 3, session_4 processed in 66.09 seconds
+Processing conv locomo_exp_user_3, session session_5
+User 9, session_4 processed in 62.13 seconds
+Processing conv locomo_exp_user_9, session session_5
+User 8, session_4 processed in 79.08 seconds
+Processing conv locomo_exp_user_8, session session_5
+User 2, session_4 processed in 80.94 seconds
+Processing conv locomo_exp_user_2, session session_5
+User 7, session_4 processed in 102.56 seconds
+Processing conv locomo_exp_user_7, session session_5
+User 0, session_5 processed in 59.92 seconds
+Processing conv locomo_exp_user_0, session session_6
+User 4, session_4 processed in 52.55 seconds
+Processing conv locomo_exp_user_4, session session_5
+User 5, session_4 processed in 79.86 seconds
+Processing conv locomo_exp_user_5, session session_5
+User 6, session_4 processed in 73.86 seconds
+Processing conv locomo_exp_user_6, session session_5
+User 1, session_5 processed in 75.25 seconds
+Processing conv locomo_exp_user_1, session session_6
+User 3, session_5 processed in 74.16 seconds
+Processing conv locomo_exp_user_3, session session_6
+User 2, session_5 processed in 48.16 seconds
+Processing conv locomo_exp_user_2, session session_6
+User 9, session_5 processed in 73.89 seconds
+Processing conv locomo_exp_user_9, session session_6
+User 0, session_6 processed in 48.85 seconds
+Processing conv locomo_exp_user_0, session session_7
+User 7, session_5 processed in 58.84 seconds
+Processing conv locomo_exp_user_7, session session_6
+User 8, session_5 processed in 76.05 seconds
+Processing conv locomo_exp_user_8, session session_6
+User 4, session_5 processed in 64.05 seconds
+Processing conv locomo_exp_user_4, session session_6
+User 5, session_5 processed in 55.02 seconds
+Processing conv locomo_exp_user_5, session session_6
+User 6, session_5 processed in 55.24 seconds
+Processing conv locomo_exp_user_6, session session_6
+User 1, session_6 processed in 59.49 seconds
+Processing conv locomo_exp_user_1, session session_7
+User 3, session_6 processed in 57.23 seconds
+Processing conv locomo_exp_user_3, session session_7
+User 9, session_6 processed in 55.95 seconds
+Processing conv locomo_exp_user_9, session session_7
+User 2, session_6 processed in 57.9 seconds
+Processing conv locomo_exp_user_2, session session_7
+User 7, session_6 processed in 59.6 seconds
+Processing conv locomo_exp_user_7, session session_7
+User 8, session_6 processed in 61.0 seconds
+Processing conv locomo_exp_user_8, session session_7
+User 5, session_6 processed in 54.87 seconds
+Processing conv locomo_exp_user_5, session session_7
+User 0, session_7 processed in 80.64 seconds
+Processing conv locomo_exp_user_0, session session_8
+User 6, session_6 processed in 65.15 seconds
+Processing conv locomo_exp_user_6, session session_7
+User 4, session_6 processed in 76.55 seconds
+Processing conv locomo_exp_user_4, session session_7
+User 3, session_7 processed in 46.16 seconds
+Processing conv locomo_exp_user_3, session session_8
+User 1, session_7 processed in 62.37 seconds
+Processing conv locomo_exp_user_1, session session_8
+User 2, session_7 processed in 60.68 seconds
+Processing conv locomo_exp_user_2, session session_8
+User 5, session_7 processed in 49.93 seconds
+Processing conv locomo_exp_user_5, session session_8
+User 9, session_7 processed in 74.22 seconds
+Processing conv locomo_exp_user_9, session session_8
+User 8, session_7 processed in 59.12 seconds
+Processing conv locomo_exp_user_8, session session_8
+User 7, session_7 processed in 66.04 seconds
+Processing conv locomo_exp_user_7, session session_8
+User 4, session_7 processed in 54.91 seconds
+Processing conv locomo_exp_user_4, session session_8
+User 6, session_7 processed in 67.2 seconds
+Processing conv locomo_exp_user_6, session session_8
+User 0, session_8 processed in 94.25 seconds
+Processing conv locomo_exp_user_0, session session_9
+User 3, session_8 processed in 87.44 seconds
+Processing conv locomo_exp_user_3, session session_9
+User 9, session_8 processed in 57.47 seconds
+Processing conv locomo_exp_user_9, session session_9
+User 2, session_8 processed in 83.89 seconds
+Processing conv locomo_exp_user_2, session session_9
+User 1, session_8 processed in 89.66 seconds
+Processing conv locomo_exp_user_1, session session_9
+User 5, session_8 processed in 73.94 seconds
+Processing conv locomo_exp_user_5, session session_9
+User 7, session_8 processed in 72.8 seconds
+Processing conv locomo_exp_user_7, session session_9
+User 8, session_8 processed in 88.7 seconds
+Processing conv locomo_exp_user_8, session session_9
+User 0, session_9 processed in 50.43 seconds
+Processing conv locomo_exp_user_0, session session_10
+User 4, session_8 processed in 92.63 seconds
+Processing conv locomo_exp_user_4, session session_9
+User 3, session_9 processed in 65.69 seconds
+Processing conv locomo_exp_user_3, session session_10
+User 9, session_9 processed in 67.14 seconds
+Processing conv locomo_exp_user_9, session session_10
+User 6, session_8 processed in 94.66 seconds
+Processing conv locomo_exp_user_6, session session_9
+User 2, session_9 processed in 60.7 seconds
+Processing conv locomo_exp_user_2, session session_10
+User 5, session_9 processed in 62.17 seconds
+Processing conv locomo_exp_user_5, session session_10
+User 7, session_9 processed in 54.94 seconds
+Processing conv locomo_exp_user_7, session session_10
+User 1, session_9 processed in 68.25 seconds
+Processing conv locomo_exp_user_1, session session_10
+User 8, session_9 processed in 75.38 seconds
+Processing conv locomo_exp_user_8, session session_10
+User 0, session_10 processed in 71.3 seconds
+Processing conv locomo_exp_user_0, session session_11
+User 4, session_9 processed in 61.69 seconds
+Processing conv locomo_exp_user_4, session session_10
+User 3, session_10 processed in 58.62 seconds
+Processing conv locomo_exp_user_3, session session_11
+User 9, session_10 processed in 56.95 seconds
+Processing conv locomo_exp_user_9, session session_11
+User 6, session_9 processed in 61.7 seconds
+Processing conv locomo_exp_user_6, session session_10
+User 1, session_10 processed in 68.2 seconds
+Processing conv locomo_exp_user_1, session session_11
+User 7, session_10 processed in 73.05 seconds
+Processing conv locomo_exp_user_7, session session_11
+User 2, session_10 processed in 81.78 seconds
+Processing conv locomo_exp_user_2, session session_11
+User 5, session_10 processed in 83.26 seconds
+Processing conv locomo_exp_user_5, session session_11
+User 0, session_11 processed in 55.13 seconds
+Processing conv locomo_exp_user_0, session session_12
+User 4, session_10 processed in 51.16 seconds
+Processing conv locomo_exp_user_4, session session_11
+User 8, session_10 processed in 64.35 seconds
+Processing conv locomo_exp_user_8, session session_11
+User 3, session_11 processed in 58.67 seconds
+Processing conv locomo_exp_user_3, session session_12
+User 9, session_11 processed in 62.89 seconds
+Processing conv locomo_exp_user_9, session session_12
+User 6, session_10 processed in 55.91 seconds
+Processing conv locomo_exp_user_6, session session_11
+User 7, session_11 processed in 49.13 seconds
+Processing conv locomo_exp_user_7, session session_12
+User 1, session_11 processed in 60.07 seconds
+Processing conv locomo_exp_user_1, session session_12
+User 2, session_11 processed in 65.35 seconds
+Processing conv locomo_exp_user_2, session session_12
+User 9, session_12 processed in 48.62 seconds
+Processing conv locomo_exp_user_9, session session_13
+User 3, session_12 processed in 63.72 seconds
+Processing conv locomo_exp_user_3, session session_13
+User 8, session_11 processed in 72.71 seconds
+Processing conv locomo_exp_user_8, session session_12
+User 7, session_12 processed in 53.06 seconds
+Processing conv locomo_exp_user_7, session session_13
+User 0, session_12 processed in 88.53 seconds
+Processing conv locomo_exp_user_0, session session_13
+User 4, session_11 processed in 91.75 seconds
+Processing conv locomo_exp_user_4, session session_12
+User 1, session_12 processed in 55.09 seconds
+Processing conv locomo_exp_user_1, session session_13
+User 5, session_11 processed in 105.12 seconds
+Processing conv locomo_exp_user_5, session session_12
+User 6, session_11 processed in 82.89 seconds
+Processing conv locomo_exp_user_6, session session_12
+User 9, session_13 processed in 63.42 seconds
+Processing conv locomo_exp_user_9, session session_14
+User 3, session_13 processed in 60.24 seconds
+Processing conv locomo_exp_user_3, session session_14
+User 2, session_12 processed in 84.65 seconds
+Processing conv locomo_exp_user_2, session session_13
+User 8, session_12 processed in 59.75 seconds
+Processing conv locomo_exp_user_8, session session_13
+User 7, session_13 processed in 57.1 seconds
+Processing conv locomo_exp_user_7, session session_14
+User 6, session_12 processed in 46.55 seconds
+Processing conv locomo_exp_user_6, session session_13
+User 0, session_13 processed in 61.63 seconds
+Processing conv locomo_exp_user_0, session session_14
+User 5, session_12 processed in 57.82 seconds
+Processing conv locomo_exp_user_5, session session_13
+User 9, session_14 processed in 32.08 seconds
+Processing conv locomo_exp_user_9, session session_15
+User 1, session_13 processed in 67.85 seconds
+Processing conv locomo_exp_user_1, session session_14
+User 4, session_12 processed in 73.22 seconds
+Processing conv locomo_exp_user_4, session session_13
+User 3, session_14 processed in 67.7 seconds
+Processing conv locomo_exp_user_3, session session_15
+User 8, session_13 processed in 66.1 seconds
+Processing conv locomo_exp_user_8, session session_14
+User 6, session_13 processed in 58.57 seconds
+Processing conv locomo_exp_user_6, session session_14
+User 5, session_13 processed in 58.56 seconds
+Processing conv locomo_exp_user_5, session session_14
+User 7, session_14 processed in 72.77 seconds
+Processing conv locomo_exp_user_7, session session_15
+User 2, session_13 processed in 92.42 seconds
+Processing conv locomo_exp_user_2, session session_14
+User 9, session_15 processed in 67.23 seconds
+Processing conv locomo_exp_user_9, session session_16
+User 1, session_14 processed in 68.23 seconds
+Processing conv locomo_exp_user_1, session session_15
+User 0, session_14 processed in 88.19 seconds
+Processing conv locomo_exp_user_0, session session_15
+User 4, session_13 processed in 71.91 seconds
+Processing conv locomo_exp_user_4, session session_14
+User 3, session_15 processed in 60.31 seconds
+Processing conv locomo_exp_user_3, session session_16
+User 6, session_14 processed in 65.05 seconds
+Processing conv locomo_exp_user_6, session session_15
+User 8, session_14 processed in 67.39 seconds
+Processing conv locomo_exp_user_8, session session_15
+User 5, session_14 processed in 69.51 seconds
+Processing conv locomo_exp_user_5, session session_15
+User 2, session_14 processed in 63.37 seconds
+Processing conv locomo_exp_user_2, session session_15
+User 9, session_16 processed in 67.91 seconds
+Processing conv locomo_exp_user_9, session session_17
+User 7, session_15 processed in 84.7 seconds
+Processing conv locomo_exp_user_7, session session_16
+User 1, session_15 processed in 67.13 seconds
+Processing conv locomo_exp_user_1, session session_16
+User 0, session_15 processed in 73.41 seconds
+Processing conv locomo_exp_user_0, session session_16
+User 4, session_14 processed in 75.86 seconds
+Processing conv locomo_exp_user_4, session session_15
+User 3, session_16 processed in 50.33 seconds
+Processing conv locomo_exp_user_3, session session_17
+User 8, session_15 processed in 62.12 seconds
+Processing conv locomo_exp_user_8, session session_16
+User 6, session_15 processed in 65.4 seconds
+Processing conv locomo_exp_user_6, session session_16
+User 9, session_17 processed in 42.22 seconds
+Processing conv locomo_exp_user_9, session session_18
+User 5, session_15 processed in 57.09 seconds
+Processing conv locomo_exp_user_5, session session_16
+User 2, session_15 processed in 60.96 seconds
+Processing conv locomo_exp_user_2, session session_16
+User 1, session_16 processed in 60.28 seconds
+Processing conv locomo_exp_user_1, session session_17
+User 7, session_16 processed in 70.19 seconds
+Processing conv locomo_exp_user_7, session session_17
+User 0, session_16 processed in 62.15 seconds
+Processing conv locomo_exp_user_0, session session_17
+User 3, session_17 processed in 66.61 seconds
+Processing conv locomo_exp_user_3, session session_18
+User 5, session_16 processed in 59.48 seconds
+Processing conv locomo_exp_user_5, session session_17
+User 4, session_15 processed in 87.04 seconds
+Processing conv locomo_exp_user_4, session session_16
+User 6, session_16 processed in 68.02 seconds
+Processing conv locomo_exp_user_6, session session_17
+User 8, session_16 processed in 74.54 seconds
+Processing conv locomo_exp_user_8, session session_17
+User 2, session_16 processed in 57.05 seconds
+Processing conv locomo_exp_user_2, session session_17
+User 9, session_18 processed in 71.07 seconds
+Processing conv locomo_exp_user_9, session session_19
+User 1, session_17 processed in 54.66 seconds
+Processing conv locomo_exp_user_1, session session_18
+User 7, session_17 processed in 64.98 seconds
+Processing conv locomo_exp_user_7, session session_18
+User 3, session_18 processed in 64.87 seconds
+Processing conv locomo_exp_user_3, session session_19
+User 0, session_17 processed in 81.05 seconds
+Processing conv locomo_exp_user_0, session session_18
+User 9, session_19 processed in 50.77 seconds
+Processing conv locomo_exp_user_9, session session_20
+User 4, session_16 processed in 62.92 seconds
+Processing conv locomo_exp_user_4, session session_17
+User 5, session_17 processed in 65.29 seconds
+Processing conv locomo_exp_user_5, session session_18
+User 2, session_17 processed in 66.23 seconds
+Processing conv locomo_exp_user_2, session session_18
+User 8, session_17 processed in 71.28 seconds
+Processing conv locomo_exp_user_8, session session_18
+User 7, session_18 processed in 55.88 seconds
+Processing conv locomo_exp_user_7, session session_19
+User 1, session_18 processed in 80.22 seconds
+Processing conv locomo_exp_user_1, session session_19
+User 6, session_17 processed in 95.79 seconds
+Processing conv locomo_exp_user_6, session session_18
+User 3, session_19 processed in 64.5 seconds
+Processing conv locomo_exp_user_3, session session_20
+User 4, session_17 processed in 55.26 seconds
+Processing conv locomo_exp_user_4, session session_18
+User 9, session_20 processed in 67.26 seconds
+Processing conv locomo_exp_user_9, session session_21
+User 8, session_18 processed in 57.53 seconds
+Processing conv locomo_exp_user_8, session session_19
+User 1, session_19 processed in 45.36 seconds
+User 1 processed successfully in 1226.36 seconds
+User 0, session_18 processed in 86.38 seconds
+Processing conv locomo_exp_user_0, session session_19
+User 2, session_18 processed in 63.69 seconds
+Processing conv locomo_exp_user_2, session session_19
+User 5, session_18 processed in 77.64 seconds
+Processing conv locomo_exp_user_5, session session_19
+User 4, session_18 processed in 53.28 seconds
+Processing conv locomo_exp_user_4, session session_19
+User 6, session_18 processed in 73.04 seconds
+Processing conv locomo_exp_user_6, session session_19
+User 3, session_20 processed in 68.54 seconds
+Processing conv locomo_exp_user_3, session session_21
+User 7, session_19 processed in 88.41 seconds
+Processing conv locomo_exp_user_7, session session_20
+User 9, session_21 processed in 53.7 seconds
+Processing conv locomo_exp_user_9, session session_22
+User 0, session_19 processed in 46.31 seconds
+User 0 processed successfully in 1272.94 seconds
+User 8, session_19 processed in 71.56 seconds
+Processing conv locomo_exp_user_8, session session_20
+User 2, session_19 processed in 69.41 seconds
+Processing conv locomo_exp_user_2, session session_20
+User 6, session_19 processed in 41.56 seconds
+Processing conv locomo_exp_user_6, session session_20
+User 5, session_19 processed in 74.1 seconds
+Processing conv locomo_exp_user_5, session session_20
+User 9, session_22 processed in 35.31 seconds
+Processing conv locomo_exp_user_9, session session_23
+User 7, session_20 processed in 47.86 seconds
+Processing conv locomo_exp_user_7, session session_21
+User 3, session_21 processed in 55.71 seconds
+Processing conv locomo_exp_user_3, session session_22
+User 4, session_19 processed in 78.72 seconds
+Processing conv locomo_exp_user_4, session session_20
+User 8, session_20 processed in 44.01 seconds
+Processing conv locomo_exp_user_8, session session_21
+User 2, session_20 processed in 44.13 seconds
+Processing conv locomo_exp_user_2, session session_21
+User 7, session_21 processed in 43.48 seconds
+Processing conv locomo_exp_user_7, session session_22
+User 3, session_22 processed in 46.44 seconds
+Processing conv locomo_exp_user_3, session session_23
+User 9, session_23 processed in 64.8 seconds
+Processing conv locomo_exp_user_9, session session_24
+User 6, session_20 processed in 74.37 seconds
+Processing conv locomo_exp_user_6, session session_21
+User 5, session_20 processed in 77.68 seconds
+Processing conv locomo_exp_user_5, session session_21
+User 8, session_21 processed in 58.04 seconds
+Processing conv locomo_exp_user_8, session session_22
+User 2, session_21 processed in 65.65 seconds
+Processing conv locomo_exp_user_2, session session_22
+User 4, session_20 processed in 74.29 seconds
+Processing conv locomo_exp_user_4, session session_21
+User 7, session_22 processed in 63.66 seconds
+Processing conv locomo_exp_user_7, session session_23
+User 5, session_21 processed in 41.05 seconds
+Processing conv locomo_exp_user_5, session session_22
+User 9, session_24 processed in 59.88 seconds
+Processing conv locomo_exp_user_9, session session_25
+User 6, session_21 processed in 56.25 seconds
+Processing conv locomo_exp_user_6, session session_22
+User 3, session_23 processed in 69.39 seconds
+Processing conv locomo_exp_user_3, session session_24
+User 8, session_22 processed in 47.48 seconds
+Processing conv locomo_exp_user_8, session session_23
+User 4, session_21 processed in 48.27 seconds
+Processing conv locomo_exp_user_4, session session_22
+User 5, session_22 processed in 46.49 seconds
+Processing conv locomo_exp_user_5, session session_23
+User 6, session_22 processed in 41.22 seconds
+Processing conv locomo_exp_user_6, session session_23
+User 7, session_23 processed in 56.08 seconds
+Processing conv locomo_exp_user_7, session session_24
+User 2, session_22 processed in 72.38 seconds
+Processing conv locomo_exp_user_2, session session_23
+User 3, session_24 processed in 47.41 seconds
+Processing conv locomo_exp_user_3, session session_25
+User 9, session_25 processed in 57.2 seconds
+Processing conv locomo_exp_user_9, session session_26
+User 8, session_23 processed in 70.75 seconds
+Processing conv locomo_exp_user_8, session session_24
+User 4, session_22 processed in 57.38 seconds
+Processing conv locomo_exp_user_4, session session_23
+User 7, session_24 processed in 49.36 seconds
+Processing conv locomo_exp_user_7, session session_25
+User 2, session_23 processed in 47.18 seconds
+Processing conv locomo_exp_user_2, session session_24
+User 3, session_25 processed in 45.21 seconds
+Processing conv locomo_exp_user_3, session session_26
+User 9, session_26 processed in 44.17 seconds
+Processing conv locomo_exp_user_9, session session_27
+User 6, session_23 processed in 57.14 seconds
+Processing conv locomo_exp_user_6, session session_24
+User 5, session_23 processed in 63.1 seconds
+Processing conv locomo_exp_user_5, session session_24
+User 4, session_23 processed in 48.02 seconds
+Processing conv locomo_exp_user_4, session session_24
+User 7, session_25 processed in 40.46 seconds
+Processing conv locomo_exp_user_7, session session_26
+User 2, session_24 processed in 40.47 seconds
+Processing conv locomo_exp_user_2, session session_25
+User 5, session_24 processed in 43.11 seconds
+Processing conv locomo_exp_user_5, session session_25
+User 9, session_27 processed in 46.22 seconds
+Processing conv locomo_exp_user_9, session session_28
+User 6, session_24 processed in 48.57 seconds
+Processing conv locomo_exp_user_6, session session_25
+User 8, session_24 processed in 62.98 seconds
+Processing conv locomo_exp_user_8, session session_25
+User 3, session_26 processed in 56.23 seconds
+Processing conv locomo_exp_user_3, session session_27
+User 2, session_25 processed in 53.66 seconds
+Processing conv locomo_exp_user_2, session session_26
+User 5, session_25 processed in 45.62 seconds
+Processing conv locomo_exp_user_5, session session_26
+User 4, session_24 processed in 58.97 seconds
+Processing conv locomo_exp_user_4, session session_25
+User 8, session_25 processed in 48.78 seconds
+User 8 processed successfully in 1628.2 seconds
+User 7, session_26 processed in 64.46 seconds
+Processing conv locomo_exp_user_7, session session_27
+User 6, session_25 processed in 54.97 seconds
+Processing conv locomo_exp_user_6, session session_26
+User 9, session_28 processed in 85.89 seconds
+Processing conv locomo_exp_user_9, session session_29
+User 3, session_27 processed in 77.72 seconds
+Processing conv locomo_exp_user_3, session session_28
+User 2, session_26 processed in 43.78 seconds
+Processing conv locomo_exp_user_2, session session_27
+User 6, session_26 processed in 45.53 seconds
+Processing conv locomo_exp_user_6, session session_27
+User 7, session_27 processed in 51.0 seconds
+Processing conv locomo_exp_user_7, session session_28
+User 4, session_25 processed in 60.27 seconds
+Processing conv locomo_exp_user_4, session session_26
+User 2, session_27 processed in 36.44 seconds
+Processing conv locomo_exp_user_2, session session_28
+User 5, session_26 processed in 79.92 seconds
+Processing conv locomo_exp_user_5, session session_27
+User 6, session_27 processed in 24.32 seconds
+Processing conv locomo_exp_user_6, session session_28
+User 9, session_29 processed in 55.04 seconds
+Processing conv locomo_exp_user_9, session session_30
+User 3, session_28 processed in 57.48 seconds
+Processing conv locomo_exp_user_3, session session_29
+User 2, session_28 processed in 39.8 seconds
+Processing conv locomo_exp_user_2, session session_29
+User 7, session_28 processed in 64.56 seconds
+Processing conv locomo_exp_user_7, session session_29
+User 5, session_27 processed in 48.89 seconds
+Processing conv locomo_exp_user_5, session session_28
+User 4, session_26 processed in 66.5 seconds
+Processing conv locomo_exp_user_4, session session_27
+User 6, session_28 processed in 50.43 seconds
+Processing conv locomo_exp_user_6, session session_29
+User 3, session_29 processed in 37.92 seconds
+User 3 processed successfully in 1758.62 seconds
+User 9, session_30 processed in 42.52 seconds
+User 9 processed successfully in 1760.11 seconds
+User 2, session_29 processed in 39.6 seconds
+Processing conv locomo_exp_user_2, session session_30
+User 7, session_29 processed in 39.2 seconds
+Processing conv locomo_exp_user_7, session session_30
+User 6, session_29 processed in 31.53 seconds
+Processing conv locomo_exp_user_6, session session_30
+User 5, session_28 processed in 41.11 seconds
+User 5 processed successfully in 1790.54 seconds
+User 4, session_27 processed in 66.28 seconds
+Processing conv locomo_exp_user_4, session session_28
+User 2, session_30 processed in 38.78 seconds
+Processing conv locomo_exp_user_2, session session_31
+User 6, session_30 processed in 33.76 seconds
+Processing conv locomo_exp_user_6, session session_31
+User 7, session_30 processed in 35.06 seconds
+User 7 processed successfully in 1820.46 seconds
+User 4, session_28 processed in 26.56 seconds
+Processing conv locomo_exp_user_4, session session_29
+User 6, session_31 processed in 30.09 seconds
+User 6 processed successfully in 1850.06 seconds
+User 2, session_31 processed in 36.5 seconds
+Processing conv locomo_exp_user_2, session session_32
+User 4, session_29 processed in 22.4 seconds
+User 4 processed successfully in 1865.84 seconds
+User 2, session_32 processed in 25.88 seconds
+User 2 processed successfully in 1880.86 seconds
+  Ingesting users ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10/10 • 0:31:20 → 0:00:00
+Ingestion stats saved to results/locomo/threadatlas-base-full/threadatlas_locomo_ingestion_stats.json
+
+================================================================================
+                              ✅ INGESTION COMPLETE                              
+================================================================================
+⏱️  Total time: 31 minutes and 20 seconds
+🔄 Framework: threadatlas | Version: base-full | Workers: 10
+📊 Processed: 10 users
+================================================================================
+
+
+  ✓ Step done in 31m23s  |  Pipeline: 1/6  |  Elapsed: 31m23s
+
+────────────────────────────────────────────────────────────────────
+  [2/6] Memory Search
+────────────────────────────────────────────────────────────────────
+
+[1/10] Processing user 0
+  Processing user 0 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152/152 • 0:00:07 → 0:00:00
+Save search results 0
+
+[2/10] Processing user 1
+  Processing user 1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81/81 • 0:00:03 → 0:00:00
+Save search results 1
+
+[3/10] Processing user 2
+  Processing user 2 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152/152 • 0:00:07 → 0:00:00
+Save search results 2
+
+[4/10] Processing user 3
+  Processing user 3 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 199/199 • 0:00:09 → 0:00:00
+Save search results 3
+
+[5/10] Processing user 4
+  Processing user 4 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178/178 • 0:00:08 → 0:00:00
+Save search results 4
+
+[6/10] Processing user 5
+  Processing user 5 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123/123 • 0:00:07 → 0:00:00
+Save search results 5
+
+[7/10] Processing user 6
+  Processing user 6 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150/150 • 0:00:08 → 0:00:00
+Save search results 6
+
+[8/10] Processing user 7
+  Processing user 7 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 191/191 • 0:00:09 → 0:00:00
+Save search results 7
+
+[9/10] Processing user 8
+  Processing user 8 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156/156 • 0:00:07 → 0:00:00
+Save search results 8
+
+[10/10] Processing user 9
+  Processing user 9 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158/158 • 0:00:08 → 0:00:00
+Save search results 9
+✅ Save all search results
+
+  ✓ Step done in 1m21s  |  Pipeline: 2/6  |  Elapsed: 32m44s
+
+────────────────────────────────────────────────────────────────────
+  [3/6] Answer Generation
+────────────────────────────────────────────────────────────────────
+[ANSWER] model=gpt-4.1-mini-2025-04-14
+  [1/10] locomo_exp_user_0 ━━━━━━━━━━━━━━━━━━━━━━━━━ 152/152 • 0:00:13 → 0:00:00
+  [2/10] locomo_exp_user_1 ━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81/81 • 0:00:07 → 0:00:00
+  [3/10] locomo_exp_user_2 ━━━━━━━━━━━━━━━━━━━━━━━━━ 152/152 • 0:00:13 → 0:00:00
+  [4/10] locomo_exp_user_3 ━━━━━━━━━━━━━━━━━━━━━━━━━ 199/199 • 0:00:17 → 0:00:00
+  [5/10] locomo_exp_user_4 ━━━━━━━━━━━━━━━━━━━━━━━━━ 178/178 • 0:00:15 → 0:00:00
+  [6/10] locomo_exp_user_5 ━━━━━━━━━━━━━━━━━━━━━━━━━ 123/123 • 0:00:11 → 0:00:00
+  [7/10] locomo_exp_user_6 ━━━━━━━━━━━━━━━━━━━━━━━━━ 150/150 • 0:00:12 → 0:00:00
+  [8/10] locomo_exp_user_7 ━━━━━━━━━━━━━━━━━━━━━━━━━ 191/191 • 0:00:15 → 0:00:00
+  [9/10] locomo_exp_user_8 ━━━━━━━━━━━━━━━━━━━━━━━━━ 156/156 • 0:00:14 → 0:00:00
+  [10/10] locomo_exp_user_9 ━━━━━━━━━━━━━━━━━━━━━━━━ 158/158 • 0:00:16 → 0:00:00
+Total: 1540 questions across 10 users
+✅ All responses saved to results/locomo/threadatlas-base-full/threadatlas_locomo_responses.json
+Token usage saved → results/locomo/threadatlas-base-full/token_usage_answer.json
+
+  ✓ Step done in 2m22s  |  Pipeline: 3/6  |  Elapsed: 35m07s
+
+────────────────────────────────────────────────────────────────────
+  [4/6] LLM-as-Judge Evaluation
+────────────────────────────────────────────────────────────────────
+[nltk_data] Downloading package wordnet to /usr/share/nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+============================================================
+Initializing evaluation resources...
+============================================================
+  [NLTK] wordnet: missing, downloading...
+  [NLTK] wordnet: download complete
+  [NLTK] punkt_tab: found in local cache
+============================================================
+Evaluation resources initialized
+============================================================
+
+
+=== Starting LoCoMo evaluation for threadatlas (version: base-full) with 1 run(s) per question ===
+Using 10 max concurrent LLM API calls
+[EVAL] model=gpt-4o-mini-2024-07-18
+📂 Loaded search contexts from: results/locomo/threadatlas-base-full/threadatlas_locomo_search_results.json
+Found 1540 total responses across 10 users to evaluate
+Starting evaluation of 10 user groups with responses
+  [1/152] Grading locomo_exp_user_2
+  [1/191] Grading locomo_exp_user_7
+  [1/178] Grading locomo_exp_user_4
+  [1/81] Grading locomo_exp_user_1
+  [1/158] Grading locomo_exp_user_9
+  [1/150] Grading locomo_exp_user_6
+  [1/199] Grading locomo_exp_user_3
+  [1/152] Grading locomo_exp_user_0
+  [1/156] Grading locomo_exp_user_8
+  [1/123] Grading locomo_exp_user_5
+  [2/199] Grading locomo_exp_user_3
+  [2/150] Grading locomo_exp_user_6
+  [2/123] Grading locomo_exp_user_5
+  [2/152] Grading locomo_exp_user_2
+  [2/191] Grading locomo_exp_user_7
+  [2/81] Grading locomo_exp_user_1
+  [2/156] Grading locomo_exp_user_8
+  [2/158] Grading locomo_exp_user_9
+  [2/178] Grading locomo_exp_user_4
+  [2/152] Grading locomo_exp_user_0
+  [3/158] Grading locomo_exp_user_9
+  [3/152] Grading locomo_exp_user_0
+  [3/123] Grading locomo_exp_user_5
+  [3/199] Grading locomo_exp_user_3
+  [3/152] Grading locomo_exp_user_2
+  [3/150] Grading locomo_exp_user_6
+  [3/178] Grading locomo_exp_user_4
+  [3/191] Grading locomo_exp_user_7
+  [3/81] Grading locomo_exp_user_1
+  [3/156] Grading locomo_exp_user_8
+  [4/123] Grading locomo_exp_user_5
+  [4/150] Grading locomo_exp_user_6
+  [4/199] Grading locomo_exp_user_3
+  [4/152] Grading locomo_exp_user_0
+  [4/158] Grading locomo_exp_user_9
+  [4/178] Grading locomo_exp_user_4
+  [4/191] Grading locomo_exp_user_7
+  [4/156] Grading locomo_exp_user_8
+  [4/152] Grading locomo_exp_user_2
+  [4/81] Grading locomo_exp_user_1
+  [5/123] Grading locomo_exp_user_5
+  [5/199] Grading locomo_exp_user_3
+  [5/178] Grading locomo_exp_user_4
+  [5/152] Grading locomo_exp_user_0
+  [5/158] Grading locomo_exp_user_9
+  [5/191] Grading locomo_exp_user_7
+  [5/156] Grading locomo_exp_user_8
+  [5/150] Grading locomo_exp_user_6
+  [5/152] Grading locomo_exp_user_2
+  [5/81] Grading locomo_exp_user_1
+  [6/123] Grading locomo_exp_user_5
+  [6/199] Grading locomo_exp_user_3
+  [6/178] Grading locomo_exp_user_4
+  [6/152] Grading locomo_exp_user_0
+  [6/191] Grading locomo_exp_user_7
+  [6/156] Grading locomo_exp_user_8
+  [6/158] Grading locomo_exp_user_9
+  [6/150] Grading locomo_exp_user_6
+  [6/81] Grading locomo_exp_user_1
+  [6/152] Grading locomo_exp_user_2
+  [7/123] Grading locomo_exp_user_5
+  [7/199] Grading locomo_exp_user_3
+  [7/178] Grading locomo_exp_user_4
+  [7/158] Grading locomo_exp_user_9
+  [7/191] Grading locomo_exp_user_7
+  [7/150] Grading locomo_exp_user_6
+  [7/152] Grading locomo_exp_user_0
+  [7/156] Grading locomo_exp_user_8
+  [7/152] Grading locomo_exp_user_2
+  [8/123] Grading locomo_exp_user_5
+  [7/81] Grading locomo_exp_user_1
+  [8/158] Grading locomo_exp_user_9
+  [8/199] Grading locomo_exp_user_3
+  [8/191] Grading locomo_exp_user_7
+  [8/178] Grading locomo_exp_user_4
+  [8/152] Grading locomo_exp_user_0
+  [8/156] Grading locomo_exp_user_8
+  [8/150] Grading locomo_exp_user_6
+  [9/123] Grading locomo_exp_user_5
+  [8/81] Grading locomo_exp_user_1
+  [8/152] Grading locomo_exp_user_2
+  [9/158] Grading locomo_exp_user_9
+  [9/191] Grading locomo_exp_user_7
+  [9/152] Grading locomo_exp_user_0
+  [9/178] Grading locomo_exp_user_4
+  [9/156] Grading locomo_exp_user_8
+  [9/150] Grading locomo_exp_user_6
+  [10/123] Grading locomo_exp_user_5
+  [9/199] Grading locomo_exp_user_3
+  [9/81] Grading locomo_exp_user_1
+  [9/152] Grading locomo_exp_user_2
+  [10/158] Grading locomo_exp_user_9
+  [10/191] Grading locomo_exp_user_7
+  [10/178] Grading locomo_exp_user_4
+  [10/152] Grading locomo_exp_user_0
+  [10/156] Grading locomo_exp_user_8
+  [10/150] Grading locomo_exp_user_6
+  [11/123] Grading locomo_exp_user_5
+  [10/81] Grading locomo_exp_user_1
+  [10/199] Grading locomo_exp_user_3
+  [10/152] Grading locomo_exp_user_2
+  [11/152] Grading locomo_exp_user_0
+  [11/178] Grading locomo_exp_user_4
+  [11/156] Grading locomo_exp_user_8
+  [11/150] Grading locomo_exp_user_6
+  [11/199] Grading locomo_exp_user_3
+  [11/81] Grading locomo_exp_user_1
+  [11/158] Grading locomo_exp_user_9
+  [11/152] Grading locomo_exp_user_2
+  [12/123] Grading locomo_exp_user_5
+  [12/152] Grading locomo_exp_user_0
+  [12/178] Grading locomo_exp_user_4
+  [12/156] Grading locomo_exp_user_8
+  [11/191] Grading locomo_exp_user_7
+  [12/150] Grading locomo_exp_user_6
+  [12/199] Grading locomo_exp_user_3
+  [12/81] Grading locomo_exp_user_1
+  [13/123] Grading locomo_exp_user_5
+  [12/158] Grading locomo_exp_user_9
+  [12/152] Grading locomo_exp_user_2
+  [13/156] Grading locomo_exp_user_8
+  [13/152] Grading locomo_exp_user_0
+  [13/178] Grading locomo_exp_user_4
+  [13/150] Grading locomo_exp_user_6
+  [12/191] Grading locomo_exp_user_7
+  [13/199] Grading locomo_exp_user_3
+  [13/81] Grading locomo_exp_user_1
+  [14/123] Grading locomo_exp_user_5
+  [14/156] Grading locomo_exp_user_8
+  [13/158] Grading locomo_exp_user_9
+  [14/150] Grading locomo_exp_user_6
+  [14/178] Grading locomo_exp_user_4
+  [14/152] Grading locomo_exp_user_0
+  [13/152] Grading locomo_exp_user_2
+  [13/191] Grading locomo_exp_user_7
+  [14/199] Grading locomo_exp_user_3
+  [14/81] Grading locomo_exp_user_1
+  [15/123] Grading locomo_exp_user_5
+  [15/156] Grading locomo_exp_user_8
+  [14/158] Grading locomo_exp_user_9
+  [15/150] Grading locomo_exp_user_6
+  [15/152] Grading locomo_exp_user_0
+  [15/178] Grading locomo_exp_user_4
+  [14/152] Grading locomo_exp_user_2
+  [14/191] Grading locomo_exp_user_7
+  [15/199] Grading locomo_exp_user_3
+  [15/81] Grading locomo_exp_user_1
+  [16/156] Grading locomo_exp_user_8
+  [15/158] Grading locomo_exp_user_9
+  [16/123] Grading locomo_exp_user_5
+  [16/150] Grading locomo_exp_user_6
+  [16/152] Grading locomo_exp_user_0
+  [16/178] Grading locomo_exp_user_4
+  [15/191] Grading locomo_exp_user_7
+  [15/152] Grading locomo_exp_user_2
+  [16/199] Grading locomo_exp_user_3
+  [17/123] Grading locomo_exp_user_5
+  [16/81] Grading locomo_exp_user_1
+  [16/158] Grading locomo_exp_user_9
+  [17/150] Grading locomo_exp_user_6
+  [17/178] Grading locomo_exp_user_4
+  [17/156] Grading locomo_exp_user_8
+  [17/152] Grading locomo_exp_user_0
+  [16/152] Grading locomo_exp_user_2
+  [18/123] Grading locomo_exp_user_5
+  [17/158] Grading locomo_exp_user_9
+  [17/81] Grading locomo_exp_user_1
+  [18/150] Grading locomo_exp_user_6
+  [18/178] Grading locomo_exp_user_4
+  [19/123] Grading locomo_exp_user_5
+  [18/156] Grading locomo_exp_user_8
+  [16/191] Grading locomo_exp_user_7
+  [18/81] Grading locomo_exp_user_1
+  [18/152] Grading locomo_exp_user_0
+  [18/158] Grading locomo_exp_user_9
+  [17/199] Grading locomo_exp_user_3
+  [19/150] Grading locomo_exp_user_6
+  [19/81] Grading locomo_exp_user_1
+  [19/156] Grading locomo_exp_user_8
+  [19/178] Grading locomo_exp_user_4
+  [18/199] Grading locomo_exp_user_3
+  [17/191] Grading locomo_exp_user_7
+  [17/152] Grading locomo_exp_user_2
+  [20/150] Grading locomo_exp_user_6
+  [20/156] Grading locomo_exp_user_8
+  [20/81] Grading locomo_exp_user_1
+  [18/191] Grading locomo_exp_user_7
+  [20/178] Grading locomo_exp_user_4
+  [19/199] Grading locomo_exp_user_3
+  [18/152] Grading locomo_exp_user_2
+  [21/150] Grading locomo_exp_user_6
+  [20/123] Grading locomo_exp_user_5
+  [21/156] Grading locomo_exp_user_8
+  [19/191] Grading locomo_exp_user_7
+  [21/81] Grading locomo_exp_user_1
+  [19/152] Grading locomo_exp_user_2
+  [19/152] Grading locomo_exp_user_0
+  [21/123] Grading locomo_exp_user_5
+  [19/158] Grading locomo_exp_user_9
+  [22/156] Grading locomo_exp_user_8
+  [20/152] Grading locomo_exp_user_2
+  [20/191] Grading locomo_exp_user_7
+  [22/81] Grading locomo_exp_user_1
+  [20/152] Grading locomo_exp_user_0
+  [22/123] Grading locomo_exp_user_5
+  [20/158] Grading locomo_exp_user_9
+  [23/156] Grading locomo_exp_user_8
+  [21/152] Grading locomo_exp_user_2
+  [21/191] Grading locomo_exp_user_7
+  [23/81] Grading locomo_exp_user_1
+  [21/152] Grading locomo_exp_user_0
+  [24/156] Grading locomo_exp_user_8
+  [22/152] Grading locomo_exp_user_2
+  [23/123] Grading locomo_exp_user_5
+  [22/191] Grading locomo_exp_user_7
+  [24/81] Grading locomo_exp_user_1
+  [25/156] Grading locomo_exp_user_8
+  [21/178] Grading locomo_exp_user_4
+  [22/152] Grading locomo_exp_user_0
+  [23/152] Grading locomo_exp_user_2
+  [22/150] Grading locomo_exp_user_6
+  [20/199] Grading locomo_exp_user_3
+  [24/123] Grading locomo_exp_user_5
+  [25/81] Grading locomo_exp_user_1
+  [23/152] Grading locomo_exp_user_0
+  [23/150] Grading locomo_exp_user_6
+  [22/178] Grading locomo_exp_user_4
+  [21/199] Grading locomo_exp_user_3
+  [24/152] Grading locomo_exp_user_2
+  [25/123] Grading locomo_exp_user_5
+  [21/158] Grading locomo_exp_user_9
+  [26/156] Grading locomo_exp_user_8
+  [26/81] Grading locomo_exp_user_1
+  [24/152] Grading locomo_exp_user_0
+  [22/199] Grading locomo_exp_user_3
+  [24/150] Grading locomo_exp_user_6
+  [25/152] Grading locomo_exp_user_2
+  [23/191] Grading locomo_exp_user_7
+  [23/178] Grading locomo_exp_user_4
+  [26/123] Grading locomo_exp_user_5
+  [27/156] Grading locomo_exp_user_8
+  [27/81] Grading locomo_exp_user_1
+  [24/191] Grading locomo_exp_user_7
+  [23/199] Grading locomo_exp_user_3
+  [25/150] Grading locomo_exp_user_6
+  [22/158] Grading locomo_exp_user_9
+  [25/152] Grading locomo_exp_user_0
+  [26/152] Grading locomo_exp_user_2
+  [27/123] Grading locomo_exp_user_5
+  [24/178] Grading locomo_exp_user_4
+  [28/156] Grading locomo_exp_user_8
+  [25/191] Grading locomo_exp_user_7
+  [26/152] Grading locomo_exp_user_0
+  [26/150] Grading locomo_exp_user_6
+  [28/81] Grading locomo_exp_user_1
+  [25/178] Grading locomo_exp_user_4
+  [23/158] Grading locomo_exp_user_9
+  [28/123] Grading locomo_exp_user_5
+  [24/199] Grading locomo_exp_user_3
+  [29/156] Grading locomo_exp_user_8
+  [27/152] Grading locomo_exp_user_2
+  [26/191] Grading locomo_exp_user_7
+  [29/81] Grading locomo_exp_user_1
+  [27/152] Grading locomo_exp_user_0
+  [27/150] Grading locomo_exp_user_6
+  [24/158] Grading locomo_exp_user_9
+  [25/199] Grading locomo_exp_user_3
+  [30/156] Grading locomo_exp_user_8
+  [26/178] Grading locomo_exp_user_4
+  [28/152] Grading locomo_exp_user_2
+  [29/123] Grading locomo_exp_user_5
+  [27/191] Grading locomo_exp_user_7
+  [28/152] Grading locomo_exp_user_0
+  [28/150] Grading locomo_exp_user_6
+  [25/158] Grading locomo_exp_user_9
+  [26/199] Grading locomo_exp_user_3
+  [31/156] Grading locomo_exp_user_8
+  [29/152] Grading locomo_exp_user_2
+  [30/81] Grading locomo_exp_user_1
+  [27/178] Grading locomo_exp_user_4
+  [29/152] Grading locomo_exp_user_0
+  [30/123] Grading locomo_exp_user_5
+  [28/191] Grading locomo_exp_user_7
+  [29/150] Grading locomo_exp_user_6
+  [27/199] Grading locomo_exp_user_3
+  [26/158] Grading locomo_exp_user_9
+  [32/156] Grading locomo_exp_user_8
+  [31/81] Grading locomo_exp_user_1
+  [30/152] Grading locomo_exp_user_0
+  [30/152] Grading locomo_exp_user_2
+  [28/178] Grading locomo_exp_user_4
+  [31/123] Grading locomo_exp_user_5
+  [28/199] Grading locomo_exp_user_3
+  [30/150] Grading locomo_exp_user_6
+  [29/191] Grading locomo_exp_user_7
+  [33/156] Grading locomo_exp_user_8
+  [31/152] Grading locomo_exp_user_2
+  [27/158] Grading locomo_exp_user_9
+  [31/152] Grading locomo_exp_user_0
+  [32/81] Grading locomo_exp_user_1
+  [29/178] Grading locomo_exp_user_4
+  [31/150] Grading locomo_exp_user_6
+  [29/199] Grading locomo_exp_user_3
+  [30/191] Grading locomo_exp_user_7
+  [32/123] Grading locomo_exp_user_5
+  [32/152] Grading locomo_exp_user_2
+  [28/158] Grading locomo_exp_user_9
+  [32/152] Grading locomo_exp_user_0
+  [30/178] Grading locomo_exp_user_4
+  [33/81] Grading locomo_exp_user_1
+  [34/156] Grading locomo_exp_user_8
+  [32/150] Grading locomo_exp_user_6
+  [30/199] Grading locomo_exp_user_3
+  [31/191] Grading locomo_exp_user_7
+  [33/123] Grading locomo_exp_user_5
+  [33/152] Grading locomo_exp_user_2
+  [29/158] Grading locomo_exp_user_9
+  [31/178] Grading locomo_exp_user_4
+  [33/152] Grading locomo_exp_user_0
+  [34/81] Grading locomo_exp_user_1
+  [35/156] Grading locomo_exp_user_8
+  [33/150] Grading locomo_exp_user_6
+  [31/199] Grading locomo_exp_user_3
+  [34/152] Grading locomo_exp_user_2
+  [32/191] Grading locomo_exp_user_7
+  [34/123] Grading locomo_exp_user_5
+  [30/158] Grading locomo_exp_user_9
+  [32/178] Grading locomo_exp_user_4
+  [34/152] Grading locomo_exp_user_0
+  [36/156] Grading locomo_exp_user_8
+  [32/199] Grading locomo_exp_user_3
+  [34/150] Grading locomo_exp_user_6
+  [35/152] Grading locomo_exp_user_2
+  [35/81] Grading locomo_exp_user_1
+  [33/191] Grading locomo_exp_user_7
+  [35/123] Grading locomo_exp_user_5
+  [31/158] Grading locomo_exp_user_9
+  [33/178] Grading locomo_exp_user_4
+  [37/156] Grading locomo_exp_user_8
+  [35/152] Grading locomo_exp_user_0
+  [35/150] Grading locomo_exp_user_6
+  [36/152] Grading locomo_exp_user_2
+  [34/191] Grading locomo_exp_user_7
+  [33/199] Grading locomo_exp_user_3
+  [36/81] Grading locomo_exp_user_1
+  [36/123] Grading locomo_exp_user_5
+  [32/158] Grading locomo_exp_user_9
+  [38/156] Grading locomo_exp_user_8
+  [36/152] Grading locomo_exp_user_0
+  [36/150] Grading locomo_exp_user_6
+  [34/178] Grading locomo_exp_user_4
+  [34/199] Grading locomo_exp_user_3
+  [35/191] Grading locomo_exp_user_7
+  [37/81] Grading locomo_exp_user_1
+  [37/152] Grading locomo_exp_user_2
+  [39/156] Grading locomo_exp_user_8
+  [37/123] Grading locomo_exp_user_5
+  [33/158] Grading locomo_exp_user_9
+  [37/150] Grading locomo_exp_user_6
+  [37/152] Grading locomo_exp_user_0
+  [35/178] Grading locomo_exp_user_4
+  [38/81] Grading locomo_exp_user_1
+  [38/152] Grading locomo_exp_user_2
+  [36/191] Grading locomo_exp_user_7
+  [38/150] Grading locomo_exp_user_6
+  [38/123] Grading locomo_exp_user_5
+  [35/199] Grading locomo_exp_user_3
+  [40/156] Grading locomo_exp_user_8
+  [34/158] Grading locomo_exp_user_9
+  [38/152] Grading locomo_exp_user_0
+  [39/81] Grading locomo_exp_user_1
+  [36/178] Grading locomo_exp_user_4
+  [39/152] Grading locomo_exp_user_2
+  [37/191] Grading locomo_exp_user_7
+  [39/150] Grading locomo_exp_user_6
+  [39/123] Grading locomo_exp_user_5
+  [36/199] Grading locomo_exp_user_3
+  [41/156] Grading locomo_exp_user_8
+  [39/152] Grading locomo_exp_user_0
+  [35/158] Grading locomo_exp_user_9
+  [37/178] Grading locomo_exp_user_4
+  [40/81] Grading locomo_exp_user_1
+  [38/191] Grading locomo_exp_user_7
+  [40/152] Grading locomo_exp_user_2
+  [40/150] Grading locomo_exp_user_6
+  [37/199] Grading locomo_exp_user_3
+  [42/156] Grading locomo_exp_user_8
+  [36/158] Grading locomo_exp_user_9
+  [40/152] Grading locomo_exp_user_0
+  [40/123] Grading locomo_exp_user_5
+  [41/81] Grading locomo_exp_user_1
+  [38/178] Grading locomo_exp_user_4
+  [41/150] Grading locomo_exp_user_6
+  [38/199] Grading locomo_exp_user_3
+  [43/156] Grading locomo_exp_user_8
+  [37/158] Grading locomo_exp_user_9
+  [39/191] Grading locomo_exp_user_7
+  [41/152] Grading locomo_exp_user_0
+  [39/178] Grading locomo_exp_user_4
+  [41/152] Grading locomo_exp_user_2
+  [41/123] Grading locomo_exp_user_5
+  [42/150] Grading locomo_exp_user_6
+  [42/81] Grading locomo_exp_user_1
+  [39/199] Grading locomo_exp_user_3
+  [38/158] Grading locomo_exp_user_9
+  [42/152] Grading locomo_exp_user_0
+  [40/178] Grading locomo_exp_user_4
+  [44/156] Grading locomo_exp_user_8
+  [40/191] Grading locomo_exp_user_7
+  [42/152] Grading locomo_exp_user_2
+  [42/123] Grading locomo_exp_user_5
+  [43/150] Grading locomo_exp_user_6
+  [40/199] Grading locomo_exp_user_3
+  [43/81] Grading locomo_exp_user_1
+  [39/158] Grading locomo_exp_user_9
+  [43/152] Grading locomo_exp_user_0
+  [41/178] Grading locomo_exp_user_4
+  [43/123] Grading locomo_exp_user_5
+  [41/191] Grading locomo_exp_user_7
+  [43/152] Grading locomo_exp_user_2
+  [41/199] Grading locomo_exp_user_3
+  [45/156] Grading locomo_exp_user_8
+  [44/150] Grading locomo_exp_user_6
+  [44/81] Grading locomo_exp_user_1
+  [40/158] Grading locomo_exp_user_9
+  [42/178] Grading locomo_exp_user_4
+  [44/152] Grading locomo_exp_user_0
+  [44/123] Grading locomo_exp_user_5
+  [44/152] Grading locomo_exp_user_2
+  [46/156] Grading locomo_exp_user_8
+  [42/199] Grading locomo_exp_user_3
+  [42/191] Grading locomo_exp_user_7
+  [45/150] Grading locomo_exp_user_6
+  [45/81] Grading locomo_exp_user_1
+  [45/123] Grading locomo_exp_user_5
+  [41/158] Grading locomo_exp_user_9
+  [43/178] Grading locomo_exp_user_4
+  [43/199] Grading locomo_exp_user_3
+  [45/152] Grading locomo_exp_user_0
+  [43/191] Grading locomo_exp_user_7
+  [47/156] Grading locomo_exp_user_8
+  [45/152] Grading locomo_exp_user_2
+  [46/150] Grading locomo_exp_user_6
+  [46/81] Grading locomo_exp_user_1
+  [42/158] Grading locomo_exp_user_9
+  [44/178] Grading locomo_exp_user_4
+  [46/123] Grading locomo_exp_user_5
+  [44/199] Grading locomo_exp_user_3
+  [44/191] Grading locomo_exp_user_7
+  [48/156] Grading locomo_exp_user_8
+  [46/152] Grading locomo_exp_user_0
+  [47/150] Grading locomo_exp_user_6
+  [46/152] Grading locomo_exp_user_2
+  [43/158] Grading locomo_exp_user_9
+  [47/81] Grading locomo_exp_user_1
+  [45/178] Grading locomo_exp_user_4
+  [45/199] Grading locomo_exp_user_3
+  [47/123] Grading locomo_exp_user_5
+  [47/152] Grading locomo_exp_user_0
+  [47/152] Grading locomo_exp_user_2
+  [48/150] Grading locomo_exp_user_6
+  [45/191] Grading locomo_exp_user_7
+  [49/156] Grading locomo_exp_user_8
+  [48/81] Grading locomo_exp_user_1
+  [46/178] Grading locomo_exp_user_4
+  [46/199] Grading locomo_exp_user_3
+  [48/152] Grading locomo_exp_user_0
+  [44/158] Grading locomo_exp_user_9
+  [48/152] Grading locomo_exp_user_2
+  [48/123] Grading locomo_exp_user_5
+  [49/150] Grading locomo_exp_user_6
+  [46/191] Grading locomo_exp_user_7
+  [50/156] Grading locomo_exp_user_8
+  [47/178] Grading locomo_exp_user_4
+  [47/199] Grading locomo_exp_user_3
+  [45/158] Grading locomo_exp_user_9
+  [49/123] Grading locomo_exp_user_5
+  [49/81] Grading locomo_exp_user_1
+  [49/152] Grading locomo_exp_user_0
+  [49/152] Grading locomo_exp_user_2
+  [50/150] Grading locomo_exp_user_6
+  [47/191] Grading locomo_exp_user_7
+  [51/156] Grading locomo_exp_user_8
+  [46/158] Grading locomo_exp_user_9
+  [48/178] Grading locomo_exp_user_4
+  [48/199] Grading locomo_exp_user_3
+  [50/123] Grading locomo_exp_user_5
+  [50/152] Grading locomo_exp_user_0
+  [50/81] Grading locomo_exp_user_1
+  [50/152] Grading locomo_exp_user_2
+  [48/191] Grading locomo_exp_user_7
+  [52/156] Grading locomo_exp_user_8
+  [51/123] Grading locomo_exp_user_5
+  [47/158] Grading locomo_exp_user_9
+  [51/150] Grading locomo_exp_user_6
+  [51/152] Grading locomo_exp_user_0
+  [49/199] Grading locomo_exp_user_3
+  [51/152] Grading locomo_exp_user_2
+  [51/81] Grading locomo_exp_user_1
+  [49/178] Grading locomo_exp_user_4
+  [49/191] Grading locomo_exp_user_7
+  [53/156] Grading locomo_exp_user_8
+  [48/158] Grading locomo_exp_user_9
+  [52/123] Grading locomo_exp_user_5
+  [52/152] Grading locomo_exp_user_0
+  [52/150] Grading locomo_exp_user_6
+  [50/199] Grading locomo_exp_user_3
+  [52/81] Grading locomo_exp_user_1
+  [50/178] Grading locomo_exp_user_4
+  [52/152] Grading locomo_exp_user_2
+  [54/156] Grading locomo_exp_user_8
+  [50/191] Grading locomo_exp_user_7
+  [53/123] Grading locomo_exp_user_5
+  [49/158] Grading locomo_exp_user_9
+  [53/152] Grading locomo_exp_user_0
+  [53/150] Grading locomo_exp_user_6
+  [53/81] Grading locomo_exp_user_1
+  [51/178] Grading locomo_exp_user_4
+  [53/152] Grading locomo_exp_user_2
+  [55/156] Grading locomo_exp_user_8
+  [51/191] Grading locomo_exp_user_7
+  [50/158] Grading locomo_exp_user_9
+  [54/123] Grading locomo_exp_user_5
+  [54/81] Grading locomo_exp_user_1
+  [54/152] Grading locomo_exp_user_0
+  [51/199] Grading locomo_exp_user_3
+  [52/178] Grading locomo_exp_user_4
+  [54/150] Grading locomo_exp_user_6
+  [54/152] Grading locomo_exp_user_2
+  [56/156] Grading locomo_exp_user_8
+  [51/158] Grading locomo_exp_user_9
+  [55/123] Grading locomo_exp_user_5
+  [52/191] Grading locomo_exp_user_7
+  [52/199] Grading locomo_exp_user_3
+  [55/81] Grading locomo_exp_user_1
+  [55/152] Grading locomo_exp_user_0
+  [53/178] Grading locomo_exp_user_4
+  [55/150] Grading locomo_exp_user_6
+  [55/152] Grading locomo_exp_user_2
+  [57/156] Grading locomo_exp_user_8
+  [53/191] Grading locomo_exp_user_7
+  [52/158] Grading locomo_exp_user_9
+  [53/199] Grading locomo_exp_user_3
+  [56/152] Grading locomo_exp_user_0
+  [56/81] Grading locomo_exp_user_1
+  [56/150] Grading locomo_exp_user_6
+  [56/152] Grading locomo_exp_user_2
+  [56/123] Grading locomo_exp_user_5
+  [54/178] Grading locomo_exp_user_4
+  [53/158] Grading locomo_exp_user_9
+  [58/156] Grading locomo_exp_user_8
+  [54/199] Grading locomo_exp_user_3
+  [54/191] Grading locomo_exp_user_7
+  [57/81] Grading locomo_exp_user_1
+  [57/150] Grading locomo_exp_user_6
+  [57/152] Grading locomo_exp_user_0
+  [57/152] Grading locomo_exp_user_2
+  [57/123] Grading locomo_exp_user_5
+  [55/178] Grading locomo_exp_user_4
+  [59/156] Grading locomo_exp_user_8
+  [54/158] Grading locomo_exp_user_9
+  [58/152] Grading locomo_exp_user_0
+  [58/152] Grading locomo_exp_user_2
+  [58/150] Grading locomo_exp_user_6
+  [55/191] Grading locomo_exp_user_7
+  [58/123] Grading locomo_exp_user_5
+  [55/199] Grading locomo_exp_user_3
+  [58/81] Grading locomo_exp_user_1
+  [60/156] Grading locomo_exp_user_8
+  [56/178] Grading locomo_exp_user_4
+  [59/152] Grading locomo_exp_user_0
+  [55/158] Grading locomo_exp_user_9
+  [59/150] Grading locomo_exp_user_6
+  [59/123] Grading locomo_exp_user_5
+  [56/199] Grading locomo_exp_user_3
+  [56/191] Grading locomo_exp_user_7
+  [59/152] Grading locomo_exp_user_2
+  [57/178] Grading locomo_exp_user_4
+  [59/81] Grading locomo_exp_user_1
+  [60/152] Grading locomo_exp_user_0
+  [61/156] Grading locomo_exp_user_8
+  [60/150] Grading locomo_exp_user_6
+  [60/123] Grading locomo_exp_user_5
+  [57/191] Grading locomo_exp_user_7
+  [56/158] Grading locomo_exp_user_9
+  [60/152] Grading locomo_exp_user_2
+  [57/199] Grading locomo_exp_user_3
+  [62/156] Grading locomo_exp_user_8
+  [58/178] Grading locomo_exp_user_4
+  [61/150] Grading locomo_exp_user_6
+  [60/81] Grading locomo_exp_user_1
+  [61/152] Grading locomo_exp_user_0
+  [61/123] Grading locomo_exp_user_5
+  [57/158] Grading locomo_exp_user_9
+  [58/191] Grading locomo_exp_user_7
+  [61/152] Grading locomo_exp_user_2
+  [58/199] Grading locomo_exp_user_3
+  [63/156] Grading locomo_exp_user_8
+  [59/178] Grading locomo_exp_user_4
+  [62/152] Grading locomo_exp_user_0
+  [61/81] Grading locomo_exp_user_1
+  [62/150] Grading locomo_exp_user_6
+  [62/123] Grading locomo_exp_user_5
+  [62/152] Grading locomo_exp_user_2
+  [58/158] Grading locomo_exp_user_9
+  [59/199] Grading locomo_exp_user_3
+  [59/191] Grading locomo_exp_user_7
+  [63/152] Grading locomo_exp_user_0
+  [62/81] Grading locomo_exp_user_1
+  [64/156] Grading locomo_exp_user_8
+  [60/178] Grading locomo_exp_user_4
+  [63/152] Grading locomo_exp_user_2
+  [63/150] Grading locomo_exp_user_6
+  [60/191] Grading locomo_exp_user_7
+  [60/199] Grading locomo_exp_user_3
+  [64/152] Grading locomo_exp_user_0
+  [63/123] Grading locomo_exp_user_5
+  [59/158] Grading locomo_exp_user_9
+  [63/81] Grading locomo_exp_user_1
+  [61/178] Grading locomo_exp_user_4
+  [65/156] Grading locomo_exp_user_8
+  [64/152] Grading locomo_exp_user_2
+  [64/150] Grading locomo_exp_user_6
+  [61/191] Grading locomo_exp_user_7
+  [60/158] Grading locomo_exp_user_9
+  [64/81] Grading locomo_exp_user_1
+  [61/199] Grading locomo_exp_user_3
+  [62/178] Grading locomo_exp_user_4
+  [66/156] Grading locomo_exp_user_8
+  [65/152] Grading locomo_exp_user_0
+  [65/152] Grading locomo_exp_user_2
+  [64/123] Grading locomo_exp_user_5
+  [65/150] Grading locomo_exp_user_6
+  [62/191] Grading locomo_exp_user_7
+  [65/81] Grading locomo_exp_user_1
+  [61/158] Grading locomo_exp_user_9
+  [63/178] Grading locomo_exp_user_4
+  [67/156] Grading locomo_exp_user_8
+  [62/199] Grading locomo_exp_user_3
+  [66/152] Grading locomo_exp_user_0
+  [66/152] Grading locomo_exp_user_2
+  [66/150] Grading locomo_exp_user_6
+  [65/123] Grading locomo_exp_user_5
+  [63/191] Grading locomo_exp_user_7
+  [66/81] Grading locomo_exp_user_1
+  [62/158] Grading locomo_exp_user_9
+  [64/178] Grading locomo_exp_user_4
+  [68/156] Grading locomo_exp_user_8
+  [63/199] Grading locomo_exp_user_3
+  [67/152] Grading locomo_exp_user_0
+  [67/150] Grading locomo_exp_user_6
+  [66/123] Grading locomo_exp_user_5
+  [67/152] Grading locomo_exp_user_2
+  [64/191] Grading locomo_exp_user_7
+  [65/178] Grading locomo_exp_user_4
+  [67/81] Grading locomo_exp_user_1
+  [64/199] Grading locomo_exp_user_3
+  [69/156] Grading locomo_exp_user_8
+  [63/158] Grading locomo_exp_user_9
+  [68/152] Grading locomo_exp_user_0
+  [68/152] Grading locomo_exp_user_2
+  [68/150] Grading locomo_exp_user_6
+  [66/178] Grading locomo_exp_user_4
+  [65/191] Grading locomo_exp_user_7
+  [65/199] Grading locomo_exp_user_3
+  [70/156] Grading locomo_exp_user_8
+  [68/81] Grading locomo_exp_user_1
+  [67/123] Grading locomo_exp_user_5
+  [64/158] Grading locomo_exp_user_9
+  [69/152] Grading locomo_exp_user_0
+  [69/152] Grading locomo_exp_user_2
+  [69/150] Grading locomo_exp_user_6
+  [66/191] Grading locomo_exp_user_7
+  [67/178] Grading locomo_exp_user_4
+  [66/199] Grading locomo_exp_user_3
+  [65/158] Grading locomo_exp_user_9
+  [71/156] Grading locomo_exp_user_8
+  [68/123] Grading locomo_exp_user_5
+  [69/81] Grading locomo_exp_user_1
+  [70/150] Grading locomo_exp_user_6
+  [70/152] Grading locomo_exp_user_2
+  [70/152] Grading locomo_exp_user_0
+  [68/178] Grading locomo_exp_user_4
+  [67/191] Grading locomo_exp_user_7
+  [67/199] Grading locomo_exp_user_3
+  [66/158] Grading locomo_exp_user_9
+  [69/123] Grading locomo_exp_user_5
+  [70/81] Grading locomo_exp_user_1
+  [71/150] Grading locomo_exp_user_6
+  [72/156] Grading locomo_exp_user_8
+  [71/152] Grading locomo_exp_user_2
+  [71/152] Grading locomo_exp_user_0
+  [68/199] Grading locomo_exp_user_3
+  [68/191] Grading locomo_exp_user_7
+  [69/178] Grading locomo_exp_user_4
+  [70/123] Grading locomo_exp_user_5
+  [67/158] Grading locomo_exp_user_9
+  [72/150] Grading locomo_exp_user_6
+  [73/156] Grading locomo_exp_user_8
+  [71/81] Grading locomo_exp_user_1
+  [72/152] Grading locomo_exp_user_2
+  [69/199] Grading locomo_exp_user_3
+  [72/152] Grading locomo_exp_user_0
+  [69/191] Grading locomo_exp_user_7
+  [70/178] Grading locomo_exp_user_4
+  [68/158] Grading locomo_exp_user_9
+  [71/123] Grading locomo_exp_user_5
+  [72/81] Grading locomo_exp_user_1
+  [73/150] Grading locomo_exp_user_6
+  [74/156] Grading locomo_exp_user_8
+  [73/152] Grading locomo_exp_user_0
+  [70/199] Grading locomo_exp_user_3
+  [73/152] Grading locomo_exp_user_2
+  [70/191] Grading locomo_exp_user_7
+  [71/178] Grading locomo_exp_user_4
+  [69/158] Grading locomo_exp_user_9
+  [75/156] Grading locomo_exp_user_8
+  [73/81] Grading locomo_exp_user_1
+  [72/123] Grading locomo_exp_user_5
+  [74/150] Grading locomo_exp_user_6
+  [74/152] Grading locomo_exp_user_2
+  [71/199] Grading locomo_exp_user_3
+  [74/152] Grading locomo_exp_user_0
+  [71/191] Grading locomo_exp_user_7
+  [72/178] Grading locomo_exp_user_4
+  [76/156] Grading locomo_exp_user_8
+  [73/123] Grading locomo_exp_user_5
+  [74/81] Grading locomo_exp_user_1
+  [75/150] Grading locomo_exp_user_6
+  [70/158] Grading locomo_exp_user_9
+  [75/152] Grading locomo_exp_user_2
+  [72/191] Grading locomo_exp_user_7
+  [73/178] Grading locomo_exp_user_4
+  [74/123] Grading locomo_exp_user_5
+  [77/156] Grading locomo_exp_user_8
+  [76/150] Grading locomo_exp_user_6
+  [75/81] Grading locomo_exp_user_1
+  [71/158] Grading locomo_exp_user_9
+  [73/191] Grading locomo_exp_user_7
+  [75/152] Grading locomo_exp_user_0
+  [74/178] Grading locomo_exp_user_4
+  [72/199] Grading locomo_exp_user_3
+  [75/123] Grading locomo_exp_user_5
+  [76/81] Grading locomo_exp_user_1
+  [78/156] Grading locomo_exp_user_8
+  [77/150] Grading locomo_exp_user_6
+  [72/158] Grading locomo_exp_user_9
+  [76/152] Grading locomo_exp_user_0
+  [74/191] Grading locomo_exp_user_7
+  [75/178] Grading locomo_exp_user_4
+  [76/123] Grading locomo_exp_user_5
+  [73/199] Grading locomo_exp_user_3
+  [79/156] Grading locomo_exp_user_8
+  [77/81] Grading locomo_exp_user_1
+  [73/158] Grading locomo_exp_user_9
+  [78/150] Grading locomo_exp_user_6
+  [77/152] Grading locomo_exp_user_0
+  [75/191] Grading locomo_exp_user_7
+  [76/178] Grading locomo_exp_user_4
+  [77/123] Grading locomo_exp_user_5
+  [76/152] Grading locomo_exp_user_2
+  [80/156] Grading locomo_exp_user_8
+  [78/81] Grading locomo_exp_user_1
+  [79/150] Grading locomo_exp_user_6
+  [74/158] Grading locomo_exp_user_9
+  [74/199] Grading locomo_exp_user_3
+  [76/191] Grading locomo_exp_user_7
+  [77/178] Grading locomo_exp_user_4
+  [78/123] Grading locomo_exp_user_5
+  [77/152] Grading locomo_exp_user_2
+  [80/150] Grading locomo_exp_user_6
+  [81/156] Grading locomo_exp_user_8
+  [75/158] Grading locomo_exp_user_9
+  [78/152] Grading locomo_exp_user_0
+  [79/81] Grading locomo_exp_user_1
+  [75/199] Grading locomo_exp_user_3
+  [77/191] Grading locomo_exp_user_7
+  [79/123] Grading locomo_exp_user_5
+  [78/152] Grading locomo_exp_user_2
+  [82/156] Grading locomo_exp_user_8
+  [81/150] Grading locomo_exp_user_6
+  [78/178] Grading locomo_exp_user_4
+  [79/152] Grading locomo_exp_user_0
+  [76/158] Grading locomo_exp_user_9
+  [80/81] Grading locomo_exp_user_1
+  [76/199] Grading locomo_exp_user_3
+  [80/123] Grading locomo_exp_user_5
+  [79/152] Grading locomo_exp_user_2
+  [78/191] Grading locomo_exp_user_7
+  [79/178] Grading locomo_exp_user_4
+  [83/156] Grading locomo_exp_user_8
+  [80/152] Grading locomo_exp_user_0
+  [82/150] Grading locomo_exp_user_6
+  [81/81] Grading locomo_exp_user_1
+  [81/123] Grading locomo_exp_user_5
+  [77/199] Grading locomo_exp_user_3
+  [79/191] Grading locomo_exp_user_7
+  [77/158] Grading locomo_exp_user_9
+  [80/152] Grading locomo_exp_user_2
+  [80/178] Grading locomo_exp_user_4
+  [81/152] Grading locomo_exp_user_0
+Group locomo_exp_user_1 processed in 53.45 seconds
+  [78/199] Grading locomo_exp_user_3
+  [84/156] Grading locomo_exp_user_8
+  [81/152] Grading locomo_exp_user_2
+  [83/150] Grading locomo_exp_user_6
+  [78/158] Grading locomo_exp_user_9
+  [80/191] Grading locomo_exp_user_7
+  [82/123] Grading locomo_exp_user_5
+  [81/178] Grading locomo_exp_user_4
+  [82/152] Grading locomo_exp_user_0
+  [79/199] Grading locomo_exp_user_3
+  [84/150] Grading locomo_exp_user_6
+  [79/158] Grading locomo_exp_user_9
+  [85/156] Grading locomo_exp_user_8
+  [81/191] Grading locomo_exp_user_7
+  [82/152] Grading locomo_exp_user_2
+  [83/123] Grading locomo_exp_user_5
+  [82/178] Grading locomo_exp_user_4
+  [85/150] Grading locomo_exp_user_6
+  [80/199] Grading locomo_exp_user_3
+  [83/152] Grading locomo_exp_user_0
+  [86/156] Grading locomo_exp_user_8
+  [80/158] Grading locomo_exp_user_9
+  [84/123] Grading locomo_exp_user_5
+  [83/152] Grading locomo_exp_user_2
+  [82/191] Grading locomo_exp_user_7
+  [86/150] Grading locomo_exp_user_6
+  [83/178] Grading locomo_exp_user_4
+  [81/199] Grading locomo_exp_user_3
+  [84/152] Grading locomo_exp_user_0
+  [81/158] Grading locomo_exp_user_9
+  [84/152] Grading locomo_exp_user_2
+  [87/156] Grading locomo_exp_user_8
+  [85/123] Grading locomo_exp_user_5
+  [83/191] Grading locomo_exp_user_7
+  [84/178] Grading locomo_exp_user_4
+  [87/150] Grading locomo_exp_user_6
+  [82/199] Grading locomo_exp_user_3
+  [85/152] Grading locomo_exp_user_0
+  [82/158] Grading locomo_exp_user_9
+  [85/152] Grading locomo_exp_user_2
+  [86/123] Grading locomo_exp_user_5
+  [84/191] Grading locomo_exp_user_7
+  [88/156] Grading locomo_exp_user_8
+  [85/178] Grading locomo_exp_user_4
+  [88/150] Grading locomo_exp_user_6
+  [83/199] Grading locomo_exp_user_3
+  [86/152] Grading locomo_exp_user_0
+  [83/158] Grading locomo_exp_user_9
+  [89/156] Grading locomo_exp_user_8
+  [86/152] Grading locomo_exp_user_2
+  [85/191] Grading locomo_exp_user_7
+  [87/123] Grading locomo_exp_user_5
+  [86/178] Grading locomo_exp_user_4
+  [84/199] Grading locomo_exp_user_3
+  [89/150] Grading locomo_exp_user_6
+  [84/158] Grading locomo_exp_user_9
+  [87/152] Grading locomo_exp_user_2
+  [87/152] Grading locomo_exp_user_0
+  [87/178] Grading locomo_exp_user_4
+  [88/123] Grading locomo_exp_user_5
+  [90/156] Grading locomo_exp_user_8
+  [86/191] Grading locomo_exp_user_7
+  [85/199] Grading locomo_exp_user_3
+  [90/150] Grading locomo_exp_user_6
+  [85/158] Grading locomo_exp_user_9
+  [88/152] Grading locomo_exp_user_2
+  [87/191] Grading locomo_exp_user_7
+  [89/123] Grading locomo_exp_user_5
+  [88/178] Grading locomo_exp_user_4
+  [91/156] Grading locomo_exp_user_8
+  [86/199] Grading locomo_exp_user_3
+  [91/150] Grading locomo_exp_user_6
+  [86/158] Grading locomo_exp_user_9
+  [89/152] Grading locomo_exp_user_2
+  [88/191] Grading locomo_exp_user_7
+  [89/178] Grading locomo_exp_user_4
+  [87/199] Grading locomo_exp_user_3
+  [90/123] Grading locomo_exp_user_5
+  [92/150] Grading locomo_exp_user_6
+  [92/156] Grading locomo_exp_user_8
+  [87/158] Grading locomo_exp_user_9
+  [90/152] Grading locomo_exp_user_2
+  [89/191] Grading locomo_exp_user_7
+  [90/178] Grading locomo_exp_user_4
+  [88/152] Grading locomo_exp_user_0
+  [88/199] Grading locomo_exp_user_3
+  [93/150] Grading locomo_exp_user_6
+  [93/156] Grading locomo_exp_user_8
+  [91/123] Grading locomo_exp_user_5
+  [91/152] Grading locomo_exp_user_2
+  [90/191] Grading locomo_exp_user_7
+  [89/152] Grading locomo_exp_user_0
+  [89/199] Grading locomo_exp_user_3
+  [91/178] Grading locomo_exp_user_4
+  [94/156] Grading locomo_exp_user_8
+  [94/150] Grading locomo_exp_user_6
+  [92/123] Grading locomo_exp_user_5
+  [92/152] Grading locomo_exp_user_2
+  [91/191] Grading locomo_exp_user_7
+  [90/152] Grading locomo_exp_user_0
+  [92/178] Grading locomo_exp_user_4
+  [90/199] Grading locomo_exp_user_3
+  [95/156] Grading locomo_exp_user_8
+  [93/123] Grading locomo_exp_user_5
+  [95/150] Grading locomo_exp_user_6
+  [93/152] Grading locomo_exp_user_2
+  [92/191] Grading locomo_exp_user_7
+  [91/199] Grading locomo_exp_user_3
+  [93/178] Grading locomo_exp_user_4
+  [91/152] Grading locomo_exp_user_0
+  [96/156] Grading locomo_exp_user_8
+  [88/158] Grading locomo_exp_user_9
+  [96/150] Grading locomo_exp_user_6
+  [94/123] Grading locomo_exp_user_5
+  [93/191] Grading locomo_exp_user_7
+  [94/152] Grading locomo_exp_user_2
+  [92/199] Grading locomo_exp_user_3
+  [97/156] Grading locomo_exp_user_8
+  [92/152] Grading locomo_exp_user_0
+  [94/178] Grading locomo_exp_user_4
+  [89/158] Grading locomo_exp_user_9
+  [97/150] Grading locomo_exp_user_6
+  [95/123] Grading locomo_exp_user_5
+  [94/191] Grading locomo_exp_user_7
+  [93/199] Grading locomo_exp_user_3
+  [95/178] Grading locomo_exp_user_4
+  [95/152] Grading locomo_exp_user_2
+  [98/156] Grading locomo_exp_user_8
+  [93/152] Grading locomo_exp_user_0
+  [90/158] Grading locomo_exp_user_9
+  [98/150] Grading locomo_exp_user_6
+  [95/191] Grading locomo_exp_user_7
+  [96/123] Grading locomo_exp_user_5
+  [96/178] Grading locomo_exp_user_4
+  [94/199] Grading locomo_exp_user_3
+  [99/156] Grading locomo_exp_user_8
+  [96/152] Grading locomo_exp_user_2
+  [94/152] Grading locomo_exp_user_0
+  [91/158] Grading locomo_exp_user_9
+  [97/123] Grading locomo_exp_user_5
+  [99/150] Grading locomo_exp_user_6
+  [96/191] Grading locomo_exp_user_7
+  [97/178] Grading locomo_exp_user_4
+  [100/156] Grading locomo_exp_user_8
+  [95/199] Grading locomo_exp_user_3
+  [97/152] Grading locomo_exp_user_2
+  [95/152] Grading locomo_exp_user_0
+  [92/158] Grading locomo_exp_user_9
+  [98/123] Grading locomo_exp_user_5
+  [100/150] Grading locomo_exp_user_6
+  [97/191] Grading locomo_exp_user_7
+  [98/178] Grading locomo_exp_user_4
+  [98/152] Grading locomo_exp_user_2
+  [96/199] Grading locomo_exp_user_3
+  [101/156] Grading locomo_exp_user_8
+  [96/152] Grading locomo_exp_user_0
+  [99/123] Grading locomo_exp_user_5
+  [93/158] Grading locomo_exp_user_9
+  [98/191] Grading locomo_exp_user_7
+  [99/178] Grading locomo_exp_user_4
+  [99/152] Grading locomo_exp_user_2
+  [97/199] Grading locomo_exp_user_3
+  [102/156] Grading locomo_exp_user_8
+  [97/152] Grading locomo_exp_user_0
+  [101/150] Grading locomo_exp_user_6
+  [100/123] Grading locomo_exp_user_5
+  [99/191] Grading locomo_exp_user_7
+  [100/178] Grading locomo_exp_user_4
+  [94/158] Grading locomo_exp_user_9
+  [103/156] Grading locomo_exp_user_8
+  [100/152] Grading locomo_exp_user_2
+  [98/199] Grading locomo_exp_user_3
+  [98/152] Grading locomo_exp_user_0
+  [102/150] Grading locomo_exp_user_6
+  [100/191] Grading locomo_exp_user_7
+  [101/123] Grading locomo_exp_user_5
+  [101/178] Grading locomo_exp_user_4
+  [95/158] Grading locomo_exp_user_9
+  [104/156] Grading locomo_exp_user_8
+  [99/199] Grading locomo_exp_user_3
+  [101/152] Grading locomo_exp_user_2
+  [99/152] Grading locomo_exp_user_0
+  [103/150] Grading locomo_exp_user_6
+  [102/123] Grading locomo_exp_user_5
+  [101/191] Grading locomo_exp_user_7
+  [96/158] Grading locomo_exp_user_9
+  [102/178] Grading locomo_exp_user_4
+  [102/152] Grading locomo_exp_user_2
+  [105/156] Grading locomo_exp_user_8
+  [100/199] Grading locomo_exp_user_3
+  [100/152] Grading locomo_exp_user_0
+  [103/123] Grading locomo_exp_user_5
+  [104/150] Grading locomo_exp_user_6
+  [103/178] Grading locomo_exp_user_4
+  [97/158] Grading locomo_exp_user_9
+  [103/152] Grading locomo_exp_user_2
+  [106/156] Grading locomo_exp_user_8
+  [101/199] Grading locomo_exp_user_3
+  [105/150] Grading locomo_exp_user_6
+  [101/152] Grading locomo_exp_user_0
+  [104/123] Grading locomo_exp_user_5
+  [98/158] Grading locomo_exp_user_9
+  [104/178] Grading locomo_exp_user_4
+  [102/199] Grading locomo_exp_user_3
+  [107/156] Grading locomo_exp_user_8
+  [102/191] Grading locomo_exp_user_7
+  [104/152] Grading locomo_exp_user_2
+  [106/150] Grading locomo_exp_user_6
+  [102/152] Grading locomo_exp_user_0
+  [105/123] Grading locomo_exp_user_5
+  [99/158] Grading locomo_exp_user_9
+  [108/156] Grading locomo_exp_user_8
+  [105/178] Grading locomo_exp_user_4
+  [103/199] Grading locomo_exp_user_3
+  [105/152] Grading locomo_exp_user_2
+  [103/191] Grading locomo_exp_user_7
+  [106/123] Grading locomo_exp_user_5
+  [107/150] Grading locomo_exp_user_6
+  [103/152] Grading locomo_exp_user_0
+  [100/158] Grading locomo_exp_user_9
+  [106/178] Grading locomo_exp_user_4
+  [104/199] Grading locomo_exp_user_3
+  [109/156] Grading locomo_exp_user_8
+  [106/152] Grading locomo_exp_user_2
+  [104/191] Grading locomo_exp_user_7
+  [108/150] Grading locomo_exp_user_6
+  [107/123] Grading locomo_exp_user_5
+  [104/152] Grading locomo_exp_user_0
+  [101/158] Grading locomo_exp_user_9
+  [105/199] Grading locomo_exp_user_3
+  [107/178] Grading locomo_exp_user_4
+  [107/152] Grading locomo_exp_user_2
+  [110/156] Grading locomo_exp_user_8
+  [109/150] Grading locomo_exp_user_6
+  [105/191] Grading locomo_exp_user_7
+  [105/152] Grading locomo_exp_user_0
+  [108/123] Grading locomo_exp_user_5
+  [102/158] Grading locomo_exp_user_9
+  [106/199] Grading locomo_exp_user_3
+  [108/152] Grading locomo_exp_user_2
+  [108/178] Grading locomo_exp_user_4
+  [111/156] Grading locomo_exp_user_8
+  [106/191] Grading locomo_exp_user_7
+  [110/150] Grading locomo_exp_user_6
+  [106/152] Grading locomo_exp_user_0
+  [109/123] Grading locomo_exp_user_5
+  [103/158] Grading locomo_exp_user_9
+  [107/199] Grading locomo_exp_user_3
+  [109/152] Grading locomo_exp_user_2
+  [112/156] Grading locomo_exp_user_8
+  [109/178] Grading locomo_exp_user_4
+  [111/150] Grading locomo_exp_user_6
+  [107/191] Grading locomo_exp_user_7
+  [107/152] Grading locomo_exp_user_0
+  [110/123] Grading locomo_exp_user_5
+  [104/158] Grading locomo_exp_user_9
+  [108/199] Grading locomo_exp_user_3
+  [110/152] Grading locomo_exp_user_2
+  [113/156] Grading locomo_exp_user_8
+  [110/178] Grading locomo_exp_user_4
+  [112/150] Grading locomo_exp_user_6
+  [108/191] Grading locomo_exp_user_7
+  [105/158] Grading locomo_exp_user_9
+  [108/152] Grading locomo_exp_user_0
+  [111/123] Grading locomo_exp_user_5
+  [109/199] Grading locomo_exp_user_3
+  [111/152] Grading locomo_exp_user_2
+  [114/156] Grading locomo_exp_user_8
+  [109/191] Grading locomo_exp_user_7
+  [111/178] Grading locomo_exp_user_4
+  [113/150] Grading locomo_exp_user_6
+  [106/158] Grading locomo_exp_user_9
+  [109/152] Grading locomo_exp_user_0
+  [110/199] Grading locomo_exp_user_3
+  [112/123] Grading locomo_exp_user_5
+  [112/152] Grading locomo_exp_user_2
+  [115/156] Grading locomo_exp_user_8
+  [112/178] Grading locomo_exp_user_4
+  [114/150] Grading locomo_exp_user_6
+  [110/191] Grading locomo_exp_user_7
+  [113/123] Grading locomo_exp_user_5
+  [110/152] Grading locomo_exp_user_0
+  [111/199] Grading locomo_exp_user_3
+  [107/158] Grading locomo_exp_user_9
+  [113/152] Grading locomo_exp_user_2
+  [116/156] Grading locomo_exp_user_8
+  [111/191] Grading locomo_exp_user_7
+  [113/178] Grading locomo_exp_user_4
+  [115/150] Grading locomo_exp_user_6
+  [114/123] Grading locomo_exp_user_5
+  [111/152] Grading locomo_exp_user_0
+  [108/158] Grading locomo_exp_user_9
+  [112/199] Grading locomo_exp_user_3
+  [114/152] Grading locomo_exp_user_2
+  [112/191] Grading locomo_exp_user_7
+  [117/156] Grading locomo_exp_user_8
+  [114/178] Grading locomo_exp_user_4
+  [115/123] Grading locomo_exp_user_5
+  [112/152] Grading locomo_exp_user_0
+  [116/150] Grading locomo_exp_user_6
+  [109/158] Grading locomo_exp_user_9
+  [113/199] Grading locomo_exp_user_3
+  [113/191] Grading locomo_exp_user_7
+  [115/152] Grading locomo_exp_user_2
+  [118/156] Grading locomo_exp_user_8
+  [113/152] Grading locomo_exp_user_0
+  [115/178] Grading locomo_exp_user_4
+  [117/150] Grading locomo_exp_user_6
+  [116/123] Grading locomo_exp_user_5
+  [114/199] Grading locomo_exp_user_3
+  [110/158] Grading locomo_exp_user_9
+  [114/191] Grading locomo_exp_user_7
+  [116/152] Grading locomo_exp_user_2
+  [114/152] Grading locomo_exp_user_0
+  [119/156] Grading locomo_exp_user_8
+  [116/178] Grading locomo_exp_user_4
+  [118/150] Grading locomo_exp_user_6
+  [115/199] Grading locomo_exp_user_3
+  [117/123] Grading locomo_exp_user_5
+  [111/158] Grading locomo_exp_user_9
+  [115/191] Grading locomo_exp_user_7
+  [117/152] Grading locomo_exp_user_2
+  [120/156] Grading locomo_exp_user_8
+  [115/152] Grading locomo_exp_user_0
+  [117/178] Grading locomo_exp_user_4
+  [119/150] Grading locomo_exp_user_6
+  [118/123] Grading locomo_exp_user_5
+  [116/199] Grading locomo_exp_user_3
+  [112/158] Grading locomo_exp_user_9
+  [116/191] Grading locomo_exp_user_7
+  [121/156] Grading locomo_exp_user_8
+  [118/152] Grading locomo_exp_user_2
+  [118/178] Grading locomo_exp_user_4
+  [116/152] Grading locomo_exp_user_0
+  [120/150] Grading locomo_exp_user_6
+  [119/123] Grading locomo_exp_user_5
+  [117/199] Grading locomo_exp_user_3
+  [113/158] Grading locomo_exp_user_9
+  [117/191] Grading locomo_exp_user_7
+  [119/178] Grading locomo_exp_user_4
+  [119/152] Grading locomo_exp_user_2
+  [122/156] Grading locomo_exp_user_8
+  [121/150] Grading locomo_exp_user_6
+  [120/123] Grading locomo_exp_user_5
+  [117/152] Grading locomo_exp_user_0
+  [118/199] Grading locomo_exp_user_3
+  [118/191] Grading locomo_exp_user_7
+  [123/156] Grading locomo_exp_user_8
+  [114/158] Grading locomo_exp_user_9
+  [120/178] Grading locomo_exp_user_4
+  [120/152] Grading locomo_exp_user_2
+  [122/150] Grading locomo_exp_user_6
+  [119/191] Grading locomo_exp_user_7
+  [118/152] Grading locomo_exp_user_0
+  [119/199] Grading locomo_exp_user_3
+  [121/123] Grading locomo_exp_user_5
+  [124/156] Grading locomo_exp_user_8
+  [121/178] Grading locomo_exp_user_4
+  [120/191] Grading locomo_exp_user_7
+  [123/150] Grading locomo_exp_user_6
+  [121/152] Grading locomo_exp_user_2
+  [119/152] Grading locomo_exp_user_0
+  [122/123] Grading locomo_exp_user_5
+  [115/158] Grading locomo_exp_user_9
+  [120/199] Grading locomo_exp_user_3
+  [122/178] Grading locomo_exp_user_4
+  [125/156] Grading locomo_exp_user_8
+  [120/152] Grading locomo_exp_user_0
+  [122/152] Grading locomo_exp_user_2
+  [116/158] Grading locomo_exp_user_9
+  [121/191] Grading locomo_exp_user_7
+  [121/199] Grading locomo_exp_user_3
+  [123/123] Grading locomo_exp_user_5
+  [124/150] Grading locomo_exp_user_6
+  [123/178] Grading locomo_exp_user_4
+  [126/156] Grading locomo_exp_user_8
+  [123/152] Grading locomo_exp_user_2
+  [121/152] Grading locomo_exp_user_0
+  [122/191] Grading locomo_exp_user_7
+  [117/158] Grading locomo_exp_user_9
+Group locomo_exp_user_5 processed in 78.46 seconds
+  [122/199] Grading locomo_exp_user_3
+  [125/150] Grading locomo_exp_user_6
+  [124/178] Grading locomo_exp_user_4
+  [127/156] Grading locomo_exp_user_8
+  [122/152] Grading locomo_exp_user_0
+  [118/158] Grading locomo_exp_user_9
+  [124/152] Grading locomo_exp_user_2
+  [123/191] Grading locomo_exp_user_7
+  [123/199] Grading locomo_exp_user_3
+  [126/150] Grading locomo_exp_user_6
+  [128/156] Grading locomo_exp_user_8
+  [125/178] Grading locomo_exp_user_4
+  [119/158] Grading locomo_exp_user_9
+  [125/152] Grading locomo_exp_user_2
+  [124/191] Grading locomo_exp_user_7
+  [123/152] Grading locomo_exp_user_0
+  [124/199] Grading locomo_exp_user_3
+  [127/150] Grading locomo_exp_user_6
+  [129/156] Grading locomo_exp_user_8
+  [126/178] Grading locomo_exp_user_4
+  [126/152] Grading locomo_exp_user_2
+  [124/152] Grading locomo_exp_user_0
+  [125/191] Grading locomo_exp_user_7
+  [125/199] Grading locomo_exp_user_3
+  [128/150] Grading locomo_exp_user_6
+  [120/158] Grading locomo_exp_user_9
+  [130/156] Grading locomo_exp_user_8
+  [127/178] Grading locomo_exp_user_4
+  [127/152] Grading locomo_exp_user_2
+  [125/152] Grading locomo_exp_user_0
+  [126/191] Grading locomo_exp_user_7
+  [121/158] Grading locomo_exp_user_9
+  [129/150] Grading locomo_exp_user_6
+  [126/199] Grading locomo_exp_user_3
+  [131/156] Grading locomo_exp_user_8
+  [128/178] Grading locomo_exp_user_4
+  [128/152] Grading locomo_exp_user_2
+  [127/191] Grading locomo_exp_user_7
+  [126/152] Grading locomo_exp_user_0
+  [122/158] Grading locomo_exp_user_9
+  [127/199] Grading locomo_exp_user_3
+  [130/150] Grading locomo_exp_user_6
+  [132/156] Grading locomo_exp_user_8
+  [129/178] Grading locomo_exp_user_4
+  [128/191] Grading locomo_exp_user_7
+  [129/152] Grading locomo_exp_user_2
+  [127/152] Grading locomo_exp_user_0
+  [123/158] Grading locomo_exp_user_9
+  [128/199] Grading locomo_exp_user_3
+  [133/156] Grading locomo_exp_user_8
+  [131/150] Grading locomo_exp_user_6
+  [129/191] Grading locomo_exp_user_7
+  [130/178] Grading locomo_exp_user_4
+  [128/152] Grading locomo_exp_user_0
+  [130/152] Grading locomo_exp_user_2
+  [124/158] Grading locomo_exp_user_9
+  [129/199] Grading locomo_exp_user_3
+  [132/150] Grading locomo_exp_user_6
+  [134/156] Grading locomo_exp_user_8
+  [131/178] Grading locomo_exp_user_4
+  [130/191] Grading locomo_exp_user_7
+  [129/152] Grading locomo_exp_user_0
+  [131/152] Grading locomo_exp_user_2
+  [125/158] Grading locomo_exp_user_9
+  [130/199] Grading locomo_exp_user_3
+  [133/150] Grading locomo_exp_user_6
+  [131/191] Grading locomo_exp_user_7
+  [135/156] Grading locomo_exp_user_8
+  [132/178] Grading locomo_exp_user_4
+  [132/152] Grading locomo_exp_user_2
+  [130/152] Grading locomo_exp_user_0
+  [126/158] Grading locomo_exp_user_9
+  [131/199] Grading locomo_exp_user_3
+  [134/150] Grading locomo_exp_user_6
+  [132/191] Grading locomo_exp_user_7
+  [131/152] Grading locomo_exp_user_0
+  [133/152] Grading locomo_exp_user_2
+  [136/156] Grading locomo_exp_user_8
+  [133/178] Grading locomo_exp_user_4
+  [127/158] Grading locomo_exp_user_9
+  [132/199] Grading locomo_exp_user_3
+  [135/150] Grading locomo_exp_user_6
+  [132/152] Grading locomo_exp_user_0
+  [137/156] Grading locomo_exp_user_8
+  [133/191] Grading locomo_exp_user_7
+  [134/152] Grading locomo_exp_user_2
+  [134/178] Grading locomo_exp_user_4
+  [128/158] Grading locomo_exp_user_9
+  [136/150] Grading locomo_exp_user_6
+  [133/199] Grading locomo_exp_user_3
+  [134/191] Grading locomo_exp_user_7
+  [138/156] Grading locomo_exp_user_8
+  [133/152] Grading locomo_exp_user_0
+  [135/152] Grading locomo_exp_user_2
+  [135/178] Grading locomo_exp_user_4
+  [129/158] Grading locomo_exp_user_9
+  [137/150] Grading locomo_exp_user_6
+  [134/199] Grading locomo_exp_user_3
+  [139/156] Grading locomo_exp_user_8
+  [135/191] Grading locomo_exp_user_7
+  [134/152] Grading locomo_exp_user_0
+  [136/152] Grading locomo_exp_user_2
+  [136/178] Grading locomo_exp_user_4
+  [130/158] Grading locomo_exp_user_9
+  [138/150] Grading locomo_exp_user_6
+  [135/199] Grading locomo_exp_user_3
+  [135/152] Grading locomo_exp_user_0
+  [136/191] Grading locomo_exp_user_7
+  [140/156] Grading locomo_exp_user_8
+  [137/152] Grading locomo_exp_user_2
+  [137/178] Grading locomo_exp_user_4
+  [131/158] Grading locomo_exp_user_9
+  [136/199] Grading locomo_exp_user_3
+  [139/150] Grading locomo_exp_user_6
+  [141/156] Grading locomo_exp_user_8
+  [136/152] Grading locomo_exp_user_0
+  [137/191] Grading locomo_exp_user_7
+  [138/152] Grading locomo_exp_user_2
+  [132/158] Grading locomo_exp_user_9
+  [138/178] Grading locomo_exp_user_4
+  [137/199] Grading locomo_exp_user_3
+  [140/150] Grading locomo_exp_user_6
+  [142/156] Grading locomo_exp_user_8
+  [137/152] Grading locomo_exp_user_0
+  [138/191] Grading locomo_exp_user_7
+  [139/152] Grading locomo_exp_user_2
+  [133/158] Grading locomo_exp_user_9
+  [141/150] Grading locomo_exp_user_6
+  [139/178] Grading locomo_exp_user_4
+  [138/199] Grading locomo_exp_user_3
+  [143/156] Grading locomo_exp_user_8
+  [139/191] Grading locomo_exp_user_7
+  [138/152] Grading locomo_exp_user_0
+  [134/158] Grading locomo_exp_user_9
+  [140/152] Grading locomo_exp_user_2
+  [142/150] Grading locomo_exp_user_6
+  [140/178] Grading locomo_exp_user_4
+  [139/199] Grading locomo_exp_user_3
+  [144/156] Grading locomo_exp_user_8
+  [139/152] Grading locomo_exp_user_0
+  [140/191] Grading locomo_exp_user_7
+  [135/158] Grading locomo_exp_user_9
+  [141/152] Grading locomo_exp_user_2
+  [143/150] Grading locomo_exp_user_6
+  [140/199] Grading locomo_exp_user_3
+  [145/156] Grading locomo_exp_user_8
+  [141/178] Grading locomo_exp_user_4
+  [140/152] Grading locomo_exp_user_0
+  [141/191] Grading locomo_exp_user_7
+  [136/158] Grading locomo_exp_user_9
+  [144/150] Grading locomo_exp_user_6
+  [142/152] Grading locomo_exp_user_2
+  [141/199] Grading locomo_exp_user_3
+  [142/178] Grading locomo_exp_user_4
+  [141/152] Grading locomo_exp_user_0
+  [146/156] Grading locomo_exp_user_8
+  [142/191] Grading locomo_exp_user_7
+  [145/150] Grading locomo_exp_user_6
+  [137/158] Grading locomo_exp_user_9
+  [142/199] Grading locomo_exp_user_3
+  [143/152] Grading locomo_exp_user_2
+  [142/152] Grading locomo_exp_user_0
+  [143/178] Grading locomo_exp_user_4
+  [143/191] Grading locomo_exp_user_7
+  [147/156] Grading locomo_exp_user_8
+  [143/199] Grading locomo_exp_user_3
+  [146/150] Grading locomo_exp_user_6
+  [138/158] Grading locomo_exp_user_9
+  [144/152] Grading locomo_exp_user_2
+  [144/178] Grading locomo_exp_user_4
+  [143/152] Grading locomo_exp_user_0
+  [148/156] Grading locomo_exp_user_8
+  [144/191] Grading locomo_exp_user_7
+  [147/150] Grading locomo_exp_user_6
+  [145/178] Grading locomo_exp_user_4
+  [144/199] Grading locomo_exp_user_3
+  [145/152] Grading locomo_exp_user_2
+  [139/158] Grading locomo_exp_user_9
+  [149/156] Grading locomo_exp_user_8
+  [145/191] Grading locomo_exp_user_7
+  [145/199] Grading locomo_exp_user_3
+  [148/150] Grading locomo_exp_user_6
+  [146/178] Grading locomo_exp_user_4
+  [140/158] Grading locomo_exp_user_9
+  [146/152] Grading locomo_exp_user_2
+  [150/156] Grading locomo_exp_user_8
+  [146/191] Grading locomo_exp_user_7
+  [144/152] Grading locomo_exp_user_0
+  [146/199] Grading locomo_exp_user_3
+  [149/150] Grading locomo_exp_user_6
+  [147/178] Grading locomo_exp_user_4
+  [141/158] Grading locomo_exp_user_9
+  [147/152] Grading locomo_exp_user_2
+  [145/152] Grading locomo_exp_user_0
+  [147/191] Grading locomo_exp_user_7
+  [151/156] Grading locomo_exp_user_8
+  [147/199] Grading locomo_exp_user_3
+  [150/150] Grading locomo_exp_user_6
+  [148/178] Grading locomo_exp_user_4
+  [148/152] Grading locomo_exp_user_2
+  [142/158] Grading locomo_exp_user_9
+  [146/152] Grading locomo_exp_user_0
+  [152/156] Grading locomo_exp_user_8
+  [148/199] Grading locomo_exp_user_3
+Group locomo_exp_user_6 processed in 93.74 seconds
+  [148/191] Grading locomo_exp_user_7
+  [149/178] Grading locomo_exp_user_4
+  [149/152] Grading locomo_exp_user_2
+  [143/158] Grading locomo_exp_user_9
+  [147/152] Grading locomo_exp_user_0
+  [153/156] Grading locomo_exp_user_8
+  [149/199] Grading locomo_exp_user_3
+  [149/191] Grading locomo_exp_user_7
+  [144/158] Grading locomo_exp_user_9
+  [150/152] Grading locomo_exp_user_2
+  [150/178] Grading locomo_exp_user_4
+  [154/156] Grading locomo_exp_user_8
+  [148/152] Grading locomo_exp_user_0
+  [150/199] Grading locomo_exp_user_3
+  [150/191] Grading locomo_exp_user_7
+  [145/158] Grading locomo_exp_user_9
+  [151/152] Grading locomo_exp_user_2
+  [155/156] Grading locomo_exp_user_8
+  [151/178] Grading locomo_exp_user_4
+  [149/152] Grading locomo_exp_user_0
+  [151/199] Grading locomo_exp_user_3
+  [151/191] Grading locomo_exp_user_7
+  [152/152] Grading locomo_exp_user_2
+  [152/178] Grading locomo_exp_user_4
+  [156/156] Grading locomo_exp_user_8
+  [150/152] Grading locomo_exp_user_0
+  [146/158] Grading locomo_exp_user_9
+  [152/199] Grading locomo_exp_user_3
+Group locomo_exp_user_2 processed in 96.16 seconds
+  [153/178] Grading locomo_exp_user_4
+Group locomo_exp_user_8 processed in 96.3 seconds
+  [152/191] Grading locomo_exp_user_7
+  [151/152] Grading locomo_exp_user_0
+  [147/158] Grading locomo_exp_user_9
+  [153/199] Grading locomo_exp_user_3
+  [154/178] Grading locomo_exp_user_4
+  [153/191] Grading locomo_exp_user_7
+  [148/158] Grading locomo_exp_user_9
+  [154/199] Grading locomo_exp_user_3
+  [152/152] Grading locomo_exp_user_0
+  [155/178] Grading locomo_exp_user_4
+  [149/158] Grading locomo_exp_user_9
+  [154/191] Grading locomo_exp_user_7
+  [155/199] Grading locomo_exp_user_3
+Group locomo_exp_user_0 processed in 97.77 seconds
+  [156/178] Grading locomo_exp_user_4
+  [155/191] Grading locomo_exp_user_7
+  [150/158] Grading locomo_exp_user_9
+  [156/199] Grading locomo_exp_user_3
+  [157/178] Grading locomo_exp_user_4
+  [156/191] Grading locomo_exp_user_7
+  [157/199] Grading locomo_exp_user_3
+  [151/158] Grading locomo_exp_user_9
+  [158/178] Grading locomo_exp_user_4
+  [157/191] Grading locomo_exp_user_7
+  [158/199] Grading locomo_exp_user_3
+  [152/158] Grading locomo_exp_user_9
+  [159/178] Grading locomo_exp_user_4
+  [158/191] Grading locomo_exp_user_7
+  [159/199] Grading locomo_exp_user_3
+  [153/158] Grading locomo_exp_user_9
+  [160/178] Grading locomo_exp_user_4
+  [159/191] Grading locomo_exp_user_7
+  [160/199] Grading locomo_exp_user_3
+  [154/158] Grading locomo_exp_user_9
+  [161/178] Grading locomo_exp_user_4
+  [160/191] Grading locomo_exp_user_7
+  [155/158] Grading locomo_exp_user_9
+  [161/199] Grading locomo_exp_user_3
+  [162/178] Grading locomo_exp_user_4
+  [161/191] Grading locomo_exp_user_7
+  [156/158] Grading locomo_exp_user_9
+  [163/178] Grading locomo_exp_user_4
+  [162/199] Grading locomo_exp_user_3
+  [162/191] Grading locomo_exp_user_7
+  [157/158] Grading locomo_exp_user_9
+  [164/178] Grading locomo_exp_user_4
+  [163/191] Grading locomo_exp_user_7
+  [163/199] Grading locomo_exp_user_3
+  [158/158] Grading locomo_exp_user_9
+  [165/178] Grading locomo_exp_user_4
+  [164/191] Grading locomo_exp_user_7
+  [164/199] Grading locomo_exp_user_3
+Group locomo_exp_user_9 processed in 103.47 seconds
+  [166/178] Grading locomo_exp_user_4
+  [165/191] Grading locomo_exp_user_7
+  [165/199] Grading locomo_exp_user_3
+  [167/178] Grading locomo_exp_user_4
+  [166/191] Grading locomo_exp_user_7
+  [166/199] Grading locomo_exp_user_3
+  [167/191] Grading locomo_exp_user_7
+  [168/178] Grading locomo_exp_user_4
+  [167/199] Grading locomo_exp_user_3
+  [168/191] Grading locomo_exp_user_7
+  [169/178] Grading locomo_exp_user_4
+  [168/199] Grading locomo_exp_user_3
+  [169/191] Grading locomo_exp_user_7
+  [170/178] Grading locomo_exp_user_4
+  [169/199] Grading locomo_exp_user_3
+  [170/191] Grading locomo_exp_user_7
+  [171/178] Grading locomo_exp_user_4
+  [170/199] Grading locomo_exp_user_3
+  [171/191] Grading locomo_exp_user_7
+  [172/178] Grading locomo_exp_user_4
+  [171/199] Grading locomo_exp_user_3
+  [172/191] Grading locomo_exp_user_7
+  [173/178] Grading locomo_exp_user_4
+  [172/199] Grading locomo_exp_user_3
+  [173/191] Grading locomo_exp_user_7
+  [174/178] Grading locomo_exp_user_4
+  [173/199] Grading locomo_exp_user_3
+  [174/191] Grading locomo_exp_user_7
+  [175/178] Grading locomo_exp_user_4
+  [174/199] Grading locomo_exp_user_3
+  [175/191] Grading locomo_exp_user_7
+  [176/178] Grading locomo_exp_user_4
+  [175/199] Grading locomo_exp_user_3
+  [177/178] Grading locomo_exp_user_4
+  [176/191] Grading locomo_exp_user_7
+  [176/199] Grading locomo_exp_user_3
+  [177/191] Grading locomo_exp_user_7
+  [178/178] Grading locomo_exp_user_4
+  [177/199] Grading locomo_exp_user_3
+  [178/191] Grading locomo_exp_user_7
+Group locomo_exp_user_4 processed in 110.95 seconds
+  [178/199] Grading locomo_exp_user_3
+  [179/191] Grading locomo_exp_user_7
+  [179/199] Grading locomo_exp_user_3
+  [180/191] Grading locomo_exp_user_7
+  [180/199] Grading locomo_exp_user_3
+  [181/191] Grading locomo_exp_user_7
+  [181/199] Grading locomo_exp_user_3
+  [182/191] Grading locomo_exp_user_7
+  [182/199] Grading locomo_exp_user_3
+  [183/191] Grading locomo_exp_user_7
+  [183/199] Grading locomo_exp_user_3
+  [184/191] Grading locomo_exp_user_7
+  [184/199] Grading locomo_exp_user_3
+  [185/191] Grading locomo_exp_user_7
+  [185/199] Grading locomo_exp_user_3
+  [186/191] Grading locomo_exp_user_7
+  [186/199] Grading locomo_exp_user_3
+  [187/191] Grading locomo_exp_user_7
+  [187/199] Grading locomo_exp_user_3
+  [188/191] Grading locomo_exp_user_7
+  [188/199] Grading locomo_exp_user_3
+  [189/191] Grading locomo_exp_user_7
+  [189/199] Grading locomo_exp_user_3
+  [190/191] Grading locomo_exp_user_7
+  [190/199] Grading locomo_exp_user_3
+  [191/191] Grading locomo_exp_user_7
+  [191/199] Grading locomo_exp_user_3
+Group locomo_exp_user_7 processed in 119.28 seconds
+  [192/199] Grading locomo_exp_user_3
+  [193/199] Grading locomo_exp_user_3
+  [194/199] Grading locomo_exp_user_3
+  [195/199] Grading locomo_exp_user_3
+  [196/199] Grading locomo_exp_user_3
+  [197/199] Grading locomo_exp_user_3
+  [198/199] Grading locomo_exp_user_3
+  [199/199] Grading locomo_exp_user_3
+Group locomo_exp_user_3 processed in 124.37 seconds
+  Evaluating groups ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10/10 • 0:02:04 → 0:00:00
+
+=== Evaluation Complete: Calculating final scores ===
+LLM-as-a-Judge Mean Score: 0.8968
+LLM-as-a-Judge Standard Deviation: 0.0000
+(Calculated from 1 separate runs over 1540 questions)
+Individual run scores: [0.8968]
+Saved detailed evaluation results to results/locomo/threadatlas-base-full/threadatlas_locomo_judged.json
+
+  ✓ Step done in 2m34s  |  Pipeline: 4/6  |  Elapsed: 37m41s
+
+────────────────────────────────────────────────────────────────────
+  [5/6] Metric Calculation
+────────────────────────────────────────────────────────────────────
+Excel file saved to: results/locomo/threadatlas-base-full/threadatlas_locomo_results.xlsx
+
+=== Metric Calculation Complete ===
+LLM-as-a-Judge score: 0.8968 ± 0.0000
+Total questions evaluated: 1540
+
+=== Duration Metrics ===
+search_duration_ms (avg): 505.45 ms
+search_duration_ms (P50): 497.24 ms
+search_duration_ms (P95): 597.84 ms
+add_duration_ms (avg): 30978.15 ms
+add_duration_ms (P50): 30488.35 ms
+add_duration_ms (P95): 46745.39 ms
+
+Results have been written to results/locomo/threadatlas-base-full/threadatlas_locomo_grades.json
+Excel report has been saved to results/locomo/threadatlas-base-full/threadatlas_locomo_results.xlsx
+
+  ✓ Step done in 2s  |  Pipeline: 5/6  |  Elapsed: 37m43s
+
+────────────────────────────────────────────────────────────────────
+  [6/6] Report Generation
+────────────────────────────────────────────────────────────────────
+
+Experiment report → results/locomo/threadatlas-base-full/exp_report.md
+==================================================================
+# OmniMemEval Experiment Report — threadatlas-base-full
+
+> Generated: 2026-11-16 04:58:12
+
+## Experiment Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Benchmark | LoCoMo |
+| Memory Framework | threadatlas |
+| Version | base-full |
+| Run Time | 2026-11-16 04:20:29 UTC |
+| Git | `5e8cdc1` (HEAD) |
+| WORKERS | 10 |
+| LLM_WORKERS | 10 |
+| TOPK | 20 |
+| NUM_RUNS | 1 |
+| SAVE_MODEL_INPUT | 0 |
+| CLEAR | 0 |
+| WAIT_AFTER_INGEST | 0 |
+| ALLOW_EMPTY_SEARCH | 1 |
+| SKIP_FAILED_SEARCH | 0 |
+| SKIP_FAILED_ANSWER | 0 |
+| SKIP_FAILED_JUDGE | 0 |
+| Results Directory | `results/locomo/threadatlas-base-full` |
+
+**Reproduce:**
+
+```bash
+./scripts/run_locomo_eval.sh --replay results/locomo/threadatlas-base-full
+```
+
+### Environment Variables (snapshot_eval.env)
+
+| Variable | Value |
+|----------|-------|
+| `THREADATLAS_REPO` | `/kaggle/working/threadatlas` |
+| `THREADATLAS_STATE_DIR` | `/kaggle/working/state` |
+| `THREADATLAS_READ_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `LLM_WORKERS` | `10` |
+| `TOPK` | `20` |
+| `ANSWER_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `EVAL_MODEL` | `gpt-4o-mini-2024-07-18` |
+
+## Context Tokens
+
+> Context Tokens are answer-stage prompt/input tokens. They are used as an approximate proxy for retrieved search-result length and should be compared only under the same benchmark, answer model, and prompt template.
+
+| Metric | Value |
+|--------|-------|
+| Answer Model | gpt-4.1-mini-2025-04-14 |
+| Answer API Calls | 1,540 |
+| Context Tokens (avg) | 6218.1 |
+
+## Evaluation Results
+
+### Overall Scores
+
+| Metric | Score |
+|--------|-------|
+| LLM-as-Judge | 0.8968 ± 0.0000 |
+| F1 | 0.2718 |
+| ROUGE-1 | 0.2751 |
+| ROUGE-2 | 0.1429 |
+| ROUGE-L | 0.2568 |
+| BLEU-1 | 0.1673 |
+| BLEU-4 | 0.0627 |
+| METEOR | 0.4125 |
+| BERTScore F1 | - |
+| Semantic Similarity | - |
+
+### Category Breakdown
+
+| Category | LLM-Judge | Questions |
+|----------|-----------|-----------|
+| multi hop | 0.8511 | 282 |
+| temporal reasoning | 0.8785 | 321 |
+| open domain | 0.7083 | 96 |
+| single hop | 0.9405 | 841 |
+
+### Pipeline Status
+
+| Stage | Failed Groups | Skipped Records | Status Counts |
+|-------|---------------|-----------------|---------------|
+| search | 0 | 0 | success=1540 |
+| answer | 0 | 0 | success=1540 |
+| eval | 0 | 0 | success=1540 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 30978.1 | 30488.4 | 46745.4 |
+| Search Latency | 505.5 | 497.2 | 597.8 |
+
+
+  ✓ Step done in 0s  |  Pipeline: 6/6  |  Elapsed: 37m43s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline Complete!                                              ║
+║  Total time: 37m43s  |  Steps: 6                                 ║
+║  Results: /kaggle/working/omnimemeval/results/locomo/threadatlas-base-full║
+╠══════════════════════════════════════════════════════════════════╣
+║  Step breakdown:                                                 ║
+║    Step 1: 31m23s                                                    ║
+║    Step 2: 1m21s                                                     ║
+║    Step 3: 2m22s                                                     ║
+║    Step 4: 2m34s                                                     ║
+║    Step 5: 2s                                                        ║
+║    Step 6: 0s                                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Reproduce: ./scripts/run_locomo_eval.sh --env .env.threadatlas --replay /kaggle/working/omnimemeval/results/locomo/threadatlas-base-full║
+╚══════════════════════════════════════════════════════════════════╝

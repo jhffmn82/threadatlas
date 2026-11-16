@@ -1,0 +1,337 @@
+Using env file: /kaggle/working/omnimemeval/.env.threadatlas
+Experiment config saved to /kaggle/working/omnimemeval/results/beam/threadatlas-base-smoke/
+  - experiment_config.sh  (script params, sourceable)
+  - snapshot_eval.env     (env copy)
+
+BEAM config:
+  lib=threadatlas
+  version=base-smoke
+  workers=1
+  llm_workers=10
+  top_k=20
+  scale=100k
+  num_runs=1
+  save_model_input=0
+  allow_empty_search=1
+  skip_failed_search=0
+  skip_failed_answer=0
+  skip_failed_judge=0
+  skip_failed_streaming=0
+  clear=0
+  notify=0
+  wait_after_ingest=0s
+  streaming=0
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline: run_beam_eval.sh                                      ║
+║  Steps: 6  |  Started: 2026-11-16 06:02:42                       ║
+╚══════════════════════════════════════════════════════════════════╝
+
+────────────────────────────────────────────────────────────────────
+  [1/6] Memory Ingestion
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+            🚀 BEAM INGESTION - THREADATLAS vbase-smoke (scale=100k)             
+================================================================================
+📚 Loaded 1 BEAM conversations (scale=100k)
+--------------------------------------------------------------------------------
+
+================================================================================
+                          🔄 [INGESTING CONVERSATION 1]                          
+================================================================================
+2026-11-16T06:02:42 [ADD START] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690
+2026-11-16T06:03:12 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=30.0s
+2026-11-16T06:03:42 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=1m00s
+2026-11-16T06:04:12 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=1m30s
+2026-11-16T06:04:42 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=2m00s
+2026-11-16T06:05:12 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=2m30s
+2026-11-16T06:05:42 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=3m00s
+2026-11-16T06:06:12 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 elapsed=3m30s
+2026-11-16T06:06:16 [ADD DONE] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_0 messages=60 chars=158690 in 3m33s
+[threadatlas] ✅ Session 0: Ingested 60 messages at 2024-03-15T00:00:00+00:00
+2026-11-16T06:06:16 [ADD START] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531
+2026-11-16T06:06:46 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531 elapsed=30.0s
+2026-11-16T06:07:16 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531 elapsed=1m00s
+2026-11-16T06:07:46 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531 elapsed=1m30s
+2026-11-16T06:08:16 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531 elapsed=2m00s
+2026-11-16T06:08:46 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531 elapsed=2m30s
+2026-11-16T06:08:50 [ADD DONE] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_1 messages=56 chars=178531 in 2m34s
+[threadatlas] ✅ Session 1: Ingested 56 messages at 2024-04-05T00:00:00+00:00
+2026-11-16T06:08:50 [ADD START] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794
+2026-11-16T06:09:20 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 elapsed=30.0s
+2026-11-16T06:09:50 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 elapsed=1m00s
+2026-11-16T06:10:20 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 elapsed=1m30s
+2026-11-16T06:10:50 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 elapsed=2m00s
+2026-11-16T06:11:20 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 elapsed=2m30s
+2026-11-16T06:11:50 [ADD RUNNING] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 elapsed=3m00s
+2026-11-16T06:11:56 [ADD DONE] threadatlas BEAM add user=beam_exp_user_base-smoke_1 session=beam_exp_user_base-smoke_1_session_2 messages=72 chars=185794 in 3m06s
+[threadatlas] ✅ Session 2: Ingested 72 messages at 2024-04-25T00:00:00+00:00
+================================================================================
+  Ingesting conversations ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1/1 • 0:09:14 → 0:00:00
+Ingestion stats saved to results/beam/threadatlas-base-smoke/threadatlas_beam_ingestion_stats.json
+
+================================================================================
+                              ✅ INGESTION COMPLETE                              
+================================================================================
+⏱️  Total time: 0:09:14
+🔄 Framework: threadatlas | Version: base-smoke | Workers: 1
+================================================================================
+
+
+  ✓ Step done in 9m15s  |  Pipeline: 1/6  |  Elapsed: 9m15s
+
+────────────────────────────────────────────────────────────────────
+  [2/6] Memory Search
+────────────────────────────────────────────────────────────────────
+
+================================================================================
+              🔍 BEAM SEARCH - THREADATLAS vbase-smoke (scale=100k)              
+================================================================================
+📚 Loaded 1 BEAM conversations
+⚙️  Search parameters: top_k=20, workers=1
+⚙️  Failure controls: allow_empty_search=True, skip_failed_search=False
+--------------------------------------------------------------------------------
+  🔎 [1] Q: How did the user feedback influence the UI/UX improvements I made before the pub...
+  🔎 [1] Q: Can you tell me about my background and previous development projects?...
+  🔎 [1] Q: Have I worked with Flask routes and handled HTTP requests in this project?...
+  🔎 [1] Q: Have I integrated Flask-Login for session management in my project?...
+  🔎 [1] Q: Can you list the order in which I brought up different aspects of developing my ...
+  🔎 [1] Q: Can you walk me through the order in which I brought up different aspects of my ...
+  🔎 [1] Q: When does my first sprint end?...
+  🔎 [1] Q: How did I organize the tasks over the course of the sprint to ensure both backen...
+  🔎 [1] Q: Could you show me how to implement a login feature?...
+  🔎 [1] Q: Which libraries are used in this project?...
+  🔎 [1] Q: What is the average response time of the dashboard API?...
+  🔎 [1] Q: How many commits have been merged into the main branch of my Git repository?...
+  🔎 [1] Q: How many new columns did I want to add to the transactions table across my reque...
+  🔎 [1] Q: How many different user roles and security features am I trying to implement acr...
+  🔎 [1] Q: I'm planning to add user login, income and expense tracking, and some basic anal...
+  🔎 [1] Q: I'm looking to improve the security features of my app. What steps would you sug...
+  🔎 [1] Q: Can you provide a comprehensive summary of how my budget tracker project has pro...
+  🔎 [1] Q: Can you give me a comprehensive summary of how I handled the security and databa...
+  🔎 [1] Q: How many weeks do I have between finishing the transaction management features a...
+  🔎 [1] Q: How many days were there between the end of my first sprint and the deadline for...
+💾 Search results for conversation 1 saved
+  Searching conversations ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1/1 • 0:00:02 → 0:00:00
+
+================================================================================
+                               ✅ SEARCH COMPLETE                                
+================================================================================
+⏱️  Total time: 0:00:02
+🔄 Framework: threadatlas | Version: base-smoke | Workers: 1
+📁 Results saved to: results/beam/threadatlas-base-smoke/threadatlas_beam_search_results.json
+================================================================================
+
+
+  ✓ Step done in 3s  |  Pipeline: 2/6  |  Elapsed: 9m19s
+
+────────────────────────────────────────────────────────────────────
+  [3/6] Answer Generation
+────────────────────────────────────────────────────────────────────
+[ANSWER] model=gpt-4.1-mini-2025-04-14
+  [1/1] beam_exp_user_base-smoke_1 ━━━━━━━━━━━━━━━━━━━ 20/20 • 0:00:18 → 0:00:00
+Total: 20 questions across 1 users
+Save response results to results/beam/threadatlas-base-smoke/threadatlas_beam_responses.json
+Token usage saved → results/beam/threadatlas-base-smoke/token_usage_answer.json
+
+  ✓ Step done in 24s  |  Pipeline: 3/6  |  Elapsed: 9m43s
+
+────────────────────────────────────────────────────────────────────
+  [4/6] Nugget Score Evaluation
+────────────────────────────────────────────────────────────────────
+
+=== Starting BEAM evaluation for threadatlas (version: base-smoke) ===
+Using 10 max concurrent LLM API calls, 1 judge runs per rubric item
+[EVAL] model=gpt-4o-mini-2024-07-18
+Found 20 total responses to evaluate
+  [1/1] beam_exp_user_base-smoke_1 ━━━━━━━━━━━━━━━━━━━ 20/20 • 0:00:08 → 0:00:00
+
+Nugget Score (mean): 0.6737
+Total questions evaluated: 20
+Saved evaluation results to results/beam/threadatlas-base-smoke/threadatlas_beam_judged.json
+Token usage saved → results/beam/threadatlas-base-smoke/token_usage_eval.json
+
+  ✓ Step done in 11s  |  Pipeline: 4/6  |  Elapsed: 9m54s
+
+────────────────────────────────────────────────────────────────────
+  [5/6] Metric Calculation
+────────────────────────────────────────────────────────────────────
+Excel file saved to: results/beam/threadatlas-base-smoke/threadatlas_beam_results.xlsx
+
+=== BEAM Metric Calculation Complete ===
+Overall Nugget Score: 0.6737 ± 0.3699
+Total questions: 20
+
+=== Per-Scale Scores ===
+  100k: 0.6737 ± 0.3699 (20 questions)
+
+=== Per-Dimension Scores ===
+  abstention: 1.0000 ± 0.0000 (2 questions)
+  contradiction_resolution: 0.4375 ± 0.0625 (2 questions)
+  event_ordering: 0.0000 ± 0.0000 (2 questions)
+  information_extraction: 1.0000 ± 0.0000 (2 questions)
+  instruction_following: 0.7500 ± 0.2500 (2 questions)
+  knowledge_update: 0.5000 ± 0.5000 (2 questions)
+  multi_session_reasoning: 0.6250 ± 0.1250 (2 questions)
+  preference_following: 1.0000 ± 0.0000 (2 questions)
+  summarization: 0.8000 ± 0.1000 (2 questions)
+  temporal_reasoning: 0.6250 ± 0.3750 (2 questions)
+
+=== Per-Difficulty Scores ===
+  clear: 0.4375 ± 0.0625 (2 questions)
+  easy: 0.6875 ± 0.3698 (8 questions)
+  hard: 1.0000 ± 0.0000 (1 questions)
+  medium: 0.6778 ± 0.3966 (9 questions)
+
+=== Duration Metrics ===
+search_duration_ms (avg): 113.76 ms
+search_duration_ms (P50): 39.64 ms
+search_duration_ms (P95): 128.26 ms
+add_duration_ms (avg): 184783.37 ms
+add_duration_ms (P50): 186150.92 ms
+add_duration_ms (P95): 211021.48 ms
+
+Results saved to results/beam/threadatlas-base-smoke/threadatlas_beam_grades.json
+Excel report saved to results/beam/threadatlas-base-smoke/threadatlas_beam_results.xlsx
+
+  ✓ Step done in 2s  |  Pipeline: 5/6  |  Elapsed: 9m56s
+
+────────────────────────────────────────────────────────────────────
+  [6/6] Report Generation
+────────────────────────────────────────────────────────────────────
+
+Experiment report → results/beam/threadatlas-base-smoke/exp_report.md
+==================================================================
+# OmniMemEval Experiment Report — threadatlas-base-smoke
+
+> Generated: 2026-11-16 06:12:38
+
+## Experiment Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Benchmark | BEAM |
+| Memory Framework | threadatlas |
+| Version | base-smoke |
+| Run Time | 2026-11-16 06:02:42 UTC |
+| Git | `5e8cdc1` (HEAD) |
+| WORKERS | 1 |
+| LLM_WORKERS | 10 |
+| TOPK | 20 |
+| SCALE | 100k |
+| NUM_RUNS | 1 |
+| SAVE_MODEL_INPUT | 0 |
+| CLEAR | 0 |
+| WAIT_AFTER_INGEST | 0 |
+| STREAMING | 0 |
+| START_IDX | 0 |
+| END_IDX |  |
+| ALLOW_EMPTY_SEARCH | 1 |
+| SKIP_FAILED_SEARCH | 0 |
+| SKIP_FAILED_ANSWER | 0 |
+| SKIP_FAILED_JUDGE | 0 |
+| SKIP_FAILED_STREAMING | 0 |
+| Results Directory | `results/beam/threadatlas-base-smoke` |
+
+**Reproduce:**
+
+```bash
+./scripts/run_beam_eval.sh --replay results/beam/threadatlas-base-smoke
+```
+
+### Environment Variables (snapshot_eval.env)
+
+| Variable | Value |
+|----------|-------|
+| `THREADATLAS_REPO` | `/kaggle/working/threadatlas` |
+| `THREADATLAS_STATE_DIR` | `/kaggle/working/state` |
+| `THREADATLAS_READ_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `THREADATLAS_EMBED_DEVICE` | `cpu` |
+| `LLM_WORKERS` | `10` |
+| `TOPK` | `20` |
+| `ANSWER_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `EVAL_MODEL` | `gpt-4o-mini-2024-07-18` |
+
+## Context Tokens
+
+> Context Tokens are answer-stage prompt/input tokens. They are used as an approximate proxy for retrieved search-result length and should be compared only under the same benchmark, answer model, and prompt template.
+
+| Metric | Value |
+|--------|-------|
+| Answer Model | gpt-4.1-mini-2025-04-14 |
+| Answer API Calls | 20 |
+| Context Tokens (avg) | 7341.8 |
+
+## Evaluation Results
+
+### Overall Scores
+
+| Metric | Score |
+|--------|-------|
+| Nugget Score | 0.6737 ± 0.3699 |
+| Questions | 20 |
+
+### By Conversation Scale
+
+| Scale | Nugget Score | Questions |
+|-------|-------------|-----------|
+| 100k | 0.6737 ± 0.3699 | 20 |
+
+### By Question Dimension
+
+| Dimension | Nugget Score | Questions |
+|-----------|-------------|-----------|
+| abstention | 1.0000 ± 0.0000 | 2 |
+| contradiction_resolution | 0.4375 ± 0.0625 | 2 |
+| event_ordering | 0.0000 ± 0.0000 | 2 |
+| information_extraction | 1.0000 ± 0.0000 | 2 |
+| instruction_following | 0.7500 ± 0.2500 | 2 |
+| knowledge_update | 0.5000 ± 0.5000 | 2 |
+| multi_session_reasoning | 0.6250 ± 0.1250 | 2 |
+| preference_following | 1.0000 ± 0.0000 | 2 |
+| summarization | 0.8000 ± 0.1000 | 2 |
+| temporal_reasoning | 0.6250 ± 0.3750 | 2 |
+
+### By Difficulty
+
+| Difficulty | Nugget Score | Questions |
+|------------|-------------|-----------|
+| clear | 0.4375 ± 0.0625 | 2 |
+| easy | 0.6875 ± 0.3698 | 8 |
+| hard | 1.0000 ± 0.0000 | 1 |
+| medium | 0.6778 ± 0.3966 | 9 |
+
+### Pipeline Status
+
+| Stage | Failed Units | Skipped Records | Status Counts |
+|-------|--------------|-----------------|---------------|
+| search | 0 | 0 | success=20 |
+| answer | 0 | 0 | success=20 |
+| eval | 0 | 0 | success=20 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 184783.4 | 186150.9 | 211021.5 |
+| Search Latency | 113.8 | 39.6 | 128.3 |
+
+
+  ✓ Step done in 0s  |  Pipeline: 6/6  |  Elapsed: 9m56s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline Complete!                                              ║
+║  Total time: 9m56s  |  Steps: 6                                  ║
+║  Results: /kaggle/working/omnimemeval/results/beam/threadatlas-base-smoke║
+╠══════════════════════════════════════════════════════════════════╣
+║  Step breakdown:                                                 ║
+║    Step 1: 9m15s                                                     ║
+║    Step 2: 3s                                                        ║
+║    Step 3: 24s                                                       ║
+║    Step 4: 11s                                                       ║
+║    Step 5: 2s                                                        ║
+║    Step 6: 0s                                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Reproduce: ./scripts/run_beam_eval.sh --env .env.threadatlas --replay /kaggle/working/omnimemeval/results/beam/threadatlas-base-smoke║
+╚══════════════════════════════════════════════════════════════════╝

@@ -1,0 +1,337 @@
+{
+    "metrics": {
+        "llm_judge_score": 0.8475609756097561,
+        "llm_judge_std": 0.0,
+        "lexical": {
+            "f1": 0.21032723341807083,
+            "rouge1_f": 0.16835263116021323,
+            "rouge2_f": 0.06687961106211308,
+            "rougeL_f": 0.14107880492130898,
+            "bleu1": 0.10870731277363732,
+            "bleu2": 0.059804979374189035,
+            "bleu3": 0.04078978487342033,
+            "bleu4": 0.027439535699847074,
+            "meteor": 0.2863997043051962
+        },
+        "semantic": {
+            "bert_f1": null,
+            "similarity": null
+        },
+        "context_tokens": 2836.4146341463415,
+        "duration": {
+            "search_duration_ms": 102.39633990497124,
+            "search_duration_ms_p50": 95.02613544464111,
+            "search_duration_ms_p95": 136.98489665985107,
+            "add_duration_ms": 40354.87184615384,
+            "add_duration_ms_p50": 36269.8,
+            "add_duration_ms_p95": 68219.74199999998
+        }
+    },
+    "category_scores": {
+        "Memory Boundary": {
+            "total": 39,
+            "llm_judge_score": 0.9487179487179487,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.26789344662692816,
+                "rouge1_f": 0.2182955435623086,
+                "rouge2_f": 0.046468548144542425,
+                "rougeL_f": 0.14627738031420037,
+                "bleu1": 0.17046028654384887,
+                "bleu2": 0.05909546439530489,
+                "bleu3": 0.039221546594329096,
+                "bleu4": 0.02898632657276444,
+                "meteor": 0.2715245436676413
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2674.076923076923,
+            "duration": {
+                "search_duration_ms": 119.92205106295071,
+                "search_duration_ms_p50": 86.97319030761719,
+                "search_duration_ms_p95": 128.7400722503662
+            },
+            "category_name": "Memory Boundary"
+        },
+        "Memory Conflict": {
+            "total": 39,
+            "llm_judge_score": 0.8205128205128205,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.28190429455606375,
+                "rouge1_f": 0.20670456951873653,
+                "rouge2_f": 0.0870578862647563,
+                "rougeL_f": 0.17656808645190994,
+                "bleu1": 0.13063595049140223,
+                "bleu2": 0.08848092535273896,
+                "bleu3": 0.0580313157451103,
+                "bleu4": 0.03366257541095413,
+                "meteor": 0.375017584795717
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2855.25641025641,
+            "duration": {
+                "search_duration_ms": 95.73434560726851,
+                "search_duration_ms_p50": 89.8435115814209,
+                "search_duration_ms_p95": 139.52691555023193
+            },
+            "category_name": "Memory Conflict"
+        },
+        "Basic Fact Recall": {
+            "total": 40,
+            "llm_judge_score": 0.825,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.18611751308820074,
+                "rouge1_f": 0.17204151167739173,
+                "rouge2_f": 0.09938759416477715,
+                "rougeL_f": 0.16784556619140048,
+                "bleu1": 0.09729749877965739,
+                "bleu2": 0.07085402224324062,
+                "bleu3": 0.054538949107921876,
+                "bleu4": 0.041042606860973316,
+                "meteor": 0.3258264287588168
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2846.875,
+            "duration": {
+                "search_duration_ms": 92.61156916618347,
+                "search_duration_ms_p50": 93.87469291687012,
+                "search_duration_ms_p95": 124.22590255737305
+            },
+            "category_name": "Basic Fact Recall"
+        },
+        "Generalization & Application": {
+            "total": 31,
+            "llm_judge_score": 0.8064516129032258,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.12311267070161033,
+                "rouge1_f": 0.08544240089191932,
+                "rouge2_f": 0.03878688067520132,
+                "rougeL_f": 0.07837077845191914,
+                "bleu1": 0.04559023014787348,
+                "bleu2": 0.02662576410180402,
+                "bleu3": 0.016150638062212185,
+                "bleu4": 0.009754950121410587,
+                "meteor": 0.19377863296439643
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2993.2258064516127,
+            "duration": {
+                "search_duration_ms": 103.33768013984927,
+                "search_duration_ms_p50": 97.60928153991699,
+                "search_duration_ms_p95": 137.9859447479248
+            },
+            "category_name": "Generalization & Application"
+        },
+        "Multi-hop Inference": {
+            "total": 9,
+            "llm_judge_score": 0.8888888888888888,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.15115811370317817,
+                "rouge1_f": 0.11415286464781481,
+                "rouge2_f": 0.04866198045743354,
+                "rougeL_f": 0.1028397333346835,
+                "bleu1": 0.06378691066682068,
+                "bleu2": 0.03261423208707528,
+                "bleu3": 0.016561892368864305,
+                "bleu4": 0.00771471004310764,
+                "meteor": 0.22623140550163928
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2862.5555555555557,
+            "duration": {
+                "search_duration_ms": 104.32656606038411,
+                "search_duration_ms_p50": 99.29227828979492,
+                "search_duration_ms_p95": 132.62605667114258
+            },
+            "category_name": "Multi-hop Inference"
+        },
+        "Dynamic Update": {
+            "total": 6,
+            "llm_judge_score": 0.6666666666666666,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.07165633930339814,
+                "rouge1_f": 0.07951273725645092,
+                "rouge2_f": 0.024145063430777717,
+                "rougeL_f": 0.07951273725645092,
+                "bleu1": 0.03432779478832731,
+                "bleu2": 0.016574958587344243,
+                "bleu3": 0.010896385406260803,
+                "bleu4": 0.007206093136544386,
+                "meteor": 0.11302184570291485
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2850.0,
+            "duration": {
+                "search_duration_ms": 89.25505479176839,
+                "search_duration_ms_p50": 87.81540393829346,
+                "search_duration_ms_p95": 114.16184902191162
+            },
+            "category_name": "Dynamic Update"
+        }
+    },
+    "difficulty_scores": {
+        "easy": {
+            "total": 95,
+            "llm_judge_score": 0.8842105263157894,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.23639764886693723,
+                "rouge1_f": 0.19596845167803864,
+                "rouge2_f": 0.07903831566102408,
+                "rougeL_f": 0.16370177510810494,
+                "bleu1": 0.12876694192005703,
+                "bleu2": 0.07090807892390487,
+                "bleu3": 0.04877375165341049,
+                "bleu4": 0.034166739855781614,
+                "meteor": 0.3193891347627167
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2785.4315789473685,
+            "duration": {
+                "search_duration_ms": 105.7963722630551,
+                "search_duration_ms_p50": 89.8435115814209,
+                "search_duration_ms_p95": 139.82956409454346
+            },
+            "difficulty_name": "easy"
+        },
+        "medium": {
+            "total": 67,
+            "llm_judge_score": 0.8059701492537313,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.1707453852374995,
+                "rouge1_f": 0.1271635878180154,
+                "rouge2_f": 0.05128069705342887,
+                "rougeL_f": 0.10898969605060596,
+                "bleu1": 0.07825174754027424,
+                "bleu2": 0.04441924982695032,
+                "bleu3": 0.0298532115027711,
+                "bleu4": 0.018283925424037447,
+                "meteor": 0.24084078176175164
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2916.089552238806,
+            "duration": {
+                "search_duration_ms": 98.16781086708183,
+                "search_duration_ms_p50": 96.19379043579102,
+                "search_duration_ms_p95": 135.4204177856445
+            },
+            "difficulty_name": "medium"
+        },
+        "hard": {
+            "total": 2,
+            "llm_judge_score": 0.5,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.2979744136460554,
+                "rouge1_f": 0.23643410852713176,
+                "rouge2_f": 0.011904761904761904,
+                "rougeL_f": 0.14147286821705427,
+                "bleu1": 0.17613636363636365,
+                "bleu2": 0.04782969059518388,
+                "bleu3": 0.027926570740636522,
+                "bleu4": 0.014610282532578947,
+                "meteor": 0.24562566277836695
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2589.0,
+            "duration": {
+                "search_duration_ms": 82.5505256652832,
+                "search_duration_ms_p50": 82.5505256652832,
+                "search_duration_ms_p95": 97.93782234191895
+            },
+            "difficulty_name": "hard"
+        }
+    },
+    "user_scores": {
+        "hm_exp_user_base-smoke_2f1f897e-d67f-dbc5-6a7b-b7634a9e294f": {
+            "total": 164,
+            "llm_judge_score": 0.8475609756097561,
+            "llm_judge_std": 0.0,
+            "lexical": {
+                "f1": 0.21032723341807083,
+                "rouge1_f": 0.16835263116021323,
+                "rouge2_f": 0.06687961106211308,
+                "rougeL_f": 0.14107880492130898,
+                "bleu1": 0.10870731277363732,
+                "bleu2": 0.059804979374189035,
+                "bleu3": 0.04078978487342033,
+                "bleu4": 0.027439535699847074,
+                "meteor": 0.2863997043051962
+            },
+            "semantic": {
+                "bert_f1": null,
+                "similarity": null
+            },
+            "context_tokens": 2836.4146341463415,
+            "duration": {
+                "search_duration_ms": 102.39633990497124,
+                "search_duration_ms_p50": 95.02613544464111,
+                "search_duration_ms_p95": 136.98489665985107
+            }
+        }
+    },
+    "pipeline_status": {
+        "search": {
+            "status_counts": {
+                "success": 164
+            },
+            "failed_units": 0,
+            "failed_users": 0,
+            "failed_records": 0,
+            "failed_keys": 0,
+            "skipped_records": 0
+        },
+        "answer": {
+            "status_counts": {
+                "success": 164
+            },
+            "failed_units": 0,
+            "failed_users": 0,
+            "failed_records": 0,
+            "failed_keys": 0,
+            "skipped_records": 0
+        },
+        "eval": {
+            "status_counts": {
+                "success": 164
+            },
+            "failed_units": 0,
+            "failed_users": 0,
+            "failed_records": 0,
+            "failed_keys": 0,
+            "skipped_records": 0
+        }
+    }
+}

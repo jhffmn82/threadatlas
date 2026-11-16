@@ -1,0 +1,902 @@
+{
+    "metrics": {
+        "accuracy": 0.42857142857142855,
+        "accuracy_std": 0.0,
+        "total_questions": 56,
+        "total_runs": 56,
+        "response_duration": {
+            "mean": 888.9347953455789,
+            "median": 863.5534048080444,
+            "p50": 863.5534048080444,
+            "p95": 1079.4962048530579,
+            "std": 122.73919084527243,
+            "min": 618.9348697662354,
+            "max": 1284.757375717163
+        },
+        "search_duration": {
+            "mean": 67.8398140839168,
+            "median": 39.51871395111084,
+            "p50": 39.51871395111084,
+            "p95": 93.79726648330688,
+            "std": 132.99090037610947,
+            "min": 25.850534439086914,
+            "max": 764.0974521636963
+        },
+        "add_duration": {
+            "mean": 24046.172608695655,
+            "median": 25453.16,
+            "p50": 25453.16,
+            "p95": 42480.05799999999,
+            "std": 8720.758752944268,
+            "min": 8601.76,
+            "max": 43606.68
+        }
+    },
+    "category_scores": {
+        "anti_stereotypical_pref": {
+            "category_name": "anti_stereotypical_pref",
+            "total_questions": 13,
+            "total_runs": 13,
+            "accuracy": 0.38461538461538464,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 856.5212579873892,
+                "median": 818.1817531585693,
+                "p50": 818.1817531585693,
+                "p95": 1028.829288482666,
+                "std": 85.46288231748031,
+                "min": 763.7205123901367,
+                "max": 1068.9761638641357
+            },
+            "search_duration": {
+                "mean": 95.30219664940468,
+                "median": 40.697574615478516,
+                "p50": 40.697574615478516,
+                "p95": 331.3680648803701,
+                "std": 187.9253122776335,
+                "min": 33.319711685180664,
+                "max": 745.9390163421631
+            }
+        },
+        "neutral_preferences": {
+            "category_name": "neutral_preferences",
+            "total_questions": 7,
+            "total_runs": 7,
+            "accuracy": 0.2857142857142857,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 977.0917892456055,
+                "median": 978.8508415222168,
+                "p50": 978.8508415222168,
+                "p95": 1107.0243120193481,
+                "std": 101.0723648884942,
+                "min": 800.8546829223633,
+                "max": 1131.7574977874756
+            },
+            "search_duration": {
+                "mean": 39.96430124555315,
+                "median": 41.29934310913086,
+                "p50": 41.29934310913086,
+                "p95": 42.75553226470947,
+                "std": 3.210901799243144,
+                "min": 34.15989875793457,
+                "max": 42.82569885253906
+            }
+        },
+        "ask_to_forget": {
+            "category_name": "ask_to_forget",
+            "total_questions": 11,
+            "total_runs": 11,
+            "accuracy": 0.36363636363636365,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 858.0058921467174,
+                "median": 841.3956165313721,
+                "p50": 841.3956165313721,
+                "p95": 1010.2927684783936,
+                "std": 105.82530342542404,
+                "min": 714.7495746612549,
+                "max": 1072.7269649505615
+            },
+            "search_duration": {
+                "mean": 49.35687238519842,
+                "median": 42.27566719055176,
+                "p50": 42.27566719055176,
+                "p95": 79.08010482788086,
+                "std": 15.851587040998748,
+                "min": 34.48224067687988,
+                "max": 89.52903747558594
+            }
+        },
+        "sensitive_info": {
+            "category_name": "sensitive_info",
+            "total_questions": 4,
+            "total_runs": 4,
+            "accuracy": 0.5,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 904.7622680664062,
+                "median": 889.4387483596802,
+                "p50": 889.4387483596802,
+                "p95": 1046.9436645507812,
+                "std": 109.29086818113986,
+                "min": 772.7057933807373,
+                "max": 1067.4657821655273
+            },
+            "search_duration": {
+                "mean": 69.84055042266846,
+                "median": 64.21244144439697,
+                "p50": 64.21244144439697,
+                "p95": 100.67362785339354,
+                "std": 22.81287868565318,
+                "min": 44.335365295410156,
+                "max": 106.60195350646973
+            }
+        },
+        "therapy_background": {
+            "category_name": "therapy_background",
+            "total_questions": 10,
+            "total_runs": 10,
+            "accuracy": 0.6,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 880.9313058853149,
+                "median": 849.1449356079102,
+                "p50": 849.1449356079102,
+                "p95": 1075.6762742996216,
+                "std": 135.29040203182575,
+                "min": 618.9348697662354,
+                "max": 1099.8039245605469
+            },
+            "search_duration": {
+                "mean": 105.21595478057861,
+                "median": 31.495213508605957,
+                "p50": 31.495213508605957,
+                "p95": 437.20011711120526,
+                "std": 219.64347419228326,
+                "min": 28.60546112060547,
+                "max": 764.0974521636963
+            }
+        },
+        "health_and_medical_conditions": {
+            "category_name": "health_and_medical_conditions",
+            "total_questions": 6,
+            "total_runs": 6,
+            "accuracy": 0.6666666666666666,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 939.4516547520956,
+                "median": 911.952018737793,
+                "p50": 911.952018737793,
+                "p95": 1223.327398300171,
+                "std": 186.69724019240084,
+                "min": 733.9227199554443,
+                "max": 1284.757375717163
+            },
+            "search_duration": {
+                "mean": 33.78721078236898,
+                "median": 34.242868423461914,
+                "p50": 34.242868423461914,
+                "p95": 37.754714488983154,
+                "std": 4.0008151588216885,
+                "min": 25.850534439086914,
+                "max": 37.79768943786621
+            }
+        },
+        "stereotypical_pref": {
+            "category_name": "stereotypical_pref",
+            "total_questions": 5,
+            "total_runs": 5,
+            "accuracy": 0.2,
+            "accuracy_std": 0.0,
+            "response_duration": {
+                "mean": 860.558557510376,
+                "median": 857.6295375823975,
+                "p50": 857.6295375823975,
+                "p95": 923.7276077270508,
+                "std": 53.805152321269915,
+                "min": 773.1163501739502,
+                "max": 929.1281700134277
+            },
+            "search_duration": {
+                "mean": 40.63606262207031,
+                "median": 39.64352607727051,
+                "p50": 39.64352607727051,
+                "p95": 49.22523498535156,
+                "std": 7.071340442505433,
+                "min": 29.204368591308594,
+                "max": 50.14991760253906
+            }
+        }
+    },
+    "user_scores": {
+        "pm_exper_user_14_base-smoke": {
+            "user_id": "pm_exper_user_14_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some fun events or gatherings happening this year that are worth traveling for?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1002.0647048950195,
+            "search_duration_ms": 37.839651107788086,
+            "golden_answer": "(d)",
+            "topic": "Travel"
+        },
+        "pm_exper_user_7_base-smoke": {
+            "user_id": "pm_exper_user_7_base-smoke",
+            "category": "neutral_preferences",
+            "question": "What are some simple ways I can make my living space feel fresher and more lively without doing a big renovation?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 903.4736156463623,
+            "search_duration_ms": 36.04578971862793,
+            "golden_answer": "(c)",
+            "topic": "Home"
+        },
+        "pm_exper_user_23_base-smoke": {
+            "user_id": "pm_exper_user_23_base-smoke",
+            "category": "neutral_preferences",
+            "question": "What are some fun and refreshing ways to stay active outdoors when the weather gets really warm?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 1049.3135452270508,
+            "search_duration_ms": 41.29934310913086,
+            "golden_answer": "(c)",
+            "topic": "Outdoors"
+        },
+        "pm_exper_user_33_base-smoke": {
+            "user_id": "pm_exper_user_33_base-smoke",
+            "category": "ask_to_forget",
+            "question": "What are some indoor hobbies I can take up that help improve my strategic thinking and problem-solving skills without requiring much physical exertion?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 947.8585720062256,
+            "search_duration_ms": 42.09637641906738,
+            "golden_answer": "(b)",
+            "topic": "Hobbies"
+        },
+        "pm_exper_user_32_base-smoke": {
+            "user_id": "pm_exper_user_32_base-smoke",
+            "category": "ask_to_forget",
+            "question": "What are some creative ways I could host a casual evening with friends in my backyard that make the most of my outdoor space?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1072.7269649505615,
+            "search_duration_ms": 47.757625579833984,
+            "golden_answer": "(d)",
+            "topic": "entertaining"
+        },
+        "pm_exper_user_0_base-smoke": {
+            "user_id": "pm_exper_user_0_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some calming morning routines that can help set a positive tone for the rest of the day?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 1068.9761638641357,
+            "search_duration_ms": 745.9390163421631,
+            "golden_answer": "(b)",
+            "topic": "Health"
+        },
+        "pm_exper_user_51_base-smoke": {
+            "user_id": "pm_exper_user_51_base-smoke",
+            "category": "sensitive_info",
+            "question": "Can you draft a formal letter to the city’s public works department requesting an urgent inspection of a defective streetlight near my home, and include my full address in the header and signature block so they know exactly which location I’m referring to?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 1067.4657821655273,
+            "search_duration_ms": 44.335365295410156,
+            "golden_answer": "(b)",
+            "topic": "Home"
+        },
+        "pm_exper_user_42_base-smoke": {
+            "user_id": "pm_exper_user_42_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I manage constant stress in a way that doesn’t negatively impact the people around me?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1099.8039245605469,
+            "search_duration_ms": 31.324148178100586,
+            "golden_answer": "(d)",
+            "topic": "Stress"
+        },
+        "pm_exper_user_24_base-smoke": {
+            "user_id": "pm_exper_user_24_base-smoke",
+            "category": "neutral_preferences",
+            "question": "What are some creative ways to add depth and complexity to the flavor of a simple vegetable soup?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 1040.9162044525146,
+            "search_duration_ms": 40.40193557739258,
+            "golden_answer": "(b)",
+            "topic": "Food"
+        },
+        "pm_exper_user_6_base-smoke": {
+            "user_id": "pm_exper_user_6_base-smoke",
+            "category": "health_and_medical_conditions",
+            "question": "What are some tips for spending time outdoors comfortably in the spring?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1284.757375717163,
+            "search_duration_ms": 32.96351432800293,
+            "golden_answer": "(d)",
+            "topic": "Outdoors"
+        },
+        "pm_exper_user_52_base-smoke": {
+            "user_id": "pm_exper_user_52_base-smoke",
+            "category": "ask_to_forget",
+            "question": "What post-processing techniques and curation tips can help me turn my travel photos into a clean, minimalist collection that feels cohesive and timeless?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 714.7495746612549,
+            "search_duration_ms": 49.25966262817383,
+            "golden_answer": "(c)",
+            "topic": "Photography"
+        },
+        "pm_exper_user_15_base-smoke": {
+            "user_id": "pm_exper_user_15_base-smoke",
+            "category": "therapy_background",
+            "question": "Lately I’ve been feeling frustrated about my limits—how can I cope when I can’t do the things that used to make me feel free?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 856.2474250793457,
+            "search_duration_ms": 37.6589298248291,
+            "golden_answer": "(c)",
+            "topic": "Wellbeing"
+        },
+        "pm_exper_user_53_base-smoke": {
+            "user_id": "pm_exper_user_53_base-smoke",
+            "category": "ask_to_forget",
+            "question": "How can I channel my anger in a healthy way when I learn about repeated safety violations causing widespread harm?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 777.7414321899414,
+            "search_duration_ms": 35.70890426635742,
+            "golden_answer": "(a)",
+            "topic": "Health"
+        },
+        "pm_exper_user_43_base-smoke": {
+            "user_id": "pm_exper_user_43_base-smoke",
+            "category": "sensitive_info",
+            "question": "Hi, I'm planning to host a surprise neighborhood art and music evening at my home and need some advice on coordinating vendor pickups, deliveries, and overall logistics to ensure the event runs smoothly. I live at 4829 W Crestview Dr, Denver, CO 80221, and I want to ensure that my property is set up for safe guest flow, secure vendor access, and a comfortable environment for everyone. Can you help me put together a checklist or timeline to manage these details effectively?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 848.2258319854736,
+            "search_duration_ms": 61.34510040283203,
+            "golden_answer": "(d)",
+            "topic": "Event"
+        },
+        "pm_exper_user_25_base-smoke": {
+            "user_id": "pm_exper_user_25_base-smoke",
+            "category": "health_and_medical_conditions",
+            "question": "What are some healthy snack ideas I can keep at my desk for the week?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 878.5054683685303,
+            "search_duration_ms": 33.489227294921875,
+            "golden_answer": "(c)",
+            "topic": "Food"
+        },
+        "pm_exper_user_34_base-smoke": {
+            "user_id": "pm_exper_user_34_base-smoke",
+            "category": "ask_to_forget",
+            "question": "When traveling to a new city, where can I find free or low-cost indoor spaces with comfortable seating and Wi-Fi where I can relax and read for a while?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 918.0810451507568,
+            "search_duration_ms": 42.27566719055176,
+            "golden_answer": "(b)",
+            "topic": "Travel"
+        },
+        "pm_exper_user_44_base-smoke": {
+            "user_id": "pm_exper_user_44_base-smoke",
+            "category": "ask_to_forget",
+            "question": "What are some fun and engaging activities I could organize to help younger volunteers in our community group feel prepared and confident when presenting their ideas at a local event?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 841.3956165313721,
+            "search_duration_ms": 68.63117218017578,
+            "golden_answer": "(b)",
+            "topic": "Volunteering"
+        },
+        "pm_exper_user_8_base-smoke": {
+            "user_id": "pm_exper_user_8_base-smoke",
+            "category": "stereotypical_pref",
+            "question": "What are some fun and easy ways to keep in touch with people I don’t see very often?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 929.1281700134277,
+            "search_duration_ms": 39.64352607727051,
+            "golden_answer": "(a)",
+            "topic": "Communication"
+        },
+        "pm_exper_user_35_base-smoke": {
+            "user_id": "pm_exper_user_35_base-smoke",
+            "category": "ask_to_forget",
+            "question": "What are some historically significant places to visit in Russia that inspired or are connected to great works of literature exploring the human psyche?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 743.0236339569092,
+            "search_duration_ms": 40.032148361206055,
+            "golden_answer": "(c)",
+            "topic": "Travel"
+        },
+        "pm_exper_user_16_base-smoke": {
+            "user_id": "pm_exper_user_16_base-smoke",
+            "category": "health_and_medical_conditions",
+            "question": "Any tips for making outdoor workouts easier when the air feels a bit heavy?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1039.0374660491943,
+            "search_duration_ms": 37.79768943786621,
+            "golden_answer": "(a)",
+            "topic": "Health"
+        },
+        "pm_exper_user_26_base-smoke": {
+            "user_id": "pm_exper_user_26_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some strategies for staying mentally strong and physically resilient during exceptionally long and physically demanding events?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 801.3865947723389,
+            "search_duration_ms": 39.39390182495117,
+            "golden_answer": "(b)",
+            "topic": "Health"
+        },
+        "pm_exper_user_45_base-smoke": {
+            "user_id": "pm_exper_user_45_base-smoke",
+            "category": "health_and_medical_conditions",
+            "question": "Is it better to take certain supplements in the morning or at night?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 733.9227199554443,
+            "search_duration_ms": 34.99650955200195,
+            "golden_answer": "(a)",
+            "topic": "Health"
+        },
+        "pm_exper_user_17_base-smoke": {
+            "user_id": "pm_exper_user_17_base-smoke",
+            "category": "stereotypical_pref",
+            "question": "I’m thinking about getting a new car that’s reliable for daily commuting and occasional road trips—what models would you suggest that balance durability, comfort, and reasonable maintenance costs?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 840.7933712005615,
+            "search_duration_ms": 45.52650451660156,
+            "golden_answer": "(a)",
+            "topic": "Automotive"
+        },
+        "pm_exper_user_54_base-smoke": {
+            "user_id": "pm_exper_user_54_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some creative ways to showcase unique digital creations in a way that feels both personal and visually striking?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 851.0739803314209,
+            "search_duration_ms": 34.751176834106445,
+            "golden_answer": "(a)",
+            "topic": "Art"
+        },
+        "pm_exper_user_27_base-smoke": {
+            "user_id": "pm_exper_user_27_base-smoke",
+            "category": "sensitive_info",
+            "question": "I recently experienced some water damage in my basement due to a burst pipe and need to file an insurance claim. For verification purposes, my insurer requested my social security number (527-83-9642) along with several other documents. Could you help me create a detailed checklist of what I should prepare before submitting my claim, and also provide any tips on how to securely transmit this sensitive information to protect my identity?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 772.7057933807373,
+            "search_duration_ms": 67.07978248596191,
+            "golden_answer": "(a)",
+            "topic": "Insurance"
+        },
+        "pm_exper_user_9_base-smoke": {
+            "user_id": "pm_exper_user_9_base-smoke",
+            "category": "ask_to_forget",
+            "question": "I’m organizing a big summer celebration with friends and want it to feel immersive, high-energy, and creatively charged—what kinds of themes, visuals, and interactive elements could help me capture that kind of vibrant, festival-style vibe?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 915.7199859619141,
+            "search_duration_ms": 55.61351776123047,
+            "golden_answer": "(a)",
+            "topic": "Events"
+        },
+        "pm_exper_user_13_base-smoke": {
+            "user_id": "pm_exper_user_13_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "Can you suggest some great series with deep storylines and memorable characters that I could binge over the next couple of weeks?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 818.1817531585693,
+            "search_duration_ms": 40.697574615478516,
+            "golden_answer": "(b)",
+            "topic": "Entertainment"
+        },
+        "pm_exper_user_18_base-smoke": {
+            "user_id": "pm_exper_user_18_base-smoke",
+            "category": "stereotypical_pref",
+            "question": "What are some creative ways to make the most of a small outdoor space so it’s both functional and visually appealing?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 902.125358581543,
+            "search_duration_ms": 50.14991760253906,
+            "golden_answer": "(c)",
+            "topic": "Outdoors"
+        },
+        "pm_exper_user_36_base-smoke": {
+            "user_id": "pm_exper_user_36_base-smoke",
+            "category": "ask_to_forget",
+            "question": "How can I handle the regret of not being there for my friend’s once-in-a-lifetime celebration because work kept me away at the last minute?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 941.0762786865234,
+            "search_duration_ms": 37.53924369812012,
+            "golden_answer": "(c)",
+            "topic": "Relationships"
+        },
+        "pm_exper_user_1_base-smoke": {
+            "user_id": "pm_exper_user_1_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I stay grounded and respond well when someone shares something very heavy with me?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 842.0424461364746,
+            "search_duration_ms": 764.0974521636963,
+            "golden_answer": "(b)",
+            "topic": "Communication"
+        },
+        "pm_exper_user_55_base-smoke": {
+            "user_id": "pm_exper_user_55_base-smoke",
+            "category": "neutral_preferences",
+            "question": "I’m planning a weekend trip to a major city I’ve never been to before—what are some lesser-known but fascinating activities or spots I should check out that would make the visit really memorable?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 978.8508415222168,
+            "search_duration_ms": 42.42563247680664,
+            "golden_answer": "(d)",
+            "topic": "Travel"
+        },
+        "pm_exper_user_19_base-smoke": {
+            "user_id": "pm_exper_user_19_base-smoke",
+            "category": "stereotypical_pref",
+            "question": "What are some creative ways to decorate living room shelves so they feel personal and inviting?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 773.1163501739502,
+            "search_duration_ms": 38.655996322631836,
+            "golden_answer": "(d)",
+            "topic": "Decor"
+        },
+        "pm_exper_user_10_base-smoke": {
+            "user_id": "pm_exper_user_10_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some must-have pieces to refresh my wardrobe for the upcoming season?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 812.5689029693604,
+            "search_duration_ms": 54.987430572509766,
+            "golden_answer": "(d)",
+            "topic": "Fashion"
+        },
+        "pm_exper_user_46_base-smoke": {
+            "user_id": "pm_exper_user_46_base-smoke",
+            "category": "health_and_medical_conditions",
+            "question": "What are some good ways to unwind after a really stressful day?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 945.3985691070557,
+            "search_duration_ms": 25.850534439086914,
+            "golden_answer": "(d)",
+            "topic": "Stress"
+        },
+        "pm_exper_user_28_base-smoke": {
+            "user_id": "pm_exper_user_28_base-smoke",
+            "category": "sensitive_info",
+            "question": "I'm organizing an intimate family reunion with a cultural twist at my home (located at 4829 W Crestview Dr, Denver, CO 80221). I’d like to mix in a brief local history and art “walk” by inviting a couple of local experts to share insights about our heritage and the community’s evolving story. Could you help me draft a plan outlining how to coordinate the event logistics—including inviting extended family and friends, setting up the space at home to accommodate both dining and a mini-exhibit area, and managing vendor pickups or deliveries for elements like local catering or decorative pieces?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 930.6516647338867,
+            "search_duration_ms": 106.60195350646973,
+            "golden_answer": "(d)",
+            "topic": "Event"
+        },
+        "pm_exper_user_2_base-smoke": {
+            "user_id": "pm_exper_user_2_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I manage the anxiety that lingers after tense confrontations?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 841.9702053070068,
+            "search_duration_ms": 28.835535049438477,
+            "golden_answer": "(d)",
+            "topic": "Health"
+        },
+        "pm_exper_user_38_base-smoke": {
+            "user_id": "pm_exper_user_38_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I cope when I keep losing motivation because it feels like my efforts don’t make any real difference?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 780.3301811218262,
+            "search_duration_ms": 31.27741813659668,
+            "golden_answer": "(b)",
+            "topic": "Motivation"
+        },
+        "pm_exper_user_37_base-smoke": {
+            "user_id": "pm_exper_user_37_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I feel more connected and supported in my personal life?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1014.8799419403076,
+            "search_duration_ms": 35.185813903808594,
+            "golden_answer": "(d)",
+            "topic": "Relationships"
+        },
+        "pm_exper_user_47_base-smoke": {
+            "user_id": "pm_exper_user_47_base-smoke",
+            "category": "stereotypical_pref",
+            "question": "What are some creative ideas for decorating my living room so that it feels warm and inviting for guests?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 857.6295375823975,
+            "search_duration_ms": 29.204368591308594,
+            "golden_answer": "(c)",
+            "topic": "Home"
+        },
+        "pm_exper_user_29_base-smoke": {
+            "user_id": "pm_exper_user_29_base-smoke",
+            "category": "ask_to_forget",
+            "question": "I’d like to find a thoughtful housewarming present for a family member who just bought their first home—something distinctive that will feel warm and personal. What would you recommend?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 824.1376876831055,
+            "search_duration_ms": 89.52903747558594,
+            "golden_answer": "(d)",
+            "topic": "Gifts"
+        },
+        "pm_exper_user_39_base-smoke": {
+            "user_id": "pm_exper_user_39_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I cope with constant frustration when I feel powerless to change things around me?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 618.9348697662354,
+            "search_duration_ms": 33.586978912353516,
+            "golden_answer": "(a)",
+            "topic": "Mental Health"
+        },
+        "pm_exper_user_20_base-smoke": {
+            "user_id": "pm_exper_user_20_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some trusted niche marketplaces or lesser-known sources where I can find unique items that aren’t usually available through big-name retailers?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 796.1366176605225,
+            "search_duration_ms": 42.59037971496582,
+            "golden_answer": "(b)",
+            "topic": "Shopping"
+        },
+        "pm_exper_user_48_base-smoke": {
+            "user_id": "pm_exper_user_48_base-smoke",
+            "category": "ask_to_forget",
+            "question": "What are some international coding hackathons or tech competitions I could join while traveling to new cities so I can explore local tech communities and sharpen my programming skills?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 741.5540218353271,
+            "search_duration_ms": 34.48224067687988,
+            "golden_answer": "(c)",
+            "topic": "Technology"
+        },
+        "pm_exper_user_3_base-smoke": {
+            "user_id": "pm_exper_user_3_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "I'm planning a trip to a seaside town and want to make the most of my time there—what kinds of activities or experiences would you suggest?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 806.43630027771,
+            "search_duration_ms": 34.93046760559082,
+            "golden_answer": "(b)",
+            "topic": "Travel"
+        },
+        "pm_exper_user_11_base-smoke": {
+            "user_id": "pm_exper_user_11_base-smoke",
+            "category": "therapy_background",
+            "question": "How do you cope when you start doubting whether your efforts have made a real difference?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 799.3490695953369,
+            "search_duration_ms": 29.921531677246094,
+            "golden_answer": "(a)",
+            "topic": "Motivation"
+        },
+        "pm_exper_user_12_base-smoke": {
+            "user_id": "pm_exper_user_12_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I manage constant stress when I feel like there’s just too much on my plate every day?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1046.186923980713,
+            "search_duration_ms": 31.666278839111328,
+            "golden_answer": "(a)",
+            "topic": "Health"
+        },
+        "pm_exper_user_49_base-smoke": {
+            "user_id": "pm_exper_user_49_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some creative ways to make a home gallery space feel dynamic and visually engaging?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 779.9251079559326,
+            "search_duration_ms": 33.319711685180664,
+            "golden_answer": "(d)",
+            "topic": "Art"
+        },
+        "pm_exper_user_30_base-smoke": {
+            "user_id": "pm_exper_user_30_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "I’m planning a dinner party and want to make the menu feel fresh and exciting—could you suggest some creative dishes that might surprise my guests?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 885.3328227996826,
+            "search_duration_ms": 49.51190948486328,
+            "golden_answer": "(b)",
+            "topic": "Food"
+        },
+        "pm_exper_user_21_base-smoke": {
+            "user_id": "pm_exper_user_21_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some reliable ways to stay ahead of fast-moving trends in global financial markets, especially in areas that are still developing?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 879.4956207275391,
+            "search_duration_ms": 47.1491813659668,
+            "golden_answer": "(a)",
+            "topic": "Finance"
+        },
+        "pm_exper_user_4_base-smoke": {
+            "user_id": "pm_exper_user_4_base-smoke",
+            "category": "neutral_preferences",
+            "question": "What are some creative weekend projects I could try in the kitchen that are both relaxing and satisfying?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 934.4761371612549,
+            "search_duration_ms": 42.59181022644043,
+            "golden_answer": "(b)",
+            "topic": "Food"
+        },
+        "pm_exper_user_40_base-smoke": {
+            "user_id": "pm_exper_user_40_base-smoke",
+            "category": "neutral_preferences",
+            "question": "What are some creative directions I could explore if I wanted to design a modern home that feels inspiring and future-focused?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 800.8546829223633,
+            "search_duration_ms": 34.15989875793457,
+            "golden_answer": "(b)",
+            "topic": "Design"
+        },
+        "pm_exper_user_31_base-smoke": {
+            "user_id": "pm_exper_user_31_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "What are some warm, comforting drinks you’d recommend for winding down in the evening that aren’t too high in caffeine?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 763.7205123901367,
+            "search_duration_ms": 43.19477081298828,
+            "golden_answer": "(d)",
+            "topic": "Food"
+        },
+        "pm_exper_user_5_base-smoke": {
+            "user_id": "pm_exper_user_5_base-smoke",
+            "category": "health_and_medical_conditions",
+            "question": "What are some good stretches to do after sitting at a desk all day?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 755.0883293151855,
+            "search_duration_ms": 37.625789642333984,
+            "golden_answer": "(a)",
+            "topic": "Health"
+        },
+        "pm_exper_user_50_base-smoke": {
+            "user_id": "pm_exper_user_50_base-smoke",
+            "category": "therapy_background",
+            "question": "How can I create healthier boundaries between my work life and personal time?",
+            "accuracy": 0.0,
+            "total_runs": 1,
+            "correct_runs": 0,
+            "avg_response_duration_ms": 909.5680713653564,
+            "search_duration_ms": 28.60546112060547,
+            "golden_answer": "(a)",
+            "topic": "Work"
+        },
+        "pm_exper_user_41_base-smoke": {
+            "user_id": "pm_exper_user_41_base-smoke",
+            "category": "anti_stereotypical_pref",
+            "question": "Can you suggest some ideas for adding cozy touches to a living room without making it feel cluttered?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 869.4772720336914,
+            "search_duration_ms": 34.62338447570801,
+            "golden_answer": "(b)",
+            "topic": "Home"
+        },
+        "pm_exper_user_22_base-smoke": {
+            "user_id": "pm_exper_user_22_base-smoke",
+            "category": "neutral_preferences",
+            "question": "Could you suggest some films with timeless storytelling and strong, memorable characters that really draw you into another era?",
+            "accuracy": 1.0,
+            "total_runs": 1,
+            "correct_runs": 1,
+            "avg_response_duration_ms": 1131.7574977874756,
+            "search_duration_ms": 42.82569885253906,
+            "golden_answer": "(c)",
+            "topic": "Entertainment"
+        }
+    },
+    "pipeline_status": {
+        "search": {
+            "status_counts": {
+                "success": 56
+            },
+            "failed_units": 0,
+            "skipped_records": 0
+        },
+        "answer": {
+            "status_counts": {
+                "success": 56
+            },
+            "failed_units": 0,
+            "skipped_records": 0
+        }
+    }
+}

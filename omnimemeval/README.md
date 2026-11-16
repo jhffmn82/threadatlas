@@ -1,10 +1,20 @@
 # ThreadAtlas on OmniMemEval
 
-ThreadAtlas's runs of [OmniMemEval](https://github.com/MemTensor/OmniMemEval)'s User Memory track: LoCoMo and
-LongMemEval, run on 2026-11-07 by Justin Hoffman. This folder holds every record the harness wrote, the notebook that
-ran it, and the checksums. The memory itself is [`threadatlas_memory/`](../threadatlas_memory/) at the root of this
-repository, and the adapter is on the branch
-[`threadatlas-adapter`](https://github.com/jhffmn82/OmniMemEval/tree/threadatlas-adapter) of a fork of the harness.
+ThreadAtlas's runs of [OmniMemEval](https://github.com/MemTensor/OmniMemEval)'s User Memory track, by Justin Hoffman.
+There are two sets.
+
+- **The baseline runs of 2026-11-16** are in [`baseline/`](baseline/), with their own
+  [README](baseline/README.md): all five benchmarks with the leaderboard's baseline models, every session read during
+  the run with `gpt-4.1-mini-2025-04-14`. LoCoMo 88.90, LongMemEval 87.00, BEAM 100K 73.12, PersonaMem v2 36.92,
+  HaluMem-Medium 83.82.
+- **The runs of 2026-11-07** are the rest of this page: LoCoMo and LongMemEval with `gpt-5.6-luna` as the reading
+  model.
+
+This folder holds every record the harness wrote, the notebook that ran it, and the checksums. The memory itself is
+[`threadatlas_memory/`](../threadatlas_memory/) at the root of this repository. For the runs of 2026-11-07 the adapter
+was on the branch [`threadatlas-adapter`](https://github.com/jhffmn82/OmniMemEval/tree/threadatlas-adapter) of a fork
+of the harness. It has been part of the harness since its commit
+[`5e8cdc1`](https://github.com/MemTensor/OmniMemEval/commit/5e8cdc115b2eff391e72192dbfe3786ebadc9005).
 
 ## Results
 

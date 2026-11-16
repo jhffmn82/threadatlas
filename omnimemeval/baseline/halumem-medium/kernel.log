@@ -1,0 +1,242 @@
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+0.00s - Debugger warning: It seems that frozen modules are being used, which may
+0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off
+0.00s - to python to disable frozen modules.
+0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.
+attached inputs: none
+OPENAI_API_KEY available: True
+$ git clone -q https://github.com/MemTensor/OmniMemEval.git /kaggle/working/omnimemeval
+$ git -C /kaggle/working/omnimemeval checkout -q 5e8cdc115b2eff391e72192dbfe3786ebadc9005
+$ git clone -q --filter=blob:none --no-checkout https://github.com/jhffmn82/threadatlas.git /kaggle/working/threadatlas
+$ git -C /kaggle/working/threadatlas sparse-checkout set threadatlas_memory
+$ git -C /kaggle/working/threadatlas checkout -q 015143cdb995497022b88878c8ebc8c5223d1eee
+$ /usr/bin/python3 -m pip install -q -r /kaggle/working/omnimemeval/requirements_user_memory.txt tiktoken
+$ /usr/bin/python3 -m pip install -q fastembed
+$ /usr/bin/python3 -m unittest scripts/tests/unit/test_threadatlas_client.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.012s
+
+OK
+$ /usr/bin/python3 data/halumem/prepare_halumem.py
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.012s
+
+OK
+
+........
+----------------------------------------------------------------------
+Ran 8 tests in 0.012s
+
+OK
+Output directory: /kaggle/working/omnimemeval/data/halumem
+Variants to download: medium
+
+  [medium] Downloading HaluMem-Medium.jsonl ...
+  [medium] Saved HaluMem-Medium.jsonl (20 JSONL records, 32.0 MB)
+
+Done.
+Output directory: /kaggle/working/omnimemeval/data/halumem
+Variants to download: medium
+
+  [medium] Downloading HaluMem-Medium.jsonl ...
+  [medium] Saved HaluMem-Medium.jsonl (20 JSONL records, 32.0 MB)
+
+Done.
+halumem {'in the prepared file': 20, 'in this run': 20} | read at once: 20
+the package as loaded: 0 gpt-4.1-mini-2025-04-14 cpu CPUExecutionProvider 512 3.22 
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 5 files:  20%|██        | 1/5 [00:00<00:00,  8.70it/s]
+Fetching 5 files:  40%|████      | 2/5 [00:00<00:00,  8.27it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:02<00:00,  2.19it/s]
+Fetching 5 files: 100%|██████████| 5/5 [00:02<00:00,  2.49it/s]
+
+rate limits for gpt-4.1-mini-2025-04-14: {'x-ratelimit-limit-requests': '30000', 'x-ratelimit-limit-tokens': '150000000', 'x-ratelimit-remaining-requests': '29999', 'x-ratelimit-remaining-tokens': '149999997'}
+{
+ "run": "full",
+ "benchmarks": [
+  "halumem"
+ ],
+ "label": "base",
+ "read_model": "gpt-4.1-mini-2025-04-14",
+ "device": "cpu",
+ "store_built_beforehand": false,
+ "attached_inputs": [],
+ "data": {
+  "data/halumem/HaluMem-Medium.jsonl": "486fbc130a5c8781a2af27ffa508a1d7855245137aa449c193ac4d29c45634e7"
+ },
+ "users": {
+  "halumem": {
+   "in the prepared file": 20,
+   "in this run": 20
+  }
+ },
+ "workers": {
+  "halumem": 20
+ },
+ "embedding": {
+  "device": "cpu",
+  "providers": "CPUExecutionProvider",
+  "seconds for 512 texts": 3.22
+ },
+ "rate limits": {
+  "x-ratelimit-limit-requests": "30000",
+  "x-ratelimit-limit-tokens": "150000000",
+  "x-ratelimit-remaining-requests": "29999",
+  "x-ratelimit-remaining-tokens": "149999997"
+ },
+ "harness": "5e8cdc115b2eff391e72192dbfe3786ebadc9005",
+ "package": "015143cdb995497022b88878c8ebc8c5223d1eee",
+ "package_files_changed": ""
+}
+bash scripts/run_halumem_eval.sh --lib threadatlas --env /kaggle/working/omnimemeval/.env.threadatlas --version base-full --workers 20 --variant medium
+halumem exit 0 after 252.3 minutes
+|-------|--------------|------------------|-----------------|---------------|
+| search | 0 | 0 | 0 | success=3467 |
+| answer | 0 | 0 | 0 | success=3467 |
+| eval | 0 | 0 | 0 | success=3467 |
+
+### Latency Metrics
+
+| Metric | Avg (ms) | P50 (ms) | P95 (ms) |
+|--------|----------|----------|----------|
+| Add Latency | 180228.5 | 186900.2 | 227138.8 |
+| Search Latency | 1669.7 | 1704.8 | 1995.4 |
+
+
+  ✓ Step done in 0s  |  Pipeline: 6/6  |  Elapsed: 4h12m15s
+
+╔══════════════════════════════════════════════════════════════════╗
+║  Pipeline Complete!                                              ║
+║  Total time: 4h12m15s  |  Steps: 6                               ║
+║  Results: /kaggle/working/omnimemeval/results/halumem/threadatlas-base-full║
+╠══════════════════════════════════════════════════════════════════╣
+║  Step breakdown:                                                 ║
+║    Step 1: 3h46m10s                                                  ║
+║    Step 2: 5m21s                                                     ║
+║    Step 3: 8m47s                                                     ║
+║    Step 4: 11m55s                                                    ║
+║    Step 5: 2s                                                        ║
+║    Step 6: 0s                                                        ║
+╠══════════════════════════════════════════════════════════════════╣
+║  Reproduce: ./scripts/run_halumem_eval.sh --env .env.threadatlas --replay /kaggle/working/omnimemeval/results/halumem/threadatlas-base-full║
+╚══════════════════════════════════════════════════════════════════╝
+reading: correct gpt-4.1-mini-2025-04-14 468 calls, 211856 tokens in, 44040 out, $0.16
+reading: salience gpt-4.1-mini-2025-04-14 1098 calls, 849957 tokens in, 206615 out, $0.67
+reading: session gpt-4.1-mini-2025-04-14 1387 calls, 5504406 tokens in, 4587717 out, $9.54
+reading: support gpt-4.1-mini-2025-04-14 1448 calls, 2260609 tokens in, 9881 out, $0.92
+reading: verify gpt-4.1-mini-2025-04-14 315 calls, 100655 tokens in, 1855 out, $0.04
+reading in all: 4716 calls, 8927483 tokens in, 4850108 out, $11.33 at list price, 12.45 hours inside calls
+/kaggle/working/results/halumem/threadatlas-base-full/threadatlas_hm_grades.json
+ metrics: {"llm_judge_score": 0.838188635708105, "llm_judge_std": 0.0, "lexical": {"f1": 0.21055083527813645, "rouge1_f": 0.16975007110247947, "rouge2_f": 0.06570007670731892, "rougeL_f": 0.1365370105321465, "bleu1": 0.11008630490355423, "bleu2": 0.058343456494721675, "bleu3": 0.03873137037881701, "bleu4": 0.026558850611258063, "meteor": 0.2868171599979054}, "semantic": {"bert_f1": null, "similarity": null}, "context_tokens": 2840.355638880877, "duration": {"search_duration_ms": 1669.6907726460588, "search_duration_ms_p50": 1704.8449516296387, "search_duration_ms_p95": 1995.4396724700925, "add_duration_ms": 180228.48139149242, "add_duration_ms_p50": 186900.16, "add_duration_ms_p95": 227138.75900000005
+ status: {"search": {"status_counts": {"success": 3467}, "failed_units": 0, "failed_users": 0, "failed_records": 0, "failed_keys": 0, "skipped_records": 0}, "answer": {"status_counts": {"success": 3467}, "failed_units": 0, "failed_users": 0, "failed_records": 0, "failed_keys": 0, "skipped_records": 0}, "eval": {"status_counts": {"success": 3467}, "failed_units": 0, "failed_users": 0, "failed_records": 0, "failed_keys": 0, "skipped_records": 0}}
+/kaggle/working/results/halumem/threadatlas-base-full/exp_report.md
+# OmniMemEval Experiment Report — threadatlas-base-full
+
+> Generated: 2026-11-16 11:38:13
+
+## Experiment Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Benchmark | HaluMem |
+| Memory Framework | threadatlas |
+| Version | base-full |
+| Run Time | 2026-11-16 07:25:58 UTC |
+| Git | `5e8cdc1` (HEAD) |
+| WORKERS | 20 |
+| LLM_WORKERS | 10 |
+| TOPK | 20 |
+| VARIANT | medium |
+| NUM_RUNS | 1 |
+| SAVE_MODEL_INPUT | 0 |
+| CLEAR | 0 |
+| WAIT_AFTER_INGEST | 0 |
+| ALLOW_EMPTY_SEARCH | 1 |
+| SKIP_FAILED_SEARCH | 0 |
+| SKIP_FAILED_ANSWER | 0 |
+| SKIP_FAILED_JUDGE | 0 |
+| Results Directory | `results/halumem/threadatlas-base-full` |
+
+**Reproduce:**
+
+```bash
+./scripts/run_halumem_eval.sh --replay results/halumem/threadatlas-base-full
+```
+
+### Environment Variables (snapshot_eval.env)
+
+| Variable | Value |
+|----------|-------|
+| `THREADATLAS_REPO` | `/kaggle/working/threadatlas` |
+| `THREADATLAS_STATE_DIR` | `/kaggle/working/state` |
+| `THREADATLAS_READ_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `THREADATLAS_EMBED_DEVICE` | `cpu` |
+| `LLM_WORKERS` | `10` |
+| `TOPK` | `20` |
+| `ANSWER_MODEL` | `gpt-4.1-mini-2025-04-14` |
+| `EVAL_MODEL` | `gpt-4o-mini-2024-07-18` |
+
+## Context Tokens
+
+> Context Tokens are answer-stage prompt/input tokens. They are used as an approximate proxy for retrieved search-result length and should be compared only under the same benchmark, answer model, and prompt template.
+
+| Metric | Value |
+|--------|-------|
+| Answer Model | gpt-4.1-mini-2025-04-14 |
+| Answer API Calls | 3,467 |
+| Context Tokens (avg) | 3051.6 |
+
+## Evaluation Results
+
+### Overall Scores
+
+| Metric | Score |
+|--------|-------|
+| QA Accuracy (LLM-as-Judge) | 0.8382 ± 0.0000 |
+| F1 | 0.2106 |
+| ROUGE-1 | 0.1698 |
+| ROUGE-2 | 0.0657 |
+| ROUGE-L | 0.1365 |
+| BLEU-1 | 0.1101 |
+| BLEU-4 | 0.0266 |
+| METEOR | 0.2868 |
+| BERTScore F1 | - |
+| Semantic Similarity | - |
+
+### By Question Type (QA Accuracy)
+
+| Question Type | QA Accuracy | Questions |
+|---------------|-------------|-----------|
+| Basic Fact Recall | 0.7534 | 746 |
+| Memory Boundary | 0.9263 | 828 |
+| Memory Conflict | 0.8843 | 769 |
+| Generalization & Application | 0.8606 | 746 |
+| Multi-hop Inference | 0.7828 | 198 |
+| Dynamic Update | 0.5556 | 180 |
+
+### By Difficulty
+
+| Difficulty | QA Accuracy | Questions |
+|------------|-------------|-----------|
+| easy | 0.8472 | 1970 |
+| hard | 0.7959 | 98 |
+| medium | 0.8284 | 1399 |
+
+### Pipeline Status
+
+| Stage | Failed Users | Failed Questions | Skipped Records | Status Coun
+['__notebook__.ipynb', 'environment.txt', 'halumem-base-full.log', 'provenance.json', 'reading-calls.jsonl', 'results']
+/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\|'
+  cells[i][c] = re.sub('\\\\\|', '|', cell)
+/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\_'
+  text = re.sub(r'_', '\_', text) # Escape underscores in display text
+[NbConvertApp] Converting notebook __notebook__.ipynb to notebook
+[NbConvertApp] Writing 35092 bytes to __notebook__.ipynb
+[NbConvertApp] Converting notebook __notebook__.ipynb to html
+[NbConvertApp] Writing 358863 bytes to __results__.html
