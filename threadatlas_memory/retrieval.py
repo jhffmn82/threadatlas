@@ -522,10 +522,11 @@ def document_title(store, doc_id):
 
 
 def header(date, title, label, previous):
-    """A bundle's date, document and unit, leaving out each one the bundle before it already showed."""
+    """A bundle's date, document and unit, leaving out each one the bundle before it already showed.
+    A session added with no date is shown as undated."""
     pieces = []
     if previous is None or previous[0] != date:
-        pieces.append(str(date))
+        pieces.append(str(date) if date else "undated")
     if previous is None or previous[1] != title:
         pieces.append(str(title))
     if previous is None or previous[2] != label:
