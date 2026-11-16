@@ -1,0 +1,37 @@
+{
+ "run": "full",
+ "benchmarks": [
+  "locomo"
+ ],
+ "label": "captions",
+ "read_model": "gpt-4.1-mini-2025-04-14",
+ "device": "cpu",
+ "store_built_beforehand": false,
+ "attached_inputs": [],
+ "data": {
+  "data/locomo/locomo10.json": "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4"
+ },
+ "users": {
+  "locomo": {
+   "in the prepared file": 10,
+   "in this run": 10
+  }
+ },
+ "workers": {
+  "locomo": 10
+ },
+ "embedding": {
+  "device": "cpu",
+  "providers": "CPUExecutionProvider",
+  "seconds for 512 texts": 3.62
+ },
+ "rate limits": {
+  "x-ratelimit-limit-requests": "30000",
+  "x-ratelimit-limit-tokens": "150000000",
+  "x-ratelimit-remaining-requests": "29999",
+  "x-ratelimit-remaining-tokens": "149999995"
+ },
+ "harness": "05513bfa2faa4f19b46089b4fd2691cd60689338",
+ "package": "015143cdb995497022b88878c8ebc8c5223d1eee",
+ "package_files_changed": ""
+}

@@ -130,6 +130,35 @@ scores. Their records are in [`short-runs/`](short-runs/).
 | 2026-11-16 06:05 | PersonaMem v2 | 2 of 200 personas | 56 | 42.86 |
 | 2026-11-16 06:06 | LongMemEval | 20 of 500 users | 20 | 20 of 20 |
 
+## A LoCoMo run on a changed harness
+
+One more full LoCoMo run was made on 2026-11-16, to test one change to the harness. It is not a leaderboard score and
+it is not one of the runs above.
+
+LoCoMo gives every shared photo a description (`blip_caption`, on 1,226 of the 5,882 turns in `locomo10.json`).
+OmniMemEval commit `1619178` made Zep graph mode and Graphiti receive it. ThreadAtlas goes through the default
+two-speaker path, which sends a message as speaker and text only. The change adds the description to a ThreadAtlas
+message in the same words: five lines of `scripts/locomo/locomo_ingestion.py` and two tests, in commit
+[`05513bf`](https://github.com/jhffmn82/OmniMemEval/commit/05513bfa2faa4f19b46089b4fd2691cd60689338) on a branch of
+the fork. The package, the models and every other setting are those of the reported run.
+
+| Run (UTC) | Harness | Package | Result |
+|---|---|---|---|
+| 2026-11-16 18:12 | `05513bf`: OmniMemEval `1619178` plus that change | `015143c` | 89.42 (1,377 of 1,540), in [`locomo-with-photo-descriptions/`](locomo-with-photo-descriptions/) |
+
+| Single-Hop | Multi-Hop | Temporal | Open-Domain | Overall | Context tokens |
+|---:|---:|---:|---:|---:|---:|
+| 95.96 | 84.75 | 84.74 | 61.46 | 89.42 | 6,317 |
+
+The three runs on the unchanged harness scored 88.44, 89.68 and 88.90. This run's 89.42 is inside that span, so it
+does not show a gain from the change. The change is not proposed to OmniMemEval. The commit that made it said the run
+would be reported whatever it scored, and this is that report.
+
+The run made 544 `add()` calls into 20 stores, with 1,594 reading calls (1.59 M tokens in, 0.68 M out, $1.73 at list
+price), and took 49 minutes. Every stage finished all 1,540 questions with none failed or skipped. `notebook.ipynb` is
+the notebook that ran it and `make_notebook.py` the script that wrote it. The notebook's opening text is the baseline
+notebook's and still calls the harness unchanged. Its first code cell and `provenance.json` name the commit that ran.
+
 ## Reproducing a run
 
 On Kaggle, the notebooks in [`run/`](run/) do every step: one notebook per benchmark, each needing an `OPENAI_API_KEY`
@@ -183,6 +212,7 @@ combined search results repeat.
 |---|---|
 | `locomo/`, `longmemeval/`, `beam-100k/`, `personamem-v2/`, `halumem-medium/` | the reported run of each benchmark |
 | `locomo-run-of-04-20/` | the LoCoMo run of 04:20 UTC on package `18df19c` |
+| `locomo-with-photo-descriptions/` | the LoCoMo run of 18:12 UTC on the harness with the photo-description change, with its notebook and the script that wrote it. Its records are under `results/locomo/threadatlas-captions-full/` and its log is `locomo-captions-full.log` |
 | `short-runs/` | the four timing runs: their records without the search results and responses |
 | `<run>/results/<benchmark>/threadatlas-base-full/` | the harness's records: search results, responses, judged answers, grades, status files, token usage, settings, report |
 | `<run>/reading-calls.jsonl` | every call to the reading model: stage, model, tokens in and out, seconds, cost, session |
