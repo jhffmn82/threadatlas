@@ -1,8 +1,10 @@
 """Calls to the model that reads the sessions: one prompt in, a JSON reply that fits its shape out.
 
 The ingestor's call policy (kaggle.com/code/jhffmn/threadatlas-document-ingestor, Block 2): the Flex
-tier at half price, the standard tier when Flex has no room, three tries on a timeout or a busy server,
-and one more asking for the shape again when a reply does not fit. Every call's cost goes to calls.jsonl.
+tier at half price, the standard tier when Flex has no room, and one more call asking for the shape again
+when a reply does not fit. A timeout, a busy server or a rate limit is waited out and tried again, eight
+tries over about seven minutes, so a run of many thousands of sessions does not lose one to a brief refusal;
+an account out of credit stops at once. Every call's cost goes to calls.jsonl.
 A model without reasoning, such as gpt-4.1-mini, is called on the standard tier with no reasoning effort.
 """
 
@@ -20,6 +22,7 @@ URL = "https://api.openai.com/v1/chat/completions"
 PRICE = {"flex": {"gpt-5.6-luna": (0.10, 0.60)},                                            # $ per million tokens
          "default": {"gpt-5.6-luna": (0.20, 1.20), "gpt-4.1-mini-2025-04-14": (0.40, 1.60)}}
 REASONS = ("gpt-5.6-luna",)      # the models that take a reasoning effort and the Flex tier
+WAITS = (5, 15, 30, 60, 60, 120, 120)      # seconds before each further try of a call
 LOG_LOCK = threading.Lock()
 TYPES = {"object": dict, "array": list, "string": str, "integer": int, "number": (int, float)}
 
@@ -81,24 +84,32 @@ def post(payload):
 def call(payload, stage, context):
     model = payload["model"]
     started = time.time()
-    for attempt in range(3):
+    for attempt in range(len(WAITS) + 1):
+        last = attempt == len(WAITS)
+        asked = 0                                        # seconds the server asks us to wait, when it says
         try:
             status, text = post(payload)
         except urllib.error.HTTPError as error:
             status, text = error.code, error.read().decode("utf-8", errors="replace")
+            try:
+                asked = float(error.headers.get("Retry-After") or 0)
+            except (TypeError, ValueError):
+                asked = 0
         except (urllib.error.URLError, TimeoutError, OSError, http.client.HTTPException):
-            if attempt == 2:
+            if last:
                 raise
-            time.sleep(15 * (attempt + 1))
+            time.sleep(WAITS[attempt])
             continue
         if status == 429 and "flex_unavailable" in text and payload.get("service_tier") == "flex":
             payload = dict(payload)
             payload["service_tier"] = "default"          # Flex has no room for this call: the standard tier takes it
             continue
+        if status == 429 and "insufficient_quota" in text:
+            raise RuntimeError("OpenAI 429: the account is out of credit: " + text[:300])     # waiting does not help
         if status == 429 or status >= 500:
-            if attempt == 2:
+            if last:
                 raise RuntimeError("OpenAI " + str(status) + ": " + text[:300])
-            time.sleep(15 * (attempt + 1))
+            time.sleep(max(WAITS[attempt], min(asked, 300)))
             continue
         if status != 200:
             raise RuntimeError("OpenAI " + str(status) + ": " + text[:300])

@@ -15,11 +15,12 @@ chunk of the document's own text:
 """
 
 import sqlite3
+import threading
 
 import numpy as np
 
 from . import config
-from .store import plain       # a passage is shown without LongMemEval's marks, as every other text is
+from .store import plain      # a passage is shown without LongMemEval's marks, as every other text is
 
 K_ENTRY = 80          # hits each search returns; the setting takes its first HITS
 K_HOP = 10            # records a hop takes along each edge, the most similar first
@@ -29,15 +30,30 @@ RRF_K = 60            # the reciprocal rank fusion constant
 MAX_PASSAGE = 500     # characters of source text shown with one fact, centred on its quote
 
 EMBEDDER = None
+EMBED_LOCK = threading.Lock()
 TOKENIZER = None
 
 
 def embed(texts):
+    """The texts' vectors. One batch is embedded at a time: the model already uses every core, or the GPU, and
+    batches sent side by side from many users' adds only take turns at them, each slower for the others."""
     global EMBEDDER
-    if EMBEDDER is None:
-        from fastembed import TextEmbedding
-        EMBEDDER = TextEmbedding(config.EMBED_MODEL)
-    return np.asarray(list(EMBEDDER.embed(texts, batch_size=256)), dtype=np.float32)
+    with EMBED_LOCK:
+        if EMBEDDER is None:
+            from fastembed import TextEmbedding
+            if config.EMBED_DEVICE == "cuda":
+                import onnxruntime
+                if hasattr(onnxruntime, "preload_dlls"):
+                    onnxruntime.preload_dlls()             # CUDA and cuDNN from the installed nvidia packages
+                model = TextEmbedding(config.EMBED_MODEL, providers=["CUDAExecutionProvider"])
+                used = model.model.model.get_providers()
+                if "CUDAExecutionProvider" not in used:    # onnxruntime falls back to the CPU without a word
+                    raise RuntimeError("THREADATLAS_EMBED_DEVICE is cuda, but the embedding model loaded on "
+                                       + ", ".join(used))
+                EMBEDDER = model
+            else:
+                EMBEDDER = TextEmbedding(config.EMBED_MODEL)
+        return np.asarray(list(EMBEDDER.embed(texts, batch_size=256)), dtype=np.float32)
 
 
 def count_tokens(text):

@@ -57,6 +57,9 @@ Set these, or put the files under `data/` beside the package:
 | `THREADATLAS_SOURCE` | `longmemeval_s.json`, the file the store's chats were read from |
 | `THREADATLAS_STATE_DIR` | where each user's folder goes |
 | `THREADATLAS_READ_MODEL` | the model that reads a session the store has not read: `gpt-5.6-luna` (the default, the pipeline's) or `gpt-4.1-mini-2025-04-14` |
+| `THREADATLAS_EMBED_DEVICE` | where the embedding model runs: `cpu` (the default) or `cuda` |
 | `OPENAI_API_KEY` | for sessions the store has not read |
 
-Needs `numpy`, `fastembed` and `tiktoken`.
+Needs `numpy`, `fastembed` and `tiktoken`; with `THREADATLAS_EMBED_DEVICE=cuda`, `fastembed-gpu` in place of
+`fastembed`. One batch of text is embedded at a time, and a call that meets a rate limit, a busy server or a
+dropped connection is tried again for about seven minutes before its session fails.

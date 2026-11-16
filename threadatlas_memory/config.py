@@ -20,6 +20,8 @@ STATE_DIR = Path(os.environ.get("THREADATLAS_STATE_DIR", str(REPO / "memory-stat
 READ_MODEL = os.environ.get("THREADATLAS_READ_MODEL", "gpt-5.6-luna")
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 DIMENSION = 384
+# where the embedding model runs: "cpu", or "cuda" for a GPU (which needs fastembed-gpu in place of fastembed)
+EMBED_DEVICE = os.environ.get("THREADATLAS_EMBED_DEVICE", "cpu")
 
 # the retrieval setting: LongMemEval's best, two hops from 40 hits of each search; the item count binds, not tokens
 HOPS = int(os.environ.get("THREADATLAS_HOPS", "2"))
